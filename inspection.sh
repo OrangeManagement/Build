@@ -1,33 +1,9 @@
 #!/bin/bash
 
-# Include private
+# Include
 . var.sh
 . ${ROOT_PATH}/private.sh
-
-# Previous cleanup
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/logs
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/stats
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/docs
-
-# Creating directories
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/logs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/stats >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/docs >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-
-# Handling git
-cd ${ROOT_PATH} && git fetch --all && git reset --hard origin/${GIT_BRANCH} && git pull >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-
-# Permission handling
-chmod -R 777 ${ROOT_PATH}
-
-# Change path for correct script inclusion
-cd ${ROOT_PATH}/${BUILD_PATH}
-
-# Setting up demo
-. ${BUILD_PATH}/demo.sh
-
-# Installing tools
-. ${BUILD_PATH}/install.sh
+. ${ROOT_PATH}/${BUILD_PATH}/setup.sh
 
 # Executing unit tests
 php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml --coverage-text --coverage-clover ${ROOT_PATH}/${BUILD_PATH}/logs/clover.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
@@ -65,9 +41,6 @@ find ${ROOT_PATH} -name "*.json" | xargs -L1 jsonlint -q > ${ROOT_PATH}/${BUILD_
 #curl -H "Content-Type: application/json" -X POST -d '{"branch":"$GIT_BRANCH","access_token":"$SCRUTINIZER_TOKEN"}' https://scrutinizer-ci.com/api/repositories/g/spl1nes/oms/inspections?access_token=${SCRUTINIZER_TOKEN}
 #curl --get --data api_token=$CODECLIMATE_TOKEN https://codeclimate.com/api/repos/oms/branches/$GIT_BRANCH/refresh -- Coming in the future... right now not available for free
 #curl -s -X POST  -H "Content-Type: application/json" -H "Accept: application/json"  -H "Travis-API-Version: 3"  -H "Authorization: token $TRAVIS_TOKEN"  -d '{"request": {"branch":"$GIT_BRANCH"}}' https://api.travis-ci.org/repo/spl1nes%2FOrange-Management/requests
-
-# Mail
-#echo "New build of branch $GIT_BRANCH from $GITHUB_URL created." | mail -s "New build" $MAIL_ADDR
 
 # Html tag inspection
 TAG[0]="<\/html>"

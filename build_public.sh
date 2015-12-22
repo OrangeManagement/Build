@@ -30,7 +30,8 @@ find ${ROOT_PATH} -name "*tpl.php" | sed -e :a -re 's/<!--.*?-->//g;/<!--/N;//ba
 rm -r -f ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
 mkdir -p ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
 mkdir -p ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public/jsOMS
-mkdir -p ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public/jsOMS/Utils
+
+# todo: build js and css files here!!!
 
 # Copying built files
 cp -R ${ROOT_PATH}/Admin/ ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
@@ -43,7 +44,7 @@ cp -R ${ROOT_PATH}/Web/ ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
 cp -R ${ROOT_PATH}/Socket/ ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
 cp -R ${ROOT_PATH}/Console/ ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public
 cp ${ROOT_PATH}/jsOMS/oms.min.js ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public/jsOMS
-cp ${ROOT_PATH}/jsOMS/Utils/oLib.min.js ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public/jsOMS/Utils
+cp ${ROOT_PATH}/jsOMS/Utils/oLib.min.js ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public/jsOMS
 
 # Removing dev files
 find ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Public -name "*.scss" -type f -delete
