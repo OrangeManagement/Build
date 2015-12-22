@@ -15,6 +15,7 @@ mkdir -p ${ROOT_PATH}/${BUILD_PATH}/docs >> ${ROOT_PATH}/${BUILD_PATH}/logs/buil
 
 # Handling git
 cd ${ROOT_PATH} && git fetch --all && git reset --hard origin/${GIT_BRANCH} && git pull >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
+find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
 
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
