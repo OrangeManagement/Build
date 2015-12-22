@@ -29,3 +29,4 @@ GITHUB_URL[14]="https://github.com/Orange-Management/Web.git"
 GIT_BRANCH="develop"
 
 DATE=$(date +%Y-%m-%d)
+VERSION_HASH=DATE
