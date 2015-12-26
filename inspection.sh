@@ -6,7 +6,7 @@
 . ${ROOT_PATH}/${BUILD_PATH}/setup.sh
 
 # Executing unit tests
-php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml --coverage-text --coverage-clover ${ROOT_PATH}/${BUILD_PATH}/logs/clover.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
+php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
 
 # Stats & metrics
 php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${ROOT_PATH}/${BUILD_PATH}/stats/phpOMS.log

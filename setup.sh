@@ -7,11 +7,13 @@
 rm -r -f ${ROOT_PATH}/${BUILD_PATH}/logs
 rm -r -f ${ROOT_PATH}/${BUILD_PATH}/stats
 rm -r -f ${ROOT_PATH}/${BUILD_PATH}/docs
+rm -r -f ${ROOT_PATH}/${BUILD_PATH}/report
 
 # Creating directories
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/logs
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/stats >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/docs >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/report >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
 
 # Handling git
 cd ${ROOT_PATH} && git fetch --all && git reset --hard origin/${GIT_BRANCH} && git pull >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
