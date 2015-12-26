@@ -29,7 +29,7 @@ mysql -e 'drop database if exists oms;' -u root -p${DB_PASSWORD}
 mysql -e 'create database oms;' -u root -p${DB_PASSWORD}
 #echo "USE mysql;\nUPDATE user SET password=PASSWORD('123456') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
 
-curl --connect-timeout 600 --max-time 601 ${WEB_URL}/Admin/Install
+curl --connect-timeout 600 --max-time 601 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -A "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" ${WEB_URL}/Admin/Install
 
 # Downloading tools
 wget -nc https://phar.phpunit.de/phploc.phar
