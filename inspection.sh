@@ -72,3 +72,6 @@ done
 
 # Find empty attributes
 grep -rln "=\"\"" --include \*.tpl.php ${ROOT_PATH} > ${ROOT_PATH}/${BUILD_PATH}/logs/unusedattributes.log
+
+# Html tag inspection
+. ${ROOT_PATH}/${BUILD_PATH}/security.sh
