@@ -7,6 +7,7 @@
 
 # Executing unit tests
 php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
+#phpdbg -qrr phpunit.phar --configuration Tests/PHPUnit/phpunit_default.xml
 
 # Stats & metrics
 php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${ROOT_PATH}/${BUILD_PATH}/stats/phpOMS.log
