@@ -34,6 +34,7 @@ mysql -e 'create database oms;' -u root -p${DB_PASSWORD}
 curl --connect-timeout 600 --max-time 601 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -A "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" ${WEB_URL}/Admin/Install
 
 # Downloading tools
+wget -nc https://getcomposer.org/composer.phar
 wget -nc https://phar.phpunit.de/phploc.phar
 wget -nc https://phar.phpunit.de/phpunit.phar
 wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
@@ -44,6 +45,8 @@ wget -nc http://static.phpmd.org/php/latest/phpmd.phar
 wget -nc https://phar.phpunit.de/phpcpd.phar
 wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
 tar -zxvf compiler-latest.tar.gz
+
+php composer.phar install
 
 # Installing tools
 [[ $(jsonlint -h) != *"Usage: jsonlint"* ]] && npm install jsonlint -g
