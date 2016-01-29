@@ -34,6 +34,6 @@ CODE[27]="action=\""
 
 for i in "${CODE[@]}"
 do
-    grep -rln "$i" --include \*.php ${ROOT_PATH}/phpOMS >> ${ROOT_PATH}/${BUILD_PATH}/logs/criticalcodeFramwork.log
-    grep -rln "$i" --include \*.php ${ROOT_PATH}/Modules >> ${ROOT_PATH}/${BUILD_PATH}/logs/criticalcodeModules.log
+    grep -rln "$i" --include \*.php ${ROOT_PATH}/phpOMS >> ${ROOT_PATH}/${BUILD_PATH}/Framework/critical_php.log
+    grep -rln "$i" --include \*.php ${ROOT_PATH}/Modules >> ${ROOT_PATH}/${BUILD_PATH}/Modules/citical_php.log
 done

@@ -4,16 +4,25 @@
 . ${ROOT_PATH}/private.sh
 
 # Previous cleanup
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/logs
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/stats
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/docs
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/report
+rm -r -f ${ROOT_PATH}/${BUILD_PATH}/Framework
+rm -r -f ${ROOT_PATH}/${BUILD_PATH}/Modules
 
 # Creating directories
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/logs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/stats >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/docs >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/report >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/logs
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/metrics
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/pdepend
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/phpcs
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/phpcpd
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/linting
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/html
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/logs
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/metrics
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/pdepend
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcs
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcpd
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/linting
+mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/html
 
 # Handling git
 cd ${ROOT_PATH} && git fetch --all && git reset --hard origin/${GIT_BRANCH} && git pull >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log

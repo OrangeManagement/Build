@@ -10,33 +10,33 @@ php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/
 #phpdbg -qrr phpunit.phar --configuration Tests/PHPUnit/phpunit_default.xml
 
 # Stats & metrics
-php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${ROOT_PATH}/${BUILD_PATH}/stats/phpOMS.log
-php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/Modules/ > ${ROOT_PATH}/${BUILD_PATH}/stats/ModulesStats.log
+php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${ROOT_PATH}/${BUILD_PATH}/Framework/phploc.log
+php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/Modules/ > ${ROOT_PATH}/${BUILD_PATH}/Modules/phploc.log
 
-php ${ROOT_PATH}/phpmetrics.phar --report-html=${ROOT_PATH}/${BUILD_PATH}/stats/ReportFramework.html ${ROOT_PATH}/phpOMS/ >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-php ${ROOT_PATH}/phpmetrics.phar --report-html=${ROOT_PATH}/${BUILD_PATH}/stats/ReportModules.html ${ROOT_PATH}/Modules/ >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
+php ${ROOT_PATH}/phpmetrics.phar --report-html=${ROOT_PATH}/${BUILD_PATH}/Framework/metrics/metrics.html ${ROOT_PATH}/phpOMS/ >> ${ROOT_PATH}/${BUILD_PATH}/Framework/build.log
+php ${ROOT_PATH}/phpmetrics.phar --report-html=${ROOT_PATH}/${BUILD_PATH}/Modules/metrics/metrics.html ${ROOT_PATH}/Modules/ >> ${ROOT_PATH}/${BUILD_PATH}/Modules/build.log
 
-php ${ROOT_PATH}/pdepend.phar --summary-xml=${ROOT_PATH}/${BUILD_PATH}/stats/phpOMSSummary.xml --jdepend-chart=${ROOT_PATH}/${BUILD_PATH}/stats/phpOMSDepend.svg --overview-pyramid=${ROOT_PATH}/${BUILD_PATH}/stats/phpOMSPryramid.svg ${ROOT_PATH}/phpOMS
-php ${ROOT_PATH}/pdepend.phar --summary-xml=${ROOT_PATH}/${BUILD_PATH}/stats/modulesSummary.xml --jdepend-chart=${ROOT_PATH}/${BUILD_PATH}/stats/modulesDepend.svg --overview-pyramid=${ROOT_PATH}/${BUILD_PATH}/stats/modulesPyramid.svg ${ROOT_PATH}/Modules
+php ${ROOT_PATH}/pdepend.phar --summary-xml=${ROOT_PATH}/${BUILD_PATH}/Framework/pdepend/pdepend.xml --jdepend-chart=${ROOT_PATH}/${BUILD_PATH}/Framework/pdepend/chart.svg --overview-pyramid=${ROOT_PATH}/${BUILD_PATH}/Framework/pdepend/pyramid.svg ${ROOT_PATH}/phpOMS
+php ${ROOT_PATH}/pdepend.phar --summary-xml=${ROOT_PATH}/${BUILD_PATH}/Modules/pdepend/pdepend.xml --jdepend-chart=${ROOT_PATH}/${BUILD_PATH}/Modules/pdepend/chart.svg --overview-pyramid=${ROOT_PATH}/${BUILD_PATH}/Modules/pdepend/pyramid.svg ${ROOT_PATH}/Modules
 
 # Documentation
 php ${ROOT_PATH}/phpDocumentor.phar -d ${ROOT_PATH} --ignore "*/phpOMS/Localization/*" -t ${ROOT_PATH}/${BUILD_PATH}/docs
 
 # Local inspection
-php phpcs.phar --report-file=${ROOT_PATH}/${BUILD_PATH}/logs/phpcsFramework.log --ignore=${ROOT_PATH}/phpOMS/Localization --standard=${ROOT_PATH}/${BUILD_PATH}/phpcs.xml ${ROOT_PATH}/phpOMS
-php phpcs.phar --report-file=${ROOT_PATH}/${BUILD_PATH}/logs/phpcsModules.log --standard=${ROOT_PATH}/${BUILD_PATH}/phpcs.xml ${ROOT_PATH}/Modules
+php phpcs.phar --report-file=${ROOT_PATH}/${BUILD_PATH}/Framework/phpcs/phpcs.log --ignore=${ROOT_PATH}/phpOMS/Localization --standard=${ROOT_PATH}/${BUILD_PATH}/phpcs.xml ${ROOT_PATH}/phpOMS
+php phpcs.phar --report-file=${ROOT_PATH}/${BUILD_PATH}/Modules/phpcs/phpcs.log --standard=${ROOT_PATH}/${BUILD_PATH}/phpcs.xml ${ROOT_PATH}/Modules
 #php phpmd.phar ${ROOT_PATH}/phpOMS xml ${ROOT_PATH}/${BUILD_PATH}/phpmd.xml --reportfile ${ROOT_PATH}/${BUILD_PATH}/logs/phpmdFramework.log -- bzip missing
 #php phpmd.phar ${ROOT_PATH}/Modules xml ${ROOT_PATH}/${BUILD_PATH}/phpmd.xml --reportfile ${ROOT_PATH}/${BUILD_PATH}/logs/phpmdModules.log -- bzip missing
-php phpcpd.phar ${ROOT_PATH}/phpOMS --exclude Localization --no-interaction > ${ROOT_PATH}/${BUILD_PATH}/logs/phpcpdFramework.log
-php phpcpd.phar ${ROOT_PATH}/Modules --no-interaction > ${ROOT_PATH}/${BUILD_PATH}/logs/phpcpdModules.log
+php phpcpd.phar ${ROOT_PATH}/phpOMS --exclude Localization --no-interaction > ${ROOT_PATH}/${BUILD_PATH}/Framework/phpcpd/phpcpd.log
+php phpcpd.phar ${ROOT_PATH}/Modules --no-interaction > ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcpd/phpcpd.log
 
 # Linting
 find ${ROOT_PATH}/phpOMS -name "*.php" | xargs -L1 php -l > ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log > ${ROOT_PATH}/${BUILD_PATH}/logs/phpLintFramework.log
+sed '/^No syntax.*/ d' < ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log > ${ROOT_PATH}/${BUILD_PATH}/Framework/linting/linting_php.log
 find ${ROOT_PATH}/Modules -name "*.php" | xargs -L1 php -l > ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log > ${ROOT_PATH}/${BUILD_PATH}/logs/phpLintModules.log
+sed '/^No syntax.*/ d' < ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log > ${ROOT_PATH}/${BUILD_PATH}/Modules/linting/linting_php.log
 rm ${ROOT_PATH}/${BUILD_PATH}/logs/temp.log
-find ${ROOT_PATH} -name "*.json" | xargs -L1 jsonlint -q > ${ROOT_PATH}/${BUILD_PATH}/logs/jsonLint.log
+find ${ROOT_PATH} -name "*.json" | xargs -L1 jsonlint -q > ${ROOT_PATH}/${BUILD_PATH}/Modules/linting/linting_json.log
 
 # External inspection and build
 #curl -H "Content-Type: application/json" -X POST -d '{"branch":"$GIT_BRANCH","access_token":"$SCRUTINIZER_TOKEN"}' https://scrutinizer-ci.com/api/repositories/g/spl1nes/oms/inspections?access_token=${SCRUTINIZER_TOKEN}
@@ -66,13 +66,12 @@ TAG[18]="<embed.*\/>"
 
 for i in "${TAG[@]}"
 do
-    echo "\nInsepcting $i:\n" >> ${ROOT_PATH}/${BUILD_PATH}/logs/htmlinspection.log
-    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/phpOMS >> ${ROOT_PATH}/${BUILD_PATH}/logs/htmlinspection.log
-    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/Modules >> ${ROOT_PATH}/${BUILD_PATH}/logs/htmlinspection.log
+    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/phpOMS >> ${ROOT_PATH}/${BUILD_PATH}/Framework/html/inspection.log
+    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/Modules >> ${ROOT_PATH}/${BUILD_PATH}/Modules/html/inspection.log
 done
 
 # Find empty attributes
-grep -rln "=\"\"" --include \*.tpl.php ${ROOT_PATH} > ${ROOT_PATH}/${BUILD_PATH}/logs/unusedattributes.log
+grep -rln "=\"\"" --include \*.tpl.php ${ROOT_PATH} > ${ROOT_PATH}/${BUILD_PATH}/Modules/html/attributes_empty.log
 
 # Html tag inspection
 . ${ROOT_PATH}/${BUILD_PATH}/security.sh
