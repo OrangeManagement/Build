@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Defining paths & basics
-ROOT_PATH="/var/www/html"
+BASE_PATH="/var/www/html"
+ROOT_PATH="${BASE_PATH}/Orange-Management"
 BUILD_PATH="Build"
 RELEASE_PATH="Release"
 TEST_PATH="Tests"
-DB_PASSWORD="123456"
 WEB_URL="http://orange-management.de"
 MAIL_ADDR=""
 

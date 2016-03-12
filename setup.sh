@@ -4,8 +4,18 @@
 . ${ROOT_PATH}/private.sh
 
 # Previous cleanup
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/Framework
-rm -r -f ${ROOT_PATH}/${BUILD_PATH}/Modules
+rm -r -f ${ROOT_PATH}
+
+# Handling git
+for i in "${GIT_BRANCH[@]}"
+do
+    if [ "$i" -eq 1 ]
+    then
+        cd ${ROOT_PATH}
+    fi
+
+    git clone $i
+done
 
 # Creating directories
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/logs
@@ -24,23 +34,15 @@ mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcpd
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/linting
 mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/html
 
-# Handling git
-cd ${ROOT_PATH} && git fetch --all && git reset --hard origin/${GIT_BRANCH} && git pull >> ${ROOT_PATH}/${BUILD_PATH}/logs/build.log
-find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
-
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
 
-# Change path for correct script inclusion
-cd ${ROOT_PATH}/${BUILD_PATH}
-
-# Setting up demo
 # Setting up database for demo and testing
-mysql -e 'drop database if exists oms;' -u root -p${DB_PASSWORD}
-mysql -e 'create database oms;' -u root -p${DB_PASSWORD}
+mysql -e 'drop database if exists oms;' -u ${DB_USER} -p${DB_PASSWORD}
+mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 #echo "USE mysql;\nUPDATE user SET password=PASSWORD('123456') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
 
-curl --connect-timeout 600 --max-time 601 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -A "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" ${WEB_URL}/Admin/Install
+curl --connect-timeout 600 --max-time 601 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -A "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" ${WEB_URL}/Install
 
 # Downloading tools
 wget -nc https://getcomposer.org/composer.phar

@@ -3,7 +3,6 @@
 # Include
 . var.sh
 . ${ROOT_PATH}/private.sh
-. ${ROOT_PATH}/${BUILD_PATH}/setup.sh
 
 # Executing unit tests
 php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
