@@ -50,8 +50,9 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 #echo "USE mysql;\nUPDATE user SET password=PASSWORD('123456') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
 
 cd ${ROOT_PATH}
+touch private.php
 
-curl --connect-timeout 600 --max-time 601 -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' -A "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36" ${WEB_URL}/Install
+curl --connect-timeout 600 --max-time 601 ${WEB_URL}/Install
 
 # Downloading tools
 wget -nc https://getcomposer.org/composer.phar
