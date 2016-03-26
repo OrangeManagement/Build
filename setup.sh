@@ -4,16 +4,24 @@
 
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
+mkdir -p ${ROOT_PATH}
 
 # Handling git
-for i in "${GIT_BRANCH[@]}"
+c=0;
+for i in "${GITHUB_URL[@]}"
 do
-    if [ "$i" -eq 1 ]
+    if [ "$c" -eq 0 ]
+    then
+        cd ${BASE_PATH}
+    fi
+
+    if [ "$c" -eq 1 ]
     then
         cd ${ROOT_PATH}
     fi
 
-    git clone $i
+    git clone -b ${GIT_BRANCH} $i
+    c=$((c+1))
 done
 
 # Creating directories
