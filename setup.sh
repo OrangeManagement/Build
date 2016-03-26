@@ -52,7 +52,7 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 cd ${ROOT_PATH}
 touch private.php
 
-curl --connect-timeout 600 --max-time 601 ${WEB_URL}/Install
+curl --connect-timeout 600 --max-time 601 -L ${WEB_URL}/Install
 
 # Downloading tools
 wget -nc https://getcomposer.org/composer.phar
