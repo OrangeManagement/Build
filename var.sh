@@ -8,6 +8,8 @@ RELEASE_PATH="Release"
 TEST_PATH="Tests"
 WEB_URL="http://orange-management.de"
 MAIL_ADDR=""
+DB_USER="root"
+DB_PASSWORD="123456"
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Orange-Management/Orange-Management.git"

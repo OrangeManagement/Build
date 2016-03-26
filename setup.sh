@@ -1,7 +1,6 @@
 #!/bin/bash
 
 . var.sh
-. ${ROOT_PATH}/private.sh
 
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
