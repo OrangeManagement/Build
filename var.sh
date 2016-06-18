@@ -30,6 +30,7 @@ GITHUB_URL[14]="https://github.com/Orange-Management/Socket.git"
 GITHUB_URL[15]="https://github.com/Orange-Management/Tests.git"
 GITHUB_URL[16]="https://github.com/Orange-Management/Web.git"
 GITHUB_URL[17]="https://github.com/Orange-Management/Website.git"
+GITHUB_URL[18]="https://github.com/Orange-Management/GitDashboard.git"
 
 GIT_BRANCH="develop"
 
