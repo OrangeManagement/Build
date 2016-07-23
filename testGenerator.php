@@ -12,7 +12,7 @@ function listFolderFiles($dir, $extension)
     foreach ($ffs as $ff) {
         if ($ff !== '.' && $ff !== '..') {
             if (is_dir($dir . '/' . $ff)) {
-                $files += listFolderFiles($dir . '/' . $ff, $extension);
+                $files = array_merge($files, listFolderFiles($dir . '/' . $ff, $extension));
             } else {
                 if (endsWith($ff, $extension)) {
                     $files[] = $dir . '/' . $ff;
@@ -49,9 +49,9 @@ foreach ($files as $file) {
     }
 }
 
-// PHP tests
+// JS tests
 $base  = __DIR__ . '/../jsOMS';
-$files = listFolderFiles($base, '.php');
+$files = listFolderFiles($base, '.js');
 $testBase = __DIR__ . '/../Tests/JS/Framework';
 
 foreach ($files as $file) {
