@@ -41,13 +41,16 @@ foreach ($files as $file) {
         && stripos($subdir, 'Enum') === false
         && stripos($subdir, 'Null') === false
         && stripos($subdir, 'Interface') === false
+        && stripos($subdir, 'Trait') === false
         && stripos($subdir, 'Abstract') === false
     ) {
         if (!file_exists($testPath)) {
-            $namespace = str_replace('/', '\\', $split[0]);
-            $namespace = explode('\\', $namespace);
-            $classname = $namespace[count($namespace) - 1] . 'Test';
+            $namespace    = str_replace('/', '\\', $split[0]);
+            $namespace    = explode('\\', $namespace);
+            $classnameSrc = $namespace[count($namespace) - 1];
+            $classname    = $classnameSrc . 'Test';
             unset($namespace[count($namespace) - 1]);
+            $use        = trim('phpOMS\\' . trim(implode('\\', $namespace), '\\') . '\\' . $classnameSrc, '\\');
             $namespace  = trim('Tests\PHPUnit\Framework\\' . trim(implode('\\', $namespace), '\\'), '\\');
             $autoloader = str_repeat('/..', count(explode('\\', $namespace)));
 
@@ -72,6 +75,8 @@ foreach ($files as $file) {
                 . 'namespace ' . $namespace . ';' . PHP_EOL
                 . '' . PHP_EOL
                 . 'require_once __DIR__ . \'' . $autoloader . '/phpOMS/Autoloader.php\';' . PHP_EOL
+                . '' . PHP_EOL
+                . 'use ' . $use . ';' . PHP_EOL
                 . '' . PHP_EOL
                 . 'class ' . $classname . ' extends \PHPUnit_Framework_TestCase' . PHP_EOL
                 . '{' . PHP_EOL
@@ -98,6 +103,7 @@ foreach ($files as $file) {
         && stripos($subdir, 'Enum') === false
         && stripos($subdir, 'Null') === false
         && stripos($subdir, 'Interface') === false
+        && stripos($subdir, 'Trait') === false
         && stripos($subdir, 'Abstract') === false
     ) {
         if (!file_exists($testPath)) {
