@@ -37,6 +37,8 @@ foreach ($files as $file) {
 
     if (stripos($subdir, 'Status.php') === false
         && stripos($subdir, 'Type.php') === false
+        && stripos($subdir, 'Layout.php') === false
+        && stripos($subdir, 'Level.php') === false
         && stripos($subdir, 'Status') === false
         && stripos($subdir, 'Enum') === false
         && stripos($subdir, 'Null') === false
@@ -99,6 +101,8 @@ foreach ($files as $file) {
 
     if (stripos($subdir, 'Status.php') === false
         && stripos($subdir, 'Type.php') === false
+        && stripos($subdir, 'Layout.php') === false
+        && stripos($subdir, 'Level.php') === false
         && stripos($subdir, 'Status') === false
         && stripos($subdir, 'Enum') === false
         && stripos($subdir, 'Null') === false
