@@ -31,6 +31,7 @@ GITHUB_URL[15]="https://github.com/Orange-Management/Tests.git"
 GITHUB_URL[16]="https://github.com/Orange-Management/Web.git"
 GITHUB_URL[17]="https://github.com/Orange-Management/Website.git"
 GITHUB_URL[18]="https://github.com/Orange-Management/GitDashboard.git"
+GITHUB_URL[19]="https://github.com/Orange-Management/Documentor.git"
 
 GIT_BRANCH="develop"
 
