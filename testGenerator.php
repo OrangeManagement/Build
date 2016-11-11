@@ -56,7 +56,10 @@ foreach ($files as $file) {
             $namespace  = trim('Tests\PHPUnit\Framework\\' . trim(implode('\\', $namespace), '\\'), '\\');
             $autoloader = str_repeat('/..', count(explode('\\', $namespace)));
 
-            mkdir(dirname($testPath), 0777, true);
+            if(!file_exists(dirname($testPAth))) {
+                mkdir(dirname($testPath), 0777, true);
+            }
+            
             file_put_contents($testPath,
                 '<?php' . PHP_EOL
                 . '/**' . PHP_EOL
