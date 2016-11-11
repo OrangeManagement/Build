@@ -59,7 +59,7 @@ foreach ($files as $file) {
             if(!file_exists(dirname($testPAth))) {
                 mkdir(dirname($testPath), 0777, true);
             }
-            
+
             file_put_contents($testPath,
                 '<?php' . PHP_EOL
                 . '/**' . PHP_EOL
@@ -85,6 +85,10 @@ foreach ($files as $file) {
                 . '' . PHP_EOL
                 . 'class ' . $classname . ' extends \PHPUnit_Framework_TestCase' . PHP_EOL
                 . '{' . PHP_EOL
+                . '    public function testPlaceholder()' . PHP_EOL
+	            . '    {' . PHP_EOL
+		        . '        self::markTestIncomplete();' . PHP_EOL
+	            . '    }' . PHP_EOL
                 . '}' . PHP_EOL
             );
         }
@@ -116,7 +120,10 @@ foreach ($files as $file) {
         if (!file_exists($testPath)) {
             $name = explode('/', $split[0]);
 
-            mkdir(dirname($testPath), 0777, true);
+            if(!file_exists(dirname($testPath))) {
+                mkdir(dirname($testPath), 0777, true);
+            }
+
             file_put_contents($testPath,
                 'describe(\'' . $name[count($name) - 1] . 'Test\', function ()' . PHP_EOL
                 . '{' . PHP_EOL
