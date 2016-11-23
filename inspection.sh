@@ -7,6 +7,7 @@
 php ${ROOT_PATH}/phpunit.phar --configuration ${ROOT_PATH}/${TEST_PATH}/PHPUnit/phpunit_default.xml > ${ROOT_PATH}/${BUILD_PATH}/logs/phpunit.log
 #phpdbg -qrr phpunit.phar --configuration Tests/PHPUnit/phpunit_default.xml
 #php Documentor/src/index.php -s C:\Users\coyle\Desktop\Orange-Management\phpOMS -d C:\Users\coyle\Desktop\outtest -c C:\Users\coyle\Desktop\Orange-Management\Build\log\coverage.xml -u C:\Users\coyle\Desktop\Orange-Management\Build\log\test.xml -g C:\Users\coyle\Desktop\Orange-Management\Developer-Guide
+#phpdbg -qrr phpunit.phar Tests/PHPUnit/Framework/Math/Matrix/MatrixTest.php --bootstrap Tests/PHPUnit/Bootstrap.php
 
 # Stats & metrics
 php ${ROOT_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${ROOT_PATH}/${BUILD_PATH}/Framework/phploc.log
