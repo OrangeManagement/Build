@@ -65,7 +65,7 @@ foreach ($files as $file) {
                 . '/**' . PHP_EOL
                 . ' * Orange Management' . PHP_EOL
                 . ' *' . PHP_EOL
-                . ' * PHP Version 7.0' . PHP_EOL
+                . ' * PHP Version 7.1' . PHP_EOL
                 . ' *' . PHP_EOL
                 . ' * @category   TBD' . PHP_EOL
                 . ' * @package    TBD' . PHP_EOL
