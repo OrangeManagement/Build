@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../../config.sh
+. config.sh
 
 # Html tag inspection
 TAG[0]="<\/html>"

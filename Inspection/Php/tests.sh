@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../../config.sh
+. config.sh
 
 php ${TOOLS_PATH}/phpunit.phar --configuration ${TEST_PATH}/PHPUnit/phpunit_default.xml > ${INSPECTION_PATH}/logs/phpunit.log
 #phpdbg -qrr phpunit.phar --configuration Tests/PHPUnit/phpunit_default.xml

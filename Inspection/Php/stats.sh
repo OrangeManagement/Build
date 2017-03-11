@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../../config.sh
+. config.sh
 
 php ${TOOLS_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${INSPECTION_PATH}/Framework/phploc.log
 php ${TOOLS_PATH}/phploc.phar ${ROOT_PATH}/Modules/ > ${INSPECTION_PATH}/Modules/phploc.log
