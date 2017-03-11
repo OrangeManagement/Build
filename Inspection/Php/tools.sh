@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../../config.s
+. ../../config.sh
 
 php ${TOOLS_PATH}/phpcs.phar --report-file=${INSPECTION_PATH}/Framework/phpcs/phpcs.log --ignore=${ROOT_PATH}/phpOMS/Localization --standard=${INSPECTION_PATH}/Configs/phpcs.xml ${ROOT_PATH}/phpOMS
 php ${TOOLS_PATH}/phpcs.phar --report-file=${INSPECTION_PATH}/Modules/phpcs/phpcs.log --standard=${INSPECTION_PATH}/Configs/phpcs.xml ${ROOT_PATH}/Modules
