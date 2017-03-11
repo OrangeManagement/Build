@@ -12,9 +12,6 @@ mkdir -p ${INSPECTION_PATH}
 rm -r -f ${TOOLS_PATH}
 mkdir -p ${TOOLS_PATH}
 
-rm -r -f ${BUILD_PATH}
-mkdir -p ${BUILD_PATH}
-
 # Handling git
 c=0;
 for i in "${GITHUB_URL[@]}"
@@ -75,6 +72,8 @@ wget -nc http://static.phpmd.org/php/latest/phpmd.phar
 wget -nc https://phar.phpunit.de/phpcpd.phar
 wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
 tar -zxvf compiler-latest.tar.gz
+
+cp ${BUILD_PATH}/Configs/composer.json ${TOOLS_PATH}/composer.json
 
 php composer.phar install
 

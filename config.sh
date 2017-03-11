@@ -3,6 +3,7 @@
 # Paths
 BASE_PATH="/var/www/html"
 ROOT_PATH="/var/www/html/Orange-Management"
+BUILD_PATH="/var/www/Build"
 
 TOOLS_PATH="/var/www/html/Tools"
 RELEASE_PATH="/var/www/html/Release"

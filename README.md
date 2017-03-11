@@ -15,6 +15,18 @@ The last feature is the backend and documentation generation based on the DocBlo
 * Modify the `config.sh` file to your needs
 * Run `setup.sh`
 
+## Dependencies
+
+The build system will take care of most requirements, the following tools and commands have to be available on the system.
+
+* npm
+* git
+* wget
+* curl
+* grep
+* xargs
+* sed
+
 # Usage
 
 * Run `build_dev.sh`
