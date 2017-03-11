@@ -24,3 +24,5 @@ find ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Dev -name "*.css" -type f -del
 find ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Dev -name "*.min.js" -type f -delete
 find ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Dev -name "private.php" -type f -delete
 find ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Dev -name "private.sh" -type f -delete
+
+# Documentation

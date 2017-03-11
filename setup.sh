@@ -1,10 +1,19 @@
 #!/bin/bash
 
-. var.sh
+. config.sh
 
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
 mkdir -p ${ROOT_PATH}
+
+rm -r -f ${INSPECTION_PATH}
+mkdir -p ${INSPECTION_PATH}
+
+rm -r -f ${TOOLS_PATH}
+mkdir -p ${TOOLS_PATH}
+
+rm -r -f ${BUILD_PATH}
+mkdir -p ${BUILD_PATH}
 
 # Handling git
 c=0;
@@ -25,21 +34,21 @@ do
 done
 
 # Creating directories
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/logs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/logs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/metrics
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/pdepend
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/phpcs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/phpcpd
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/linting
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Framework/html
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/logs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/metrics
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/pdepend
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcs
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/phpcpd
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/linting
-mkdir -p ${ROOT_PATH}/${BUILD_PATH}/Modules/html
+mkdir -p ${INSPECTION_PATH}/logs
+mkdir -p ${INSPECTION_PATH}/Framework/logs
+mkdir -p ${INSPECTION_PATH}/Framework/metrics
+mkdir -p ${INSPECTION_PATH}/Framework/pdepend
+mkdir -p ${INSPECTION_PATH}/Framework/phpcs
+mkdir -p ${INSPECTION_PATH}/Framework/phpcpd
+mkdir -p ${INSPECTION_PATH}/Framework/linting
+mkdir -p ${INSPECTION_PATH}/Framework/html
+mkdir -p ${INSPECTION_PATH}/Modules/logs
+mkdir -p ${INSPECTION_PATH}/Modules/metrics
+mkdir -p ${INSPECTION_PATH}/Modules/pdepend
+mkdir -p ${INSPECTION_PATH}/Modules/phpcs
+mkdir -p ${INSPECTION_PATH}/Modules/phpcpd
+mkdir -p ${INSPECTION_PATH}/Modules/linting
+mkdir -p ${INSPECTION_PATH}/Modules/html
 
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
@@ -51,6 +60,8 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 
 cd ${ROOT_PATH}
 touch private.php
+
+cd ${TOOLS_PATH}
 
 # Downloading tools
 wget -nc https://getcomposer.org/composer.phar
