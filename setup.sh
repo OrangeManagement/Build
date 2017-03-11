@@ -81,7 +81,7 @@ cp ${BUILD_PATH}/Configs/composer.json ${TOOLS_PATH}/composer.json
 
 php composer.phar install
 
-ln -s /var/www/html/Tools/vendor /var/www/html/Orange-Management/vendor
+ln -s ${TOOLS_PATH}/vendor ${ROOT_PATH}/vendor
 
 # Installing tools
 [[ $(jsonlint -h) != *"Usage: jsonlint"* ]] && npm install jsonlint -g
