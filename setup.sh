@@ -39,6 +39,7 @@ mkdir -p ${INSPECTION_PATH}/Framework/phpcs
 mkdir -p ${INSPECTION_PATH}/Framework/phpcpd
 mkdir -p ${INSPECTION_PATH}/Framework/linting
 mkdir -p ${INSPECTION_PATH}/Framework/html
+
 mkdir -p ${INSPECTION_PATH}/Modules/logs
 mkdir -p ${INSPECTION_PATH}/Modules/metrics
 mkdir -p ${INSPECTION_PATH}/Modules/pdepend
@@ -46,6 +47,9 @@ mkdir -p ${INSPECTION_PATH}/Modules/phpcs
 mkdir -p ${INSPECTION_PATH}/Modules/phpcpd
 mkdir -p ${INSPECTION_PATH}/Modules/linting
 mkdir -p ${INSPECTION_PATH}/Modules/html
+
+mkdir -p ${INSPECTION_PATH}/Test/Php
+mkdir -p ${INSPECTION_PATH}/Test/Js
 
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
