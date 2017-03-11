@@ -26,6 +26,9 @@ The build system will take care of most requirements, the following tools and co
 * grep
 * xargs
 * sed
+* php
+* php-dom
+* php-xdebug
 
 # Usage
 
