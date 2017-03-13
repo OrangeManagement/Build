@@ -9,9 +9,6 @@ mkdir -p ${ROOT_PATH}
 rm -r -f ${INSPECTION_PATH}
 mkdir -p ${INSPECTION_PATH}
 
-rm -r -f ${TOOLS_PATH}
-mkdir -p ${TOOLS_PATH}
-
 # Handling git
 c=0;
 for i in "${GITHUB_URL[@]}"
@@ -62,24 +59,28 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 cd ${ROOT_PATH}
 touch private.php
 
-cd ${TOOLS_PATH}
+if [ ! -d "$TOOLS_PATH" ]; then
+    mkdir -p ${TOOLS_PATH}
 
-# Downloading tools
-wget -nc https://getcomposer.org/composer.phar
-wget -nc https://phar.phpunit.de/phploc.phar
-wget -nc https://phar.phpunit.de/phpunit.phar
-wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
-wget -nc http://phpdoc.org/phpDocumentor.phar
-wget -nc http://static.pdepend.org/php/latest/pdepend.phar
-wget -nc https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-wget -nc http://static.phpmd.org/php/latest/phpmd.phar
-wget -nc https://phar.phpunit.de/phpcpd.phar
-wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-tar -zxvf compiler-latest.tar.gz
+    cd ${TOOLS_PATH}
 
-cp ${BUILD_PATH}/Configs/composer.json ${TOOLS_PATH}/composer.json
+    # Downloading tools
+    wget -nc https://getcomposer.org/composer.phar
+    wget -nc https://phar.phpunit.de/phploc.phar
+    wget -nc https://phar.phpunit.de/phpunit.phar
+    wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
+    wget -nc http://phpdoc.org/phpDocumentor.phar
+    wget -nc http://static.pdepend.org/php/latest/pdepend.phar
+    wget -nc https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+    wget -nc http://static.phpmd.org/php/latest/phpmd.phar
+    wget -nc https://phar.phpunit.de/phpcpd.phar
+    wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
+    tar -zxvf compiler-latest.tar.gz
 
-php composer.phar install
+    cp ${BUILD_PATH}/Configs/composer.json ${TOOLS_PATH}/composer.json
+
+    php composer.phar install
+fi
 
 ln -s ${TOOLS_PATH}/vendor ${ROOT_PATH}/vendor
 
