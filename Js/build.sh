@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. config
+. config.sh
 
 . Tools/buildBase.sh
 . Tools/buildLib.sh
