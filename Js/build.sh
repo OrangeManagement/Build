@@ -2,9 +2,9 @@
 
 . config.sh
 
-. Tools/buildBase.sh
-. Tools/buildLib.sh
-. Tools/buildUI.sh
-. Tools/build3D.sh
-. Tools/buildChart.sh
-. Tools/buildSocket.sh
+. Js/buildBase.sh
+. Js/buildLib.sh
+. Js/buildUI.sh
+. Js/build3D.sh
+. Js/buildChart.sh
+. Js/buildSocket.sh
