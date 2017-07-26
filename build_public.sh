@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Include vars
-. var.sh
+# Include config
+. config.sh
 
 # Removing unnecessary attribute quotes (only for end user release not for dev release)
 find ${ROOT_PATH} -name "*tpl.php" | xargs -L1 sed -i -e 's/(name=")([a-zA-Z0-9\-\_]*)(")/name=\2/g'

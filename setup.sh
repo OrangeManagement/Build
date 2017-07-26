@@ -51,11 +51,6 @@ mkdir -p ${INSPECTION_PATH}/Test/Js
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
 
-# Setting up database for demo and testing
-mysql -e 'drop database if exists oms;' -u ${DB_USER} -p${DB_PASSWORD}
-mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
-#echo "USE mysql;\nUPDATE user SET password=PASSWORD('123456') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
-
 cd ${ROOT_PATH}
 touch private.php
 

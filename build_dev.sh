@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Include vars
-. var.sh
+# Include config
+. config.sh
 
 # Creating release path
 rm -r -f ${ROOT_PATH}/${RELEASE_PATH}/${VERSION_HASH}/Dev

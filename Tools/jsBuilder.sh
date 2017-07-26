@@ -1,27 +1,20 @@
 #!/bin/bash
 
-# JS files
-LIB_SRC[0]="/var/www/html/Orange-Management/jsOMS/Uri/Http.js"
-LIB_SRC[1]="/var/www/html/Orange-Management/jsOMS/Uri/UriFactory.js"
-
-# JS files
-LIB_OUT="/home/pi/output.js"
-
-echo "" > ${LIB_OUT}
-for i in "${LIB_SRC[@]}"
+echo "" > ${OUT}
+for i in "${SRC[@]}"
 do
-    cat $i >> ${LIB_OUT}
-    echo "" >> ${LIB_OUT}
+    cat $i >> ${OUT}
+    echo "" >> ${OUT}
 done
 
 # Remove spaces at end of line
-sed -i -e 's/[[:blank:]]*$//g' ${LIB_OUT}
+sed -i -e 's/[[:blank:]]*$//g' ${OUT}
 # Make single line
-sed -i -e ':a;N;$!ba;s/\n/ /g' ${LIB_OUT}
+sed -i -e ':a;N;$!ba;s/\n/ /g' ${OUT}
 # Remove multiple spaces
-sed -i -e 's/  */ /g' ${LIB_OUT}
+sed -i -e 's/  */ /g' ${OUT}
 # Remove double js initialization
-sed -i -e 's/(function *(jsOMS) *{ *"use strict";//g' ${LIB_OUT}
-sed -i -e 's/} *(window.jsOMS = window.jsOMS || {}));//g' ${LIB_OUT}
+sed -i -e 's/(function *(jsOMS) *{ *"use strict";//g' ${OUT}
+sed -i -e 's/} *(window.jsOMS = window.jsOMS || {}));//g' ${OUT}
 
-echo "(function(jsOMS){\"use strict\";$(cat ${LIB_OUT})}(window.jsOMS = window.jsOMS || {}));" > ${LIB_OUT}
+echo "(function(jsOMS){\"use strict\";$(cat ${OUT})}(window.jsOMS = window.jsOMS || {}));" > ${OUT}
