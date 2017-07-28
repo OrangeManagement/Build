@@ -11,7 +11,10 @@ done
 sed -i -e 's/[[:blank:]]*$//g' ${OUT}
 
 # Minimize
-java -jar ${TOOLS_PATH}/closure-compiler* --compilation_level SIMPLE_OPTIMIZATIONS --js ${OUT}
+java -jar ${TOOLS_PATH}/closure-compiler* --compilation_level SIMPLE_OPTIMIZATIONS --js ${OUT} --js_output_file ${OUT}.min
+
+rm ${OUT}
+mv ${OUT}.min ${OUT}
 
 # Make single line
 sed -i -e ':a;N;$!ba;s/\n/ /g' ${OUT}
