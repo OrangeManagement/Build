@@ -9,6 +9,10 @@ done
 
 # Remove spaces at end of line
 sed -i -e 's/[[:blank:]]*$//g' ${OUT}
+
+# Minimize
+java -jar ${TOOLS_PATH}/closure-compiler* --compilation_level SIMPLE_OPTIMIZATIONS --js ${OUT}
+
 # Make single line
 sed -i -e ':a;N;$!ba;s/\n/ /g' ${OUT}
 # Remove multiple spaces
@@ -18,4 +22,3 @@ sed -i -e 's/(function *(jsOMS) *{ *"use strict";//g' ${OUT}
 sed -i -e 's/} *(window.jsOMS = window.jsOMS || {}));//g' ${OUT}
 
 echo "(function(jsOMS){\"use strict\";$(cat ${OUT})}(window.jsOMS = window.jsOMS || {}));" > ${OUT}
-java -jar ${TOOLS_PATH}/closure-compiler* --compilation_level SIMPLE_OPTIMIZATIONS --js ${OUT}
