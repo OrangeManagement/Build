@@ -62,8 +62,6 @@ foreach ($files as $file) {
                 . ' *' . PHP_EOL
                 . ' * @category   TBD' . PHP_EOL
                 . ' * @package    TBD' . PHP_EOL
-                . ' * @author     OMS Development Team <dev@oms.com>' . PHP_EOL
-                . ' * @author     Dennis Eichhorn <d.eichhorn@oms.com>' . PHP_EOL
                 . ' * @copyright  Dennis Eichhorn' . PHP_EOL
                 . ' * @license    OMS License 1.0' . PHP_EOL
                 . ' * @version    1.0.0' . PHP_EOL
