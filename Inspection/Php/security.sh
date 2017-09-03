@@ -31,6 +31,8 @@ CODE[24]="_COOKIE"
 CODE[25]="_FILES"
 CODE[26]="unlink"
 CODE[27]="action=\""
+CODE[28]="ReflectionClass"
+CODE[29]="TestUtils"
 
 for i in "${CODE[@]}"
 do
