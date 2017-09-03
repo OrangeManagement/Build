@@ -44,6 +44,6 @@ done
 
 # PHP strict type
 grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Framework/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Modules/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Model/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Web/strict_missing_php.log
+grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Modules > ${INSPECTION_PATH}/Modules/strict_missing_php.log
+grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Model > ${INSPECTION_PATH}/Model/strict_missing_php.log
+grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/strict_missing_php.log
