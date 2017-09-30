@@ -25,9 +25,9 @@ function listFolderFiles($dir, $extension)
 }
 
 // PHP tests
-$base     = __DIR__ . '/../phpOMS';
+$base     = __DIR__ . '/../../phpOMS';
 $files    = listFolderFiles($base, '.php');
-$testBase = __DIR__ . '/../Tests/PHPUnit/Framework';
+$testBase = __DIR__ . '/../../Tests/PHPUnit/Framework';
 
 foreach ($files as $file) {
     $file     = str_replace($base, '', $file);
@@ -74,7 +74,7 @@ foreach ($files as $file) {
                 . '' . PHP_EOL
                 . 'use ' . $use . ';' . PHP_EOL
                 . '' . PHP_EOL
-                . 'class ' . $classname . ' extends \PHPUnit_Framework_TestCase' . PHP_EOL
+                . 'class ' . $classname . ' extends \PHPUnit\Framework\TestCase' . PHP_EOL
                 . '{' . PHP_EOL
                 . '    public function testPlaceholder()' . PHP_EOL
 	            . '    {' . PHP_EOL
@@ -87,9 +87,9 @@ foreach ($files as $file) {
 }
 
 // JS tests
-$base     = __DIR__ . '/../jsOMS';
+$base     = __DIR__ . '/../../jsOMS';
 $files    = listFolderFiles($base, '.js');
-$testBase = __DIR__ . '/../Tests/JS/Framework';
+$testBase = __DIR__ . '/../../Tests/JS/Framework';
 
 foreach ($files as $file) {
     $file     = str_replace($base, '', $file);
