@@ -77,9 +77,9 @@ foreach ($files as $file) {
                 . 'class ' . $classname . ' extends \PHPUnit\Framework\TestCase' . PHP_EOL
                 . '{' . PHP_EOL
                 . '    public function testPlaceholder()' . PHP_EOL
-	            . '    {' . PHP_EOL
-		        . '        self::markTestIncomplete();' . PHP_EOL
-	            . '    }' . PHP_EOL
+                . '    {' . PHP_EOL
+                . '        self::markTestIncomplete();' . PHP_EOL
+                . '    }' . PHP_EOL
                 . '}' . PHP_EOL
             );
         }
