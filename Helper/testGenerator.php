@@ -49,7 +49,7 @@ foreach ($files as $file) {
             $namespace  = trim('Tests\PHPUnit\Framework\\' . trim(implode('\\', $namespace), '\\'), '\\');
             $autoloader = str_repeat('/..', count(explode('\\', $namespace)));
 
-            if(!file_exists(dirname($testPath))) {
+            if (!file_exists(dirname($testPath))) {
                 mkdir(dirname($testPath), 0777, true);
             }
 
@@ -104,7 +104,7 @@ foreach ($files as $file) {
         if (!file_exists($testPath)) {
             $name = explode('/', $split[0]);
 
-            if(!file_exists(dirname($testPath))) {
+            if (!file_exists(dirname($testPath))) {
                 mkdir(dirname($testPath), 0777, true);
             }
 
