@@ -48,6 +48,11 @@ mkdir -p ${INSPECTION_PATH}/Modules/phpcpd
 mkdir -p ${INSPECTION_PATH}/Modules/linting
 mkdir -p ${INSPECTION_PATH}/Modules/html
 
+mkdir -p ${INSPECTION_PATH}/Framework
+mkdir -p ${INSPECTION_PATH}/Web
+mkdir -p ${INSPECTION_PATH}/Model
+mkdir -p ${INSPECTION_PATH}/Modules
+
 mkdir -p ${INSPECTION_PATH}/Test/Php
 mkdir -p ${INSPECTION_PATH}/Test/Js
 
