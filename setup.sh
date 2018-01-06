@@ -53,9 +53,6 @@ chmod -R 777 ${ROOT_PATH}
 
 cd ${ROOT_PATH}
 
-# Add subtree remotes
-. Helper/defineSubtrees.sh
-
 # Setup tools for inspection
 if [ ! -d "$TOOLS_PATH" ]; then
     mkdir -p ${TOOLS_PATH}
