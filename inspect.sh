@@ -29,4 +29,4 @@ php ${TOOLS_PATH}/phpunit.phar -v --configuration ${TEST_PATH}/PHPUnit/phpunit_d
 . Inspection/Php/security.sh
 
 # Documentation
-php ${TOOLS_PATH}/documentor.phar -s ${ROOT_PATH}/phpOMS -d ${BASE_PATH}/Inspection/Test/Php/docblock -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -b http://orange-management.de/Inspection/Test/Php/docblock
+php ${TOOLS_PATH}/documentor.phar -s ${ROOT_PATH}/phpOMS -d ${BASE_PATH}/Inspection/Test/Php/docblock -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -b http://docs.orange-management.de
