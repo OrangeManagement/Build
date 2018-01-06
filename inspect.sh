@@ -12,7 +12,7 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 #. Js/build.sh
 
 # Executing unit tests
-. Inspection/Php/tests.sh
+php ${TOOLS_PATH}/phpunit.phar -v --configuration ${TEST_PATH}/PHPUnit/phpunit_default.xml --log-junit ${INSPECTION_PATH}/Test/Php/junit_php.xml --testdox-html ${INSPECTION_PATH}/Test/Php/index.html --coverage-html ${INSPECTION_PATH}/Test/Php/coverage --coverage-clover ${INSPECTION_PATH}/Test/Php/coverage.xml > ${INSPECTION_PATH}/Test/Php/phpunit.log
 
 # Stats & metrics
 . Inspection/Php/stats.sh
@@ -27,3 +27,6 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 
 # Custom php inspections
 . Inspection/Php/security.sh
+
+# Documentation
+php ${TOOLS_PATH}/documentor.phar -s ${ROOT_PATH}/phpOMS -d ${BASE_PATH}/docblock -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -b http://orange-management.de/Inspection/Test/Php/docblock
