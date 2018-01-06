@@ -27,6 +27,9 @@ do
     c=$((c+1))
 done
 
+cd ${ROOT_PATH}
+git submodule update --init --recursive
+
 # Creating directories for inspection
 mkdir -p ${INSPECTION_PATH}/logs
 mkdir -p ${INSPECTION_PATH}/Framework/logs
@@ -68,7 +71,8 @@ if [ ! -d "$TOOLS_PATH" ]; then
     wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
     tar -zxvf compiler-latest.tar.gz
 
-    cp ${BUILD_PATH}/Configs/composer.json ${TOOLS_PATH}/composer.json
+    chmod -R 777 ${TOOLS_PATH}
+    cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
 
     php composer.phar install
 fi

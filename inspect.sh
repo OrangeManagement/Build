@@ -9,7 +9,7 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 #echo "USE mysql;\nUPDATE user SET password=PASSWORD('123456') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
 
 # Build js
-. Js/build.sh
+#. Js/build.sh
 
 # Executing unit tests
 . Inspection/Php/tests.sh
