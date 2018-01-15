@@ -8,7 +8,6 @@ BUILD_PATH="/var/www/Build"
 TOOLS_PATH="/var/www/html/Tools"
 RELEASE_PATH="/var/www/html/Release"
 INSPECTION_PATH="/var/www/html/Inspection"
-TEST_PATH="/var/www/html/Orange-Management/Tests"
 
 # Web
 WEB_URL="http://orange-management.de"
