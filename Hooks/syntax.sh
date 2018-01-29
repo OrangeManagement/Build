@@ -1,12 +1,29 @@
 git diff --cached --name-only | while read FILE; do
+
 if [[ "$FILE" =~ ^.+(php|inc|module|install|test)$ ]]; then
-    # Courtesy of swytsh from the comments below.
     if [[ -f $FILE ]]; then
+    
+        # php lint
         php -l "$FILE" 1> /dev/null
         if [ $? -ne 0 ]; then
-            echo -e "\e[1;31m\tAborting commit due to files with syntax errors.\e[0m" >&2
+            echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
+            exit 1
+        fi
+        
+        # phpcs
+        ./vendor/bin/phpcs --standard="./Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
+        if [ $? -ne 0 ]; then
+            echo -e "\e[1;31m\tCode Sniffer error.\e[0m" >&2
+            exit 1
+        fi
+        
+        # phpmd
+        ./vendor/bin/phpmd --standard="./Build/Config/phpmd.xml" --encoding=utf-8 -n -p $FILE
+        if [ $? -ne 0 ]; then
+            echo -e "\e[1;31m\tMess Detector error.\e[0m" >&2
             exit 1
         fi
     fi
 fi
+
 done || exit $?
