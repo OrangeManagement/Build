@@ -18,7 +18,7 @@ if [[ "$FILE" =~ ^.+(php|inc|module|install|test)$ ]]; then
         fi
         
         # phpmd
-        ./vendor/bin/phpmd --standard="./Build/Config/phpmd.xml" --encoding=utf-8 -n -p $FILE
+        ./vendor/bin/phpmd $FILE ./Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tMess Detector error.\e[0m" >&2
             exit 1
