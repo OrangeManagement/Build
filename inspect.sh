@@ -21,6 +21,9 @@ php ${TOOLS_PATH}/phpunit.phar -v --configuration ${ROOT_PATH}/tests/phpunit_def
 . Inspection/Php/linting.sh
 . Inspection/Json/linting.sh
 
+# Code style
+. Inspection/Php/style.sh
+
 # Custom html inspections
 . Inspection/Html/tags.sh
 . Inspection/Html/attributes.sh

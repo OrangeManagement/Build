@@ -71,6 +71,8 @@ if [ ! -d "$TOOLS_PATH" ]; then
     wget -nc https://getcomposer.org/composer.phar
     wget -nc https://phar.phpunit.de/phploc.phar
     wget -nc https://phar.phpunit.de/phpunit.phar
+    wget -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.2.2/phpcs.phar
+    wget -nc http://static.phpmd.org/php/latest/phpmd.phar
     wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
     wget -nc http://static.pdepend.org/php/latest/pdepend.phar
     wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
