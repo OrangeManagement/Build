@@ -4,6 +4,7 @@
 <exclude-pattern>*.tpl.php</exclude-pattern>
 <exclude-pattern>*Routes.php</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
+<exclude-pattern>*/Routes/*</exclude-pattern>
 <arg value="q"/>
 <rule ref="Generic.Classes.DuplicateClassName"/>
 <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
