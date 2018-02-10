@@ -3,6 +3,7 @@
 <description></description>
 <exclude-pattern>*.tpl.php</exclude-pattern>
 <exclude-pattern>*Routes.php</exclude-pattern>
+<exclude-pattern>*ObjLoader.js</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
 <exclude-pattern>*/Routes/*</exclude-pattern>
 <arg value="q"/>
@@ -91,7 +92,9 @@
 <rule ref="Squiz.WhiteSpace.CastSpacing"/>
 <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
 <!--<rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/> multiline object operator should be valid e.g. -> -->
-<rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+<rule ref="Squiz.WhiteSpace.OperatorSpacing">
+    <exclude-pattern>*Http.js</exclude-pattern><!-- Regex false positive -->
+</rule>
 <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
 <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
 <rule ref="Zend.Files.ClosingTag"/>
