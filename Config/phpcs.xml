@@ -68,7 +68,9 @@
 </rule>
 <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
 <rule ref="MySource.PHP.EvalObjectFactory"/>
-<rule ref="MySource.PHP.GetRequestData"/>
+<rule ref="MySource.PHP.GetRequestData">
+    <exclude-pattern>*Request.php</exclude-pattern>
+</rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
 <rule ref="PEAR.Commenting.FunctionComment">
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't need comments -->
