@@ -13,7 +13,7 @@ The last feature is the backend and documentation generation based on the DocBlo
 
 * Clone the repository somewhere save
 * Modify the `config.sh` file to your needs
-* Run `setup.sh`
+* Run `buildProject.sh`
 
 ## Dependencies
 
