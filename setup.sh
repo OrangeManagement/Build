@@ -4,7 +4,7 @@
 
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
-mkdir -p ${ROOT_PATH}
+rm -r -f ${BASE_PATH}/Website
 
 rm -r -f ${INSPECTION_PATH}
 mkdir -p ${INSPECTION_PATH}
