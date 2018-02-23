@@ -30,12 +30,6 @@ The build system will take care of most requirements, the following tools and co
 * php-dom
 * php-xdebug
 
-# Usage
-
-* Run `build_dev.sh`
-* Run `build_public.sh`
-* Run `inspection.sh`
-
 ## Inspections
 
 The following inspections are performed:
