@@ -9,26 +9,17 @@ mkdir -p ${ROOT_PATH}
 rm -r -f ${INSPECTION_PATH}
 mkdir -p ${INSPECTION_PATH}
 
+cd ${BASE_PATH}
+
 # Create git repositories
-c=0;
 for i in "${GITHUB_URL[@]}"
 do
-    if [ "$c" -eq 0 ]
-    then
-        cd ${BASE_PATH}
-    fi
-
-    if [ "$c" -eq 1 ]
-    then
-        cd ${ROOT_PATH}
-    fi
-
     git clone -b ${GIT_BRANCH} $i
-    c=$((c+1))
 done
 
 cd ${ROOT_PATH}
 git submodule update --init --recursive
+git submodule foreach checkout develop
 
 # Creating directories for inspection
 mkdir -p ${INSPECTION_PATH}/logs
