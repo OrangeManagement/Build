@@ -87,7 +87,9 @@
     </properties>
 </rule>
 <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+    <severity>3</severity>
+</rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
 <rule ref="PEAR.Commenting.FunctionComment">
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't need comments -->
