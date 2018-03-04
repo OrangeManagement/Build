@@ -2,6 +2,8 @@
 
 . ${BUILD_PATH}/config.sh
 
+echo "Start html tags inspection\n"
+
 # Html tag inspection
 TAG[0]="<\/html>"
 TAG[1]="<\/body>"

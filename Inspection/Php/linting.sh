@@ -2,6 +2,8 @@
 
 . ${BUILD_PATH}/config.sh
 
+echo "Start php linting inspection\n"
+
 find ${ROOT_PATH}/phpOMS -name "*.php" | xargs -L1 php -l > ${INSPECTION_PATH}/logs/temp.log
 sed '/^No syntax.*/ d' < ${INSPECTION_PATH}/logs/temp.log > ${INSPECTION_PATH}/Framework/linting/linting_php.log
 

@@ -2,6 +2,8 @@
 
 . ${BUILD_PATH}/config.sh
 
+echo "Start js security inspection\n"
+
 # JS code inspection
 CODE[0]="onload"
 CODE[1]="onclick"
