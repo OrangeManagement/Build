@@ -5,6 +5,9 @@
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
 rm -r -f ${BASE_PATH}/Website
+rm -r -f ${BASE_PATH}/phpOMS
+rm -r -f ${BASE_PATH}/jsOMS
+rm -r -f ${BASE_PATH}/cssOMS
 
 rm -r -f ${INSPECTION_PATH}
 mkdir -p ${INSPECTION_PATH}
@@ -19,7 +22,7 @@ done
 
 cd ${ROOT_PATH}
 git submodule update --init --recursive
-git submodule foreach checkout develop
+git submodule foreach git checkout develop
 
 # Creating directories for inspection
 mkdir -p ${INSPECTION_PATH}/logs

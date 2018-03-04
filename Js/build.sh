@@ -1,10 +1,10 @@
 #!/bin/bash
 
-. config.sh
+. ${BUILD_PATH}/config.sh
 
-. Js/buildBase.sh
-. Js/buildLib.sh
-. Js/buildUI.sh
-. Js/build3D.sh
-. Js/buildChart.sh
-. Js/buildSocket.sh
+. ${BUILD_PATH}/Js/buildBase.sh
+. ${BUILD_PATH}/Js/buildLib.sh
+. ${BUILD_PATH}/Js/buildUI.sh
+. ${BUILD_PATH}/Js/build3D.sh
+. ${BUILD_PATH}/Js/buildChart.sh
+. ${BUILD_PATH}/Js/buildSocket.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. config.sh
+. ${BUILD_PATH}/config.sh
 
 # PHP code inspection
 CODE[0]="file_get_content"

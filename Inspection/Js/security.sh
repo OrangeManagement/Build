@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. config.sh
+. ${BUILD_PATH}/config.sh
 
 # JS code inspection
 CODE[0]="onload"

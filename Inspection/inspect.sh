@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Include config
-. config.sh
+. ${BUILD_PATH}/config.sh
 
 # Setting up database for demo and testing
 mysql -e 'drop database if exists oms;' -u ${DB_USER} -p${DB_PASSWORD}
@@ -15,18 +15,18 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 php ${TOOLS_PATH}/phpunit.phar -v --configuration ${ROOT_PATH}/tests/phpunit_default.xml --log-junit ${INSPECTION_PATH}/Test/Php/junit_php.xml --testdox-html ${INSPECTION_PATH}/Test/Php/index.html --coverage-html ${INSPECTION_PATH}/Test/Php/coverage --coverage-clover ${INSPECTION_PATH}/Test/Php/coverage.xml > ${INSPECTION_PATH}/Test/Php/phpunit.log
 
 # Stats & metrics
-. Inspection/Php/stats.sh
+. ${BUILD_PATH}/Inspection/Php/stats.sh
 
 # Linting
-. Inspection/Php/linting.sh
-. Inspection/Json/linting.sh
+. ${BUILD_PATH}/Inspection/Php/linting.sh
+. ${BUILD_PATH}/Inspection/Json/linting.sh
 
 # Code style
-. Inspection/Php/style.sh
+. ${BUILD_PATH}/Inspection/Php/style.sh
 
 # Custom html inspections
-. Inspection/Html/tags.sh
-. Inspection/Html/attributes.sh
+. ${BUILD_PATH}/Inspection/Html/tags.sh
+. ${BUILD_PATH}/Inspection/Html/attributes.sh
 
 # Custom php inspections
-. Inspection/Php/security.sh
+. ${BUILD_PATH}/Inspection/Php/security.sh
