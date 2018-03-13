@@ -71,6 +71,7 @@ if [ ! -d "$TOOLS_PATH" ]; then
     wget -nc http://static.pdepend.org/php/latest/pdepend.phar
     wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
     wget -nc https://github.com/Orange-Management/Documentor/releases/download/1.1.0/documentor.phar
+    wget -nc https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar
     tar -zxvf compiler-latest.tar.gz
 
     chmod -R 777 ${TOOLS_PATH}
