@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ${BUILD_PATH}/config.sh
+. config.sh
 
 echo "Start html attributes inspection\n"
 

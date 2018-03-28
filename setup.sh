@@ -77,8 +77,5 @@ if [ ! -d "$TOOLS_PATH" ]; then
     chmod -R 777 ${TOOLS_PATH}
     cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
 
-    php composer.phar install
+    php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/
 fi
-
-# Link vendor
-ln -s ${TOOLS_PATH}/vendor ${ROOT_PATH}/vendor

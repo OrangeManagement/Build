@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ${BUILD_PATH}/config.sh
+. config.sh
 
 . ${BUILD_PATH}/Js/buildBase.sh
 . ${BUILD_PATH}/Js/buildLib.sh
