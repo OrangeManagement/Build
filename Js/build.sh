@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. ../config.sh
+. $(dirname "$0")/../config.sh
 
 . ${BUILD_PATH}/Js/buildBase.sh
 . ${BUILD_PATH}/Js/buildLib.sh
