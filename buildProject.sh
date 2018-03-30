@@ -6,7 +6,7 @@
 # Clean setup
 . setup.sh
 
-cd ${ROOT_PATH}
+cd ${BUILD_PATH}
 
 # Run inspection
 . ${BUILD_PATH}/Inspection/inspect.sh

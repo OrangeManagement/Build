@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $(dirname "$0")/../../config.sh
+. config.sh
 
 echo "Start json linting inspection\n"
 
