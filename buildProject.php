@@ -1,3 +1,3 @@
 <?php
 
-shell_exec('./buildProject.sh 2> /dev/null &');
+shell_exec('./buildProject.sh > /dev/null 2>/dev/null &');
