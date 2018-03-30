@@ -7,4 +7,3 @@ parameters:
 		- php
 	excludes_analyse:
 		- *.tpl.php
-	bootstrap: %currentWorkingDirectory%/Config/phpstan.php
