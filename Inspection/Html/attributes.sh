@@ -2,7 +2,7 @@
 
 . config.sh
 
-echo "Start html attributes inspection\n"
+echo "Start html attributes inspection"
 
 # Find empty attributes
 grep -rln "=\"\"" --include \*.tpl.php ${ROOT_PATH} > ${INSPECTION_PATH}/Modules/html/attributes_empty.log

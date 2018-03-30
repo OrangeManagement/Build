@@ -12,7 +12,7 @@ mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
 #. Js/build.sh
 
 # Executing unit tests
-php ${TOOLS_PATH}/phpunit.phar -v --configuration ${ROOT_PATH}/tests/phpunit_default.xml --log-junit ${INSPECTION_PATH}/Test/Php/junit_php.xml --testdox-html ${INSPECTION_PATH}/Test/Php/index.html --coverage-html ${INSPECTION_PATH}/Test/Php/coverage --coverage-clover ${INSPECTION_PATH}/Test/Php/coverage.xml > ${INSPECTION_PATH}/Test/Php/phpunit.log
+. ${BUILD_PATH}/Inspection/Php/tests.sh
 
 # Stats & metrics
 . ${BUILD_PATH}/Inspection/Php/stats.sh

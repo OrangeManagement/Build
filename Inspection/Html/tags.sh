@@ -2,7 +2,7 @@
 
 . config.sh
 
-echo "Start html tags inspection\n"
+echo "Start html tags inspection"
 
 # Html tag inspection
 TAG[0]="<\/html>"

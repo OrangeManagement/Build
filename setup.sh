@@ -2,6 +2,8 @@
 
 . config.sh
 
+echo "Remove old setup"
+
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
 rm -r -f ${BASE_PATH}/Website
@@ -15,6 +17,8 @@ mkdir -p ${INSPECTION_PATH}
 
 cd ${BASE_PATH}
 
+echo "Setup repositories"
+
 # Create git repositories
 for i in "${GITHUB_URL[@]}"
 do
@@ -24,6 +28,8 @@ done
 cd ${ROOT_PATH}
 git submodule update --init --recursive
 git submodule foreach git checkout develop
+
+echo "Setup build output"
 
 # Creating directories for inspection
 mkdir -p ${INSPECTION_PATH}/logs
@@ -58,6 +64,8 @@ chmod -R 777 ${ROOT_PATH}
 mkdir -p ${TOOLS_PATH}
 
 cd ${TOOLS_PATH}
+
+echo "Setup tools"
 
 # Downloading tools
 wget -nc https://getcomposer.org/composer.phar
