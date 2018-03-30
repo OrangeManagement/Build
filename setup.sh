@@ -54,29 +54,25 @@ mkdir -p ${INSPECTION_PATH}/Test/Js
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
 
-cd ${ROOT_PATH}
-
 # Setup tools for inspection
-if [ ! -d "$TOOLS_PATH" ]; then
-    mkdir -p ${TOOLS_PATH}
+mkdir -p ${TOOLS_PATH}
 
-    cd ${TOOLS_PATH}
+cd ${TOOLS_PATH}
 
-    # Downloading tools
-    wget -nc https://getcomposer.org/composer.phar
-    wget -nc https://phar.phpunit.de/phploc.phar
-    wget -nc https://phar.phpunit.de/phpunit.phar
-    wget -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.2.2/phpcs.phar
-    wget -nc http://static.phpmd.org/php/latest/phpmd.phar
-    wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
-    wget -nc http://static.pdepend.org/php/latest/pdepend.phar
-    wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-    wget -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
-    wget -nc https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar
-    tar -zxvf compiler-latest.tar.gz
+# Downloading tools
+wget -nc https://getcomposer.org/composer.phar
+wget -nc https://phar.phpunit.de/phploc.phar
+wget -nc https://phar.phpunit.de/phpunit.phar
+wget -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.2.2/phpcs.phar
+wget -nc http://static.phpmd.org/php/latest/phpmd.phar
+wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
+wget -nc http://static.pdepend.org/php/latest/pdepend.phar
+wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
+wget -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
+wget -nc https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar
+tar -zxvf compiler-latest.tar.gz
 
-    chmod -R 777 ${TOOLS_PATH}
-fi
+chmod -R 777 ${TOOLS_PATH}
 
 cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
 php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/
