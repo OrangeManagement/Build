@@ -8,6 +8,7 @@ rm -r -f ${BASE_PATH}/Website
 rm -r -f ${BASE_PATH}/phpOMS
 rm -r -f ${BASE_PATH}/jsOMS
 rm -r -f ${BASE_PATH}/cssOMS
+rm -r -f ${TOOLS_PATH}
 
 rm -r -f ${INSPECTION_PATH}
 mkdir -p ${INSPECTION_PATH}
@@ -75,7 +76,7 @@ if [ ! -d "$TOOLS_PATH" ]; then
     tar -zxvf compiler-latest.tar.gz
 
     chmod -R 777 ${TOOLS_PATH}
-    cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
-
-    php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/
 fi
+
+cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
+php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/
