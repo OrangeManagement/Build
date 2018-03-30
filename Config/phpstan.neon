@@ -1,6 +1,9 @@
 parameters:
 	ignoreErrors:
 		- '#Access to protected property Web\WebApplication::\$[a-zA-Z0-9_]+#'
+		- '#Calling method prepare() on possibly null value of type PDO|null.#'
+		- '#Calling method lastInsertId() on possibly null value of type PDO|null.#'
+		- '#Class PHPUnit\Framework\TestCase not found and could not be autoloaded.#'
 	fileExtensions:
 		- php
 	excludes_analyse:
