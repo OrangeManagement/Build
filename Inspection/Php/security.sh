@@ -36,6 +36,11 @@ CODE[27]="action=\""
 CODE[28]="ReflectionClass"
 CODE[29]="TestUtils"
 
+touch ${INSPECTION_PATH}/Framework/critical_php.log
+touch ${INSPECTION_PATH}/Modules/critical_php.log
+touch ${INSPECTION_PATH}/Model/critical_php.log
+touch ${INSPECTION_PATH}/Web/critical_php.log
+
 for i in "${CODE[@]}"
 do
     grep -rlni "$i" --include \*.php ${ROOT_PATH}/phpOMS >> ${INSPECTION_PATH}/Framework/critical_php.log
