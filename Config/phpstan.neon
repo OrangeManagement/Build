@@ -10,3 +10,5 @@ parameters:
 		- php
 	excludes_analyse:
 		- *.tpl.php
+		- */tests/*
+		- */test/*
