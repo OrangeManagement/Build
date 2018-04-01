@@ -1,9 +1,11 @@
 parameters:
 	ignoreErrors:
-		- '#Access to protected property Web\\WebApplication::\$[a-zA-Z0-9_]+#'
+		- '#Access to protected property Web\\WebApplication::(.*)#'
 		- '#Calling method prepare\(\) on possibly null value of type PDO\|null\.#'
 		- '#Calling method lastInsertId\(\) on possibly null value of type PDO\|null\.#'
-		- '#Access to an undefined property phpOMS\\DataStorage\\DataStorageConnectionInterface::#'
+		- '#Access to an undefined property phpOMS\\DataStorage\\DataStorageConnectionInterface::(.*)#'
+		- '#Call to an undefined method phpOMS\\Module\\ModuleAbstract::(.*)#'
+		- '#Access to an undefined property phpOMS\\ApplicationAbstract::(.*)#'
 	fileExtensions:
 		- php
 	excludes_analyse:
