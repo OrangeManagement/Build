@@ -12,3 +12,8 @@ php ${TOOLS_PATH}/phpstan.phar analyse --autoload-file=${ROOT_PATH}/phpOMS/Autol
 php ${TOOLS_PATH}/phpstan.phar analyse --autoload-file=${ROOT_PATH}/phpOMS/Autoloader.php -l 7 -c ${BUILD_PATH}/Config/phpstan.neon ${ROOT_PATH}/Modules > ${INSPECTION_PATH}/Modules/phpstan.log
 php ${TOOLS_PATH}/phpstan.phar analyse --autoload-file=${ROOT_PATH}/phpOMS/Autoloader.php -l 7 -c ${BUILD_PATH}/Config/phpstan.neon ${ROOT_PATH}/Model > ${INSPECTION_PATH}/Model/phpstan.log
 php ${TOOLS_PATH}/phpstan.phar analyse --autoload-file=${ROOT_PATH}/phpOMS/Autoloader.php -l 7 -c ${BUILD_PATH}/Config/phpstan.neon ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/phpstan.log
+
+php ${TOOLS_PATH}/phan.phar -k ${BUILD_PATH}/Config/phan.php -l ${ROOT_PATH}/phpOMS -m text --color -o ${INSPECTION_PATH}/Framework/phan.log
+php ${TOOLS_PATH}/phan.phar -k ${BUILD_PATH}/Config/phan.php -l ${ROOT_PATH}/Modules -m text --color -o ${INSPECTION_PATH}/Modules/phan.log
+php ${TOOLS_PATH}/phan.phar -k ${BUILD_PATH}/Config/phan.php -l ${ROOT_PATH}/Model -m text --color -o ${INSPECTION_PATH}/Model/phan.log
+php ${TOOLS_PATH}/phan.phar -k ${BUILD_PATH}/Config/phan.php -l ${ROOT_PATH}/Web -m text --color -o ${INSPECTION_PATH}/Web/phan.log
