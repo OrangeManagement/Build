@@ -1,5 +1,16 @@
 <?php
 return [
+    'target_php_version' => null,
+    'strict_param_checking' => true,
+    'strict_property_checking' => true,
+    'strict_return_checking' => true,
+    'check_docblock_signature_return_type_match' => true,
+    'check_docblock_signature_param_type_match' => true,
+    'prefer_narrowed_phpdoc_param_type' => true,
+    'prefer_narrowed_phpdoc_return_type' => true,
+    'allow_method_param_type_widening' => false,
+    'analyze_signature_compatibility' => true,
+    'dead_code_detection' => true,
     'backward_compatibility_checks' => false,
     'quick_mode' => false,
     'analyze_signature_compatibility' => true,
