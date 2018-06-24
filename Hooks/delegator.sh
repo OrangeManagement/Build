@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. Build/Hooks/logging.sh
-. Build/Hooks/syntax.sh
-. Build/Hooks/filename.sh
+. ${rootpath}/Build/Hooks/logging.sh
+. ${rootpath}/Build/Hooks/syntax.sh
+. ${rootpath}/Build/Hooks/filename.sh

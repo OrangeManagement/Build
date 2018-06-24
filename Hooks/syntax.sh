@@ -13,14 +13,14 @@ if [[ "$FILE" =~ ^.+(php|inc|module|install|test)$ ]]; then
         fi
         
         # phpcs
-        ./vendor/bin/phpcs --standard="./Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
+        ${rootpath}/vendor/bin/phpcs --standard="${rootpath}/Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tCode Sniffer error.\e[0m" >&2
             exit 1
         fi
         
         # phpmd
-        ./vendor/bin/phpmd $FILE ./Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
+        ${rootpath}/vendor/bin/phpmd $FILE text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tMess Detector error.\e[0m" >&2
             exit 1

@@ -26,11 +26,11 @@
 <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
 <rule ref="Generic.PHP.DisallowShortOpenTag"/>
 <rule ref="Generic.PHP.DiscourageGoto"/>
-<rule ref="Generic.PHP.ForbiddenFunctions">
+<!--<rule ref="Generic.PHP.ForbiddenFunctions">
     <properties>
         <property name="forbiddenFunctions" type="array" value="delete=>unset,print=>echo,create_function=>null" />
     </properties>
-</rule>
+</rule>-->
 <rule ref="Generic.Files.ByteOrderMark"/>
 <rule ref="Generic.Files.LineLength">
 <rule ref="Generic.Files.OneTraitPerFile"/>
@@ -130,7 +130,6 @@
 <rule ref="Squiz.Functions.GlobalFunction">
     <exclude-pattern>*/tests/*</exclude-pattern>
 </rule>
-<rule ref="Squiz.PHP.ForbiddenFunctions"/>
 <rule ref="Squiz.PHP.GlobalKeyword"/>
 <rule ref="Squiz.PHP.NonExecutableCode"/>
 <rule ref="Squiz.Scope.StaticThisUsage"/>
