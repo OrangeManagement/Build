@@ -1,3 +1,5 @@
+#!/bin/sh
+
 git diff --cached --name-only | while read FILE; do
 
 if [[ "$FILE" =~ ^.+(php|inc|module|install|test)$ ]]; then
