@@ -29,6 +29,23 @@ cd ${ROOT_PATH}
 git submodule update --init --recursive
 git submodule foreach git checkout develop
 
+echo "Setup hooks"
+
+# Setup hooks
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Model/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Modules/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
+
+chmod +x ${ROOT_PATH}/.git/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/Model/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/Modules/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
+
 echo "Setup build output"
 
 # Creating directories for inspection
