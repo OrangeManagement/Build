@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git diff --cached --name-only | while read FILE; do
 
