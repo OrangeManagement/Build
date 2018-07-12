@@ -29,12 +29,14 @@ fi
 
 # Html checks
 if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
+    # Invalid and empty attributes
     if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]*\"' $FILE) ]]; then
         echo -e "\e[1;31m\tFound invalid attribute.\e[0m" >&2
         grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]*\"' $FILE >&2
         exit 1
     fi
 
+    # Invalid class/id names
     if [[ -n $(grep -E '(id|class)=\"[a-zA-Z]*[\#\$\%\^\&\*\(\)\\/\ ]+[a-zA-Z]*\"' $FILE) ]]; then
         echo -e "\e[1;31m\tFound invalid class/id.\e[0m" >&2
         grep -E '(id|class)=\"[a-zA-Z]*[\#\$\%\^\&\*\(\)\\/\ ]+[a-zA-Z]*\"' $FILE >&2
@@ -66,11 +68,19 @@ if [[ "$FILE" =~ ^.+(sh)$ ]]; then
     fi
 fi
 
-# Check whitespace end of line in code
+# text files in general
 if [[ "$FILE" =~ ^.+(sh|js|php|json)$ ]]; then
+    # Check whitespace end of line in code
     if [[ -n $(grep -E ' $' $FILE) ]]; then
         echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
         echo grep -E ' $' $FILE >&2
+        exit 1
+    fi
+
+    # Check for tabs
+    if [[ -n $(grep -P '\t' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound tab instead of whitespace.\e[0m" >&2
+        echo grep -P '\t' $FILE >&2
         exit 1
     fi
 fi
