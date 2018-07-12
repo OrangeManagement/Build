@@ -16,4 +16,5 @@ if [[ "$FILE" =~ ^.+(js)$ ]]; then
       echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$FILE'. Commit was not aborted, however.\e[0m" >&2
     fi
 fi
-done
+
+done || exit $?
