@@ -33,6 +33,7 @@ echo "Setup hooks"
 
 # Setup hooks
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/hooks/pre-commit
+cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Build/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Model/hooks/pre-commit
@@ -40,6 +41,7 @@ cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Modules/hooks/p
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
 
 chmod +x ${ROOT_PATH}/.git/hooks/pre-commit
+chmod +x ${ROOT_PATH}/.git/modules/Build/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/Model/hooks/pre-commit
