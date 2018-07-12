@@ -27,6 +27,24 @@ if [[ "$FILE" =~ ^.+(php)$ ]]; then
     fi
 fi
 
+# Html checks
+if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
+    if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]+\"' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound invalid attribute.\e[0m" >&2
+        exit 1
+    fi
+
+    if [[ -n $(grep -E '(id|class)=\"[a-zA-Z]*[\#\$\%\^\&\*\(\)\\/\ ]+[a-zA-Z]*\"' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound invalid class/id.\e[0m" >&2
+        exit 1
+    fi
+
+    if [[ -n $(grep -P '(\<img)((?!.*?alt=).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
+        exit 1
+    fi
+fi
+
 if [[ "$FILE" =~ ^.+(sh)$ ]]; then
     if [[ -f $FILE ]]; then
         # sh lint
@@ -38,10 +56,12 @@ if [[ "$FILE" =~ ^.+(sh)$ ]]; then
     fi
 fi
 
-# Check whitespace end of line
-if [[ -n $(find $FILE -type f -exec egrep -l " +$" {} \;) ]]; then
-    echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
-    exit 1
+# Check whitespace end of line in code
+if [[ "$FILE" =~ ^.+(sh|js|php)$ ]]; then
+    if [[ -n $(find $FILE -type f -exec egrep -l " +$" {} \;) ]]; then
+        echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
+        exit 1
+    fi
 fi
 
 done || exit $?
