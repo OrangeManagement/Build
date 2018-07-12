@@ -29,7 +29,7 @@ fi
 
 # Html checks
 if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
-    if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]+\"' $FILE) ]]; then
+    if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]*\"' $FILE) ]]; then
         echo -e "\e[1;31m\tFound invalid attribute.\e[0m" >&2
         grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]*\"' $FILE >&2
         exit 1
