@@ -92,6 +92,7 @@
 </rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
 <rule ref="PEAR.Commenting.FunctionComment">
+    <severity>3</severity>
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't need comments -->
 </rule>
 <rule ref="PEAR.Commenting.InlineComment"/>
