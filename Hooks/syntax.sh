@@ -10,14 +10,14 @@ if [[ "$FILE" =~ ^.+(php)$ ]]; then
             echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
             exit 1
         fi
-        
+
         # phpcs
         ${rootpath}/vendor/bin/phpcs --standard="${rootpath}/Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tCode Sniffer error.\e[0m" >&2
             exit 1
         fi
-        
+
         # phpmd
         ${rootpath}/vendor/bin/phpmd $FILE text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
         if [ $? -ne 0 ]; then
@@ -36,6 +36,12 @@ if [[ "$FILE" =~ ^.+(sh)$ ]]; then
             exit 1
         fi
     fi
+fi
+
+# Check whitespace end of line
+if [[ -n $(find $FILE -type f -exec egrep -l " +$" {} \;) ]]; then
+    echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
+    exit 1
 fi
 
 done || exit $?
