@@ -31,17 +31,27 @@ fi
 if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
     if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]+\"' $FILE) ]]; then
         echo -e "\e[1;31m\tFound invalid attribute.\e[0m" >&2
+        grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]+\"' $FILE >&2
         exit 1
     fi
 
     if [[ -n $(grep -E '(id|class)=\"[a-zA-Z]*[\#\$\%\^\&\*\(\)\\/\ ]+[a-zA-Z]*\"' $FILE) ]]; then
         echo -e "\e[1;31m\tFound invalid class/id.\e[0m" >&2
+        grep -E '(id|class)=\"[a-zA-Z]*[\#\$\%\^\&\*\(\)\\/\ ]+[a-zA-Z]*\"' $FILE >&2
         exit 1
     fi
 
+    # Images must have a alt= attribute *error*
     if [[ -n $(grep -P '(\<img)((?!.*?alt=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
+        grep -P '(\<img)((?!.*?alt=).)*(>)' $FILE >&2
         exit 1
+    fi
+
+    # Value fields should not be hard coded *warning*
+    if [[ -n $(grep -P '(value=\")((?!\<\?).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tValue field should not be hard coded.\e[0m" >&2
+        grep -P '(value=\")((?!\<\?).)*(>)' $FILE >&2
     fi
 fi
 
@@ -57,7 +67,7 @@ if [[ "$FILE" =~ ^.+(sh)$ ]]; then
 fi
 
 # Check whitespace end of line in code
-if [[ "$FILE" =~ ^.+(sh|js|php)$ ]]; then
+if [[ "$FILE" =~ ^.+(sh|js|php|json)$ ]]; then
     if [[ -n $(find $FILE -type f -exec egrep -l " +$" {} \;) ]]; then
         echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
         exit 1
