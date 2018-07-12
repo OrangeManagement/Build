@@ -55,6 +55,12 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
         echo -e "\e[1;31m\tValue field should not be hard coded.\e[0m" >&2
         grep -P '(value=\")((?!\<\?).)*(>)' $FILE >&2
     fi
+
+    # Hard coded language *warning*
+    if [[ -n $(grep -P '(\<td\>|\<th\>|\<caption\>|\<label.*?(\"|l)\>)[0-9a-zA-Z\.\?]+' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound hard coded text.\e[0m" >&2
+        grep -P '(\<td\>|\<th\>|\<caption\>|\<label.*?(\"|l)\>)[0-9a-zA-Z\.\?]+' $FILE >&2
+    fi
 fi
 
 if [[ "$FILE" =~ ^.+(sh)$ ]]; then
