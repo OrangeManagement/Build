@@ -68,8 +68,9 @@ fi
 
 # Check whitespace end of line in code
 if [[ "$FILE" =~ ^.+(sh|js|php|json)$ ]]; then
-    if [[ -n $(find $FILE -type f -exec egrep -l " +$" {} \;) ]]; then
+    if [[ -n $(grep -E ' $' $FILE) ]]; then
         echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
+        echo grep -E ' $' $FILE >&2
         exit 1
     fi
 fi
