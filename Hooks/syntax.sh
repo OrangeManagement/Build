@@ -77,10 +77,10 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
         grep -P '(style=)' $FILE >&2
     fi
 
-    # Value fields should not be hard coded *warning*
-    if [[ -n $(grep -P '(value=\")((?!\<\?).)*(>)' $FILE) ]]; then
-        echo -e "\e[1;31m\tValue field should not be hard coded.\e[0m" >&2
-        grep -P '(value=\")((?!\<\?).)*(>)' $FILE >&2
+    # Attribute descriptions should not be hard coded *warning*
+    if [[ -n $(grep -P '(value|title|alt|aria\-label)(=\")((?!\<\?).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tAttribute description should not be hard coded.\e[0m" >&2
+        grep -P '(value|title|alt|aria\-label)(=\")((?!\<\?).)*(>)' $FILE >&2
     fi
 
     # Hard coded language *warning*
