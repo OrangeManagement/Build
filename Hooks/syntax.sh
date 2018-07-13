@@ -27,7 +27,7 @@ if [[ "$FILE" =~ ^.+(php)$ ]]; then
     fi
 fi
 
-# Html checks
+# Html/template checks
 if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
     # Invalid and empty attributes
     if [[ -n $(grep -E '=\"[\#\$\%\^\&\*\(\)\\/\ ]*\"' $FILE) ]]; then
@@ -48,6 +48,33 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
         echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
         grep -P '(\<img)((?!.*?alt=).)*(>)' $FILE >&2
         exit 1
+    fi
+    
+    # Input elements must have a type= attribute *error*
+    if [[ -n $(grep -P '(\<input)((?!.*?type=).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound missing input type attribute.\e[0m" >&2
+        grep -P '(\<input)((?!.*?type=).)*(>)' $FILE >&2
+        exit 1
+    fi
+    
+    # Form fields must have a name *error*
+    if [[ -n $(grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound missing form element name.\e[0m" >&2
+        grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE >&2
+        exit 1
+    fi
+    
+    # Form must have a id, action and method *error*
+    if [[ -n $(grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
+        grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' $FILE >&2
+        exit 1
+    fi
+    
+    # Inline css is invalid *warning*
+    if [[ -n $(grep -P '(style=)' $FILE) ]]; then
+        echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
+        grep -P '(style=)' $FILE >&2
     fi
 
     # Value fields should not be hard coded *warning*
