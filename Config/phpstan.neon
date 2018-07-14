@@ -7,6 +7,10 @@ parameters:
 		- '#Call to an undefined method phpOMS\\Module\\ModuleAbstract::(.*)#'
 		- '#Access to an undefined property phpOMS\\ApplicationAbstract::(.*)#'
 		- '#Cannot access property (.*) on phpOMS\\ApplicationAbstract(.*)#'
+		- '#Call to an undefined method phpOMS\\DataStorage\\Database\\BuilderAbstract::(.*)#'
+		- '#Call to an undefined method object::getId\(\)#'
+		- '#Strict comparison using === between array and false will always evaluate to false#'
+		- '#Cannot call method (.*) on PDO\|null#'
 	fileExtensions:
 		- php
 	excludes_analyse:
