@@ -5,7 +5,7 @@ git diff --cached --name-only | while read FILE; do
 if [[ "$FILE" =~ ^.+(php)$ ]]; then
     if [[ -f $FILE ]]; then
         # php lint
-        php -l "$FILE" 1> /dev/null
+        php -l "$FILE"
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
             exit 1
@@ -105,14 +105,14 @@ fi
 if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
     # Check whitespace end of line in code
     if [[ -n $(grep -P ' $' $FILE) ]]; then
-        echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
+        echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
         grep -P ' $' $FILE >&2
         exit 1
     fi
 
     # Check for tabs
     if [[ -n $(grep -P '\t' $FILE) ]]; then
-        echo -e "\e[1;31m\tFound tab instead of whitespace.\e[0m" >&2
+        echo -e "\e[1;31m\tFound tab instead of whitespace $FILE.\e[0m" >&2
         grep -P '\t' $FILE >&2
         exit 1
     fi
