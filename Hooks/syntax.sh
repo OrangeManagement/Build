@@ -49,28 +49,28 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
         grep -P '(\<img)((?!.*?alt=).)*(>)' $FILE >&2
         exit 1
     fi
-    
+
     # Input elements must have a type= attribute *error*
     if [[ -n $(grep -P '(\<input)((?!.*?type=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing input type attribute.\e[0m" >&2
         grep -P '(\<input)((?!.*?type=).)*(>)' $FILE >&2
         exit 1
     fi
-    
+
     # Form fields must have a name *error*
     if [[ -n $(grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing form element name.\e[0m" >&2
         grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE >&2
         exit 1
     fi
-    
+
     # Form must have a id, action and method *error*
     if [[ -n $(grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
         grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' $FILE >&2
         exit 1
     fi
-    
+
     # Inline css is invalid *warning*
     if [[ -n $(grep -P '(style=)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
@@ -104,16 +104,16 @@ fi
 # text files in general
 if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
     # Check whitespace end of line in code
-    if [[ -n $(grep -E ' $' $FILE) ]]; then
+    if [[ -n $(grep -P ' $' $FILE) ]]; then
         echo -e "\e[1;31m\tFound whitespace at end of line.\e[0m" >&2
-        echo grep -E ' $' $FILE >&2
+        grep -P ' $' $FILE >&2
         exit 1
     fi
 
     # Check for tabs
     if [[ -n $(grep -P '\t' $FILE) ]]; then
         echo -e "\e[1;31m\tFound tab instead of whitespace.\e[0m" >&2
-        echo grep -P '\t' $FILE >&2
+        grep -P '\t' $FILE >&2
         exit 1
     fi
 fi
