@@ -12,14 +12,14 @@ if [[ "$FILE" =~ ^.+(php)$ ]]; then
         fi
 
         # phpcs
-        ${rootpath}/vendor/bin/phpcs --standard="${rootpath}/Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
+        php -d memory_limit=4G ${rootpath}/vendor/bin/phpcs --standard="${rootpath}/Build/Config/phpcs.xml" --encoding=utf-8 -n -p $FILE
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tCode Sniffer error.\e[0m" >&2
             exit 1
         fi
 
         # phpmd
-        ${rootpath}/vendor/bin/phpmd $FILE text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
+        php -d memory_limit=4G ${rootpath}/vendor/bin/phpmd $FILE text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1
         if [ $? -ne 0 ]; then
             echo -e "\e[1;31m\tMess Detector error.\e[0m" >&2
             exit 1
