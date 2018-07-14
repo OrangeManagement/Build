@@ -6,6 +6,7 @@ parameters:
 		- '#Access to an undefined property phpOMS\\DataStorage\\DataStorageConnectionInterface::(.*)#'
 		- '#Call to an undefined method phpOMS\\Module\\ModuleAbstract::(.*)#'
 		- '#Access to an undefined property phpOMS\\ApplicationAbstract::(.*)#'
+		- '#Cannot access property (.*) on phpOMS\\ApplicationAbstract(.*)#'
 	fileExtensions:
 		- php
 	excludes_analyse:
