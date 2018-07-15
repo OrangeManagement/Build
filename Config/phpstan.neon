@@ -12,6 +12,7 @@ parameters:
 		- '#Strict comparison using === between array and false will always evaluate to false#'
 		- '#Cannot call method (.*) on PDO\|null#'
 		- '#Method phpOMS\\Message\\Http\\Rest::request\(\) should return string but returns string\|true#'
+		- '#Call to an undefined method RecursiveIteratorIterator::getSubPathname\(\)#'
 	fileExtensions:
 		- php
 	excludes_analyse:
