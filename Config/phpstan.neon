@@ -12,6 +12,7 @@ parameters:
 		- '#Strict comparison using === between array and false will always evaluate to false#'
 		- '#Cannot call method (.*) on PDO\|null#'
 		- '#Call to an undefined method RecursiveIteratorIterator::getSubPathname\(\)#'
+		- '#Call to an undefined method RecursiveIteratorIterator\|RegexIterator::getSubPathname\(\)#'
 	fileExtensions:
 		- php
 	excludes_analyse:
