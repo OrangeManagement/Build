@@ -100,7 +100,7 @@ wget -nc https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar
 wget -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
 wget -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
 
-unzip -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests
+unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests
 tar -zxvf compiler-latest.tar.gz
 
 chmod -R 777 ${TOOLS_PATH}
