@@ -12,6 +12,7 @@ The last feature is the backend and documentation generation based on the DocBlo
 # Setup
 
 * Clone the repository somewhere save
+* Check out the `install.sh` file and/or run it
 * Modify the `config.sh` file to your needs
 * Run `buildProject.sh`
 
