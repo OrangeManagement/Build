@@ -51,16 +51,16 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
     fi
 
     # Input elements must have a type= attribute *error*
-    if [[ -n $(grep -P '(\<input)((?!.*?type=).)*(>)' $FILE) ]]; then
+    if [[ -n $(grep -P '(<input)((?!.*?type=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing input type attribute.\e[0m" >&2
-        grep -P '(\<input)((?!.*?type=).)*(>)' $FILE >&2
+        grep -P '(<input)((?!.*?type=).)*(>)' $FILE >&2
         exit 1
     fi
 
     # Form fields must have a name *error*
-    if [[ -n $(grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE) ]]; then
+    if [[ -n $(grep -P '(<input|<select|<textarea)((?!.*?name=).)*(>)' $FILE) ]]; then
         echo -e "\e[1;31m\tFound missing form element name.\e[0m" >&2
-        grep -P '(\<input|select|textarea)((?!.*?name=).)*(>)' $FILE >&2
+        grep -P '(<input|<select|<textarea)((?!.*?name=).)*(>)' $FILE >&2
         exit 1
     fi
 
