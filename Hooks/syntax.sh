@@ -73,7 +73,7 @@ if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
 
     # Inline css is invalid *warning*
     if [[ -n $(grep -P '(style=)' $FILE) ]]; then
-        echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
+        echo -e "\e[1;31m\tFound inline styles.\e[0m" >&2
         grep -P '(style=)' $FILE >&2
     fi
 
