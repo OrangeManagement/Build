@@ -13,6 +13,8 @@ echo $rootpath
         continue
     fi
 
+    echo $FILE
+
     # Filename
     if [[ $(isValidFileName "$FILE") = 1 ]]; then
         echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2
