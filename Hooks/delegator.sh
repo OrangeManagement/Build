@@ -5,13 +5,15 @@
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
+set -e
+
 git diff --cached --name-only | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
 
     # Filename
-    if [[ ! $(isValidFileName "$FILE") ]]; then
+    if [[ $(isValidFileName "$FILE") = 1 ]]; then
         echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2
         exit 1
     fi
@@ -22,16 +24,16 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1 ]]; then
-        echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$1'. Commit was not aborted, however.\e[0m" >&2
+        echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$FILE'. Commit was not aborted, however.\e[0m" >&2
     fi
 
     # Tests
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhanTestSuccessfull "$FILE") ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessfull "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhan error.\e[0m" >&2
-        exit 1
+        exit 1 
     fi
 
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhpStanTestSuccessfull "$FILE") ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessfull "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhp stan error.\e[0m" >&2
         exit 1
     fi
@@ -56,29 +58,32 @@ git diff --cached --name-only | while read FILE; do
         fi
     fi
 
-    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ ! $(isValidBashScript "$FILE") ]]; then
-        echo -e "\e[1;31m\tBash linting error.\e[0m" >&2
+    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ $(isValidBashScript "$FILE") = 0 ]]; then
+        echo -e "\e[1;31m\tBash linting error in '$FILE'.\e[0m" >&2
         exit 1
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        GEN_SYNTAX = $(hasInvalidBasicSyntax "$FILE")
+        echo 1
+        GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
+
+        echo 2
 
         if [[ $GEN_SYNTAX = 1 ]]; then
-            echo -e "\e[1;31m\tFound whitespace at end of line in $1.\e[0m" >&2
-            grep -P ' $' $1 >&2
+            echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
+            grep -P ' $' $FILE >&2
             exit 1
         fi
 
         if [[ $GEN_SYNTAX = 2 ]]; then
-            echo -e "\e[1;31m\tFound tab instead of whitespace $1.\e[0m" >&2
-            grep -P '\t' $1 >&2
+            echo -e "\e[1;31m\tFound tab instead of whitespace $FILE.\e[0m" >&2
+            grep -P '\t' $FILE >&2
             exit 1
         fi
     fi
 
     if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
-        TPL_SYNTAX = $(hasInvalidHtmlTemplateContent "$FILE")
+        TPL_SYNTAX=$(hasInvalidHtmlTemplateContent "$FILE")
 
         if [[ $TPL_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2

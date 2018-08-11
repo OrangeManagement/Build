@@ -6,14 +6,14 @@ hasPhpLogging() {
         return 1
     fi
 
-    return 0;
+    return 0
 }
 
 hasJsLogging() {
     RESULT=$(grep "console.log(" "$1")
     if [ ! -z $RESULT ]; then
-        return 1;
+        return 1
     fi
 
-    return 0;
+    return 0
 }

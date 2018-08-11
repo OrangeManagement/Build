@@ -5,33 +5,37 @@
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
+set -e
+rootpath="$(pwd)"
+echo $rootpath
+
 ($(git diff --name-only $TRAVIS_COMMIT_RANGE)) | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
 
     # Filename
-    if [[ ! $(isValidFileName "$FILE") = 1]]; then
-        echo -e "\e[1;31m\tInvalid file name.\e[0m" >&2
+    if [[ $(isValidFileName "$FILE") = 1 ]]; then
+        echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2
         exit 1
     fi
 
     # Logging
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(hasPhpLogging "$FILE") = 1]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(hasPhpLogging "$FILE") = 1 ]]; then
         echo -e "\e[1;33m\tWarning, the commit contains a call to var_dump() in '$FILE'. Commit was not aborted, however.\e[0m" >&2
     fi
 
-    if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1]]; then
+    if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1 ]]; then
         echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$1'. Commit was not aborted, however.\e[0m" >&2
     fi
 
     # Tests
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhanTestSuccessfull "$FILE")]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessfull "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhan error.\e[0m" >&2
-        exit 1
+        exit 1 
     fi
 
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhpStanTestSuccessfull "$FILE")]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessfull "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhp stan error.\e[0m" >&2
         exit 1
     fi
@@ -56,13 +60,13 @@
         fi
     fi
 
-    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ ! $(isValidBashScript "$FILE")]]; then
-        echo -e "\e[1;31m\tBash linting error.\e[0m" >&2
+    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ $(isValidBashScript "$FILE") = 0 ]]; then
+        echo -e "\e[1;31m\tBash linting error in '$FILE'.\e[0m" >&2
         exit 1
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        GEN_SYNTAX = $(hasInvalidBasicSyntax "$FILE")
+        GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
 
         if [[ $GEN_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound whitespace at end of line in $1.\e[0m" >&2
@@ -78,7 +82,7 @@
     fi
 
     if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
-        TPL_SYNTAX = $(hasInvalidHtmlTemplateContent "$FILE")
+        TPL_SYNTAX=$(hasInvalidHtmlTemplateContent "$FILE")
 
         if [[ $TPL_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
