@@ -64,8 +64,6 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        echo 0
-        echo $FILE
         echo 1
         GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
         echo 2
