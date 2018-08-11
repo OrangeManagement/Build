@@ -7,7 +7,7 @@ rootpath="$(pwd)"
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
-($(git diff --name-only $TRAVIS_COMMIT_RANGE)) | while read FILE; do
+git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
