@@ -28,7 +28,7 @@ git diff --cached --name-only | while read FILE; do
     # Tests
     if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessfull "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhan error.\e[0m" >&2
-        exit 1 
+        exit 1
     fi
 
     if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessfull "$FILE") = 0 ]]; then
@@ -38,7 +38,8 @@ git diff --cached --name-only | while read FILE; do
 
     # Syntax
     if [[ "$FILE" =~ ^.+(php)$ ]]; then
-        PHP_SYNTAX=$(hasInvalidPhpSyntax "$FILE")
+        $(hasInvalidPhpSyntax "$FILE")
+        PHP_SYNTAX=$?
 
         if [[ $PHP_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
@@ -62,8 +63,8 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
-        echo $GEN_SYNTAX
+        $(hasInvalidBasicSyntax "$FILE")
+        GEN_SYNTAX=$?
 
         if [[ $GEN_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
@@ -79,7 +80,8 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
-        TPL_SYNTAX=$(hasInvalidHtmlTemplateContent "$FILE")
+        $(hasInvalidHtmlTemplateContent "$FILE")
+        TPL_SYNTAX=$?
 
         if [[ $TPL_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
