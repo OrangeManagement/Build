@@ -5,33 +5,33 @@
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
-git diff --cached --name-only | while read FILE; do
+($(git diff --name-only $TRAVIS_COMMIT_RANGE)) | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
 
     # Filename
-    if [[ ! $(isValidFileName "$FILE") = 1 ]]; then
+    if [[ ! $(isValidFileName "$FILE") = 1]]; then
         echo -e "\e[1;31m\tInvalid file name.\e[0m" >&2
         exit 1
     fi
 
     # Logging
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(hasPhpLogging "$FILE") = 1 ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(hasPhpLogging "$FILE") = 1]]; then
         echo -e "\e[1;33m\tWarning, the commit contains a call to var_dump() in '$FILE'. Commit was not aborted, however.\e[0m" >&2
     fi
 
-    if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1 ]]; then
+    if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1]]; then
         echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$1'. Commit was not aborted, however.\e[0m" >&2
     fi
 
     # Tests
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhanTestSuccessfull "$FILE") ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhanTestSuccessfull "$FILE")]]; then
         echo -e "\e[1;31m\tPhan error.\e[0m" >&2
         exit 1
     fi
 
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhpStanTestSuccessfull "$FILE") ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ ! $(isPhpStanTestSuccessfull "$FILE")]]; then
         echo -e "\e[1;31m\tPhp stan error.\e[0m" >&2
         exit 1
     fi
@@ -56,7 +56,7 @@ git diff --cached --name-only | while read FILE; do
         fi
     fi
 
-    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ ! $(isValidBashScript "$FILE") ]]; then
+    if [[ "$FILE" =~ ^.+(sh)$ ]] && [[ ! $(isValidBashScript "$FILE")]]; then
         echo -e "\e[1;31m\tBash linting error.\e[0m" >&2
         exit 1
     fi
