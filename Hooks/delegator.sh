@@ -5,8 +5,6 @@
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
-set -e
-
 git diff --cached --name-only | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
         continue
@@ -64,10 +62,7 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        echo 1
         GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
-        echo 2
-
 
         if [[ $GEN_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
@@ -125,5 +120,3 @@ git diff --cached --name-only | while read FILE; do
         fi
     fi
 done
-
-exit 0

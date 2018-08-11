@@ -71,7 +71,7 @@ isValidBashScript() {
 }
 
 hasInvalidBasicSyntax() {
-    echo 1
+    echo 3
     echo $1
     # Check whitespace end of line in code
     if [[ -n $(grep -P ' $' "$1") ]]; then
