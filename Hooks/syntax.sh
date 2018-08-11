@@ -24,37 +24,37 @@ hasInvalidPhpSyntax() {
 
 hasInvalidHtmlTemplateContent() {
     # Images must have a alt= attribute *error*
-    if [[ -n $(grep -P '(\<img)((?!.*?alt=).)*(>)' $1) ]]; then
+    if [[ -n $(grep -P '(\<img)((?!.*?alt=).)*(>)' "$1") ]]; then
         return 1
     fi
 
     # Input elements must have a type= attribute *error*
-    if [[ -n $(grep -P '(<input)((?!.*?type=).)*(>)' $1) ]]; then
+    if [[ -n $(grep -P '(<input)((?!.*?type=).)*(>)' "$1") ]]; then
         return 2
     fi
 
     # Form fields must have a name *error*
-    if [[ -n $(grep -P '(<input|<select|<textarea)((?!.*?name=).)*(>)' $1) ]]; then
+    if [[ -n $(grep -P '(<input|<select|<textarea)((?!.*?name=).)*(>)' "$1") ]]; then
         return 3
     fi
 
     # Form must have a id, action and method *error*
-    if [[ -n $(grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' $1) ]]; then
+    if [[ -n $(grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' "$1") ]]; then
         return 4
     fi
 
     # Inline css is invalid *warning*
-    if [[ -n $(grep -P '(style=)' $1) ]]; then
+    if [[ -n $(grep -P '(style=)' "$1") ]]; then
         return 5
     fi
 
     # Attribute descriptions should not be hard coded *warning*
-    if [[ -n $(grep -P '(value|title|alt|aria\-label)(=\")((?!\<\?).)*(>)' $1) ]]; then
+    if [[ -n $(grep -P '(value|title|alt|aria\-label)(=\")((?!\<\?).)*(>)' "$1") ]]; then
         return 6
     fi
 
     # Hard coded language *warning*
-    if [[ -n $(grep -P '(\<td\>|\<th\>|\<caption\>|\<label.*?(\"|l)\>)[0-9a-zA-Z\.\?]+' $1) ]]; then
+    if [[ -n $(grep -P '(\<td\>|\<th\>|\<caption\>|\<label.*?(\"|l)\>)[0-9a-zA-Z\.\?]+' "$1") ]]; then
         return 7
     fi
 
@@ -72,12 +72,12 @@ isValidBashScript() {
 
 hasInvalidBasicSyntax() {
     # Check whitespace end of line in code
-    if [[ -n $(grep -P ' $' $1) ]]; then
+    if [[ -n $(grep -P ' $' "$1") ]]; then
         return 1
     fi
 
     # Check for tabs
-    if [[ -n $(grep -P '\t' $1) ]]; then
+    if [[ -n $(grep -P '\t' "$1") ]]; then
         return 2
     fi
 
