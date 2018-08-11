@@ -1,12 +1,11 @@
 #!/bin/bash
 
+rootpath="$(pwd)"
+
 . ${rootpath}/Build/Hooks/logging.sh
 . ${rootpath}/Build/Hooks/syntax.sh
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
-
-rootpath="$(pwd)"
-echo $rootpath
 
 ($(git diff --name-only $TRAVIS_COMMIT_RANGE)) | while read FILE; do
     if [[ ! -f "$FILE" ]]; then
