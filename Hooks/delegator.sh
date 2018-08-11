@@ -64,10 +64,12 @@ git diff --cached --name-only | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
+        echo 0
+        echo $FILE
         echo 1
         GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
-
         echo 2
+
 
         if [[ $GEN_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2

@@ -71,10 +71,7 @@ isValidBashScript() {
 }
 
 hasInvalidBasicSyntax() {
-    # Check whitespace end of line in code
-    if [[ -n $(grep -P ' $' "$1") ]]; then
-        return 1
-    fi
+
 
     # Check for tabs
     if [[ -n $(grep -P '\t' "$1") ]]; then
