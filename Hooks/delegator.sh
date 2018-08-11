@@ -12,7 +12,7 @@ git diff --cached --name-only | while read FILE; do
 
     # Filename
     if [[ ! $(isValidFileName "$FILE") ]]; then
-        echo -e "\e[1;31m\tInvalid file name.\e[0m" >&2
+        echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2
         exit 1
     fi
 
