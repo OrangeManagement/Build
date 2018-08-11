@@ -41,7 +41,7 @@ echo $rootpath
 
     # Syntax
     if [[ "$FILE" =~ ^.+(php)$ ]]; then
-        PHP_SYNTAX = $(hasInvalidPhpSyntax "$FILE")
+        PHP_SYNTAX=$(hasInvalidPhpSyntax "$FILE")
 
         if [[ $PHP_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
