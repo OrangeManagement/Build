@@ -5,7 +5,6 @@
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
-set -e
 rootpath="$(pwd)"
 echo $rootpath
 
@@ -26,7 +25,7 @@ echo $rootpath
     fi
 
     if [[ "$FILE" =~ ^.+(js)$ ]] && [[ $(hasJsLogging "$FILE") = 1 ]]; then
-        echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$1'. Commit was not aborted, however.\e[0m" >&2
+        echo -e "\e[1;33m\tWarning, the commit contains a call to console.log() in '$FILE'. Commit was not aborted, however.\e[0m" >&2
     fi
 
     # Tests
@@ -69,14 +68,14 @@ echo $rootpath
         GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
 
         if [[ $GEN_SYNTAX = 1 ]]; then
-            echo -e "\e[1;31m\tFound whitespace at end of line in $1.\e[0m" >&2
-            grep -P ' $' $1 >&2
+            echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
+            grep -P ' $' $FILE >&2
             exit 1
         fi
 
         if [[ $GEN_SYNTAX = 2 ]]; then
-            echo -e "\e[1;31m\tFound tab instead of whitespace $1.\e[0m" >&2
-            grep -P '\t' $1 >&2
+            echo -e "\e[1;31m\tFound tab instead of whitespace $FILE.\e[0m" >&2
+            grep -P '\t' $FILE >&2
             exit 1
         fi
     fi
@@ -124,5 +123,3 @@ echo $rootpath
         fi
     fi
 done
-
-exit 0
