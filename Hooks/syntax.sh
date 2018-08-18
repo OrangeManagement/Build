@@ -14,7 +14,7 @@ hasInvalidPhpSyntax() {
     fi
 
     # phpmd
-    $(php -d memory_limit=4G ${rootpath}/vendor/bin/phpmd "$1" text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1)
+    $(php -d memory_limit=4G ${rootpath}/vendor/bin/phpmd "$1" text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1 > /dev/null)
     if [[ $? != 0 ]]; then
         return 3
     fi
