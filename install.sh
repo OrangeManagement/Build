@@ -9,7 +9,7 @@ a2enmod headers
 
 pecl install ast
 
-echo "extension=ast.so" | sudo tee /etc/php/7.2/mods-available/ast.ini
+echo "extension=ast.so" | tee /etc/php/7.2/mods-available/ast.ini
 phpenmod ast
 
 systemctl restart apache2
