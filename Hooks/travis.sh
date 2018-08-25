@@ -104,8 +104,8 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
         fi
 
         if [[ $TPL_SYNTAX = 4 ]]; then
-            echo -e "\e[1;31m\tFound missing form element action, method or id.\e[0m" >&2
-            grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' "$FILE" >&2
+            echo -e "\e[1;31m\tFound missing form element name or id.\e[0m" >&2
+            grep -P '(\<form)((?!.*?(name|id)=).)*(>)' "$FILE" >&2
             exit 1
         fi
 

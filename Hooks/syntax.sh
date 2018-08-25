@@ -39,7 +39,7 @@ hasInvalidHtmlTemplateContent() {
     fi
 
     # Form must have a id, action and method *error*
-    if [[ -n $(grep -P '(\<form)((?!.*?(action|method|id)=).)*(>)' "$1") ]]; then
+    if [[ -n $(grep -P '(\<form)((?!.*?(name|id)=).)*(>)' "$1") ]]; then
         return 4
     fi
 
