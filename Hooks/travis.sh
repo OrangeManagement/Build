@@ -28,12 +28,12 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
     fi
 
     # Tests
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessfull "$FILE") = 0 ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessful "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhan error.\e[0m" >&2
         exit 1
     fi
 
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessfull "$FILE") = 0 ]]; then
+    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessful "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhp stan error.\e[0m" >&2
         exit 1
     fi
