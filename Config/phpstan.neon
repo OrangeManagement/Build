@@ -3,6 +3,8 @@ parameters:
 		- '#Access to protected property Web\\WebApplication::(.*)#'
 		- '#Calling method prepare\(\) on possibly null value of type PDO\|null\.#'
 		- '#Calling method lastInsertId\(\) on possibly null value of type PDO\|null\.#'
+		- '#Cannot call method prepare\(\) on PDO\|null\.#'
+		- '#Cannot call method beginTransaction\(\) on PDO\|null\.#'
 		- '#Access to an undefined property phpOMS\\DataStorage\\DataStorageConnectionInterface::(.*)#'
 		- '#Call to an undefined method phpOMS\\Module\\ModuleAbstract::(.*)#'
 		- '#Access to an undefined property phpOMS\\ApplicationAbstract::(.*)#'
@@ -18,3 +20,4 @@ parameters:
 		- *.tpl.php
 		- */tests/*
 		- */test/*
+		- *Test.php
