@@ -10,7 +10,7 @@ hasPhpLogging() {
 }
 
 hasJsLogging() {
-    RESULT=$(grep "console.log(" "$1")
+    RESULT=$(grep " console.log(" "$1")
     if [ ! -z $RESULT ]; then
         return 1
     fi
