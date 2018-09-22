@@ -13,7 +13,7 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
     fi
 
     # Filename
-    if [[ $(isValidFileName "$FILE") = 1 ]]; then
+    if [[ $(isValidFileName "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2
         exit 1
     fi
@@ -40,8 +40,7 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
 
     # Syntax
     if [[ "$FILE" =~ ^.+(php)$ ]]; then
-        $(hasInvalidPhpSyntax "$FILE")
-        PHP_SYNTAX=$?
+        PHP_SYNTAX=$(hasInvalidPhpSyntax "$FILE")
 
         if [[ $PHP_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tPhp linting error.\e[0m" >&2
@@ -65,8 +64,7 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(sh|js|php|json|css)$ ]]; then
-        $(hasInvalidBasicSyntax "$FILE")
-        GEN_SYNTAX=$?
+        GEN_SYNTAX=$(hasInvalidBasicSyntax "$FILE")
 
         if [[ $GEN_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound whitespace at end of line in $FILE.\e[0m" >&2
@@ -82,8 +80,7 @@ git diff --name-only $TRAVIS_COMMIT_RANGE | while read FILE; do
     fi
 
     if [[ "$FILE" =~ ^.+(tpl\.php|html)$ ]]; then
-        $(hasInvalidHtmlTemplateContent "$FILE")
-        TPL_SYNTAX=$?
+        TPL_SYNTAX=$(hasInvalidHtmlTemplateContent "$FILE")
 
         if [[ $TPL_SYNTAX = 1 ]]; then
             echo -e "\e[1;31m\tFound missing image alt attribute.\e[0m" >&2
