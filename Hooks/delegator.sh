@@ -1,13 +1,11 @@
 #!/bin/bash
 
-set -x
-
 . ${rootpath}/Build/Hooks/logging.sh
 . ${rootpath}/Build/Hooks/syntax.sh
 . ${rootpath}/Build/Hooks/filename.sh
 . ${rootpath}/Build/Hooks/tests.sh
 
-git diff --cached --name-only | while read FILE; do
+for FILE in $(git diff --cached --name-only); do
     echo $FILE
 
     if [[ ! -f "$FILE" ]]; then

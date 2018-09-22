@@ -1,7 +1,7 @@
 #!/bin/bash
 
 isPhanTestSuccessful() {
-    php -d memory_limit=4G ${rootpath}/vendor/bin/phan -k ${rootpath}/Build/Config/phan.php -f "$1" >&2
+    php -d memory_limit=4G ${rootpath}/vendor/bin/phan -k ${rootpath}/Build/Config/phan.php --minimum-severity=0 --color -f "$1" >&2
     if [ $? -ne 0 ]; then
         echo 0
         return 0
