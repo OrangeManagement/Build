@@ -6,8 +6,6 @@
 . ${rootpath}/Build/Hooks/tests.sh
 
 for FILE in $(git diff --cached --name-only); do
-    echo $FILE
-
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
