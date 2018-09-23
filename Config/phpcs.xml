@@ -2,9 +2,17 @@
 <ruleset name="default">
 <description></description>
 <exclude-pattern>*.tpl.php</exclude-pattern>
+<exclude-pattern>*.css</exclude-pattern>
 <exclude-pattern>*Routes.php</exclude-pattern>
 <exclude-pattern>*ObjLoader.js</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
+<exclude-pattern>*/Demo/*</exclude-pattern>
+<exclude-pattern>*/Build/*</exclude-pattern>
+<exclude-pattern>*/Cache/*</exclude-pattern>
+<exclude-pattern>*/Docs/*</exclude-pattern>
+<exclude-pattern>*/Documentation/*</exclude-pattern>
+<exclude-pattern>*/Resources/*</exclude-pattern>
+<exclude-pattern>*/tests/*</exclude-pattern>
 <exclude-pattern>*/Routes/*</exclude-pattern>
 <arg value="q"/>
 <arg name="colors"/>
@@ -57,13 +65,13 @@
 <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
 <rule ref="Generic.Formatting.SpaceAfterCast"/>
 <rule ref="Generic.Functions.CallTimePassByReference"/>
-<rule ref="Generic.Metrics.CyclomaticComplexity">
+<!--<rule ref="Generic.Metrics.CyclomaticComplexity">
     <properties>
         <property name="complexity" value="15"/>
         <property name="absoluteComplexity" value="25"/>
     </properties>
-    <exclude-pattern>*Measurement.php</exclude-pattern><!-- Very simple switch statements -->
-</rule>
+    <exclude-pattern>*Measurement.php</exclude-pattern>
+</rule> -->
 <rule ref="Generic.Metrics.NestingLevel">
     <properties>
         <property name="nestingLevel" value="5"/>

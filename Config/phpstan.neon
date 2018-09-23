@@ -21,3 +21,13 @@ parameters:
 		- */tests/*
 		- */test/*
 		- *Test.php
+		- *Routes.php
+		- *ObjLoader.js
+		- */vendor/*
+		- */Demo/*
+		- */Build/*
+		- */Cache/*
+		- */Docs/*
+		- */Documentation/*
+		- */Resources/*
+		- */Routes/*
