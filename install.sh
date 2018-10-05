@@ -12,10 +12,6 @@ pecl install ast
 echo "extension=ast.so" | tee /etc/php/7.2/mods-available/ast.ini
 phpenmod ast
 
-pecl install redis
-echo "extension=redis.so" | tee /etc/php/7.2/mods-available/redis.ini
-phpenmod redis
-
 systemctl restart apache2
 
 # Install redis
@@ -50,8 +46,13 @@ chmod 770 /var/lib/redis
 systemctl start redis
 systemctl enable redis
 
+pecl install redis
+echo "extension=redis.so" | tee /etc/php/7.2/mods-available/redis.ini
+phpenmod redis
+
 # Install memcached
 apt-get install memcached libmemcached-dev libmemcached-tools
 systemctl restart memcached
+pecl install memcached
 echo "extension=memcached.so" | tee /etc/php/7.2/mods-available/memcached.ini
 phpenmod memcached
