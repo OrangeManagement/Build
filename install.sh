@@ -58,3 +58,10 @@ systemctl restart memcached
 pecl install memcached
 echo "extension=memcached.so" | tee /etc/php/7.2/mods-available/memcached.ini
 phpenmod memcached
+
+# Install email server for testing
+apt-get install dovecot-imapd dovecot-pop3d
+# protocls = pop3 pop3s imap imaps
+# pop3_uidl_format = %08Xu%08Xv
+/etc/init.d/dovecot start
+sudo useradd -d /home/testuser -g mail -u 1001 -s /bin/bash testuser
