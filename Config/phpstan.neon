@@ -22,6 +22,7 @@ parameters:
 		- */test/*
 		- *Test.php
 		- *Routes.php
+		- *Hooks.php
 		- *ObjLoader.js
 		- */vendor/*
 		- */Demo/*
@@ -31,3 +32,4 @@ parameters:
 		- */Documentation/*
 		- */Resources/*
 		- */Routes/*
+		- */Hooks/*
