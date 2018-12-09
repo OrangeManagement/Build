@@ -27,12 +27,12 @@ for FILE in $(git diff --cached --name-only); do
 
     # Tests
     if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessful "$FILE") = 0 ]]; then
-        echo -e "\e[1;31m\tPhan error.\e[0m" >&2
+        echo -e "\e[1;31m\tPhan error in $FILE.\e[0m" >&2
         exit 1
     fi
 
     if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessful "$FILE") = 0 ]]; then
-        echo -e "\e[1;31m\tPhp stan error.\e[0m" >&2
+        echo -e "\e[1;31m\tPhp stan error in $FILE.\e[0m" >&2
         exit 1
     fi
 
