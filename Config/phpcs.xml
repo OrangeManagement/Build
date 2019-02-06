@@ -16,6 +16,7 @@
 <exclude-pattern>*/tests/*</exclude-pattern>
 <exclude-pattern>*/Routes/*</exclude-pattern>
 <exclude-pattern>*/Hooks/*</exclude-pattern>
+<exclude-pattern>*/node_modules/*</exclude-pattern>
 <arg value="q"/>
 <arg name="colors"/>
 <rule ref="Generic.Classes.DuplicateClassName"/>

@@ -33,3 +33,4 @@ parameters:
 		- */Resources/*
 		- */Routes/*
 		- */Hooks/*
+		- */node_modules/*
