@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# create new user
+adduser test
+usermod -aG sudo test
+
+
 # Debian
 #wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
 #echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
@@ -49,9 +54,17 @@ apt-get install dovecot-imapd dovecot-pop3d
 # protocls = pop3 pop3s imap imaps
 # pop3_uidl_format = %08Xu%08Xv
 /etc/init.d/dovecot start
-sudo useradd -d /home/testuser -g mail -u 1001 -s /bin/bash testuser
+sudo useradd -d /home/test -g mail -u 1001 -s /bin/bash test
 
 # npm
 npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest
 
 systemctl restart apache2
+
+# FTP
+apt-get install vsftpd
+
+# /etc/vstftpd.conf
+# write_enable=YES
+# anon_upload_enable=YES
+# connect_from_port_20=NO
