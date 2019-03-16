@@ -15,7 +15,7 @@ MAIL_ADDR=""
 
 # Authentications
 DB_USER="root"
-DB_PASSWORD="123456"
+DB_PASSWORD=""
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Orange-Management/Orange-Management.git"

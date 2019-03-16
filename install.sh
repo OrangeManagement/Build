@@ -16,6 +16,7 @@ apt-get install npm git php7.2 php7.2-cli php7.2-common php7.2-mysql php7.2-pgsq
 # USE mysql;
 # mysql < 5.7
 # UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+# UPDATE user SET password=PASSWORD("") WHERE User='root';
 # FLUSH PRIVILEGES;
 # exit;
 # else mysql >= 5.7
@@ -59,8 +60,6 @@ sudo useradd -d /home/test -g mail -u 1001 -s /bin/bash test
 # npm
 npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest
 
-systemctl restart apache2
-
 # FTP
 apt-get install vsftpd
 
@@ -68,3 +67,5 @@ apt-get install vsftpd
 # write_enable=YES
 # anon_upload_enable=YES
 # connect_from_port_20=NO
+
+systemctl restart apache2

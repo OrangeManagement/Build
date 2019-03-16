@@ -25,6 +25,10 @@ do
     git clone -b ${GIT_BRANCH} $i
 done
 
+cd ${BASE_PATH}/Website
+git submodule update --init --recursive
+git submodule foreach git checkout develop
+
 cd ${ROOT_PATH}
 git submodule update --init --recursive
 git submodule foreach git checkout develop
