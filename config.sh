@@ -19,10 +19,7 @@ DB_PASSWORD="123456"
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Orange-Management/Orange-Management.git"
-GITHUB_URL[1]="https://github.com/Orange-Management/phpOMS.git"
-GITHUB_URL[2]="https://github.com/Orange-Management/jsOMS.git"
-GITHUB_URL[3]="https://github.com/Orange-Management/cssOMS.git"
-GITHUB_URL[4]="https://github.com/Orange-Management/Website.git"
+GITHUB_URL[1]="https://github.com/Orange-Management/Website.git"
 
 GIT_BRANCH="develop"
 
