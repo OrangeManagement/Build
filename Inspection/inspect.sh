@@ -4,8 +4,8 @@
 . config.sh
 
 # Setting up database for demo and testing
-mysql -e 'drop database if exists oms;' -u ${DB_USER} -p${DB_PASSWORD}
-mysql -e 'create database oms;' -u ${DB_USER} -p${DB_PASSWORD}
+mysql -e 'drop database if exists oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
+mysql -e 'create database oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
 
 # Build js
 #. Js/build.sh
