@@ -4,7 +4,6 @@
 adduser test
 usermod -aG sudo test
 
-
 # Debian
 #wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
 #echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
@@ -22,7 +21,14 @@ apt-get install npm git php7.2 php7.2-cli php7.2-common php7.2-mysql php7.2-pgsq
 # else mysql >= 5.7
 # ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
 
+# /etc/postgresq/...
+# change from md5 to trust
+
 update-rc.d postgresql enable
+service postgresql start
+
+# Install sqlsrv
+# https://docs.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-2017
 
 a2enmod rewrite
 a2enmod headers
