@@ -70,6 +70,14 @@ mkdir -p ${INSPECTION_PATH}/Modules/phpcpd
 mkdir -p ${INSPECTION_PATH}/Modules/linting
 mkdir -p ${INSPECTION_PATH}/Modules/html
 
+mkdir -p ${INSPECTION_PATH}/Web/logs
+mkdir -p ${INSPECTION_PATH}/Web/metrics
+mkdir -p ${INSPECTION_PATH}/Web/pdepend
+mkdir -p ${INSPECTION_PATH}/Web/phpcs
+mkdir -p ${INSPECTION_PATH}/Web/phpcpd
+mkdir -p ${INSPECTION_PATH}/Web/linting
+mkdir -p ${INSPECTION_PATH}/Web/html
+
 mkdir -p ${INSPECTION_PATH}/Framework
 mkdir -p ${INSPECTION_PATH}/Web
 mkdir -p ${INSPECTION_PATH}/Model

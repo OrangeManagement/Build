@@ -32,8 +32,8 @@ CODE[22]="onblur"
 for i in "${CODE[@]}"
 do
     grep -rlni "$i" --include \*.js ${ROOT_PATH}/jsOMS >> ${INSPECTION_PATH}/Framework/critical_js.log
-    grep -rlni "$i" --include \*.js ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/citical_js.log
-    grep -rlni "$i" --include \*.js ${ROOT_PATH}/Web >> ${INSPECTION_PATH}/Web/citical_js.log
+    grep -rlni "$i" --include \*.js ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/critical_js.log
+    grep -rlni "$i" --include \*.js ${ROOT_PATH}/Web >> ${INSPECTION_PATH}/Web/critical_js.log
 done
 
 # JS strict type

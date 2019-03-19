@@ -44,13 +44,13 @@ touch ${INSPECTION_PATH}/Web/critical_php.log
 for i in "${CODE[@]}"
 do
     grep -rlni "$i" --include \*.php ${ROOT_PATH}/phpOMS >> ${INSPECTION_PATH}/Framework/critical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/citical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Model >> ${INSPECTION_PATH}/Model/citical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Web >> ${INSPECTION_PATH}/Web/citical_php.log
+    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/critical_php.log
+    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Model >> ${INSPECTION_PATH}/Model/critical_php.log
+    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Web >> ${INSPECTION_PATH}/Web/critical_php.log
 done
 
 # PHP strict type
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Framework/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Modules > ${INSPECTION_PATH}/Modules/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Model > ${INSPECTION_PATH}/Model/strict_missing_php.log
-grep -r -L "declare\(\ *strict_types\ *=\ *1\ *\);" --include=*.php ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/strict_missing_php.log
+grep -r -L "declare\(strict_types=1\);" --include=*.php ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Framework/strict_missing_php.log
+grep -r -L "declare\(strict_types=1\);" --include=*.php ${ROOT_PATH}/Modules > ${INSPECTION_PATH}/Modules/strict_missing_php.log
+grep -r -L "declare\(strict_types=1\);" --include=*.php ${ROOT_PATH}/Model > ${INSPECTION_PATH}/Model/strict_missing_php.log
+grep -r -L "declare\(strict_types=1\);" --include=*.php ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/strict_missing_php.log
