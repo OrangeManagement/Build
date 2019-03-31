@@ -62,6 +62,7 @@ apt-get install dovecot-imapd dovecot-pop3d
 # pop3_uidl_format = %08Xu%08Xv
 /etc/init.d/dovecot start
 sudo useradd -d /home/test -g mail -u 1001 -s /bin/bash test
+# Make sure no ssh is possible for this user
 
 # npm
 npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest
