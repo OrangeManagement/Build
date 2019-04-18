@@ -29,3 +29,6 @@ mysql -e 'create database oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
 
 # Custom php inspections
 . ${BUILD_PATH}/Inspection/Php/security.sh
+
+# Build external test report
+php ${TOOLS_PATH}/testreportgenerator.phar -l ${BUILD_PATH}/Config/reportLang.php -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -d https://orange-management.org/Inspection/Test/ReportExternal --version 1.0.0
