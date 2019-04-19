@@ -89,6 +89,18 @@ return [
     'phpOMS\tests\Account\GroupTest:testChangeStatus' => ['description' => 'The default status of the group can be changed to a different valid status'],
     'phpOMS\tests\Account\GroupTest:testStatusException' => ['description' => 'A group can only have valid group status'],
 
+    'phpOMS\tests\Asset\AssetManagerTest' => ['description' => 'Asset manager to handle/access assets'],
+    'phpOMS\tests\Asset\AssetManagerTest:testAttributes' => ['description' => 'The manager has the expected member variables'],
+    'phpOMS\tests\Asset\AssetManagerTest:testDefault' => ['description' => 'The manager has the expected default values after initialization'],
+    'phpOMS\tests\Asset\AssetManagerTest:testAddAsset' => ['description' => 'An asset can be added to the manager'],
+    'phpOMS\tests\Asset\AssetManagerTest:testRetrieveAsset' => ['description' => 'An asset can be retrieved from the manager'],
+    'phpOMS\tests\Asset\AssetManagerTest:testInvalidAssetReplacement' => ['description' => 'An asset can only be added once to the manager (no duplication unless overwritten)'],
+    'phpOMS\tests\Asset\AssetManagerTest:testAssetReplacement' => ['description' => 'An asset can be replaced upon request'],
+    'phpOMS\tests\Asset\AssetManagerTest:testAssetRemove' => ['description' => 'An asset can be removed from the manager'],
+
+    'phpOMS\tests\Auth\AuthTest' => ['description' => 'Asset manager to handle/access assets'],
+    'phpOMS\tests\Auth\AuthTest:testAuthWithEmptyHttpSession' => ['description' => 'The default http session doesn\'t authenticate an account'],
+
     'phpOMS\tests\Localization\MoneyTest' => ['description' => 'Money datatype for internal representation of money'],
     'phpOMS\tests\Localization\MoneyTest:testDefaultMemberVariables' => ['description' => 'The datatype has the expected member variables and default values'],
     'phpOMS\tests\Localization\MoneyTest:testMoneyDefaultStringRepresentation' => ['description' => 'The datatype returns the correct default string representation (#,###.##)'],
