@@ -56,6 +56,15 @@ return [
     ':disclaimer' => 'Disclaimer',
     ':disclaimer_desc_1' => 'This test report doesn\'t provide any legal warrenty over completeness and correctness in case of damages of any kind.',
     // report elements come below / the order is important and is the same as in the generated report.
+    'phpOMS\tests\Account\AccountManagerTest' => ['description' => 'Account/user manager to handle/access loaded accounts'],
+    'phpOMS\tests\Account\AccountManagerTest:testAttributes' => ['description' => 'The manager has the expected member variables'],
+    'phpOMS\tests\Account\AccountManagerTest:testDefault' => ['description' => 'The manager has the expected default values after initialization'],
+    'phpOMS\tests\Account\AccountManagerTest:testAddAccount' => ['description' => 'An account can be added to the manager'],
+    'phpOMS\tests\Account\AccountManagerTest:testRetrieveAccount' => ['description' => 'An account can be retrieved from the manager'],
+    'phpOMS\tests\Account\AccountManagerTest:testNoAccountDuplication' => ['description' => 'An account can only be added once to the account manager (no duplication)'],
+    'phpOMS\tests\Account\AccountManagerTest:testNoAccountDuplication' => ['description' => 'An account can only be added once to the account manager (no duplication)'],
+    'phpOMS\tests\Account\AccountManagerTest:testRemoveAccount' => ['description' => 'An account can be removed from the account manager'],
+
     'phpOMS\tests\Localization\MoneyTest' => ['description' => 'Money datatype for internal representation of money'],
     'phpOMS\tests\Localization\MoneyTest:testDefaultMemberVariables' => ['description' => 'The datatype has the expected member variables and default values'],
     'phpOMS\tests\Localization\MoneyTest:testMoneyDefaultStringRepresentation' => ['description' => 'The datatype returns the correct default string representation (#,###.##)'],
@@ -69,9 +78,11 @@ return [
     'phpOMS\tests\Localization\MoneyTest:testMoneyMultDiv' => ['description' => 'The datatype correctly multiplies and divides the money with numerics'],
     'phpOMS\tests\Localization\MoneyTest:testMoneyAbsoluteValue' => ['description' => 'The datatype correctly handles the absolute value'],
     'phpOMS\tests\Localization\MoneyTest:testMoneyPower' => ['description' => 'The datatype correctly handles the power operator'],
+
     'phpOMS\tests\System\SystemUtilsTest' => ['description' => 'System information'],
     'phpOMS\tests\System\SystemUtilsTest:testRAM' => ['description' => 'Test if it is possible to get information about the available RAM and usage (on Windows)'],
     'phpOMS\tests\System\SystemUtilsTest:testCPUUsage' => ['description' => 'Test if it is possible to get information about the CPU usage'],
+
     'phpOMS\tests\Math\Matrix\SingularValueDecompositionTest' => ['description' => 'Singular Value Decomposition'],
     'phpOMS\tests\Math\Matrix\SingularValueDecompositionTest:testRankCalculation' => ['description' => 'Test the correct rank calculation'],
     'phpOMS\tests\Math\Matrix\SingularValueDecompositionTest:testSUVCalculation' => ['description' => 'Test the correct calculation of U, S and V'],
