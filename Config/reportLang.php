@@ -101,6 +101,20 @@ return [
     'phpOMS\tests\Auth\AuthTest' => ['description' => 'Asset manager to handle/access assets'],
     'phpOMS\tests\Auth\AuthTest:testAuthWithEmptyHttpSession' => ['description' => 'The default http session doesn\'t authenticate an account'],
 
+    'phpOMS\Business\Finance\DepreciationTest' => ['description' => 'Depreciation calculations'],
+    'phpOMS\Business\Finance\DepreciationTest:testStraightLine' => ['description' => 'The straight line deprecition and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testArithmeticDegressivDepreciation' => ['description' => 'The arithmetic degressiv deprecition and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testArithmeticProgressivDepreciation' => ['description' => 'The arithmetic progressiv deprecition and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testGeometricProgressivDepreciation' => ['description' => 'The geometric progressiv deprecition and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testGeometricDegressivDepreciation' => ['description' => 'The geometric degressiv deprecition and reverse value calculations are correct'],
+
+    'phpOMS\Business\Finance\FinanceFormulasTest' => ['description' => 'Finance formulas'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testAnnualPercentageYield' => ['description' => 'The annual percentage yield (APY) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testFutureValueOfAnnuity' => ['description' => 'The future value of annuity (FVA) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testFutureValueOfAnnuityContinuousCompounding' => ['description' => 'The future value of annuity continuous compounding (FVACC) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testAnnuityPaymentPV' => ['description' => 'The annuity payment from the present value (PV) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testAnnuityPaymentFV' => ['description' => 'The annuity payment from the future value (FV) and reverse value calculations are correct'],
+
     'phpOMS\tests\Localization\MoneyTest' => ['description' => 'Money datatype for internal representation of money'],
     'phpOMS\tests\Localization\MoneyTest:testDefaultMemberVariables' => ['description' => 'The datatype has the expected member variables and default values'],
     'phpOMS\tests\Localization\MoneyTest:testMoneyDefaultStringRepresentation' => ['description' => 'The datatype returns the correct default string representation (#,###.##)'],
