@@ -56,7 +56,7 @@ echo "Setup build output"
 mkdir -p ${INSPECTION_PATH}/logs
 mkdir -p ${INSPECTION_PATH}/Framework/logs
 mkdir -p ${INSPECTION_PATH}/Framework/metrics
-mkdir -p ${INSPECTION_PATH}/Framework/pdepend
+#mkdir -p ${INSPECTION_PATH}/Framework/pdepend
 mkdir -p ${INSPECTION_PATH}/Framework/phpcs
 mkdir -p ${INSPECTION_PATH}/Framework/phpcpd
 mkdir -p ${INSPECTION_PATH}/Framework/linting
@@ -64,7 +64,7 @@ mkdir -p ${INSPECTION_PATH}/Framework/html
 
 mkdir -p ${INSPECTION_PATH}/Modules/logs
 mkdir -p ${INSPECTION_PATH}/Modules/metrics
-mkdir -p ${INSPECTION_PATH}/Modules/pdepend
+#mkdir -p ${INSPECTION_PATH}/Modules/pdepend
 mkdir -p ${INSPECTION_PATH}/Modules/phpcs
 mkdir -p ${INSPECTION_PATH}/Modules/phpcpd
 mkdir -p ${INSPECTION_PATH}/Modules/linting
@@ -72,7 +72,7 @@ mkdir -p ${INSPECTION_PATH}/Modules/html
 
 mkdir -p ${INSPECTION_PATH}/Web/logs
 mkdir -p ${INSPECTION_PATH}/Web/metrics
-mkdir -p ${INSPECTION_PATH}/Web/pdepend
+#mkdir -p ${INSPECTION_PATH}/Web/pdepend
 mkdir -p ${INSPECTION_PATH}/Web/phpcs
 mkdir -p ${INSPECTION_PATH}/Web/phpcpd
 mkdir -p ${INSPECTION_PATH}/Web/linting
@@ -101,9 +101,9 @@ wget -nc https://getcomposer.org/composer.phar
 wget -nc https://phar.phpunit.de/phploc.phar
 wget -nc https://phar.phpunit.de/phpunit.phar
 wget -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.2.2/phpcs.phar
-wget -nc http://static.phpmd.org/php/latest/phpmd.phar
+#wget -nc http://static.phpmd.org/php/latest/phpmd.phar no longer available
 wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
-wget -nc http://static.pdepend.org/php/latest/pdepend.phar
+#wget -nc http://static.pdepend.org/php/latest/pdepend.phar
 wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
 wget -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
 wget -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.0.1-beta/testreportgenerator.phar
