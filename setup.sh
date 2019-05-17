@@ -106,7 +106,7 @@ wget -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.pha
 #wget -nc http://static.pdepend.org/php/latest/pdepend.phar
 wget -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
 wget -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
-wget -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.0.1-beta/testreportgenerator.phar
+wget -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc1/testreportgenerator.phar
 wget -nc https://github.com/phpstan/phpstan/releases/download/0.9.2/phpstan.phar
 wget -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
 wget -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar

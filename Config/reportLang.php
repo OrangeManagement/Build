@@ -102,11 +102,11 @@ return [
     'phpOMS\tests\Auth\AuthTest:testAuthWithEmptyHttpSession' => ['description' => 'The default http session doesn\'t authenticate an account'],
 
     'phpOMS\Business\Finance\DepreciationTest' => ['description' => 'Depreciation calculations'],
-    'phpOMS\Business\Finance\DepreciationTest:testStraightLine' => ['description' => 'The straight line deprecition and reverse value calculations are correct'],
-    'phpOMS\Business\Finance\DepreciationTest:testArithmeticDegressivDepreciation' => ['description' => 'The arithmetic degressiv deprecition and reverse value calculations are correct'],
-    'phpOMS\Business\Finance\DepreciationTest:testArithmeticProgressivDepreciation' => ['description' => 'The arithmetic progressiv deprecition and reverse value calculations are correct'],
-    'phpOMS\Business\Finance\DepreciationTest:testGeometricProgressivDepreciation' => ['description' => 'The geometric progressiv deprecition and reverse value calculations are correct'],
-    'phpOMS\Business\Finance\DepreciationTest:testGeometricDegressivDepreciation' => ['description' => 'The geometric degressiv deprecition and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testStraightLine' => ['description' => 'The straight line depreciation and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testArithmeticDegressivDepreciation' => ['description' => 'The arithmetic degressiv depreciation and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testArithmeticProgressivDepreciation' => ['description' => 'The arithmetic progressiv depreciation and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testGeometricProgressivDepreciation' => ['description' => 'The geometric progressiv depreciation and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\DepreciationTest:testGeometricDegressivDepreciation' => ['description' => 'The geometric degressiv depreciation and reverse value calculations are correct'],
 
     'phpOMS\Business\Finance\FinanceFormulasTest' => ['description' => 'Finance formulas'],
     'phpOMS\Business\Finance\FinanceFormulasTest:testAnnualPercentageYield' => ['description' => 'The annual percentage yield (APY) and reverse value calculations are correct'],
