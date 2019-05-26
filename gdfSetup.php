@@ -215,6 +215,21 @@ $app->accountManager->add($account);
 $app->router = new Router();
 
 /**
+ * Install modules
+ */
+$module = $app->moduleManager->get('Admin');
+TestUtils::setMember($module, 'app', $app);
+
+$response = new Response();
+$request  = new Request(new Http(''));
+
+$request->getHeader()->setAccount(1);
+$request->setData('status', 3);
+
+$request->setData('module', 'Helper');
+$module->apiModuleStatusUpdate($request, $response);
+
+/**
  * Setup groups
  */
 $module = $app->moduleManager->get('Admin');
@@ -236,10 +251,12 @@ $groups = [
     ['name' => 'QM', 'permissions' => []],
     ['name' => 'Finance', 'permissions' => []],
     ['name' => 'Employee', 'permissions' => [
-        //'Navigation' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
         'Help' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
         'Profile' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
-        //'Help' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
+        'Helper' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
+    ]],
+    ['name' => 'Controlling', 'permissions' => [
+        'Helper' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
     ]],
 ];
 
@@ -254,14 +271,14 @@ foreach ($groups as $group) {
     $module->apiGroupCreate($request, $response);
 
     if (!empty($group['permissions'])) {
-        $a = $response->get('')['response'];
+        $g = $response->get('')['response'];
         foreach ($group['permissions'] as $key => $p) {
             $response = new Response();
             $request  = new Request(new Http(''));
 
             $request->getHeader()->setAccount(1);
             $request->setData('permissionowner', $p['permissionowner']);
-            $request->setData('permissionref', $a->getId());
+            $request->setData('permissionref', $g->getId());
             $request->setData('permissionunit', $p['permissionunit']);
             $request->setData('permissionapp', $p['permissionapp']);
             $request->setData('permissionmodule', $key);
@@ -395,7 +412,7 @@ $accounts = [
         'name1'  => 'Dennis',
         'name2'  => 'Eichhorn',
         'email'  => 'dennis.eichhorn@gdfmbh.com',
-        'groups' =>  ['Executive', 'Finance', 'Employee']
+        'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee']
     ]
 ];
 
@@ -429,3 +446,7 @@ foreach ($accounts as $account) {
         }
     }
 }
+
+/**
+ * Setup helper module
+ */
