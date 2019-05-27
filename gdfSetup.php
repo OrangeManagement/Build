@@ -168,7 +168,7 @@ $request->setData('adminname', 'admin');
 $request->setData('adminpassword', 'orange');
 $request->setData('adminemail', 'admin@oms.com');
 $request->setData('domain', '127.0.0.1');
-$request->setData('websubdir', '/');
+$request->setData('websubdir',  $config['page']['root']);
 $request->setData('defaultlang', 'en');
 
 WebApplication::installRequest($request, $response);
