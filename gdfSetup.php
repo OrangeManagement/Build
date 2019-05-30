@@ -391,6 +391,7 @@ foreach ($positions as $position) {
             $module->apiPositionCreate($request, $response);
 
             $positionIds[$position['name']] = $response->get('')['response']->getId();
+            break;
         }
     }
 }
