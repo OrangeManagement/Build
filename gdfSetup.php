@@ -226,7 +226,12 @@ $request  = new Request(new Http(''));
 $request->getHeader()->setAccount(1);
 $request->setData('status', 3);
 
+// Helper
 $request->setData('module', 'Helper');
+$module->apiModuleStatusUpdate($request, $response);
+
+// Search
+$request->setData('module', 'Search');
 $module->apiModuleStatusUpdate($request, $response);
 
 /**
