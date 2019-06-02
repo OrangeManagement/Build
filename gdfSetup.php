@@ -234,6 +234,11 @@ $module->apiModuleStatusUpdate($request, $response);
 $request->setData('module', 'Search');
 $module->apiModuleStatusUpdate($request, $response);
 
+// Dashboard
+$request->setData('module', 'Dashboard');
+$module->apiModuleStatusUpdate($request, $response);
+
+
 /**
  * Setup groups
  */
