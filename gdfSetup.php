@@ -226,6 +226,7 @@ $request  = new Request(new Http(''));
 
 $request->getHeader()->setAccount(1);
 $request->setData('name', 'GDF GmbH');
+$request->setData('parent', 1);
 $request->setData('status', 1);
 
 $module->apiUnitCreate($request, $response);
