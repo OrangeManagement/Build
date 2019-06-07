@@ -29,6 +29,7 @@ use phpOMS\Module\ModuleManager;
 use phpOMS\Router\Router;
 use phpOMS\Uri\Http;
 use phpOMS\Utils\TestUtils;
+use Model\Settings;
 
 $config   = [
     'db'       => [
@@ -163,7 +164,7 @@ $request->setData('updatepassword', $config['db']['core']['masters']['admin']['p
 $request->setData('deleteuser', $config['db']['core']['masters']['admin']['login']);
 $request->setData('deletepassword', $config['db']['core']['masters']['admin']['password']);
 
-$request->setData('orgname', 'GDF GmbH');
+$request->setData('orgname', 'MANI Inc.');
 $request->setData('adminname', 'admin');
 $request->setData('adminpassword', 'orange');
 $request->setData('adminemail', 'admin@oms.com');
@@ -199,7 +200,7 @@ $account = new Account();
 TestUtils::setMember($account, 'id', 1);
 
 $permission = new AccountPermission();
-$permission->setUnit(1);
+$permission->setUnit(2);
 $permission->setApp('backend');
 $permission->setPermission(
     PermissionType::READ
@@ -215,7 +216,22 @@ $app->accountManager->add($account);
 $app->router = new Router();
 
 /**
- * Install modules
+ * Setup additional units
+ */
+$module = $app->moduleManager->get('Organization');
+TestUtils::setMember($module, 'app', $app);
+
+$response = new Response();
+$request  = new Request(new Http(''));
+
+$request->getHeader()->setAccount(1);
+$request->setData('name', 'GDF GmbH');
+$request->setData('status', 1);
+
+$module->apiUnitCreate($request, $response);
+
+/**
+ * Change app settings
  */
 $module = $app->moduleManager->get('Admin');
 TestUtils::setMember($module, 'app', $app);
@@ -223,6 +239,19 @@ TestUtils::setMember($module, 'app', $app);
 $response = new Response();
 $request  = new Request(new Http(''));
 
+$request->getHeader()->setAccount(1);
+$request->setData('settings_' . Settings::DEFAULT_ORGANIZATION, '2');
+
+$module->apiSettingsSet($request, $response);
+
+/**
+ * Install modules
+ */
+$module = $app->moduleManager->get('Admin');
+TestUtils::setMember($module, 'app', $app);
+
+$response = new Response();
+$request  = new Request(new Http(''));
 $request->getHeader()->setAccount(1);
 $request->setData('status', 3);
 
@@ -261,12 +290,12 @@ $groups = [
     ['name' => 'QM', 'permissions' => []],
     ['name' => 'Finance', 'permissions' => []],
     ['name' => 'Employee', 'permissions' => [
-        'Help' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
-        'Profile' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
-        'Helper' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
+        'Help' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
+        'Profile' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
+        'Helper' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
     ]],
     ['name' => 'Controlling', 'permissions' => [
-        'Helper' => ['permissionowner' => 1, 'permissionunit' => 1, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
+        'Helper' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
     ]],
 ];
 
@@ -338,7 +367,7 @@ foreach ($departments as $department) {
     $request->getHeader()->setAccount(1);
     $request->setData('name', $department['name']);
     $request->setData('status', Status::ACTIVE);
-    $request->setData('unit', 1);
+    $request->setData('unit', 2);
     $request->setData('parent', $departmentIds[$department['parent']] ?? null);
 
     $module->apiDepartmentCreate($request, $response);
