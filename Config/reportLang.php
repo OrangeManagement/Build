@@ -114,6 +114,38 @@ return [
     'phpOMS\Business\Finance\FinanceFormulasTest:testFutureValueOfAnnuityContinuousCompounding' => ['description' => 'The future value of annuity continuous compounding (FVACC) and reverse value calculations are correct'],
     'phpOMS\Business\Finance\FinanceFormulasTest:testAnnuityPaymentPV' => ['description' => 'The annuity payment from the present value (PV) and reverse value calculations are correct'],
     'phpOMS\Business\Finance\FinanceFormulasTest:testAnnuityPaymentFV' => ['description' => 'The annuity payment from the future value (FV) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testAnnutiyPaymentFactorPV' => ['description' => 'The annuity payment from the present value (PV) and reverse value calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testPresentValueOfAnnuity' => ['description' => 'The present value of the annuity is correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testPresentValueAnnuityFactor' => ['description' => 'The present value annuity factor of the annuity is correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testPresentValueOfAnnuityDue' => ['description' => 'The due present value the annuity is correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testFutureValueOfAnnuityDue' => ['description' => 'The due future value the annuity is correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testRelativeMarketShare' => ['description' => 'The relative market share calculations by shares and ales are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testAssetRatios' => ['description' => 'The asset ratio calculations are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testBalanceRatios' => ['description' => 'Balance ratio calculations for DII, Receivables/Turnover, and more are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testDeptRatios' => ['description' => 'Dept ratios for dept coverage, dept to equity and dept to income are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testRatios' => ['description' => 'Not Implemented!!!'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testCompound' => ['description' => 'Compound calculations for interest, principal and periods are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testContinuousCompounding' => ['description' => 'Continuous compound calculations for interest, principal and periods are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testSimpleInterest' => ['description' => 'Calculations for interest, principal and periods are correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testDiscountedPaybackPeriod' => ['description' => 'The descounted payback period is correct'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testDoublingTime' => ['description' => 'Test the correct calculation of the growth rate in order to double and vice versa'],
+    'phpOMS\Business\Finance\FinanceFormulasTest:testDoublingTimeContinuousCompounding' => ['description' => 'Test the correct calculation of the growth rate in order to double and vice versa with continuous compounding'],
+    // todo: implement remaining
+
+    'phpOMS\tests\Business\Marketing\MetricsTest' => ['description' => 'General marketing metrics'],
+    'phpOMS\tests\Business\Marketing\MetricsTest:testCustomerRetention' => ['description' => 'Test the correctnes of the customer retention calculation'],
+
+    'phpOMS\tests\Business\Marketing\NetPromoterScoreTest' => ['description' => 'Net promoter'],
+    'phpOMS\tests\Business\Marketing\NetPromoterScoreTest:testDefault' => ['description' => 'The default net promoter score is 0'],
+    'phpOMS\tests\Business\Marketing\NetPromoterScoreTest:testScoreDetractorPassivePromotor' => ['description' => 'The net promotor score, detractors, passives and promotors are correct'],
+
+    'phpOMS\tests\Business\Programming\MetricsTest' => ['description' => 'General programming metrics'],
+    'phpOMS\tests\Business\Programming\MetricsTest:testABCMetric' => ['description' => 'Test correctness of the ABC calculation'],
+    'phpOMS\tests\Business\Programming\MetricsTest:testCRAPMetric' => ['description' => 'Test correctness of CRAP score'],
+
+    'phpOMS\tests\Business\Sales\MarketShareEstimationTest' => ['description' => 'Market share calculations'],
+    'phpOMS\tests\Business\Sales\MarketShareEstimationTest:testZipfRank' => ['description' => 'The rank calculated with Zipf is correct'],
+    'phpOMS\tests\Business\Sales\MarketShareEstimationTest:testZipfShare' => ['description' => 'The market share by rank calculated with Zipf is correct'],
 
     'phpOMS\tests\Localization\MoneyTest' => ['description' => 'Money datatype for internal representation of money'],
     'phpOMS\tests\Localization\MoneyTest:testDefaultMemberVariables' => ['description' => 'The datatype has the expected member variables and default values'],
