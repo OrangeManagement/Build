@@ -1,5 +1,6 @@
 #!/bin/bash
 
+. ${rootpath}/Build/Hooks/fixes.sh
 . ${rootpath}/Build/Hooks/logging.sh
 . ${rootpath}/Build/Hooks/syntax.sh
 . ${rootpath}/Build/Hooks/filename.sh
@@ -9,6 +10,12 @@ for FILE in $(git diff --cached --name-only); do
     if [[ ! -f "$FILE" ]]; then
         continue
     fi
+
+    # Fixes
+    if [[ "$FILE" =~ ^.+(php)$ ]]; then
+        $(phpcsfix "$FILE")
+    fi
+
 
     # Filename
     if [[ $(isValidFileName "$FILE") = 0 ]]; then
