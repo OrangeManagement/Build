@@ -241,7 +241,7 @@ $response = new Response();
 $request  = new Request(new Http(''));
 
 $request->getHeader()->setAccount(1);
-$request->setData('settings_' . Settings::DEFAULT_ORGANIZATION, '2');
+$request->setData('settings', \json_encode([Settings::DEFAULT_ORGANIZATION => '2']));
 
 $module->apiSettingsSet($request, $response);
 
@@ -291,12 +291,60 @@ $groups = [
     ['name' => 'QM', 'permissions' => []],
     ['name' => 'Finance', 'permissions' => []],
     ['name' => 'Employee', 'permissions' => [
-        'Help' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
-        'Profile' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
-        'Helper' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 0, 'permissionread' => 2, 'permissionupdate' => 0, 'permissiondelete' => 0, 'permissionpermission' => 0],
+        'Help' => [
+            'permissionowner' => 1,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 0,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0
+        ],
+        'Profile' => [
+            'permissionowner' => 1,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 0,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0
+        ],
+        'Helper' => [
+            'permissionowner' => 1,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 0,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0
+        ],
     ]],
     ['name' => 'Controlling', 'permissions' => [
-        'Helper' => ['permissionowner' => 1, 'permissionunit' => 2, 'permissionapp' => 'backend', 'permissiontype' => null, 'permissionelement' => null, 'permissioncomponent' => null, 'permissioncreate' => 4, 'permissionread' => 2, 'permissionupdate' => 8, 'permissiondelete' => 16, 'permissionpermission' => 32],
+        'Helper' => [
+            'permissionowner' => 1,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 16,
+            'permissionpermission' => 32
+        ],
     ]],
 ];
 
