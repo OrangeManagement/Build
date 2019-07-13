@@ -1,35 +1,35 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Remove old install and setup database.
  *
  * This script is usefull when you want to manually install the app without resetting an old database/app or new empty database.
  */
-ini_set('memory_limit', '2048M');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+\ini_set('memory_limit', '2048M');
+\ini_set('display_errors', 1);
+\ini_set('display_startup_errors', 1);
+\error_reporting(\E_ALL);
 
 require_once __DIR__ . '/../phpOMS/Autoloader.php';
 
 use Install\WebApplication;
 use Model\CoreSettings;
-use phpOMS\ApplicationAbstract;
-use phpOMS\Dispatcher\Dispatcher;
+use Model\Settings;
+use Modules\Admin\Models\AccountPermission;
+use Modules\Admin\Models\GroupMapper;
+use Modules\Organization\Models\DepartmentMapper;
+use Modules\Organization\Models\Status;
 use phpOMS\Account\Account;
 use phpOMS\Account\AccountManager;
+use phpOMS\Account\AccountStatus;
+use phpOMS\Account\AccountType;
+use phpOMS\Account\GroupStatus;
 use phpOMS\Account\PermissionType;
+use phpOMS\ApplicationAbstract;
 use phpOMS\DataStorage\Database\DatabasePool;
 use phpOMS\DataStorage\Session\HttpSession;
-use Modules\Admin\Models\AccountPermission;
-use phpOMS\Message\Http\Request;
+use phpOMS\Dispatcher\Dispatcher;
 use phpOMS\Event\EventManager;
-use phpOMS\Message\Http\RequestMethod;
-use phpOMS\Message\Http\Response;
-use phpOMS\Module\ModuleManager;
-use phpOMS\Router\Router;
-use phpOMS\Uri\Http;
-use phpOMS\Utils\TestUtils;
-use Model\Settings;
+use phpOMS\Message\Http\Request;
 
 $config   = [
     'db'       => [
@@ -132,7 +132,7 @@ $config   = [
         'en',
     ],
     'apis'     => [
-    ]
+    ],
 ];
 
 // Reset database
@@ -362,8 +362,8 @@ $module->apiModuleStatusUpdate($request, $response);
 $module = $app->moduleManager->get('Admin');
 TestUtils::setMember($module, 'app', $app);
 
-use Modules\Admin\Models\GroupMapper;
-use phpOMS\Account\GroupStatus;
+use phpOMS\Message\Http\RequestMethod;
+use phpOMS\Message\Http\Response;
 
 $groups = [
     ['name' => 'Management', 'permissions' => []],
@@ -394,7 +394,7 @@ $groups = [
             'permissionread' => 2,
             'permissionupdate' => 0,
             'permissiondelete' => 0,
-            'permissionpermission' => 0
+            'permissionpermission' => 0,
         ],
         'Profile' => [
             'permissionowner' => 1,
@@ -407,7 +407,7 @@ $groups = [
             'permissionread' => 2,
             'permissionupdate' => 0,
             'permissiondelete' => 0,
-            'permissionpermission' => 0
+            'permissionpermission' => 0,
         ],
         'Helper' => [
             'permissionowner' => 1,
@@ -420,7 +420,7 @@ $groups = [
             'permissionread' => 2,
             'permissionupdate' => 0,
             'permissiondelete' => 0,
-            'permissionpermission' => 0
+            'permissionpermission' => 0,
         ],
     ]],
     ['name' => 'Controlling', 'permissions' => [
@@ -435,7 +435,7 @@ $groups = [
             'permissionread' => 2,
             'permissionupdate' => 8,
             'permissiondelete' => 16,
-            'permissionpermission' => 32
+            'permissionpermission' => 32,
         ],
     ]],
 ];
@@ -482,7 +482,7 @@ foreach ($groups as $group) {
 $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
 
-use Modules\Organization\Models\Status;
+use phpOMS\Module\ModuleManager;
 
 $departments = [
     ['name' => 'Management', 'parent' => null],
@@ -523,7 +523,7 @@ foreach ($departments as $department) {
 $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
 
-use Modules\Organization\Models\DepartmentMapper;
+use phpOMS\Router\Router;
 
 $positions = [
     ['name' => 'Chairman', 'department' => 'Management', 'parent' => null],
@@ -585,9 +585,8 @@ foreach ($positions as $position) {
 $module = $app->moduleManager->get('Admin');
 TestUtils::setMember($module, 'app', $app);
 
-use Modules\Admin\Models\AccountMapper;
-use phpOMS\Account\AccountStatus;
-use phpOMS\Account\AccountType;
+use phpOMS\Uri\Http;
+use phpOMS\Utils\TestUtils;
 
 $accounts = [
     [
@@ -596,8 +595,8 @@ $accounts = [
         'name1'  => 'Dennis',
         'name2'  => 'Eichhorn',
         'email'  => 'dennis.eichhorn@gdfmbh.com',
-        'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee']
-    ]
+        'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee'],
+    ],
 ];
 
 $groups = GroupMapper::getAll();
