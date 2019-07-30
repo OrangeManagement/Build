@@ -5,8 +5,8 @@
  * This script is usefull when you want to manually install the app without resetting an old database/app or new empty database.
  */
 \ini_set('memory_limit', '2048M');
-\ini_set('display_errors', 1);
-\ini_set('display_startup_errors', 1);
+\ini_set('display_errors', '1');
+\ini_set('display_startup_errors', '1');
 \error_reporting(\E_ALL);
 
 require_once __DIR__ . '/../phpOMS/Autoloader.php';
@@ -18,18 +18,28 @@ use Modules\Admin\Models\AccountPermission;
 use Modules\Admin\Models\GroupMapper;
 use Modules\Organization\Models\DepartmentMapper;
 use Modules\Organization\Models\Status;
+use Modules\News\Models\NewsType;
+use Modules\News\Models\NewsStatus;
 use phpOMS\Account\Account;
 use phpOMS\Account\AccountManager;
 use phpOMS\Account\AccountStatus;
 use phpOMS\Account\AccountType;
 use phpOMS\Account\GroupStatus;
+use phpOMS\Account\PermissionOwner;
 use phpOMS\Account\PermissionType;
 use phpOMS\ApplicationAbstract;
 use phpOMS\DataStorage\Database\DatabasePool;
 use phpOMS\DataStorage\Session\HttpSession;
 use phpOMS\Dispatcher\Dispatcher;
 use phpOMS\Event\EventManager;
+use phpOMS\Localization\ISO639x1Enum;
 use phpOMS\Message\Http\Request;
+use phpOMS\Message\Http\RequestMethod;
+use phpOMS\Message\Http\Response;
+use phpOMS\Module\ModuleManager;
+use phpOMS\Router\Router;
+use phpOMS\Uri\Http;
+use phpOMS\Utils\TestUtils;
 
 $config   = [
     'db'       => [
@@ -362,17 +372,73 @@ $module->apiModuleStatusUpdate($request, $response);
 $module = $app->moduleManager->get('Admin');
 TestUtils::setMember($module, 'app', $app);
 
-use phpOMS\Message\Http\RequestMethod;
-use phpOMS\Message\Http\Response;
-
 $groups = [
+    ['name' => 'beta_tester', 'permissions' => [
+        [
+            'module' => 'News',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'News',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'api',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+    ]],
     ['name' => 'Management', 'permissions' => []],
     ['name' => 'Executive', 'permissions' => []],
     ['name' => 'R&D', 'permissions' => []],
     ['name' => 'Sales', 'permissions' => []],
     ['name' => 'Service', 'permissions' => []],
     ['name' => 'Support', 'permissions' => []],
-    ['name' => 'Secretariat', 'permissions' => []],
+    ['name' => 'Secretariat', 'permissions' => [
+        [
+            'module' => 'News',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'News',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'api',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+    ]],
     ['name' => 'HR', 'permissions' => []],
     ['name' => 'Purchasing', 'permissions' => []],
     ['name' => 'QA', 'permissions' => []],
@@ -383,8 +449,9 @@ $groups = [
     ['name' => 'Registration', 'permissions' => []],
     ['name' => 'Finance', 'permissions' => []],
     ['name' => 'Employee', 'permissions' => [
-        'Help' => [
-            'permissionowner' => 1,
+        [
+            'module' => 'Help',
+            'permissionowner' => PermissionOwner::GROUP,
             'permissionunit' => 2,
             'permissionapp' => 'backend',
             'permissiontype' => null,
@@ -396,8 +463,9 @@ $groups = [
             'permissiondelete' => 0,
             'permissionpermission' => 0,
         ],
-        'Profile' => [
-            'permissionowner' => 1,
+        [
+            'module' => 'Dashboard',
+            'permissionowner' => PermissionOwner::GROUP,
             'permissionunit' => 2,
             'permissionapp' => 'backend',
             'permissiontype' => null,
@@ -409,8 +477,79 @@ $groups = [
             'permissiondelete' => 0,
             'permissionpermission' => 0,
         ],
-        'Helper' => [
-            'permissionowner' => 1,
+        [
+            'module' => 'Profile',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 0,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'Media',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'Media',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'api',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'Tasks',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'Tasks',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'api',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 0,
+            'permissiondelete' => 0,
+            'permissionpermission' => 0,
+        ],
+        [
+            'module' => 'Helper',
+            'permissionowner' => PermissionOwner::GROUP,
             'permissionunit' => 2,
             'permissionapp' => 'backend',
             'permissiontype' => null,
@@ -424,10 +563,25 @@ $groups = [
         ],
     ]],
     ['name' => 'Controlling', 'permissions' => [
-        'Helper' => [
-            'permissionowner' => 1,
+        [
+            'module' => 'Helper',
+            'permissionowner' => PermissionOwner::GROUP,
             'permissionunit' => 2,
             'permissionapp' => 'backend',
+            'permissiontype' => null,
+            'permissionelement' => null,
+            'permissioncomponent' => null,
+            'permissioncreate' => 4,
+            'permissionread' => 2,
+            'permissionupdate' => 8,
+            'permissiondelete' => 16,
+            'permissionpermission' => 32,
+        ],
+        [
+            'module' => 'Helper',
+            'permissionowner' => PermissionOwner::GROUP,
+            'permissionunit' => 2,
+            'permissionapp' => 'api',
             'permissiontype' => null,
             'permissionelement' => null,
             'permissioncomponent' => null,
@@ -461,7 +615,7 @@ foreach ($groups as $group) {
             $request->setData('permissionref', $g->getId());
             $request->setData('permissionunit', $p['permissionunit']);
             $request->setData('permissionapp', $p['permissionapp']);
-            $request->setData('permissionmodule', $key);
+            $request->setData('permissionmodule', $p['module']);
             $request->setData('permissiontype', $p['permissiontype']);
             $request->setData('permissionelement', $p['permissionelement']);
             $request->setData('permissioncomponent', $p['permissioncomponent']);
@@ -482,14 +636,13 @@ foreach ($groups as $group) {
 $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
 
-use phpOMS\Module\ModuleManager;
-
 $departments = [
     ['name' => 'Management', 'parent' => null],
     ['name' => 'R&D', 'parent' => 'Management'],
     ['name' => 'Sales', 'parent' => 'Management'],
     ['name' => 'Service', 'parent' => 'Management'],
     ['name' => 'Support', 'parent' => 'Management'],
+    ['name' => 'Purchase', 'parent' => 'Management'],
     ['name' => 'Warehouse', 'parent' => 'Purchase'],
     ['name' => 'Secretariat', 'parent' => 'Management'],
     ['name' => 'Registration', 'parent' => 'Management'],
@@ -522,8 +675,6 @@ foreach ($departments as $department) {
  */
 $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
-
-use phpOMS\Router\Router;
 
 $positions = [
     ['name' => 'Chairman', 'department' => 'Management', 'parent' => null],
@@ -585,9 +736,6 @@ foreach ($positions as $position) {
 $module = $app->moduleManager->get('Admin');
 TestUtils::setMember($module, 'app', $app);
 
-use phpOMS\Uri\Http;
-use phpOMS\Utils\TestUtils;
-
 $accounts = [
     [
         'login'  => 'deichhorn',
@@ -595,7 +743,7 @@ $accounts = [
         'name1'  => 'Dennis',
         'name2'  => 'Eichhorn',
         'email'  => 'dennis.eichhorn@gdfmbh.com',
-        'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee'],
+        'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee', 'beta_tester'],
     ],
 ];
 
@@ -639,7 +787,7 @@ TestUtils::setMember($module, 'app', $app);
 $response = new Response();
 $request  = new Request(new Http(''));
 
-$request->getHeader()->setAccount(2);
+$request->getHeader()->setAccount(1);
 $request->setData('title', 'TestBoard');
 $module->apiBoardCreate($request, $response);
 
@@ -648,6 +796,49 @@ $request->setData('order', 1);
 $request->setData('module', 'News');
 $module->apiComponentCreate($request, $response);
 
+$request->setData('order', 2);
+$request->setData('module', 'Tasks');
+$module->apiComponentCreate($request, $response);
+
+$request->setData('order', 3);
+$request->setData('module', 'Message');
+$module->apiComponentCreate($request, $response);
+
+$request->setData('order', 4);
+$request->setData('module', 'Calendar');
+$module->apiComponentCreate($request, $response);
+
 /**
  * Setup helper module
  */
+
+ /**
+ * Setup news module
+ */
+$module = $app->moduleManager->get('News');
+TestUtils::setMember($module, 'app', $app);
+
+$response = new Response();
+$request  = new Request(new Http(''));
+
+$request->getHeader()->setAccount(2);
+$request->setData('publish', 'now');
+$request->setData('title', 'Welcome beta testers!');
+$request->setData('plain',
+    "I'm proud to announce that the very first version of the new intranet of Micerium/Schütz is now in private beta."
+    . "\n\nFor the private beta only a couple of people have access to it and can use/test it. For those of you who are in this private beta test phase your frustration will be worth it on our ride to improve the system over time. Your feedback is well appreciated and will be implemented whenever possible. Please note that especially in the beginning a lot of things remain to be implemented and fixed and therefore it may take some time to serve all of your feedback justice."
+    . "\n\nThe goal of this new intranet is to unify all the different IT systems the company currently uses into one. As a result we hope to reduce the workload of all employees and frustration of dealing with multiple software solutions. Of course this new intranet will not be able to solve all problems in the very beginning but over time we hope to modernize and simplify our workflows."
+    . "\n\nAll the data which is created during the private beta phase will remain even once we go into public beta. Please note that every beta user is part of the **beta_tester** group. Some things will only be made visiable and created for the **beta_tester** group. This means once we go into public beta and into the release later on these things will only remain visible to beta testers. Examples are news articles like this one, some tasks/todos and more which will be specifically targeted to beta testers. Of course some of the data created during the beta test phase will be also visible to all other employees in the public beta or after the release."
+    . "\n\nIf you find bugs or feature requests please do so in the [support/ticket](support/list) module. All issues created during the beta test should be created with the **private_beta** tag and for the **beta_tester** group. These issues will then be visible to all beta testers and allows all beta testers to see the progress which is made and also avoids duplicated bug reports or feature requests. Additionally all beta testers will be able to comment on bugs and feature requests."
+    . "\n\nI'm looking forward to your help and support."
+    . "\n\n## Information"
+    . "\n\nBelow please find a summary of important information which may be helpful for you:"
+    . "\n\n* Messages and calendar events in this intranet and your outlook are synchronized once a day at midnight. Of course messages and calendar events created in the intranet are shown immediately in the intranet (but only after midnight in outlook)"
+    . "\n* Invoices from the ERP system are imported once a day at midnight but invoices created in this intranet cannot be exported to the ERP!"
+    . "\n* Documents, customer reports and phone notes of customers are imported from the CRM once a day at midnight but cannot be exported to the CRM!"
+);
+$request->setData('type', NewsType::ARTICLE);
+$request->setData('status', NewsStatus::VISIBLE);
+$request->setData('featured', true);
+$request->setData('lang', ISO639x1Enum::_EN);
+$module->apiNewsCreate($request, $response);
