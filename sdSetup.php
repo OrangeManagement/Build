@@ -318,8 +318,12 @@ $module->apiModuleStatusUpdate($request, $response);
 $request->setData('module', 'HumanResourceManagement');
 $module->apiModuleStatusUpdate($request, $response);
 
-// HumanResourceManagement
+// HumanResourceTimeRecording
 $request->setData('module', 'HumanResourceTimeRecording');
+$module->apiModuleStatusUpdate($request, $response);
+
+// MyPrivate
+$request->setData('module', 'MyPrivate');
 $module->apiModuleStatusUpdate($request, $response);
 
 // Support
@@ -706,6 +710,7 @@ $positions = [
     ['name' => 'HR Employee', 'department' => 'HR', 'parent' => 'Head of HR'],
     ['name' => 'Head of IT', 'department' => 'IT', 'parent' => 'CEO'],
     ['name' => 'IT Employee', 'department' => 'IT', 'parent' => 'Head of IT'],
+    ['name' => 'Trainee', 'department' => 'HR', 'parent' => 'Head of HR'],
 ];
 
 $departments = DepartmentMapper::getAll();
@@ -842,3 +847,44 @@ $request->setData('status', NewsStatus::VISIBLE);
 $request->setData('featured', true);
 $request->setData('lang', ISO639x1Enum::_EN);
 $module->apiNewsCreate($request, $response);
+
+ /**
+ * Setup human resource module
+ */
+$module = $app->moduleManager->get('HumanResourceManagement');
+TestUtils::setMember($module, 'app', $app);
+
+$response = new Response();
+$request  = new Request(new Http(''));
+
+$request->getHeader()->setAccount(2);
+$request->setData('account', 2);
+
+$module->apiEmployeeFromAccountCreate($request, $response);
+
+$request->setData('employee', 1);
+$request->setData('start', '2015-07-01');
+$request->setData('end', '2017-01-15');
+$request->setData('unit', 2);
+$request->setData('department', 14);
+$request->setData('position', 30);
+
+$module->apiEmployeeHistoryCreate($request, $response);
+
+$request->setData('employee', 1);
+$request->setData('start', '2017-01-15');
+$request->setData('end', '2019-01-01');
+$request->setData('unit', 2);
+$request->setData('department', 14);
+$request->setData('position', 8);
+
+$module->apiEmployeeHistoryCreate($request, $response);
+
+$request->setData('employee', 1);
+$request->setData('start', '2019-01-01');
+$request->setData('end', '');
+$request->setData('unit', 2);
+$request->setData('department', 14);
+$request->setData('position', 7);
+
+$module->apiEmployeeHistoryCreate($request, $response);
