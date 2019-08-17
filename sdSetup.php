@@ -187,7 +187,7 @@ WebApplication::installRequest($request, $response);
 // Setup for api calls
 $app = new class() extends ApplicationAbstract
 {
-    protected $appName = 'Api';
+    protected string $appName = 'Api';
 };
 
 $app->dbPool = new DatabasePool();
