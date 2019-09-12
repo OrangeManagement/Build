@@ -118,6 +118,8 @@
 </rule>
 <rule ref="PEAR.Commenting.FunctionComment">
     <severity>7</severity>
+    <exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/><!-- Important for @inheritdoc -->
+    <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/><!-- Important for @inheritdoc -->
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't need comments -->
 </rule>
 <rule ref="PEAR.Commenting.InlineComment"/>
