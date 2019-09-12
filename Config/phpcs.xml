@@ -102,8 +102,22 @@
     <severity>3</severity>
 </rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
+<rule ref="PEAR.Commenting.FileComment">
+    <exclude name="PEAR.Commenting.FileComment.InvalidPackage"/>
+    <exclude name="PEAR.Commenting.FileComment.IncompleteCopyright"/>
+    <exclude name="PEAR.Commenting.FileComment.InvalidVersion"/>
+    <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
+    <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+</rule>
+<rule ref="PEAR.Commenting.ClassComment">
+    <exclude name="PEAR.Commenting.ClassComment.InvalidPackage"/>
+    <exclude name="PEAR.Commenting.ClassComment.IncompleteCopyright"/>
+    <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
+    <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+    <exclude name="PEAR.Commenting.ClassComment.InvalidVersion"/>
+</rule>
 <rule ref="PEAR.Commenting.FunctionComment">
-    <severity>3</severity>
+    <severity>7</severity>
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't need comments -->
 </rule>
 <rule ref="PEAR.Commenting.InlineComment"/>
