@@ -641,22 +641,22 @@ $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
 
 $departments = [
-    ['name' => 'Management', 'parent' => null],
-    ['name' => 'R&D', 'parent' => 'Management'],
-    ['name' => 'Sales', 'parent' => 'Management'],
-    ['name' => 'Service', 'parent' => 'Management'],
-    ['name' => 'Support', 'parent' => 'Management'],
-    ['name' => 'Purchase', 'parent' => 'Management'],
-    ['name' => 'Warehouse', 'parent' => 'Purchase'],
-    ['name' => 'Secretariat', 'parent' => 'Management'],
+    ['name' => 'Management',   'parent' => null],
+    ['name' => 'R&D',          'parent' => 'Management'],
+    ['name' => 'Sales',        'parent' => 'Management'],
+    ['name' => 'Service',      'parent' => 'Management'],
+    ['name' => 'Support',      'parent' => 'Management'],
+    ['name' => 'Purchase',     'parent' => 'Management'],
+    ['name' => 'Warehouse',    'parent' => 'Purchase'],
+    ['name' => 'Secretariat',  'parent' => 'Management'],
     ['name' => 'Registration', 'parent' => 'Management'],
-    ['name' => 'HR', 'parent' => 'Management'],
-    ['name' => 'Purchasing', 'parent' => 'Management'],
-    ['name' => 'QA', 'parent' => 'Management'],
-    ['name' => 'QM', 'parent' => 'Management'],
-    ['name' => 'Finance', 'parent' => 'Management'],
-    ['name' => 'Marketing', 'parent' => 'Management'],
-    ['name' => 'IT', 'parent' => 'Management'],
+    ['name' => 'HR',           'parent' => 'Management'],
+    ['name' => 'Purchasing',   'parent' => 'Management'],
+    ['name' => 'QA',           'parent' => 'Management'],
+    ['name' => 'QM',           'parent' => 'Management'],
+    ['name' => 'Finance',      'parent' => 'Management'],
+    ['name' => 'Marketing',    'parent' => 'Management'],
+    ['name' => 'IT',           'parent' => 'Management'],
 ];
 $departmentIds = [];
 
@@ -681,36 +681,36 @@ $module = $app->moduleManager->get('Organization');
 TestUtils::setMember($module, 'app', $app);
 
 $positions = [
-    ['name' => 'Chairman', 'department' => 'Management', 'parent' => null],
-    ['name' => 'CEO', 'department' => 'Management', 'parent' => 'Chairman'],
-    ['name' => 'Executive Member', 'department' => null, 'parent' => 'Chairman'],
-    ['name' => 'COO', 'department' => 'Management', 'parent' => 'CEO'],
-    ['name' => 'CTO', 'department' => 'R&D', 'parent' => 'CEO'],
-    ['name' => 'R&D Employee', 'department' => 'R&D', 'parent' => 'CTO'],
-    ['name' => 'CFO', 'department' => 'Finance', 'parent' => 'CEO'],
-    ['name' => 'Accountant', 'department' => 'Finance', 'parent' => 'CFO'],
-    ['name' => 'CSO', 'department' => 'Sales', 'parent' => 'CEO'],
-    ['name' => 'Export Controle Officer', 'department' => 'Sales', 'parent' => 'CEO'],
-    ['name' => 'Back Office Sales', 'department' => 'Sales', 'parent' => 'CSO'],
-    ['name' => 'Head of Secretariat', 'department' => 'Secretariat', 'parent' => 'CEO'],
-    ['name' => 'Secretary', 'department' => 'Secretariat', 'parent' => 'Head of Secretariat'],
-    ['name' => 'Head of Service', 'department' => 'Service', 'parent' => 'CEO'],
-    ['name' => 'Service Employee', 'department' => 'Service', 'parent' => 'Head of Service'],
-    ['name' => 'Head of Support', 'department' => 'Support', 'parent' => 'CEO'],
-    ['name' => 'Support Employee', 'department' => 'Support', 'parent' => 'Head of Support'],
-    ['name' => 'Head of Warehouse', 'department' => 'Warehouse', 'parent' => 'Head of Production'],
-    ['name' => 'Warehouse Employee', 'department' => 'Warehouse', 'parent' => 'Head of Warehouse'],
-    ['name' => 'Head of Purchasing', 'department' => 'Purchasing', 'parent' => 'CEO'],
-    ['name' => 'Back Office Purchasing', 'department' => 'Purchasing', 'parent' => 'Head of Purchasing'],
-    ['name' => 'Head of QM', 'department' => 'QM', 'parent' => 'CEO'],
-    ['name' => 'QM Employee', 'department' => 'QM', 'parent' => 'Head of QM'],
-    ['name' => 'Head of QA', 'department' => 'QA', 'parent' => 'CEO'],
-    ['name' => 'QA Employee', 'department' => 'QA', 'parent' => 'Head of QA'],
-    ['name' => 'Head of HR', 'department' => 'HR', 'parent' => 'CEO'],
-    ['name' => 'HR Employee', 'department' => 'HR', 'parent' => 'Head of HR'],
-    ['name' => 'Head of IT', 'department' => 'IT', 'parent' => 'CEO'],
-    ['name' => 'IT Employee', 'department' => 'IT', 'parent' => 'Head of IT'],
-    ['name' => 'Trainee', 'department' => 'HR', 'parent' => 'Head of HR'],
+    ['name' => 'Chairman',                'department' => 'Management',  'parent' => null],
+    ['name' => 'CEO',                     'department' => 'Management',  'parent' => 'Chairman'],
+    ['name' => 'Executive Member',        'department' => null,          'parent' => 'Chairman'],
+    ['name' => 'COO',                     'department' => 'Management',  'parent' => 'CEO'],
+    ['name' => 'CTO',                     'department' => 'R&D',         'parent' => 'CEO'],
+    ['name' => 'R&D Employee',            'department' => 'R&D',         'parent' => 'CTO'],
+    ['name' => 'CFO',                     'department' => 'Finance',     'parent' => 'CEO'],
+    ['name' => 'Accountant',              'department' => 'Finance',     'parent' => 'CFO'],
+    ['name' => 'CSO',                     'department' => 'Sales',       'parent' => 'CEO'],
+    ['name' => 'Export Controle Officer', 'department' => 'Sales',       'parent' => 'CEO'],
+    ['name' => 'Back Office Sales',       'department' => 'Sales',       'parent' => 'CSO'],
+    ['name' => 'Head of Secretariat',     'department' => 'Secretariat', 'parent' => 'CEO'],
+    ['name' => 'Secretary',               'department' => 'Secretariat', 'parent' => 'Head of Secretariat'],
+    ['name' => 'Head of Service',         'department' => 'Service',     'parent' => 'CEO'],
+    ['name' => 'Service Employee',        'department' => 'Service',     'parent' => 'Head of Service'],
+    ['name' => 'Head of Support',         'department' => 'Support',     'parent' => 'CEO'],
+    ['name' => 'Support Employee',        'department' => 'Support',     'parent' => 'Head of Support'],
+    ['name' => 'Head of Warehouse',       'department' => 'Warehouse',   'parent' => 'Head of Production'],
+    ['name' => 'Warehouse Employee',      'department' => 'Warehouse',   'parent' => 'Head of Warehouse'],
+    ['name' => 'Head of Purchasing',      'department' => 'Purchasing',  'parent' => 'CEO'],
+    ['name' => 'Back Office Purchasing',  'department' => 'Purchasing',  'parent' => 'Head of Purchasing'],
+    ['name' => 'Head of QM',              'department' => 'QM',          'parent' => 'CEO'],
+    ['name' => 'QM Employee',             'department' => 'QM',          'parent' => 'Head of QM'],
+    ['name' => 'Head of QA',              'department' => 'QA',          'parent' => 'CEO'],
+    ['name' => 'QA Employee',             'department' => 'QA',          'parent' => 'Head of QA'],
+    ['name' => 'Head of HR',              'department' => 'HR',          'parent' => 'CEO'],
+    ['name' => 'HR Employee',             'department' => 'HR',          'parent' => 'Head of HR'],
+    ['name' => 'Head of IT',              'department' => 'IT',          'parent' => 'CEO'],
+    ['name' => 'IT Employee',             'department' => 'IT',          'parent' => 'Head of IT'],
+    ['name' => 'Trainee',                 'department' => 'HR',          'parent' => 'Head of HR'],
 ];
 
 $departments = DepartmentMapper::getAll();
@@ -747,7 +747,7 @@ $accounts = [
         'pass'   => 'deichhorn',
         'name1'  => 'Dennis',
         'name2'  => 'Eichhorn',
-        'email'  => 'dennis.eichhorn@gdfmbh.com',
+        'email'  => 'd.eichhorn@schuetz-dental.de',
         'groups' =>  ['Executive', 'Finance', 'Controlling', 'Employee', 'beta_tester'],
     ],
 ];
@@ -858,9 +858,9 @@ $response = new Response();
 $request  = new Request(new Http(''));
 
 $request->getHeader()->setAccount(2);
-$request->setData('account', 2);
+$request->setData('accounts', 2);
 
-$module->apiEmployeeFromAccountCreate($request, $response);
+$module->apiEmployeeCreate($request, $response);
 
 $request->setData('employee', 1);
 $request->setData('start', '2015-07-01');
