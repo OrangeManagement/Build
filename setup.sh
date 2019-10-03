@@ -105,12 +105,12 @@ wget --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/downloa
 wget --tries=2 -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
 #wget --tries=2 -nc http://static.pdepend.org/php/latest/pdepend.phar
 wget --tries=2 -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-wget --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
-wget --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc1/testreportgenerator.phar
 wget --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.11.16/phpstan.phar
 wget --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
 wget --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar
 wget --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
+wget --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
+wget --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc1/testreportgenerator.phar
 
 unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests
 tar -zxvf compiler-latest.tar.gz
