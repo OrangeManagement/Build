@@ -858,7 +858,7 @@ $response = new Response();
 $request  = new Request(new Http(''));
 
 $request->getHeader()->setAccount(2);
-$request->setData('accounts', 2);
+$request->setData('profiles', 1);
 
 $module->apiEmployeeCreate($request, $response);
 
