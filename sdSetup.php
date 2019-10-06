@@ -1,9 +1,11 @@
-<?php declare(strict_types=1);
+<?php
 /**
  * Remove old install and setup database.
  *
  * This script is usefull when you want to manually install the app without resetting an old database/app or new empty database.
  */
+declare(strict_types=1);
+
 \ini_set('memory_limit', '2048M');
 \ini_set('display_errors', '1');
 \ini_set('display_startup_errors', '1');
