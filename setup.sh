@@ -117,6 +117,8 @@ wget --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/j
 wget --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
 wget --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc2/testreportgenerator.phar
 
+mkdir ${ROOT_PATH}/jsOMS/tests
+
 unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests
 tar -zxvf compiler-latest.tar.gz
 
