@@ -26,7 +26,7 @@ use phpOMS\Event\EventManager;
 use phpOMS\Message\Http\RequestMethod;
 use phpOMS\Message\Http\Response;
 use phpOMS\Module\ModuleManager;
-use phpOMS\Router\Router;
+use phpOMS\Router\WebRouter;
 use phpOMS\Uri\Http;
 use phpOMS\Utils\TestUtils;
 use Model\Settings;
@@ -213,7 +213,7 @@ $permission->setPermission(
 $account->addPermission($permission);
 
 $app->accountManager->add($account);
-$app->router = new Router();
+$app->router = new WebRouter();
 
 /**
  * Setup additional units
