@@ -85,6 +85,7 @@
         <property name="nestingLevel" value="5"/>
         <property name="absoluteNestingLevel" value="11"/>
     </properties>
+     <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
 </rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>
