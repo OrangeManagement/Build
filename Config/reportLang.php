@@ -308,6 +308,7 @@ return [
     'phpOMS\tests\Config\OptionsTraitTest:testDefault' => ['description' => 'The option helper has the expected default values after initialization'],
     'phpOMS\tests\Config\OptionsTraitTest:testAdd' => ['description' => 'Options can be added to the helper'],
     'phpOMS\tests\Config\OptionsTraitTest:testAddMultiple' => ['description' => 'Multiple options can be added to the helper in one go'],
+    'phpOMS\tests\Config\OptionsTraitTest:testGetMultiple' => ['description' => 'Multiple options can be retrieved'],
     'phpOMS\tests\Config\OptionsTraitTest:testOverwrite' => ['description' => 'Options can be overwritten/changed'],
 
     'phpOMS\tests\DataStorage\Cache\CachePoolTest' => ['description' => 'Pool for caches'],
