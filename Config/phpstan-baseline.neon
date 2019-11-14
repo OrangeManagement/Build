@@ -1,0 +1,2362 @@
+
+Warning: "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in /home/spl1nes/Orange-Management/Resources/tcpdf/tcpdf.php on line 17778
+
+
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Instantiated class phpOMS\\\\DataStorage\\\\Session\\\\ConsoleSession not found\\.$#"
+			count: 1
+			path: Console/ConsoleApplication.php
+
+		-
+			message: "#^Property phpOMS\\\\ApplicationAbstract\\:\\:\\$sessionManager \\(phpOMS\\\\DataStorage\\\\Session\\\\SessionInterface\\|null\\) does not accept phpOMS\\\\DataStorage\\\\Session\\\\ConsoleSession\\.$#"
+			count: 1
+			path: Console/ConsoleApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$session of class phpOMS\\\\Account\\\\AccountManager constructor expects phpOMS\\\\DataStorage\\\\Session\\\\SessionInterface, phpOMS\\\\DataStorage\\\\Session\\\\ConsoleSession given\\.$#"
+			count: 1
+			path: Console/ConsoleApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method phpOMS\\\\Router\\\\WebRouter\\:\\:route\\(\\) expects string, phpOMS\\\\Message\\\\Console\\\\Request given\\.$#"
+			count: 1
+			path: Console/ConsoleApplication.php
+
+		-
+			message: "#^Cannot call method critical\\(\\) on phpOMS\\\\Log\\\\FileLogger\\|null\\.$#"
+			count: 2
+			path: Console/ConsoleApplication.php
+
+		-
+			message: "#^Constructor of class Install\\\\ConsoleApplication has an unused parameter \\$arg\\.$#"
+			count: 1
+			path: Install/ConsoleApplication.php
+
+		-
+			message: "#^Cannot call method add\\(\\) on phpOMS\\\\Router\\\\RouterInterface\\|null\\.$#"
+			count: 2
+			path: Install/ConsoleApplication.php
+
+		-
+			message: "#^Cannot call method add\\(\\) on phpOMS\\\\Router\\\\RouterInterface\\|null\\.$#"
+			count: 2
+			path: Install/WebApplication.php
+
+		-
+			message: "#^Property Modules\\\\Accounting\\\\Models\\\\Creditor\\:\\:\\$account has unknown class Modules\\\\Accounting\\\\Models\\\\phpOMS as its type\\.$#"
+			count: 1
+			path: Modules/Accounting/Models/Creditor.php
+
+		-
+			message: "#^Method Modules\\\\Accounting\\\\Models\\\\Creditor\\:\\:getAccount\\(\\) should return int\\|Modules\\\\Admin\\\\Models\\\\Account\\|null but returns int\\|Modules\\\\Accounting\\\\Models\\\\phpOMS\\|null\\.$#"
+			count: 1
+			path: Modules/Accounting/Models/Creditor.php
+
+		-
+			message: "#^Property Modules\\\\Accounting\\\\Models\\\\Debitor\\:\\:\\$account has unknown class Modules\\\\Accounting\\\\Models\\\\phpOMS as its type\\.$#"
+			count: 1
+			path: Modules/Accounting/Models/Debitor.php
+
+		-
+			message: "#^Method Modules\\\\Accounting\\\\Models\\\\Debitor\\:\\:getAccount\\(\\) should return int\\|Modules\\\\Admin\\\\Models\\\\Account\\|null but returns int\\|Modules\\\\Accounting\\\\Models\\\\phpOMS\\|null\\.$#"
+			count: 1
+			path: Modules/Accounting/Models/Debitor.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 5
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Admin\\\\Theme\\\\Backend\\\\Components\\\\GroupTagSelector\\\\GroupTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Admin/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Admin/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Admin/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\Auditor\\\\Models\\\\Audit\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Auditor/Models/Audit.php
+
+		-
+			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Billing/Models/Invoice.php
+
+		-
+			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
+			count: 1
+			path: Modules/Billing/Models/Invoice.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Event\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Calendar/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Calendar/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:addEvent\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Calendar.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Calendar.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Calendar.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Event.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
+			count: 1
+			path: Modules/Calendar/Models/Event.php
+
+		-
+			message: "#^Cannot call method setCreatedBy\\(\\) on int\\|Modules\\\\Calendar\\\\Models\\\\Schedule\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Event.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getLocation\\(\\) should return phpOMS\\\\Stdlib\\\\Base\\\\Location but returns phpOMS\\\\Stdlib\\\\Base\\\\Location\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Event.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getSchedule\\(\\) should return Modules\\\\Calendar\\\\Models\\\\Schedule but returns int\\|Modules\\\\Calendar\\\\Models\\\\Schedule\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Event.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Schedule\\:\\:getStart\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Schedule.php
+
+		-
+			message: "#^Parameter \\#1 \\$message of class InvalidArgumentException constructor expects string, int given\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Schedule.php
+
+		-
+			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Schedule\\:\\:getEnd\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Models/Schedule.php
+
+		-
+			message: "#^Class Modules\\\\Chat\\\\Room does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Chat/Room.php
+
+		-
+			message: "#^Property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$numberReverse \\(string\\) does not accept bool\\|float\\|int\\|string\\.$#"
+			count: 1
+			path: Modules/ClientManagement/Models/Client.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$taxId\\.$#"
+			count: 2
+			path: Modules/ClientManagement/Models/Client.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$defaultTnvoiceAddress\\.$#"
+			count: 1
+			path: Modules/ClientManagement/Models/Client.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\FormValidation not found\\.$#"
+			count: 1
+			path: Modules/Comments/Controller/BackendController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\Comment not found\\.$#"
+			count: 1
+			path: Modules/Comments/Controller/BackendController.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Comments\\\\Controller\\\\CommentMapper\\.$#"
+			count: 1
+			path: Modules/Comments/Controller/BackendController.php
+
+		-
+			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\Comments\\\\Controller\\\\Comment\\.$#"
+			count: 1
+			path: Modules/Comments/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\:\\:\\$parent \\(int\\|Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\|null\\) does not accept string\\.$#"
+			count: 1
+			path: Modules/CostCenterAccounting/Models/CostCenter.php
+
+		-
+			message: "#^Property Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\:\\:\\$parent \\(int\\|Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\|null\\) does not accept string\\.$#"
+			count: 1
+			path: Modules/CostObjectAccounting/Models/CostObject.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 2
+			path: Modules/Dashboard/Controller/ApiController.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\DatabaseEditor\\\\Controller\\\\ConnectionFactory\\.$#"
+			count: 2
+			path: Modules/DatabaseEditor/Controller/ApiController.php
+
+		-
+			message: "#^Undefined variable\\: \\$builder$#"
+			count: 2
+			path: Modules/DatabaseEditor/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
+			count: 1
+			path: Modules/Draw/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/EventManagement/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/EventManagement/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/EventManagement/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/EventManagement/Models/Event.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
+			count: 1
+			path: Modules/EventManagement/Models/Event.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 1
+			path: Modules/Exchange/Controller/ApiController.php
+
+		-
+			message: "#^PHPDoc tag @return with type void is incompatible with native type phpOMS\\\\Contract\\\\RenderableInterface\\.$#"
+			count: 1
+			path: Modules/Exchange/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\Exchange\\\\Controller\\\\BackendController\\:\\:viewExchangeDashboard\\(\\) with return type void returns phpOMS\\\\Views\\\\View but should not return anything\\.$#"
+			count: 1
+			path: Modules/Exchange/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:\\$remote has unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface as its type\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to an undefined method Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:importArticle\\(\\)\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Parameter \\#1 \\$dbdata of static method phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionFactory\\:\\:create\\(\\) expects array\\<string\\>, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Property Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:\\$remote \\(Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface\\) does not accept phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionAbstract\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to static method setConnection\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\DataMapperAbstract\\.$#"
+			count: 4
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Accounting\\\\Models\\\\CostCenter not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Access to private property \\$local of parent class Modules\\\\Exchange\\\\Models\\\\ImporterAbstract\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to method setCostCenter\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenter\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to method setCostCenterName\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenter\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenterMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Accounting\\\\Models\\\\CostObject not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to method setCostObject\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObject\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to method setCostObjectName\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObject\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObjectMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Importer.php
+
+		-
+			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostCenter.php
+
+		-
+			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostObject.php
+
+		-
+			message: "#^Access to constant CUSTOMER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant SUPPLIER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant ACCOUNT on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant COSTCENTER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant COSTOBJECT on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant ARTICLE on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to an undefined method Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Importer\\:\\:importArticle\\(\\)\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant INVOICE on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method getAll\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\OMSCostCenterMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Accounting\\\\Models\\\\CostCenter not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to private property \\$local of parent class Modules\\\\Exchange\\\\Models\\\\ImporterAbstract\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method setConnection\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\DataMapperAbstract\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setCostCenter\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenter\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setCostCenterName\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenter\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostCenterMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method getAll\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\OMSCostObjectMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Accounting\\\\Models\\\\CostObject not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setCostObject\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObject\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setCostObjectName\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObject\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObjectMapper\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Importer\\:\\:\\$remote\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant EU_TIN on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\CustomerIdType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to static method getByType\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\CustomerIdTypeMapper\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Access to constant GER_TIN on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\CustomerIdType\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setNumber\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method getProfile\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 3
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Address not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setDefaultDeliveryAddress\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setDefaultInvoiceAddress\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setDefaultPaymentTerms\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\PaymentTerms not found\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setCreditLimit\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setStatus\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setInfo\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setAdvertisementMaterial\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setSalesRep\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method setType\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method addPartner\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 1
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to method addId\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Client\\.$#"
+			count: 2
+			path: Modules/Exchange/Interfaces/OMS/Importer.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:setDownloadable\\(\\)\\.$#"
+			count: 1
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Upload\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\Helper\\\\Models\\\\Report\\:\\:\\$template has unknown class Modules\\\\Helper\\\\Models\\\\Media as its type\\.$#"
+			count: 1
+			path: Modules/Helper/Models/Report.php
+
+		-
+			message: "#^Property Modules\\\\Helper\\\\Models\\\\Template\\:\\:\\$source has unknown class Modules\\\\Helper\\\\Models\\\\Media as its type\\.$#"
+			count: 1
+			path: Modules/Helper/Models/Template.php
+
+		-
+			message: "#^Parameter \\#1 \\$profile of class Modules\\\\HumanResourceManagement\\\\Models\\\\Employee constructor expects int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\|null, Modules\\\\Profile\\\\Models\\\\Profile given\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:\\$profile has unknown class Modules\\\\HumanResourceManagement\\\\Models\\\\Profile as its type\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:\\$image has unknown class Modules\\\\HumanResourceManagement\\\\Models\\\\Media as its type\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Parameter \\$profile of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:__construct\\(\\) has invalid typehint type Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getProfile\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getImage\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getImage\\(\\) should return int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Media but returns int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\|Modules\\\\Media\\\\Models\\\\NullMedia\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Parameter \\$image of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:setImage\\(\\) has invalid typehint type Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getNewestEducationHistory\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeEducationHistory\\.$#"
+			count: 2
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Instantiated class Modules\\\\HumanResourceManagement\\\\Models\\\\NullEmployeeEducationHistory not found\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getNewestWorkHistory\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeWorkHistory\\.$#"
+			count: 2
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Instantiated class Modules\\\\HumanResourceManagement\\\\Models\\\\NullEmployeeWorkHistory not found\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/Employee.php
+
+		-
+			message: "#^Static property Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeMapper\\:\\:\\$columns \\(array\\<string, array\\<string, bool\\|string\\>\\>\\) does not accept default value of type array\\<string, array\\<string, array\\<string, true\\>\\|string\\>\\>\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool has unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool as its type\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool \\(phpOMS\\\\DataStorage\\\\Database\\\\Pool\\) does not accept phpOMS\\\\DataStorage\\\\Database\\\\DatabasePool\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
+			message: "#^Call to method get\\(\\) on an unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool\\.$#"
+			count: 6
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
+			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getList\\(\\) should return array but returns array\\<string, mixed\\>\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
+			message: "#^Access to undefined constant phpOMS\\\\Account\\\\PermissionType\\:\\:GET\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#2 \\$start of static method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionMapper\\:\\:getSessionListForEmployee\\(\\) expects DateTime, int given\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$employee of class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session constructor expects int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee, Modules\\\\HumanResourceManagement\\\\Models\\\\Employee given\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$session of class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement constructor expects int, Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session given\\.$#"
+			count: 2
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot call method getStatus\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot call method getId\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot call method getSession\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session and null will always evaluate to false\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Call to method getProfile\\(\\) on an unknown class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee\\.$#"
+			count: 2
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\HumanResourceTimeRecording\\\\Controller\\\\NullSession not found\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:\\$employee has unknown class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee as its type\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Parameter \\$employee of method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:__construct\\(\\) has invalid typehint type Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:getEmployee\\(\\) has invalid type Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Cannot call method getStatus\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\.$#"
+			count: 2
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Cannot call method getDatetime\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\.$#"
+			count: 2
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Property Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:\\$busy \\(int\\) does not accept float\\|int\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^Method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:getBreak\\(\\) should return int but returns float\\|int\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/Session.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$dt with type DateTiem\\|null is not subtype of native type DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
+
+		-
+			message: "#^Parameter \\$dt of method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\:\\:__construct\\(\\) has invalid typehint type DateTiem\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
+
+		-
+			message: "#^Parameter \\$task of method Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:createFromTask\\(\\) has invalid typehint type Modules\\\\Kanban\\\\Models\\\\Task\\.$#"
+			count: 1
+			path: Modules/Kanban/Models/KanbanCard.php
+
+		-
+			message: "#^Call to method getId\\(\\) on an unknown class Modules\\\\Kanban\\\\Models\\\\Task\\.$#"
+			count: 1
+			path: Modules/Kanban/Models/KanbanCard.php
+
+		-
+			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
+			count: 1
+			path: Modules/Kanban/Models/KanbanCardComment.php
+
+		-
+			message: "#^Instantiated class Modules\\\\Knowledgebase\\\\Controller\\\\FormValidation not found\\.$#"
+			count: 2
+			path: Modules/Knowledgebase/Controller/ApiController.php
+
+		-
+			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
+			count: 1
+			path: Modules/Knowledgebase/Models/WikiDoc.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Marketing/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Marketing/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Marketing/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\Marketing\\\\Models\\\\Promotion\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Marketing/Models/Promotion.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
+			count: 1
+			path: Modules/Marketing/Models/Promotion.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 1
+			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$outputPath with type string\\|null is not subtype of native type string\\.$#"
+			count: 1
+			path: Modules/Media/Models/Media.php
+
+		-
+			message: "#^PHPDoc tag @return with type void is incompatible with native type string\\.$#"
+			count: 1
+			path: Modules/Media/Models/Media.php
+
+		-
+			message: "#^Method Modules\\\\Media\\\\Models\\\\Media\\:\\:decrypt\\(\\) with return type void returns string but should not return anything\\.$#"
+			count: 1
+			path: Modules/Media/Models/Media.php
+
+		-
+			message: "#^Parameter \\#1 \\$known_string of function hash_equals expects string, string\\|null given\\.$#"
+			count: 1
+			path: Modules/Media/Models/Media.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|false given\\.$#"
+			count: 4
+			path: Modules/Media/Views/MediaView.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and null will always evaluate to false\\.$#"
+			count: 1
+			path: Modules/Media/Views/MediaView.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
+			count: 1
+			path: Modules/Navigation/Models/Navigation.php
+
+		-
+			message: "#^Cannot call method where\\(\\) on array\\.$#"
+			count: 2
+			path: Modules/News/Controller/ApiController.php
+
+		-
+			message: "#^Static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) invoked with 4 parameters, 1 required\\.$#"
+			count: 2
+			path: Modules/News/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/News/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 3
+			path: Modules/Organization/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\UnitTagSelector\\\\UnitTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 4
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 6
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\InlinePreview\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\DepartmentTagSelector\\\\DepartmentTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 4
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\PositionTagSelector\\\\PositionTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
+			message: "#^Method Modules\\\\Profile\\\\Models\\\\Profile\\:\\:getImage\\(\\) should return Modules\\\\Media\\\\Models\\\\Media but returns int\\|Modules\\\\Media\\\\Models\\\\Media\\|null\\.$#"
+			count: 1
+			path: Modules/Profile/Models/Profile.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Controller/BackendController.php
+
+		-
+			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$media has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Media as its type\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$tasks has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Tasks as its type\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedias\\(\\) has invalid type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Parameter \\$media of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:addMedia\\(\\) has invalid typehint type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Call to method getId\\(\\) on an unknown class Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
+			count: 2
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\ProjectManagement\\\\Models\\\\Media\\>\\) does not accept int\\|Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
+			count: 2
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$task with type int\\|Modules\\\\Tasks\\\\Models\\\\Task is not subtype of native type Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\>\\) does not accept Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
+			count: 2
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getTask\\(\\) should return Modules\\\\Tasks\\\\Models\\\\Task but returns Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\|Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedia\\(\\) has invalid type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
+			count: 2
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedia\\(\\) should return Modules\\\\ProjectManagement\\\\Models\\\\Media but returns Modules\\\\ProjectManagement\\\\Models\\\\Media\\|Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getTasks\\(\\) should return array\\<Modules\\\\Tasks\\\\Models\\\\Task\\> but returns array\\<Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\>\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getCalendar\\(\\) should return Modules\\\\Calendar\\\\Models\\\\Calendar but returns int\\|Modules\\\\Calendar\\\\Models\\\\Calendar\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Cannot call method setName\\(\\) on int\\|Modules\\\\Calendar\\\\Models\\\\Calendar\\.$#"
+			count: 1
+			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\FormValidation not found\\.$#"
+			count: 3
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQAQuestionFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 2
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\Markdown not found\\.$#"
+			count: 3
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QAQuestion not found\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setQuestion\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setLanguage\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setCategory\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setStatus\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setBadges\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to static method isValidValue\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestionStatus\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswerMapper\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQAAnswerFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
+			count: 2
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QAAnswer not found\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setQuestion\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
+			count: 2
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setStatus\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to static method isValidValue\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswerStatus\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategoryMapper\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQACategoryFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
+			count: 2
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QACategory not found\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Call to method setParent\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
+			count: 1
+			path: Modules/QA/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\$badge of method Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:addBadge\\(\\) has invalid typehint type Modules\\\\QA\\\\Models\\\\QABadge\\.$#"
+			count: 1
+			path: Modules/QA/Models/QAQuestion.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getRouteVerb\\(\\)\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
+
+		-
+			message: "#^Class Modules\\\\Support\\\\Models\\\\Issue does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Support/Models/Issue.php
+
+		-
+			message: "#^Class Modules\\\\Support\\\\Models\\\\Message does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Support/Models/Message.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\Support\\\\Models\\\\Message\\:\\:\\$id\\.$#"
+			count: 1
+			path: Modules/Support/Models/Message.php
+
+		-
+			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Answer does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Surveys/Models/Answer.php
+
+		-
+			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Question does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Surveys/Models/Question.php
+
+		-
+			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Section does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Surveys/Models/Section.php
+
+		-
+			message: "#^Property Modules\\\\Surveys\\\\Models\\\\Survey\\:\\:\\$created has unknown class Modules\\\\Surveys\\\\Models\\\\datetime as its type\\.$#"
+			count: 1
+			path: Modules/Surveys/Models/Survey.php
+
+		-
+			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Survey does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Modules/Surveys/Models/Survey.php
+
+		-
+			message: "#^Call to static method get\\(\\) on an unknown class Modules\\\\Tag\\\\Controller\\\\TagMapper\\.$#"
+			count: 4
+			path: Modules/Tag/Controller/ApiController.php
+
+		-
+			message: "#^Class Modules\\\\Tag\\\\Controller\\\\TagMapper not found\\.$#"
+			count: 3
+			path: Modules/Tag/Controller/ApiController.php
+
+		-
+			message: "#^Array has 2 duplicate keys with value 'tag_color' \\('tag_color', 'tag_color'\\)\\.$#"
+			count: 1
+			path: Modules/Tag/Models/TagMapper.php
+
+		-
+			message: "#^Class Modules\\\\Tag\\\\Models\\\\AccountMapper not found\\.$#"
+			count: 1
+			path: Modules/Tag/Models/TagMapper.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 1
+			path: Modules/Tasks/Controller/ApiController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 2
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^PHPDoc tag @return with type void is incompatible with native type int\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/RelationAbstract.php
+
+		-
+			message: "#^Method Modules\\\\Tasks\\\\Models\\\\RelationAbstract\\:\\:getDuty\\(\\) with return type void returns int but should not return anything\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/RelationAbstract.php
+
+		-
+			message: "#^Method Modules\\\\Tasks\\\\Models\\\\Task\\:\\:getDue\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/Task.php
+
+		-
+			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/Task.php
+
+		-
+			message: "#^Method Modules\\\\Tasks\\\\Models\\\\TaskElement\\:\\:getDue\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/TaskElement.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$warehouse has unknown class Modules\\\\Warehousing\\\\Models\\\\Warehouse as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^PHPDoc tag @var for property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$status with type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus is incompatible with native type int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$status has unknown class Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Arrival as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Arrival\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Arrival\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Arrival but returns Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\|Modules\\\\Warehousing\\\\Models\\\\Arrival\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getOrder\\(\\) should return int but returns string\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$order \\(string\\) does not accept int\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getStatus\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getStatus\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(\\\\Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\)\\: Unexpected token \"\\\\n     \\*\", expected TOKEN_VARIABLE at offset 86$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getWarehouse\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$order \\(Modules\\\\WarehouseManagement\\\\Models\\\\intstring\\) does not accept default value of type string\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$order has unknown class Modules\\\\WarehouseManagement\\\\Models\\\\intstring as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^PHPDoc tag @var for property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$status with type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus is incompatible with native type int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$status has unknown class Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Article as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Article\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Article but returns Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\|Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getOrder\\(\\) should return int but returns Modules\\\\WarehouseManagement\\\\Models\\\\intstring\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$order \\(Modules\\\\WarehouseManagement\\\\Models\\\\intstring\\) does not accept int\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getDelivered\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getStatus\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getStatus\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^PHPDoc tag @param has invalid value \\(\\\\Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\)\\: Unexpected token \"\\\\n     \\*\", expected TOKEN_VARIABLE at offset 86$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getWarehouse\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getWarehouse\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Warehouse but returns string\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getSender\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Warehouse as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:\\$id\\.$#"
+			count: 2
+			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Warehouse\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Warehouse but returns Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\|Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^PHPDoc tag @var for property Socket\\\\Socketserver\\\\Application\\:\\:\\$type with type phpOMS\\\\Socket\\\\SocketType is incompatible with native type string\\.$#"
+			count: 1
+			path: Socket/Socketserver/Application.php
+
+		-
+			message: "#^Property Socket\\\\Socketserver\\\\Application\\:\\:\\$type has unknown class phpOMS\\\\Socket\\\\SocketType as its type\\.$#"
+			count: 1
+			path: Socket/Socketserver/Application.php
+
+		-
+			message: "#^Access to an undefined property Socket\\\\Socketserver\\\\Application\\:\\:\\$appName\\.$#"
+			count: 1
+			path: Socket/Socketserver/Application.php
+
+		-
+			message: "#^Class phpOMS\\\\DataStorage\\\\Cache\\\\CachePool does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: Socket/Socketserver/Application.php
+
+		-
+			message: "#^Access to an undefined property Socket\\\\Socketserver\\\\Application\\:\\:\\$socket\\.$#"
+			count: 2
+			path: Socket/Socketserver/Application.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Router\\\\RouterInterface\\:\\:route\\(\\)\\.$#"
+			count: 1
+			path: Web/Api/Application.php
+
+		-
+			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
+			count: 1
+			path: Web/E404/Application.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
+			count: 2
+			path: Web/E404/Application.php
+
+		-
+			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
+			count: 1
+			path: Web/E500/Application.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
+			count: 2
+			path: Web/E500/Application.php
+
+		-
+			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
+			count: 1
+			path: Web/E503/Application.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
+			count: 2
+			path: Web/E503/Application.php
+
+		-
+			message: "#^Cannot call method critical\\(\\) on phpOMS\\\\Log\\\\FileLogger\\|null\\.$#"
+			count: 3
+			path: Web/WebApplication.php
+
+		-
+			message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
+			count: 2
+			path: phpOMS/Algorithm/JobScheduling/Weighted.php
+
+		-
+			message: "#^Array \\(array\\<phpOMS\\\\Algorithm\\\\Knapsack\\\\ItemInterface\\>\\) does not accept array\\<string, mixed\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/Knapsack/Backpack.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$endNode with type phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null is not subtype of native type phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\.$#"
+			count: 5
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Cannot call method getX\\(\\) on phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null\\.$#"
+			count: 4
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Cannot call method getY\\(\\) on phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null\\.$#"
+			count: 4
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpStraight\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
+			count: 3
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpDiagonal\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
+			count: 3
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpDiagonalOneObstacle\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
+			count: 3
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpDiagonalNoObstacle\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
+			count: 3
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Property phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:\\$nodes has unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes as its type\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Property phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:\\$expandedNodes has unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes as its type\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Array \\(array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\) does not accept phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Call to method getX\\(\\) on an unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\.$#"
+			count: 2
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Call to method getY\\(\\) on an unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\.$#"
+			count: 2
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:getPath\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:expandPath\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Parameter \\#1 \\$node1 of method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:interpolate\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\Node, phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes given\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Parameter \\#2 \\$node2 of method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:interpolate\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\Node, phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes given\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/Path.php
+
+		-
+			message: "#^Binary operation \"\\+\\=\" between array\\<int\\|string, mixed\\> and array\\|false results in an error\\.$#"
+			count: 1
+			path: phpOMS/Config/SettingsAbstract.php
+
+		-
+			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
+			count: 4
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^PHPDoc tag @return with type void is incompatible with native type array\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) with return type void returns mixed but should not return anything\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Parameter \\#1 \\$result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstract\\(\\) expects array, void given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Parameter \\#3 \\$columns of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstract\\(\\) expects array, string given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) \\(void\\) is used\\.$#"
+			count: 2
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Call to an undefined static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateConditionalsArray\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Parameter \\#1 \\$result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstractArray\\(\\) expects array, void given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Parameter \\#3 \\$columns of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstractArray\\(\\) expects array, string given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Array \\(array\\<phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionAbstract\\>\\) does not accept phpOMS\\\\DataStorage\\\\DataStorageConnectionInterface\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DatabasePool.php
+
+		-
+			message: "#^Instanceof between array\\|Closure and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Query/Builder.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Column\\:\\:getColumn\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Query/Builder.php
+
+		-
+			message: "#^Parameter \\$from of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Grammar\\\\Grammar\\:\\:compileFromQuery\\(\\) has invalid typehint type phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Grammar\\\\From\\.$#"
+			count: 2
+			path: phpOMS/DataStorage/Database/Query/Grammar/Grammar.php
+
+		-
+			message: "#^Call to method toSql\\(\\) on an unknown class phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Grammar\\\\From\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Query/Grammar/Grammar.php
+
+		-
+			message: "#^phpOMS\\\\DataStorage\\\\Database\\\\Schema\\\\Builder\\:\\:__construct\\(\\) does not call parent constructor from phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Schema/Builder.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 3
+			path: phpOMS/Localization/Money.php
+
+		-
+			message: "#^Result of \\|\\| is always false\\.$#"
+			count: 1
+			path: phpOMS/Localization/Money.php
+
+		-
+			message: "#^Result of \\|\\| is always true\\.$#"
+			count: 3
+			path: phpOMS/Localization/Money.php
+
+		-
+			message: "#^Argument of an invalid type array\\|null supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: phpOMS/Log/FileLogger.php
+
+		-
+			message: "#^Parameter \\#1 \\$n of static method phpOMS\\\\Math\\\\Number\\\\Numbers\\:\\:isSquare\\(\\) expects int, float\\|int given\\.$#"
+			count: 2
+			path: phpOMS/Math/Functions/Fibunacci.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Math/Number/Numbers.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$leftDerivativeType with type float is incompatible with native type int\\.$#"
+			count: 1
+			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$rightDerivativeType with type float is incompatible with native type int\\.$#"
+			count: 1
+			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
+
+		-
+			message: "#^Parameter \\#3 \\$value of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:set\\(\\) expects int, float given\\.$#"
+			count: 11
+			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
+
+		-
+			message: "#^Method phpOMS\\\\Math\\\\Parser\\\\Evaluator\\:\\:shuntingYard\\(\\) should return array\\<int, string\\> but returns array\\<int, string\\|null\\>\\.$#"
+			count: 1
+			path: phpOMS/Math/Parser/Evaluator.php
+
+		-
+			message: "#^Parameter \\#2 \\$offset of function array_slice expects int, float\\|int given\\.$#"
+			count: 1
+			path: phpOMS/Math/Statistic/MeasureOfDispersion.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Message/Console/Request.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Console\\\\Request\\:\\:getMethod\\(\\) should return string but returns array\\|string\\.$#"
+			count: 1
+			path: phpOMS/Message/Console/Request.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between resource and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Message/Http/Rest.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Message/Http/Rest.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:decode\\(\\) should return string but returns string\\|false\\.$#"
+			count: 3
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Parameter \\#1 \\$overview of method phpOMS\\\\Message\\\\Mail\\\\Mail\\:\\:setOverview\\(\\) expects array, array\\|false given\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Parameter \\#1 \\$body of method phpOMS\\\\Message\\\\Mail\\\\Mail\\:\\:setBody\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:getInboxOverview\\(\\) should return array but returns array\\|false\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Cannot access property \\$Nmsgs on stdClass\\|false\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:getMessageOverview\\(\\) should return array but returns array\\|false\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:countMessages\\(\\) should return int but returns int\\|false\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:getMessageHeader\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/EmailAbstract.php
+
+		-
+			message: "#^Property phpOMS\\\\Message\\\\Mail\\\\Mail\\:\\:\\$overview \\(string\\) does not accept array\\.$#"
+			count: 1
+			path: phpOMS/Message/Mail/Mail.php
+
+		-
+			message: "#^Access to an undefined property phpOMS\\\\Message\\\\RequestAbstract\\:\\:\\$uri\\.$#"
+			count: 1
+			path: phpOMS/Message/RequestAbstract.php
+
+		-
+			message: "#^Access to an undefined property phpOMS\\\\Message\\\\RequestAbstract\\:\\:\\$files\\.$#"
+			count: 1
+			path: phpOMS/Message/RequestAbstract.php
+
+		-
+			message: "#^Class phpOMS\\\\Message\\\\Socket\\\\Request constructor invoked with 1 parameter, 0 required\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/PacketManager.php
+
+		-
+			message: "#^Access to constant M_JSON on an unknown class phpOMS\\\\Message\\\\Socket\\\\MimeType\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Call to static method stringify\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\StringUtils\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Access to constant M_HTML on an unknown class phpOMS\\\\Message\\\\Socket\\\\MimeType\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Class phpOMS\\\\Message\\\\Socket\\\\View not found\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Call to method toArray\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\View\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Call to static method getInstance\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\FileLogger\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Access to constant MSG_FULL on an unknown class phpOMS\\\\Message\\\\Socket\\\\FileLogger\\.$#"
+			count: 1
+			path: phpOMS/Message/Socket/Response.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
+			count: 2
+			path: phpOMS/Module/ModuleAbstract.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/Module/ModuleManager.php
+
+		-
+			message: "#^phpOMS\\\\Module\\\\NullModule\\:\\:__construct\\(\\) does not call parent constructor from phpOMS\\\\Module\\\\ModuleAbstract\\.$#"
+			count: 1
+			path: phpOMS/Module/NullModule.php
+
+		-
+			message: "#^Parameter \\#1 \\$process of function proc_close expects resource, resource\\|false given\\.$#"
+			count: 1
+			path: phpOMS/Module/PackageManager.php
+
+		-
+			message: "#^Property phpOMS\\\\Socket\\\\Client\\\\Client\\:\\:\\$app has unknown class phpOMS\\\\Socket\\\\Client\\\\SocketApplication as its type\\.$#"
+			count: 1
+			path: phpOMS/Socket/Client/Client.php
+
+		-
+			message: "#^Property phpOMS\\\\Socket\\\\Client\\\\Client\\:\\:\\$app \\(phpOMS\\\\Socket\\\\Client\\\\SocketApplication\\) does not accept phpOMS\\\\ApplicationAbstract\\.$#"
+			count: 1
+			path: phpOMS/Socket/Client/Client.php
+
+		-
+			message: "#^Parameter \\#1 \\$router of class phpOMS\\\\Message\\\\Socket\\\\PacketManager constructor expects phpOMS\\\\Router\\\\SocketRouter, phpOMS\\\\Router\\\\RouterInterface given\\.$#"
+			count: 1
+			path: phpOMS/Socket/Client/Client.php
+
+		-
+			message: "#^Access to an undefined property phpOMS\\\\Socket\\\\Client\\\\Client\\:\\:\\$commands\\.$#"
+			count: 1
+			path: phpOMS/Socket/Client/Client.php
+
+		-
+			message: "#^Undefined variable\\: \\$id$#"
+			count: 1
+			path: phpOMS/Socket/Server/ClientManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$router of class phpOMS\\\\Message\\\\Socket\\\\PacketManager constructor expects phpOMS\\\\Router\\\\SocketRouter, phpOMS\\\\Router\\\\RouterInterface given\\.$#"
+			count: 1
+			path: phpOMS/Socket/Server/Server.php
+
+		-
+			message: "#^Property phpOMS\\\\Socket\\\\SocketAbstract\\:\\:\\$sock \\(resource\\) does not accept resource\\|false\\.$#"
+			count: 1
+			path: phpOMS/Socket/SocketAbstract.php
+
+		-
+			message: "#^Property phpOMS\\\\Socket\\\\SocketAbstract\\:\\:\\$sock \\(resource\\) does not accept null\\.$#"
+			count: 1
+			path: phpOMS/Socket/SocketAbstract.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Stdlib/Base/Iban.php
+
+		-
+			message: "#^Parameter \\#2 \\$timestamp of function date expects int, int\\|false given\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Base/SmartDateTime.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Stdlib\\\\Graph\\\\Node\\:\\:getNeighbors\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) should return phpOMS\\\\Stdlib\\\\Graph\\\\Node but returns phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Stdlib\\\\Graph\\\\Node and null will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Cannot assign new offset to array\\|phpOMS\\\\Stdlib\\\\Graph\\\\Node\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getLeft\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null given\\.$#"
+			count: 2
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null given\\.$#"
+			count: 2
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getLeft\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, null given\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, null given\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/BinaryTree.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Stdlib\\\\Graph\\\\Node and null will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Stdlib/Graph/Tree.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$arg1 of function min expects array, \\(array\\<int, int\\>\\)\\|int given\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/Tree.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Stdlib\\\\Graph\\\\Tree\\:\\:getLevel\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/Tree.php
+
+		-
+			message: "#^Function callback not found\\.$#"
+			count: 1
+			path: phpOMS/Stdlib/Graph/Tree.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#2 \\$dir of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:size\\(\\) expects string, int\\|string given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#2 \\$filename of function ftp_size expects string, int\\|string given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Argument of an invalid type array\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#1 \\$str of function substr expects string, string\\|null given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#3 \\$content of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:put\\(\\) expects string, string\\|false given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#1 \\$con of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects resource, string given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#2 \\$path of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects string, int given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Parameter \\#3 \\$permission of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects int, true given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:__construct\\(\\) does not call parent constructor from phpOMS\\\\System\\\\File\\\\Ftp\\\\FileAbstract\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Parameter \\#2 \\$fp of function ftp_fget expects resource, resource\\|false given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Parameter \\#1 \\$fp of function rewind expects resource, resource\\|false given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Parameter \\#1 \\$source of function stream_get_contents expects resource, resource\\|false given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:get\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Call to an undefined static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:ftpCreate\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Cannot call method getPath\\(\\) on phpOMS\\\\Uri\\\\Http\\|null\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/File.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\FileAbstract\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FileAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\FileAbstract\\:\\:getChangedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FileAbstract.php
+
+		-
+			message: "#^Cannot call method setTimestamp\\(\\) on DateTime\\|null\\.$#"
+			count: 2
+			path: phpOMS/System/File/Ftp/FileAbstract.php
+
+		-
+			message: "#^Parameter \\#3 \\$content of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:put\\(\\) expects string, int given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:get\\(\\) invoked with 1 parameter, 2 required\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Parameter \\#1 \\$con of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects resource, string given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Parameter \\#2 \\$path of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects string, int given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Parameter \\#3 \\$permission of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:create\\(\\) expects int, true given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:create\\(\\) invoked with 1 parameter, 2 required\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Parameter \\#1 \\$con of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:list\\(\\) expects resource, string given\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:set\\(\\) invoked with 2 parameters, 3 required\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:append\\(\\) invoked with 2 parameters, 3 required\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:prepend\\(\\) invoked with 2 parameters, 3 required\\.$#"
+			count: 1
+			path: phpOMS/System/File/Ftp/FtpStorage.php
+
+		-
+			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: phpOMS/System/File/Local/Directory.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Local\\\\FileAbstract\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: phpOMS/System/File/Local/FileAbstract.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Local\\\\FileAbstract\\:\\:getChangedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: phpOMS/System/File/Local/FileAbstract.php
+
+		-
+			message: "#^Cannot call method setTimestamp\\(\\) on DateTime\\|null\\.$#"
+			count: 2
+			path: phpOMS/System/File/Local/FileAbstract.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Uri/Argument.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Uri/Http.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Utils/Compression/LZW.php
+
+		-
+			message: "#^Method phpOMS\\\\Utils\\\\Compression\\\\LZW\\:\\:decompress\\(\\) should return string but returns int\\|string\\.$#"
+			count: 1
+			path: phpOMS/Utils/Compression/LZW.php
+
+		-
+			message: "#^Result of \\|\\| is always false\\.$#"
+			count: 2
+			path: phpOMS/Utils/Converter/Numeric.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
+			count: 3
+			path: phpOMS/Utils/Converter/Numeric.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Utils/Encoding/Huffman/Huffman.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Utils/Encoding/Huffman/Huffman.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Utils/Git/Repository.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx not found\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods not found\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls not found\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
+			count: 2
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\Excel\\\\ExcelDatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet not found\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method getProperties\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method getSheetCount\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method execute\\(\\) on an unknown class phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method createSheet\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method setActiveSheetIndex\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx not found\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods not found\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls not found\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+
+		-
+			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\IODatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
+			count: 1
+			path: phpOMS/Utils/IO/IODatabaseMapper.php
+
+		-
+			message: "#^Cannot assign offset string to string\\.$#"
+			count: 2
+			path: phpOMS/Utils/Parser/Markdown/Markdown.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
+			count: 1
+			path: phpOMS/Utils/Parser/Markdown/Markdown.php
+
+		-
+			message: "#^Result of && is always false\\.$#"
+			count: 1
+			path: phpOMS/Utils/Permutation.php
+
+		-
+			message: "#^Method phpOMS\\\\Utils\\\\TaskSchedule\\\\Interval\\:\\:serialize\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: phpOMS/Utils/TaskSchedule/Interval.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Validation/Finance/Iban.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
+			count: 2
+			path: phpOMS/Views/View.php
+
+
