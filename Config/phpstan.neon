@@ -1,3 +1,6 @@
+includes:
+		- phpstan-baseline.neon
+
 parameters:
 	ignoreErrors:
 		- '#Access to protected property Web\\WebApplication::(.*)#'
@@ -25,12 +28,14 @@ parameters:
 		- *Hooks.php
 		- *ObjLoader.js
 		- */vendor/*
+		- *vendor*
 		- */Demo/*
 		- */Build/*
 		- */Cache/*
 		- */Docs/*
 		- */Documentation/*
 		- */Resources/*
+		- *Resources*
 		- */Routes/*
 		- */Hooks/*
 		- */node_modules/*
