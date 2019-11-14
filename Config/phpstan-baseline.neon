@@ -1,7 +1,3 @@
-
-Warning: "continue" targeting switch is equivalent to "break". Did you mean to use "continue 2"? in /home/spl1nes/Orange-Management/Resources/tcpdf/tcpdf.php on line 17778
-
-
 parameters:
 	ignoreErrors:
 		-
@@ -40,9 +36,24 @@ parameters:
 			path: Install/ConsoleApplication.php
 
 		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
+			count: 6
+			path: Install/InstallAbstract.php
+
+		-
 			message: "#^Cannot call method add\\(\\) on phpOMS\\\\Router\\\\RouterInterface\\|null\\.$#"
 			count: 2
 			path: Install/WebApplication.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 10
+			path: Modules/Accounting/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 10
+			path: Modules/Accounting/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\Accounting\\\\Models\\\\Creditor\\:\\:\\$account has unknown class Modules\\\\Accounting\\\\Models\\\\phpOMS as its type\\.$#"
@@ -65,14 +76,69 @@ parameters:
 			path: Modules/Accounting/Models/Debitor.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/AccountsPayable/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
+			path: Modules/AccountsPayable/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/AccountsReceivable/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
+			path: Modules/AccountsReceivable/Controller/BackendController.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
 			count: 5
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$appSettings on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:apiProfileCreateDbEntry\\(\\)\\.$#"
+			count: 1
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 7
+			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$eventManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
 			path: Modules/Admin/Controller/ApiController.php
 
 		-
 			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
 			count: 1
 			path: Modules/Admin/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$appSettings on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Admin/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 8
+			path: Modules/Admin/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 11
+			path: Modules/Admin/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Admin\\\\Theme\\\\Backend\\\\Components\\\\GroupTagSelector\\\\GroupTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -90,9 +156,64 @@ parameters:
 			path: Modules/Admin/Controller/BackendController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
+			count: 1
+			path: Modules/Admin/Models/AccountMapper.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 2
+			path: Modules/Arrival/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Arrival/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/AssetManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/AssetManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 6
+			path: Modules/Auditor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 7
+			path: Modules/Auditor/Controller/BackendController.php
+
+		-
 			message: "#^Method Modules\\\\Auditor\\\\Models\\\\Audit\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
 			count: 1
 			path: Modules/Auditor/Models/Audit.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/Balance/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Balance/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Billing/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Billing/Controller/BackendController.php
 
 		-
 			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
@@ -103,6 +224,26 @@ parameters:
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Billing/Models/Invoice.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/BudgetManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/BudgetManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/Calendar/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Calendar/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Event\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -170,9 +311,39 @@ parameters:
 			path: Modules/Calendar/Models/Schedule.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/Chart/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Chart/Controller/BackendController.php
+
+		-
 			message: "#^Class Modules\\\\Chat\\\\Room does not have a constructor and must be instantiated without any parameters\\.$#"
 			count: 1
 			path: Modules/Chat/Room.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Checklist/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Checklist/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/ClientManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/ClientManagement/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$numberReverse \\(string\\) does not accept bool\\|float\\|int\\|string\\.$#"
@@ -188,6 +359,16 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$defaultTnvoiceAddress\\.$#"
 			count: 1
 			path: Modules/ClientManagement/Models/Client.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 2
+			path: Modules/Comments/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Comments/Controller/BackendController.php
 
 		-
 			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\FormValidation not found\\.$#"
@@ -210,9 +391,39 @@ parameters:
 			path: Modules/Comments/Controller/BackendController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/ContractLifecycleManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/ContractLifecycleManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/CostCenterAccounting/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/CostCenterAccounting/Controller/BackendController.php
+
+		-
 			message: "#^Property Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\:\\:\\$parent \\(int\\|Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\|null\\) does not accept string\\.$#"
 			count: 1
 			path: Modules/CostCenterAccounting/Models/CostCenter.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/CostObjectAccounting/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/CostObjectAccounting/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\:\\:\\$parent \\(int\\|Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\|null\\) does not accept string\\.$#"
@@ -225,6 +436,26 @@ parameters:
 			path: Modules/Dashboard/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/Dashboard/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Dashboard/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Database/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Database/Controller/BackendController.php
+
+		-
 			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\DatabaseEditor\\\\Controller\\\\ConnectionFactory\\.$#"
 			count: 2
 			path: Modules/DatabaseEditor/Controller/ApiController.php
@@ -235,14 +466,69 @@ parameters:
 			path: Modules/DatabaseEditor/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/DatabaseEditor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/DatabaseEditor/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
 			count: 1
 			path: Modules/Draw/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Draw/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Draw/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
 			count: 2
 			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Editor/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/EventManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/EventManagement/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -275,8 +561,23 @@ parameters:
 			path: Modules/Exchange/Controller/ApiController.php
 
 		-
+			message: "#^Cannot access property \\$dbPool on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Exchange/Controller/ApiController.php
+
+		-
 			message: "#^PHPDoc tag @return with type void is incompatible with native type phpOMS\\\\Contract\\\\RenderableInterface\\.$#"
 			count: 1
+			path: Modules/Exchange/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/Exchange/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
 			path: Modules/Exchange/Controller/BackendController.php
 
 		-
@@ -565,9 +866,54 @@ parameters:
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
 
 		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Help/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:setDownloadable\\(\\)\\.$#"
 			count: 1
 			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$dbPool on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createAccountModelPermission\\(\\)\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/Helper/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Helper/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Upload\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -577,6 +923,11 @@ parameters:
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
 			count: 2
+			path: Modules/Helper/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$dbPool on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
 			path: Modules/Helper/Controller/BackendController.php
 
 		-
@@ -593,6 +944,16 @@ parameters:
 			message: "#^Parameter \\#1 \\$profile of class Modules\\\\HumanResourceManagement\\\\Models\\\\Employee constructor expects int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\|null, Modules\\\\Profile\\\\Models\\\\Profile given\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/HumanResourceManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/HumanResourceManagement/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -660,6 +1021,11 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
+
+		-
 			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool has unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool as its type\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
@@ -680,8 +1046,23 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/StaffList.php
 
 		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
 			message: "#^Access to undefined constant phpOMS\\\\Account\\\\PermissionType\\:\\:GET\\.$#"
 			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
@@ -730,9 +1111,29 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
+
+		-
 			message: "#^Instantiated class Modules\\\\HumanResourceTimeRecording\\\\Controller\\\\NullSession not found\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/TimerecordingController.php
 
 		-
 			message: "#^Property Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:\\$employee has unknown class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee as its type\\.$#"
@@ -780,6 +1181,81 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
+			count: 2
+			path: Modules/HumanResourceTimeRecording/Models/SessionMapper.php
+
+		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Models/SessionMapper.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/InvestmentManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/InvestmentManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 7
+			path: Modules/ItemManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 7
+			path: Modules/ItemManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Job/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Job/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/KPI/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/KPI/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/Kanban/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Kanban/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Kanban/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Kanban/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Kanban/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\$task of method Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:createFromTask\\(\\) has invalid typehint type Modules\\\\Kanban\\\\Models\\\\Task\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCard.php
@@ -800,9 +1276,44 @@ parameters:
 			path: Modules/Knowledgebase/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 7
+			path: Modules/Knowledgebase/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 7
+			path: Modules/Knowledgebase/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Knowledgebase/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Knowledgebase/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Knowledgebase/Controller/BackendController.php
+
+		-
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Knowledgebase/Models/WikiDoc.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/Marketing/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
+			path: Modules/Marketing/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -830,9 +1341,44 @@ parameters:
 			path: Modules/Marketing/Models/Promotion.php
 
 		-
+			message: "#^Cannot call method query\\(\\) on PDO\\|null\\.$#"
+			count: 1
+			path: Modules/Media/Admin/Installer.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
 			count: 1
 			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createAccountModelPermission\\(\\)\\.$#"
+			count: 1
+			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Media/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Media/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Media/Controller/BackendController.php
 
 		-
 			message: "#^PHPDoc tag @param for parameter \\$outputPath with type string\\|null is not subtype of native type string\\.$#"
@@ -865,6 +1411,101 @@ parameters:
 			path: Modules/Media/Views/MediaView.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 7
+			path: Modules/Messages/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 7
+			path: Modules/Messages/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/Monitoring/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Monitoring/Controller/BackendController.php
+
+		-
+			message: "#^Cannot call method query\\(\\) on PDO\\|null\\.$#"
+			count: 1
+			path: Modules/Navigation/Admin/Installer.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$dbPool on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:openNav\\(\\)\\.$#"
+			count: 1
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Navigation/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$dbPool on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:openNav\\(\\)\\.$#"
+			count: 1
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Navigation/Controller/TimerecordingController.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
 			count: 1
 			path: Modules/Navigation/Models/Navigation.php
@@ -880,6 +1521,31 @@ parameters:
 			path: Modules/News/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/News/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/News/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/News/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/News/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/News/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Editor\\\\Theme\\\\Backend\\\\Components\\\\Editor\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
 			count: 1
 			path: Modules/News/Controller/BackendController.php
@@ -888,6 +1554,16 @@ parameters:
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
 			count: 3
 			path: Modules/Organization/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 9
+			path: Modules/Organization/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 9
+			path: Modules/Organization/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\UnitTagSelector\\\\UnitTagSelectorView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -915,6 +1591,36 @@ parameters:
 			path: Modules/Organization/Controller/BackendController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/PL/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/PL/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 4
+			path: Modules/Production/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 4
+			path: Modules/Production/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
 			count: 1
 			path: Modules/Profile/Controller/BackendController.php
@@ -930,9 +1636,24 @@ parameters:
 			path: Modules/Profile/Controller/BackendController.php
 
 		-
+			message: "#^Cannot access property \\$appSettings on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Profile/Controller/BackendController.php
+
+		-
 			message: "#^Method Modules\\\\Profile\\\\Models\\\\Profile\\:\\:getImage\\(\\) should return Modules\\\\Media\\\\Models\\\\Media but returns int\\|Modules\\\\Media\\\\Models\\\\Media\\|null\\.$#"
 			count: 1
 			path: Modules/Profile/Models/Profile.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/ProjectManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/ProjectManagement/Controller/BackendController.php
 
 		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
@@ -1018,6 +1739,16 @@ parameters:
 			message: "#^Cannot call method setName\\(\\) on int\\|Modules\\\\Calendar\\\\Models\\\\Calendar\\.$#"
 			count: 1
 			path: Modules/ProjectManagement/Models/Project.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 6
+			path: Modules/Purchase/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 6
+			path: Modules/Purchase/Controller/BackendController.php
 
 		-
 			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\FormValidation not found\\.$#"
@@ -1150,9 +1881,59 @@ parameters:
 			path: Modules/QA/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/QA/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/QA/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\$badge of method Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:addBadge\\(\\) has invalid typehint type Modules\\\\QA\\\\Models\\\\QABadge\\.$#"
 			count: 1
 			path: Modules/QA/Models/QAQuestion.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 2
+			path: Modules/ResearchDevelopment/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/ResearchDevelopment/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 19
+			path: Modules/RiskManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 19
+			path: Modules/RiskManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationSplash\\(\\)\\.$#"
+			count: 1
+			path: Modules/SalesAnalysis/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/SalesAnalysis/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/SalesAnalysis/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$dispatcher on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getRouteVerb\\(\\)\\.$#"
@@ -1160,9 +1941,64 @@ parameters:
 			path: Modules/Search/Controller/ApiController.php
 
 		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Search/Controller/ApiController.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
 			count: 1
 			path: Modules/Search/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 2
+			path: Modules/Shipping/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 2
+			path: Modules/Shipping/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 1
+			path: Modules/StockTaking/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/StockTaking/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/SupplierManagement/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/SupplierManagement/Controller/BackendController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 6
+			path: Modules/Support/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 6
+			path: Modules/Support/Controller/BackendController.php
 
 		-
 			message: "#^Class Modules\\\\Support\\\\Models\\\\Issue does not have a constructor and must be instantiated without any parameters\\.$#"
@@ -1178,6 +2014,16 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\Support\\\\Models\\\\Message\\:\\:\\$id\\.$#"
 			count: 1
 			path: Modules/Support/Models/Message.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 3
+			path: Modules/Surveys/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 3
+			path: Modules/Surveys/Controller/BackendController.php
 
 		-
 			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Answer does not have a constructor and must be instantiated without any parameters\\.$#"
@@ -1230,7 +2076,32 @@ parameters:
 			path: Modules/Tasks/Controller/ApiController.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
 			message: "#^Parameter \\#1 \\$app of class Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView constructor expects phpOMS\\\\ApplicationAbstract, phpOMS\\\\ApplicationAbstract\\|null given\\.$#"
+			count: 1
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$accountManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$appName on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$orgId on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
 			count: 1
 			path: Modules/Tasks/Controller/BackendController.php
 
@@ -1268,6 +2139,16 @@ parameters:
 			message: "#^Method Modules\\\\Tasks\\\\Models\\\\TaskElement\\:\\:getDue\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
 			count: 1
 			path: Modules/Tasks/Models/TaskElement.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:count\\(\\)\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/TaskMapper.php
+
+		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
+			count: 1
+			path: Modules/Tasks/Models/TaskMapper.php
 
 		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$warehouse has unknown class Modules\\\\Warehousing\\\\Models\\\\Warehouse as its type\\.$#"
@@ -1343,6 +2224,56 @@ parameters:
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$creator has unknown class phpOMS\\\\Models\\\\User as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Article as its type\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Article\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Article\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Article but returns Modules\\\\WarehouseManagement\\\\Models\\\\Article\\|Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreated\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) has invalid type phpOMS\\\\Models\\\\User\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) should return phpOMS\\\\Models\\\\User but returns phpOMS\\\\Models\\\\User\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Parameter \\$creator of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:setCreator\\(\\) has invalid typehint type phpOMS\\\\Models\\\\User\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$prices\\.$#"
+			count: 3
+			path: Modules/WarehouseManagement/Models/Article.php
 
 		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$order \\(Modules\\\\WarehouseManagement\\\\Models\\\\intstring\\) does not accept default value of type string\\.$#"
@@ -1453,6 +2384,16 @@ parameters:
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Warehouse but returns Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\|Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Warehouse.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
+			count: 5
+			path: Modules/Workflow/Controller/BackendController.php
+
+		-
+			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 5
+			path: Modules/Workflow/Controller/BackendController.php
 
 		-
 			message: "#^PHPDoc tag @var for property Socket\\\\Socketserver\\\\Application\\:\\:\\$type with type phpOMS\\\\Socket\\\\SocketType is incompatible with native type string\\.$#"
@@ -1610,9 +2551,54 @@ parameters:
 			path: phpOMS/Algorithm/PathFinding/Path.php
 
 		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
+			count: 3
+			path: phpOMS/Config/SettingsAbstract.php
+
+		-
 			message: "#^Binary operation \"\\+\\=\" between array\\<int\\|string, mixed\\> and array\\|false results in an error\\.$#"
 			count: 1
 			path: phpOMS/Config/SettingsAbstract.php
+
+		-
+			message: "#^Cannot call method beginTransaction\\(\\) on PDO\\|null\\.$#"
+			count: 2
+			path: phpOMS/Config/SettingsAbstract.php
+
+		-
+			message: "#^Cannot call method commit\\(\\) on PDO\\|null\\.$#"
+			count: 2
+			path: phpOMS/Config/SettingsAbstract.php
+
+		-
+			message: "#^Cannot call method quote\\(\\) on PDO\\|null\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/BuilderAbstract.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:into\\(\\)\\.$#"
+			count: 3
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
+			count: 20
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Cannot call method lastInsertId\\(\\) on PDO\\|null\\.$#"
+			count: 2
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:delete\\(\\)\\.$#"
+			count: 3
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:update\\(\\)\\.$#"
+			count: 4
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
 			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
@@ -1625,7 +2611,17 @@ parameters:
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
+			count: 4
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
 			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) with return type void returns mixed but should not return anything\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:random\\(\\)\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
@@ -1666,6 +2662,11 @@ parameters:
 
 		-
 			message: "#^Instanceof between array\\|Closure and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Query/Builder.php
+
+		-
+			message: "#^Cannot call method prepare\\(\\) on PDO\\|null\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Query/Builder.php
 
@@ -1862,6 +2863,11 @@ parameters:
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getUri\\(\\)\\.$#"
 			count: 2
+			path: phpOMS/Module/ModuleAbstract.php
+
+		-
+			message: "#^Cannot access property \\$eventManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 10
 			path: phpOMS/Module/ModuleAbstract.php
 
 		-
@@ -2150,6 +3156,16 @@ parameters:
 			path: phpOMS/System/File/Ftp/FtpStorage.php
 
 		-
+			message: "#^Call to an undefined method RecursiveIteratorIterator\\|RegexIterator\\:\\:getSubPathname\\(\\)\\.$#"
+			count: 1
+			path: phpOMS/System/File/Local/Directory.php
+
+		-
+			message: "#^Call to an undefined method RecursiveIteratorIterator\\:\\:getSubPathname\\(\\)\\.$#"
+			count: 5
+			path: phpOMS/System/File/Local/Directory.php
+
+		-
 			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
 			count: 1
 			path: phpOMS/System/File/Local/Directory.php
@@ -2353,6 +3369,11 @@ parameters:
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
 			count: 1
 			path: phpOMS/Validation/Finance/Iban.php
+
+		-
+			message: "#^Cannot access property \\$l11nManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
+			count: 1
+			path: phpOMS/Views/View.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"

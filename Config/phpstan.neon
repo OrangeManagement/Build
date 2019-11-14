@@ -1,41 +1,26 @@
 includes:
-		- phpstan-baseline.neon
+    - phpstan-baseline.neon
 
 parameters:
-	ignoreErrors:
-		- '#Access to protected property Web\\WebApplication::(.*)#'
-		- '#Calling method prepare\(\) on possibly null value of type PDO\|null\.#'
-		- '#Calling method lastInsertId\(\) on possibly null value of type PDO\|null\.#'
-		- '#Cannot call method prepare\(\) on PDO\|null\.#'
-		- '#Cannot call method beginTransaction\(\) on PDO\|null\.#'
-		- '#Access to an undefined property phpOMS\\DataStorage\\DataStorageConnectionInterface::(.*)#'
-		- '#Call to an undefined method phpOMS\\Module\\ModuleAbstract::(.*)#'
-		- '#Access to an undefined property phpOMS\\ApplicationAbstract::(.*)#'
-		- '#Cannot access property (.*) on phpOMS\\ApplicationAbstract(.*)#'
-		- '#Call to an undefined method phpOMS\\DataStorage\\Database\\BuilderAbstract::(.*)#'
-		- '#Call to an undefined method object::getId\(\)#'
-		- '#Cannot call method (.*) on PDO\|null#'
-		- '#Call to an undefined method RecursiveIteratorIterator::getSubPathname\(\)#'
-		- '#Call to an undefined method RecursiveIteratorIterator\|RegexIterator::getSubPathname\(\)#'
-	fileExtensions:
-		- php
-	excludes_analyse:
-		- *.tpl.php
-		- */tests/*
-		- */test/*
-		- *Test.php
-		- *Routes.php
-		- *Hooks.php
-		- *ObjLoader.js
-		- */vendor/*
-		- *vendor*
-		- */Demo/*
-		- */Build/*
-		- */Cache/*
-		- */Docs/*
-		- */Documentation/*
-		- */Resources/*
-		- *Resources*
-		- */Routes/*
-		- */Hooks/*
-		- */node_modules/*
+    fileExtensions:
+        - php
+    excludes_analyse:
+        - *.tpl.php
+        - */tests/*
+        - */test/*
+        - *Test.php
+        - *Routes.php
+        - *Hooks.php
+        - *ObjLoader.js
+        - */vendor/*
+        - *vendor*
+        - */Demo/*
+        - */Build/*
+        - */Cache/*
+        - */Docs/*
+        - */Documentation/*
+        - */Resources/*
+        - *Resources*
+        - */Routes/*
+        - */Hooks/*
+        - */node_modules/*
