@@ -276,11 +276,6 @@ parameters:
 			path: Modules/Calendar/Models/Event.php
 
 		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
-			count: 1
-			path: Modules/Calendar/Models/Event.php
-
-		-
 			message: "#^Cannot call method setCreatedBy\\(\\) on int\\|Modules\\\\Calendar\\\\Models\\\\Schedule\\|null\\.$#"
 			count: 1
 			path: Modules/Calendar/Models/Event.php
@@ -321,11 +316,6 @@ parameters:
 			path: Modules/Chart/Controller/BackendController.php
 
 		-
-			message: "#^Class Modules\\\\Chat\\\\Room does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Chat/Room.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
 			count: 3
 			path: Modules/Checklist/Controller/BackendController.php
@@ -344,11 +334,6 @@ parameters:
 			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
 			count: 3
 			path: Modules/ClientManagement/Controller/BackendController.php
-
-		-
-			message: "#^Property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$numberReverse \\(string\\) does not accept bool\\|float\\|int\\|string\\.$#"
-			count: 1
-			path: Modules/ClientManagement/Models/Client.php
 
 		-
 			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$taxId\\.$#"
@@ -547,11 +532,6 @@ parameters:
 
 		-
 			message: "#^Method Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/EventManagement/Models/Event.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
 			count: 1
 			path: Modules/EventManagement/Models/Event.php
 
@@ -1256,16 +1236,6 @@ parameters:
 			path: Modules/Kanban/Controller/BackendController.php
 
 		-
-			message: "#^Parameter \\$task of method Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:createFromTask\\(\\) has invalid typehint type Modules\\\\Kanban\\\\Models\\\\Task\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
-			message: "#^Call to method getId\\(\\) on an unknown class Modules\\\\Kanban\\\\Models\\\\Task\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCardComment.php
@@ -1332,11 +1302,6 @@ parameters:
 
 		-
 			message: "#^Method Modules\\\\Marketing\\\\Models\\\\Promotion\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Marketing/Models/Promotion.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$createdBy Creator\\)\\: Unexpected token \"\\$createdBy\", expected TOKEN_IDENTIFIER at offset 18$#"
 			count: 1
 			path: Modules/Marketing/Models/Promotion.php
 
@@ -2001,16 +1966,6 @@ parameters:
 			path: Modules/Support/Controller/BackendController.php
 
 		-
-			message: "#^Class Modules\\\\Support\\\\Models\\\\Issue does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Support/Models/Issue.php
-
-		-
-			message: "#^Class Modules\\\\Support\\\\Models\\\\Message does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Support/Models/Message.php
-
-		-
 			message: "#^Access to an undefined property Modules\\\\Support\\\\Models\\\\Message\\:\\:\\$id\\.$#"
 			count: 1
 			path: Modules/Support/Models/Message.php
@@ -2024,31 +1979,6 @@ parameters:
 			message: "#^Cannot access property \\$moduleManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
 			count: 3
 			path: Modules/Surveys/Controller/BackendController.php
-
-		-
-			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Answer does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Surveys/Models/Answer.php
-
-		-
-			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Question does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Surveys/Models/Question.php
-
-		-
-			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Section does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Surveys/Models/Section.php
-
-		-
-			message: "#^Property Modules\\\\Surveys\\\\Models\\\\Survey\\:\\:\\$created has unknown class Modules\\\\Surveys\\\\Models\\\\datetime as its type\\.$#"
-			count: 1
-			path: Modules/Surveys/Models/Survey.php
-
-		-
-			message: "#^Class Modules\\\\Surveys\\\\Models\\\\Survey does not have a constructor and must be instantiated without any parameters\\.$#"
-			count: 1
-			path: Modules/Surveys/Models/Survey.php
 
 		-
 			message: "#^Call to static method get\\(\\) on an unknown class Modules\\\\Tag\\\\Controller\\\\TagMapper\\.$#"
@@ -2151,41 +2081,6 @@ parameters:
 			path: Modules/Tasks/Models/TaskMapper.php
 
 		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$warehouse has unknown class Modules\\\\Warehousing\\\\Models\\\\Warehouse as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^PHPDoc tag @var for property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$status with type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus is incompatible with native type int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$status has unknown class Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Arrival as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Arrival\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Arrival\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Arrival but returns Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\|Modules\\\\Warehousing\\\\Models\\\\Arrival\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Arrival.php
@@ -2201,52 +2096,12 @@ parameters:
 			path: Modules/WarehouseManagement/Models/Arrival.php
 
 		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getStatus\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getStatus\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus but returns int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\\\Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\)\\: Unexpected token \"\\\\n     \\*\", expected TOKEN_VARIABLE at offset 86$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getWarehouse\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Arrival.php
 
 		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$creator has unknown class phpOMS\\\\Models\\\\User as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Article as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Article\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Article\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Article but returns Modules\\\\WarehouseManagement\\\\Models\\\\Article\\|Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
@@ -2286,36 +2141,6 @@ parameters:
 			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
-			message: "#^PHPDoc tag @var for property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$status with type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus is incompatible with native type int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$status has unknown class Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Article as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Article\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Article but returns Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\|Modules\\\\Warehousing\\\\Models\\\\Article\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getOrder\\(\\) should return int but returns Modules\\\\WarehouseManagement\\\\Models\\\\intstring\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Shipping.php
@@ -2331,58 +2156,13 @@ parameters:
 			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getStatus\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getStatus\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus but returns int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\\\Modules\\\\Warehousing\\\\Models\\\\ArrivalStatus\\)\\: Unexpected token \"\\\\n     \\*\", expected TOKEN_VARIABLE at offset 86$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getWarehouse\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getWarehouse\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Warehouse but returns string\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getSender\\(\\) should return int but returns int\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
-			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:\\$instances has unknown class Modules\\\\Warehousing\\\\Models\\\\Warehouse as its type\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Warehouse.php
-
-		-
 			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:\\$id\\.$#"
 			count: 2
-			path: Modules/WarehouseManagement/Models/Warehouse.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:getInstance\\(\\) has invalid type Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Warehouse.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\Warehousing\\\\Models\\\\Warehouse\\>\\) does not accept Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Warehouse.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\:\\:getInstance\\(\\) should return Modules\\\\Warehousing\\\\Models\\\\Warehouse but returns Modules\\\\WarehouseManagement\\\\Models\\\\Warehouse\\|Modules\\\\Warehousing\\\\Models\\\\Warehouse\\.$#"
-			count: 1
 			path: Modules/WarehouseManagement/Models/Warehouse.php
 
 		-
@@ -2912,6 +2692,16 @@ parameters:
 
 		-
 			message: "#^Parameter \\#1 \\$router of class phpOMS\\\\Message\\\\Socket\\\\PacketManager constructor expects phpOMS\\\\Router\\\\SocketRouter, phpOMS\\\\Router\\\\RouterInterface given\\.$#"
+			count: 1
+			path: phpOMS/Socket/Server/Server.php
+
+		-
+			message: "#^Cannot call method getSocket\\(\\) on null\\.$#"
+			count: 1
+			path: phpOMS/Socket/Server/Server.php
+
+		-
+			message: "#^Cannot call method setHandshake\\(\\) on null\\.$#"
 			count: 1
 			path: phpOMS/Socket/Server/Server.php
 

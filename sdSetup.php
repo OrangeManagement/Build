@@ -269,107 +269,107 @@ $request->getHeader()->setAccount(1);
 $request->setData('status', 3);
 
 // Helper
-$request->setData('module', 'Helper');
+$request->setData('m, trueodule', 'Helper');
 $module->apiModuleStatusUpdate($request, $response);
 
 // Search
-$request->setData('module', 'Search');
+$request->setData('module', 'Search', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Dashboard
-$request->setData('module', 'Dashboard');
+$request->setData('module', 'Dashboard', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Tasks
-$request->setData('module', 'Tasks');
+$request->setData('module', 'Tasks', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Message
-$request->setData('module', 'Message');
+$request->setData('module', 'Message', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Calendar
-$request->setData('module', 'Calendar');
+$request->setData('module', 'Calendar', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Editor
-$request->setData('module', 'Editor');
+$request->setData('module', 'Editor', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Checklist
-$request->setData('module', 'Checklist');
+$request->setData('module', 'Checklist', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // News
-$request->setData('module', 'News');
+$request->setData('module', 'News', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Profile
-$request->setData('module', 'Profile');
+$request->setData('module', 'Profile', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Kanban
-$request->setData('module', 'Kanban');
+$request->setData('module', 'Kanban', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Workflow
-$request->setData('module', 'Workflow');
+$request->setData('module', 'Workflow', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // HumanResourceManagement
-$request->setData('module', 'HumanResourceManagement');
+$request->setData('module', 'HumanResourceManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // HumanResourceTimeRecording
-$request->setData('module', 'HumanResourceTimeRecording');
+$request->setData('module', 'HumanResourceTimeRecording', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // MyPrivate
-$request->setData('module', 'MyPrivate');
+$request->setData('module', 'MyPrivate', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Support
-$request->setData('module', 'Support');
+$request->setData('module', 'Support', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // ClientManagement
-$request->setData('module', 'ClientManagement');
+$request->setData('module', 'ClientManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // SupplierManagement
-$request->setData('module', 'SupplierManagement');
+$request->setData('module', 'SupplierManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // ItemManagement
-$request->setData('module', 'ItemManagement');
+$request->setData('module', 'ItemManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Billling
-$request->setData('module', 'Billling');
+$request->setData('module', 'Billling', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // InvoiceManagement
-$request->setData('module', 'InvoiceManagement');
+$request->setData('module', 'InvoiceManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // WarehouseManagement
-$request->setData('module', 'WarehouseManagement');
+$request->setData('module', 'WarehouseManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // StockTaking
-$request->setData('module', 'StockTaking');
+$request->setData('module', 'StockTaking', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // QualityManagement
-$request->setData('module', 'QualityManagement');
+$request->setData('module', 'QualityManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // AssetManagement
-$request->setData('module', 'AssetManagement');
+$request->setData('module', 'AssetManagement', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 // Marketing
-$request->setData('module', 'Marketing');
+$request->setData('module', 'Marketing', true);
 $module->apiModuleStatusUpdate($request, $response);
 
 /**
@@ -799,20 +799,20 @@ $request->setData('title', 'TestBoard');
 $module->apiBoardCreate($request, $response);
 
 $request->setData('board', 1);
-$request->setData('order', 1);
-$request->setData('module', 'News');
+$request->setData('order', 1, true);
+$request->setData('module', 'News', true);
 $module->apiComponentCreate($request, $response);
 
-$request->setData('order', 2);
-$request->setData('module', 'Tasks');
+$request->setData('order', 2, true);
+$request->setData('module', 'Tasks', true);
 $module->apiComponentCreate($request, $response);
 
-$request->setData('order', 3);
-$request->setData('module', 'Message');
+$request->setData('order', 3, true);
+$request->setData('module', 'Message', true);
 $module->apiComponentCreate($request, $response);
 
-$request->setData('order', 4);
-$request->setData('module', 'Calendar');
+$request->setData('order', 4, true);
+$request->setData('module', 'Calendar', true);
 $module->apiComponentCreate($request, $response);
 
 /**
@@ -864,29 +864,29 @@ $request->setData('profiles', 1);
 
 $module->apiEmployeeCreate($request, $response);
 
-$request->setData('employee', 1);
-$request->setData('start', '2015-07-01');
-$request->setData('end', '2017-01-15');
-$request->setData('unit', 2);
-$request->setData('department', 14);
-$request->setData('position', 30);
+$request->setData('employee', 1, true);
+$request->setData('start', '2015-07-01', true);
+$request->setData('end', '2017-01-15', true);
+$request->setData('unit', 2, true);
+$request->setData('department', 14, true);
+$request->setData('position', 30, true);
 
 $module->apiEmployeeHistoryCreate($request, $response);
 
-$request->setData('employee', 1);
-$request->setData('start', '2017-01-15');
-$request->setData('end', '2019-01-01');
-$request->setData('unit', 2);
-$request->setData('department', 14);
-$request->setData('position', 8);
+$request->setData('employee', 1, true);
+$request->setData('start', '2017-01-15', true);
+$request->setData('end', '2019-01-01', true);
+$request->setData('unit', 2, true);
+$request->setData('department', 14, true);
+$request->setData('position', 8, true);
 
 $module->apiEmployeeHistoryCreate($request, $response);
 
-$request->setData('employee', 1);
-$request->setData('start', '2019-01-01');
-$request->setData('end', '');
-$request->setData('unit', 2);
-$request->setData('department', 14);
-$request->setData('position', 7);
+$request->setData('employee', 1, true);
+$request->setData('start', '2019-01-01', true);
+$request->setData('end', '', true);
+$request->setData('unit', 2, true);
+$request->setData('department', 14, true);
+$request->setData('position', 7, true);
 
 $module->apiEmployeeHistoryCreate($request, $response);

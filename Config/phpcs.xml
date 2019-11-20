@@ -2,9 +2,16 @@
 <ruleset name="default">
 <description></description>
 <exclude-pattern>*.tpl.php</exclude-pattern>
+<exclude-pattern>*.pdf.php</exclude-pattern>
+<exclude-pattern>*.xls.php</exclude-pattern>
+<exclude-pattern>*.csv.php</exclude-pattern>
 <exclude-pattern>*.css</exclude-pattern>
 <exclude-pattern>*Markdown.php</exclude-pattern>
+<exclude-pattern>*Markdown.js</exclude-pattern>
+<exclude-pattern>*Sha1.js</exclude-pattern>
+<exclude-pattern>*Sha1b.js</exclude-pattern>
 <exclude-pattern>*Routes.php</exclude-pattern>
+<exclude-pattern>*SearchCommands.php</exclude-pattern>
 <exclude-pattern>*Hooks.php</exclude-pattern>
 <exclude-pattern>*ObjLoader.js</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
@@ -98,7 +105,9 @@
     <exclude-pattern>*ExponentialSmoothing.php</exclude-pattern><!-- Correct name is more important than rule -->
 </rule>
 <rule ref="Generic.PHP.LowerCaseConstant"/>
-<rule ref="Generic.PHP.NoSilencedErrors"/>
+<rule ref="Generic.PHP.NoSilencedErrors">
+    <exclude-pattern>*Server.php</exclude-pattern><!-- Socket shouldn't output errors -->
+</rule>
 <rule ref="Generic.Strings.UnnecessaryStringConcat">
     <properties>
         <property name="allowMultiline" value="true" />
@@ -154,7 +163,9 @@
 <rule ref="PSR12.Files.OpenTag"/>
 <rule ref="PSR12.Properties.ConstantVisibility"/>
 <!--<rule ref="PSR12.Functions.ReturnTypeDeclaration"/>-->
-<rule ref="MySource.Objects.AssignThis"/>
+<rule ref="MySource.Objects.AssignThis">
+    <exclude-pattern>*DragNDrop.js</exclude-pattern>
+</rule>
 <rule ref="MySource.PHP.EvalObjectFactory"/>
 <rule ref="MySource.PHP.GetRequestData">
     <exclude-pattern>*Request.php</exclude-pattern>
