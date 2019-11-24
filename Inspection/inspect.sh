@@ -46,4 +46,4 @@ echo "Custom php inspection"
 # Build external test report
 echo "#################################################"
 echo "PHP test report"
-php ${TOOLS_PATH}/testreportgenerator.phar -l ${BUILD_PATH}/Config/reportLang.php -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -d ${INSPECTION_PATH}/Test/ReportExternal --version 1.0.0
+php ${TOOLS_PATH}/testreportgenerator.phar -b ${ROOT_PATH} -l ${BUILD_PATH}/Config/reportLang.php -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -s ${INSPECTION_PATH}/Test/Php/junit_phpcs.xml -a ${INSPECTION_PATH}/Test/Php/phpstan.json -d ${INSPECTION_PATH}/Test/ReportExternal --version 1.0.0
