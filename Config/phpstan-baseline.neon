@@ -3023,112 +3023,112 @@ parameters:
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx not found\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods not found\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls not found\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
 			count: 2
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
-			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\Excel\\\\ExcelDatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
+			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\Spreadsheet\\\\SpreadsheetDatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet not found\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method getProperties\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method getSheetCount\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method execute\\(\\) on an unknown class phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method createSheet\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method setActiveSheetIndex\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx not found\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods not found\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls not found\\.$#"
 			count: 1
-			path: phpOMS/Utils/IO/Excel/ExcelDatabaseMapper.php
+			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\IODatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
