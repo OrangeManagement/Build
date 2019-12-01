@@ -440,8 +440,55 @@ return [
     'phpOMS\tests\DataStorage\Cache\Connection\FileCacheTest:testInvalidCachePath' => ['description' => 'A invalid cache connection will throw an InvalidConnectionConfigException', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Cache\Connection\FileCacheTest:testInvalidDataType' => ['description' => 'A invalid data type will throw an InvalidArgumentException', 'type' => 'framework'],
 
-    // todo: memcached
-    // todo: redis cache
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest' => ['description' => 'Memcached connection', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testDefault' => ['description' => 'The memcached connection has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testConnect' => ['description' => 'The connection to a cache can be established (none-exising directories get created)', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testSetInputOutput' => ['description' => 'Different cache data (types) can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testAddInputOutput' => ['description' => 'Cache data can bet added and returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidOverwrite' => ['description' => 'Cache data cannot be added if it already exists', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testReplace' => ['description' => 'Existing cache data can be replaced', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidReplace' => ['description' => 'None-existing cache data cannot be replaced', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testDelete' => ['description' => 'Cache data can be deleted', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testStats' => ['description' => 'The cache correctly handles general cache information', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testFlush' => ['description' => 'The cache can be flushed', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testUnexpiredInputOutput' => ['description' => 'Cache data can be set and returned with expiration limits', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testExpiredInputOutput' => ['description' => 'Expired cache data can be forced to return', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testForceExpiredInputOutput' => ['description' => 'Expired cache data cannot be returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidDeleteUnexpired' => ['description' => 'Unexpired cache data connot be delete if lower expiration is defined', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testDeleteExpired' => ['description' => 'Expired cache data can be deleted if higher expiration is defined', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testForceDeleteUnexpired' => ['description' => 'Unexpired data can be force deleted with lower expiration date', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testFlushExpired' => ['description' => 'Cach data can be flushed by expiration date', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testBadCacheStatus' => ['description' => 'A bad cache status will prevent all cache actions', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidDataType' => ['description' => 'A invalid data type will throw an InvalidArgumentException', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidCacheHost' => ['description' => 'A invalid host throws a InvalidConnectionConfigException', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\MemCachedTest:testInvalidCachePort' => ['description' => 'A invalid port throws a InvalidConnectionConfigException', 'type' => 'framework'],
+
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest' => ['description' => 'Redis cache connection', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testDefault' => ['description' => 'The redis cache connection has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testConnect' => ['description' => 'The connection to a cache can be established (none-exising directories get created)', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testSetInputOutput' => ['description' => 'Different cache data (types) can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testAddInputOutput' => ['description' => 'Cache data can bet added and returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidOverwrite' => ['description' => 'Cache data cannot be added if it already exists', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testReplace' => ['description' => 'Existing cache data can be replaced', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidReplace' => ['description' => 'None-existing cache data cannot be replaced', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testDelete' => ['description' => 'Cache data can be deleted', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testStats' => ['description' => 'The cache correctly handles general cache information', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testFlush' => ['description' => 'The cache can be flushed', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testUnexpiredInputOutput' => ['description' => 'Cache data can be set and returned with expiration limits', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testExpiredInputOutput' => ['description' => 'Expired cache data can be forced to return', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testForceExpiredInputOutput' => ['description' => 'Expired cache data cannot be returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidDeleteUnexpired' => ['description' => 'Unexpired cache data connot be delete if lower expiration is defined', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testDeleteExpired' => ['description' => 'Expired cache data can be deleted if higher expiration is defined', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testForceDeleteUnexpired' => ['description' => 'Unexpired data can be force deleted with lower expiration date', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testFlushExpired' => ['description' => 'Cach data can be flushed by expiration date', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testBadCacheStatus' => ['description' => 'A bad cache status will prevent all cache actions', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidDataType' => ['description' => 'A invalid data type will throw an InvalidArgumentException', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidCacheHost' => ['description' => 'A invalid host throws a InvalidConnectionConfigException', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidCachePort' => ['description' => 'A invalid port throws a InvalidConnectionConfigException', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\RedisTest:testInvalidCacheDatabase' => ['description' => 'A invalid database throws a InvalidConnectionConfigException', 'type' => 'framework'],
+
+    'phpOMS\tests\DataStorage\Cache\Connection\NullCacheTest' => ['description' => 'Null cache connection if no cache is available', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\NullCacheTest:testDefault' => ['description' => 'The default cache has the expected default values after initialization', 'type' => 'framework'],
 
     'phpOMS\tests\DataStorage\Cookie\CookieJarTest' => ['description' => 'CookieJar to handle http cookies', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Cookie\CookieJarTest:testDefault' => ['description' => 'The cookie jar has the expected default values and functionality after initialization', 'type' => 'framework'],
@@ -639,7 +686,35 @@ return [
     'phpOMS\tests\Localization\LocalizationTest:testMissingLocalizationLoading' => ['description' => 'By default the english locale file will be loaded if no other locale file can be found', 'type' => 'framework'],
     'phpOMS\tests\Localization\LocalizationTest:testInvalidLocalizationLoading' => ['description' => 'Loading localization data from a file with invalid language throws InvalidEnumValue', 'type' => 'framework'],
 
-    // todo: test l11n mappers
+    'phpOMS\tests\Localization\Defaults\CityMapperTest' => ['description' => 'City database mapper', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CityMapperTest:testR' => ['description' => 'The model can be read from the database', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\CityTest' => ['description' => 'City database model', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CityTest:testDefaults' => ['description' => 'The model has the expected and default values', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\CountryMapperTest' => ['description' => 'Country database mapper', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CountryMapperTest:testR' => ['description' => 'The model can be read from the database', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\CountryTest' => ['description' => 'Country database model', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CountryTest:testDefaults' => ['description' => 'The model has the expected and default values', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\CurrencyMapperTest' => ['description' => 'Currency database mapper', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CurrencyMapperTest:testR' => ['description' => 'The model can be read from the database', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\CurrencyTest' => ['description' => 'Currency database model', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\CurrencyTest:testDefaults' => ['description' => 'The model has the expected and default values', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\IbanMapperTest' => ['description' => 'Iban database mapper', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\IbanMapperTest:testR' => ['description' => 'The model can be read from the database', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\IbanTest' => ['description' => 'Iban database model', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\IbanTest:testDefaults' => ['description' => 'The model has the expected and default values', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\LanguageMapperTest' => ['description' => 'Language database mapper', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\LanguageMapperTest:testR' => ['description' => 'The model can be read from the database', 'type' => 'framework'],
+
+    'phpOMS\tests\Localization\Defaults\LanguageTest' => ['description' => 'Language database model', 'type' => 'framework'],
+    'phpOMS\tests\Localization\Defaults\LanguageTest:testDefaults' => ['description' => 'The model has the expected and default values', 'type' => 'framework'],
 
     'phpOMS\tests\Localization\MoneyTest' => ['description' => 'Money datatype for internal representation of money', 'type' => 'framework'],
     'phpOMS\tests\Localization\MoneyTest:testDefaultMemberVariables' => ['description' => 'The datatype has the expected member variables and default values', 'type' => 'framework'],
@@ -1554,17 +1629,243 @@ return [
     'phpOMS\tests\Utils\IO\Zip\ZipTest:testInvalidUnpackSource' => ['description' => 'A none-existing source cannot be unpacked', 'type' => 'framework'],
     'phpOMS\tests\Utils\IO\Zip\ZipTest:testInvalidUnpackDestination' => ['description' => 'A destination cannot be overwritten', 'type' => 'framework'],
 
-    // parser
+    'phpOMS\tests\Utils\Parser\Php\ArrayParserTest' => ['description' => 'Array data serializer as code', 'type' => 'framework'],
+    'phpOMS\tests\Utils\Parser\Php\ArrayParserTest:testParser' => ['description' => 'An array can be encoded and decoded as php code', 'type' => 'framework'],
+    'phpOMS\tests\Utils\Parser\Php\ArrayParserTest:testInvalidValueType' => ['description' => 'A value can be encoded and decoded into php code', 'type' => 'framework'],
 
-    // rng
+    // markdown
 
-    // utils
+    'phpOMS\tests\Utils\RnG\ArrayRandomizeTest' => ['description' => 'Array randomizer', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\ArrayRandomizeTest:testYates' => ['description' => 'An array can be randomized using the yates algorithm', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\ArrayRandomizeTest:testKnuth' => ['description' => 'An array can be randomized using the knuth algorithm', 'type' => 'framework'],
 
-    // validation
+    'phpOMS\tests\Utils\RnG\DateTimeTest' => ['description' => 'Date time randomizer', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\DateTimeTest:testRnG' => ['description' => 'A random date time can be generated', 'type' => 'framework'],
 
-    // version
+    'phpOMS\tests\Utils\RnG\FileTest' => ['description' => 'File extension randomizer', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\FileTest:testRnGExtension' => ['description' => 'A random file extension can be generated', 'type' => 'framework'],
 
-    // views
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest' => ['description' => 'Random number generator', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testBsdRng' => ['description' => 'The bsd random number generator starts with the correct sequence', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testBsdRngEqual' => ['description' => 'The same bsd seed generates the same random number', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testBsdRngNotEqual' => ['description' => 'Different bsd seeds generate different random numbers', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testMsRng' => ['description' => 'The msvcrt random number generator starts with the correct sequence', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testMsRngEqual' => ['description' => 'The same msvcrt seed generates the same random number', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\LinearCongruentialGeneratorTest:testMsRngNotEqual' => ['description' => 'Different msvcrt seeds generate different random numbers', 'type' => 'framework'],
 
-    // application
+    'phpOMS\tests\Utils\RnG\NameTest' => ['description' => 'Random name generator', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\NameTest:testRandom' => ['description' => 'Random female and male names can be generated', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\RnG\PhoneTest' => ['description' => 'Random phone number generator', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\PhoneTest:testRnG' => ['description' => 'Random phone numbers can be generated', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\RnG\StringUtilsTest' => ['description' => 'Random string generator', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\StringUtilsTest:testStrings' => ['description' => 'Random strings can be generated', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\RnG\TextTest' => ['description' => 'Random text generator', 'type' => 'framework'],
+    'phpOMS\tests\Utils\RnG\TextTest:testRnG' => ['description' => 'Random text can be generated', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\CronJobTest' => ['description' => 'Cron job', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronJobTest:testDefault' => ['description' => 'The cron job has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronJobTest:testCreateJobWithData' => ['description' => 'A cron job can be created from an array and rendered', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\CronTest' => ['description' => 'Cron handler', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testDefault' => ['description' => 'The cron handler has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testGuessBinary' => ['description' => 'The cron brinary location path can be guessed', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testCronJobInputOutput' => ['description' => 'A cron job can be created and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testInvalidCronJobName' => ['description' => 'A none-existing cron name cannot be returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testCronJobUpdate' => ['description' => 'A cron job can be updated', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\CronTest:testDelete' => ['description' => 'A cron job can be deleted', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest' => ['description' => 'Cron handler', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testDefault' => ['description' => 'The interval has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testConstructorInputOutput' => ['description' => 'The start date can be set during initialization and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testStartInputOutput' => ['description' => 'The start date can set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testEndInputOutput' => ['description' => 'The end date can set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testMaxExecutionInputOutput' => ['description' => 'The maximum execution duration can set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testMinuteInputOutput' => ['description' => 'An execution minute can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testMinuteOverwriteInputOutput' => ['description' => 'An execution minute can be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testHourInputOutput' => ['description' => 'An execution hour can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testHourOverwriteInputOutput' => ['description' => 'An execution hour can be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testYearInputOutput' => ['description' => 'An execution year can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testYearOverwriteInputOutput' => ['description' => 'An execution year can be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testDayOfMonthInputOutput' => ['description' => 'An execution day of month can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testDayOfMonthOverwriteInputOutput' => ['description' => 'An execution day of month can be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testDayOfWeekInputOutput' => ['description' => 'An execution day of week can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testDayOfWeekOverwriteInputOutput' => ['description' => 'An execution day of week can be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testSerialize' => ['description' => 'A interval can be serialized', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\IntervalTest:testUnserialize' => ['description' => 'A serialized interval can be unserialized', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\SchedulerAbstractTest' => ['description' => 'Scheduler abstraction', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\SchedulerAbstractTest:testDefault' => ['description' => 'The scheduler has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\SchedulerAbstractTest:testGuessBinary' => ['description' => 'The scheduler brinary location path can be guessed', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\SchedulerFactoryTest' => ['description' => 'Scheduler factory for creating cron/task handlers', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\SchedulerFactoryTest:testCreate' => ['description' => 'The correct schudeler is crated depending on the operating system', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest' => ['description' => 'Job/task abstraction', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testDefault' => ['description' => 'The task abstraction has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testCommandInputOutput' => ['description' => 'The command can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testStatusInputOutput' => ['description' => 'The status can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testCommentInputOutput' => ['description' => 'The comment can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testLastRuntimeInputOutput' => ['description' => 'The last runtime can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskAbstractTest:testNextRuntimeInputOutput' => ['description' => 'The next runtime can be set and returned', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\TaskFactoryTest' => ['description' => 'Task factory for creating cron jobs/tasks', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskFactoryTest:testFactory' => ['description' => 'The correct task is crated depending on the operating system', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler' => ['description' => 'Task schedule handler', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testDefault' => ['description' => 'The task handler has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testGuessBinary' => ['description' => 'The task brinary location path can be guessed', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testTaskScheduleInputOutput' => ['description' => 'A task can be created and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testInvalidTaskScheduleName' => ['description' => 'A none-existing task name cannot be returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testTaskScheduleUpdate' => ['description' => 'A task can be updated', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TaskSchedule\TaskScheduler:testDelete' => ['description' => 'A task can be deleted', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\ArrayUtilsTest' => ['description' => 'Array utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayInputOutput' => ['description' => 'Array values can be set and returned with a path', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayInRecursive' => ['description' => 'Test recursively if a value is in an array', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayDelete' => ['description' => 'An array element can be removed by its path', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayRecursiveSum' => ['description' => 'The recursive sum of all values in an array can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayFlatten' => ['description' => 'A multi-dimensional array can be flatten to a one-dimensional array', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArraySum' => ['description' => 'The sum of an array can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayAllIn' => ['description' => 'An array can be checked if it contains multiple defined elements', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArrayAnyIn' => ['description' => 'An array can be checked if it contains any of the defined elements', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArgHas' => ['description' => 'An array can be checked if it has an element and returns its index', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testInvalidArgHas' => ['description' => 'A none-existing argument in an array returns a negative value', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testArgGet' => ['description' => 'The argument value in an array can be returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testInvalidArgGet' => ['description' => 'A none-existing argument in an array returns null', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testPowerInt' => ['description' => 'All array values in an array can be exponentiated by an integer', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testPowerFloat' => ['description' => 'All array values in an array can be exponentiated by a float', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testSqrt' => ['description' => 'All array values in an array can be square rooted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ArrayUtilsTest:testAbs' => ['description' => 'All array values in an array can be turned into their absolute value', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\ColorUtilsTest' => ['description' => 'Color utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ColorUtilsTest:testIntToRgb' => ['description' => 'A integer can be converted to rgb', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ColorUtilsTest:testRgbToInt' => ['description' => 'Rgb can be converted to a integer', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\ImageUtilsTest' => ['description' => 'Image utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\ImageUtilsTest:testImage' => ['description' => 'Base64 image data can be decoded to an image', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\NumericUtilsTest' => ['description' => 'Numeric utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\NumericUtilsTest:testShift' => ['description' => 'Integers can be unsigned right shifted', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\PermutationTest' => ['description' => 'Permutation utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testPermute' => ['description' => 'An array can be permuted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testIsPermutation' => ['description' => 'Two string can be checked if they are a permutation of each other', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testIsPalindrome' => ['description' => 'A string can be checked if it is a palindrome', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testPermutate' => ['description' => 'An array can be permutated with a permutation key', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testWrongPermuteParameterType' => ['description' => 'A invalid permutation type throws a InvalidArgumentException', 'type' => 'framework'],
+    'phpOMS\tests\Utils\PermutationTest:testWrongPermuteKeyLength' => ['description' => 'A none-existing permutation keye throws a OutOfBoundsException', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\StringCompareTest' => ['description' => 'String comparison / dictionary', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringCompareTest:testDictionaryMatch' => ['description' => 'A string can be matched with a dictionary entry', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringCompareTest:testInvalidDictionary' => ['description' => 'A string doesn\'t match a dictionary entry if it is very different', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringCompareTest:testDictionaryAdd' => ['description' => 'A new dictionary entry can be created and returned', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\StringUtilsTest' => ['description' => 'String utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testEntropy' => ['description' => 'The entropy of a string can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testStarts' => ['description' => 'A string can be checked if it starts with a defined string', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testEnds' => ['description' => 'A string can be checked if it ends with a defined string', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testStartsMb' => ['description' => 'A multi-byte string can be checked if it starts with a defined string', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testEndsMb' => ['description' => 'A multi-byte string can be checked if it ends with a defined string', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testTransformUpperCase' => ['description' => 'The first character of a multi-byte string can be turned into upper case', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testTransformLowerCase' => ['description' => 'The first character of a multi-byte string can be turned into lower case', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testTrim' => ['description' => 'A multi-byte string can be trimmed', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testRTrim' => ['description' => 'A multi-byte string can be right-trimmed', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testLTrim' => ['description' => 'A multi-byte string can be left-trimmed', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testContains' => ['description' => 'A string can be checked if it contains at least one defined string element', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testContainsMb' => ['description' => 'A multi-byte string can be checked if it contains at least one defined string element', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testCountMb' => ['description' => 'The characters of a multi-byte string can be counted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testCountBeginning' => ['description' => 'The amount of a defined characters in the beginning of a string can be counted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testStringify' => ['description' => 'Various data types can be stringified', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testStringDiffHtml' => ['description' => 'The difference between two strings can be evaluated', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\TestUtilsTest' => ['description' => 'Test utilities', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TestUtilsTest:testGet' => ['description' => 'A member value can be returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TestUtilsTest:testInvalidGet' => ['description' => 'Invalid member variable returns null', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TestUtilsTest:testInputOutput' => ['description' => 'A member value can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Utils\TestUtilsTest:testInputInputOutput' => ['description' => 'A none-existing member variable cannot be set', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Base\DateTimeTest' => ['description' => 'Datetime validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\DateTimeTest:testDateTime' => ['description' => 'A date time string can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Base\JsonTest' => ['description' => 'Json validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testJson' => ['description' => 'A json string can be validated', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testJsonTemplate' => ['description' => 'A json string can be validated against a template definition', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testJsonTemplateAdditional' => ['description' => 'A json string can be validated against a template definition with additional data', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testJsonTemplateInvalidAdditional' => ['description' => 'A json string cannot be validated against a template definition with additional data if an exact match is enforced', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testJsonTemplateInvalidMissing' => ['description' => 'A json string cannot be validated against a template definition with missing data if an exact match is enforced', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Base\JsonTest:testInvalidJsonTemplate' => ['description' => 'A json string cannot be validated against a template definition if it doesn\'t match the template', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Finance\BICTest' => ['description' => 'BIC validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Finance\BICTest:testBic' => ['description' => 'A BIC can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Finance\CreditCardTest' => ['description' => 'Credit card validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Finance\CreditCardTest:testCreditCard' => ['description' => 'A credit card can be validated', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Finance\CreditCardTest:testInvalidCreditCardType' => ['description' => 'A invalid type cannot be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Finance\IbanTest' => ['description' => 'Iban validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Finance\IbanTest:testValid' => ['description' => 'A iban can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Network\EmailTest' => ['description' => 'Email validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Network\EmailTest:testValidation' => ['description' => 'A email can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Network\HostnameTest' => ['description' => 'Hostname validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Network\HostnameTest:testHostname' => ['description' => 'A hostname can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\Network\IpTest' => ['description' => 'IP validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Network\IpTest:testValid' => ['description' => 'A ip can be validated', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Network\IpTest:testValidIp4' => ['description' => 'A ip4 can be validated', 'type' => 'framework'],
+    'phpOMS\tests\Validation\Network\IpTest:testValidIp6' => ['description' => 'A ip6 can be validated', 'type' => 'framework'],
+
+    'phpOMS\tests\Validation\ValidatorTest' => ['description' => 'General validator', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidationContains' => ['description' => 'A string can be checked if it contains a substring', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidationLength' => ['description' => 'A string can be checked if it has a certain length', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidationLimit' => ['description' => 'A value can be checked if it is in range', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidationType' => ['description' => 'A value can be checked to be of a defined type', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidationError' => ['description' => 'The error message and error code have the expected default values', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testValidators' => ['description' => 'Custom validators can be specified in order to validate a value', 'type' => 'framework'],
+    'phpOMS\tests\Validation\ValidatorTest:testMatching' => ['description' => 'A value can be checked to match a regular expression', 'type' => 'framework'],
+
+    'phpOMS\tests\Version\VersionTest' => ['description' => 'Version handler', 'type' => 'framework'],
+    'phpOMS\tests\Version\VersionTest:testVersionCompare' => ['description' => 'Versions can be compared with each other', 'type' => 'framework'],
+
+    'phpOMS\tests\Views\ViewTest' => ['description' => 'View for response rendering', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testDefault' => ['description' => 'The view has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testGetText' => ['description' => 'The view can output text from the localization manager', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testGetHtml' => ['description' => 'The view can output html escaped text from the localization manager', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testDataInputOutput' => ['description' => 'View data can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testDataAdd' => ['description' => 'View data can be added and returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testInvalidDataOverwrite' => ['description' => 'View data cannot be added if it already exists', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testRemove' => ['description' => 'View data can be removed', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testInvalidDataRemove' => ['description' => 'None-existing view data cannot be removed', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testGetRequest' => ['description' => 'The request can be returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testGetResponse' => ['description' => 'The response can be returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testPrintHtml' => ['description' => 'Text can be html escaped', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testViewInputOutput' => ['description' => 'Views can be added and returned from a view', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testInvalidViewGet' => ['description' => 'None-existing views cannot be returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testViewRemove' => ['description' => 'Views can be removed', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testInvalidViewRemove' => ['description' => 'None-existing views cannot be removed', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testOverwritingView' => ['description' => 'A view can be forcefully overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testInvalidOverwritingView' => ['description' => 'By default a view is not overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testRender' => ['description' => 'A view template can be rendered', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testSerialize' => ['description' => 'A view template can be serialized', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testArray' => ['description' => 'A view can be turned into an array containing the rendered templates', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testRenderException' => ['description' => 'Rendering a invalid template throws a PathException', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testSerializeException' => ['description' => 'Serializing a invalid template throws a PathException', 'type' => 'framework'],
+
+    'phpOMS\tests\Views\PaginationViewTest' => ['description' => 'View for pagination', 'type' => 'framework'],
+    'phpOMS\tests\Views\PaginationViewTest:testDefault' => ['description' => 'The pagination view has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Views\PaginationViewTest:testMaxPagesInputOutput' => ['description' => 'The max pages can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\PaginationViewTest:testPagesInputOutput' => ['description' => 'The pages can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\PaginationViewTest:testPageInputOutput' => ['description' => 'The page can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Views\PaginationViewTest:testResultsInputOutput' => ['description' => 'The results can be set and returned', 'type' => 'framework'],
+
+    'phpOMS\tests\ApplicationAbstractTest' => ['description' => 'Application abstraction', 'type' => 'framework'],
+    'phpOMS\tests\ApplicationAbstractTest:testInputOutput' => ['description' => 'Application values can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\ApplicationAbstractTest:testPageInputOutput' => ['description' => 'Application values cannot be overwritten', 'type' => 'framework'],
+
+    'phpOMS\tests\AutoloaderTest' => ['description' => 'Class autoloader', 'type' => 'framework'],
+    'phpOMS\tests\AutoloaderTest:testAutoloader' => ['description' => 'Classes can be checked for existence', 'type' => 'framework'],
 ];
