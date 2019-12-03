@@ -746,6 +746,76 @@ return [
     'phpOMS\tests\Log\FileLoggerTest:testTiming' => ['description' => 'The logger can perform timings for internal duration logging', 'type' => 'framework'],
     'phpOMS\tests\Log\FileLoggerTest:testLogException' => ['description' => 'A invalid log type throws a InvalidEnumValue', 'type' => 'framework'],
 
+    'phpOMS\tests\Math\Function\FibunacciTest' => ['description' => 'Fibunacci functions', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FibunacciTest:testFibunacci' => ['description' => 'A number can be checked if it is a fibunacci number', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FibunacciTest:testFibunacciByKey' => ['description' => 'A fibunacci number can be returned by index', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FibunacciTest:testBinet' => ['description' => 'The binet formula returns fibunacci numbers', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FibunacciTest:testBinetFib' => ['description' => 'The binet formula and the fibunacci formula return the same results', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Function\FunctionsTest' => ['description' => 'Various math functions', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testFactorial' => ['description' => 'The factorial of a number can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testBinomialCoefficient' => ['description' => 'The binomial coefficient can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testAckermann' => ['description' => 'The ackerman function can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testMultiplicativeInverseModulo' => ['description' => 'The multiplicative inverse module can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testOdd' => ['description' => 'A number can be checked if it is odd', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testEven' => ['description' => 'A number can be checked if it is even', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\FunctionsTest:testCircularPosition' => ['description' => 'The relative number can be calculated on a circular number system (e.g. month in a diverging business year)', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Function\GammaTest' => ['description' => 'Gamma function', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\GammaTest:testFactorial' => ['description' => 'The gamma function can be calculated for integers', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\GammaTest:testApproximationSpouge' => ['description' => 'The gamma function can be approximated with the spouge formula', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\GammaTest:testApproximationStirling' => ['description' => 'The gamma function can be approximated with the stirling formula', 'type' => 'framework'],
+    'phpOMS\tests\Math\Function\GammaTest:testApproximationLanzos' => ['description' => 'The gamma function can be approximated with the lanzos formula', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\ConvexHull\MonotoneChainTest' => ['description' => 'Monotone chain', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\ConvexHull\MonotoneChainTest:testMonotoneChain' => ['description' => 'A convedx hull can be formed from multiple points on a plane', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\CircleTest' => ['description' => 'Circle shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\CircleTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\CircleTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\CircleTest:testRadiusBySurface' => ['description' => 'The radius can be caluclated with the surface', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\CircleTest:testRadiusByPerimeter' => ['description' => 'The radius can be caluclated with the perimeter', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\EllipseTest' => ['description' => 'Ellipse shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\EllipseTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\EllipseTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest' => ['description' => 'Polygon shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testPoint' => ['description' => 'The location of a point can be checked relative to a polygon', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testInteriorAngle' => ['description' => 'The interior angle can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testExteriorAngle' => ['description' => 'The exterior angle can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testArea' => ['description' => 'The area can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testBarycenter' => ['description' => 'The barycenter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testRegularAreaByLength' => ['description' => 'The regular area can be calculated with the side length', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\PolygonTest:testRegularAreaByRadius' => ['description' => 'The regular area can be calculated with the radius', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\QuadrilateralTest' => ['description' => 'Quadrilateral shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\QuadrilateralTest:testArea' => ['description' => 'The area can be calculated', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\RectangleTest' => ['description' => 'Rectangle shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\RectangleTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\RectangleTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\RectangleTest:testDiagonal' => ['description' => 'The diagonal can be calculated', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\TrapezoidTest' => ['description' => 'Trapezoid shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TrapezoidTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TrapezoidTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TrapezoidTest:testHeight' => ['description' => 'The height can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TrapezoidTest:testSideLength' => ['description' => 'The side lengths can be calculated', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D2\TriangleTest' => ['description' => 'Triangle shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TriangleTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TriangleTest:testPerimeter' => ['description' => 'The perimeter can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TriangleTest:testHeight' => ['description' => 'The height can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D2\TriangleTest:testHypot' => ['description' => 'The hypotenuse can be calculated', 'type' => 'framework'],
+
+    'phpOMS\tests\Math\Geometry\Shape\D3\ConeTest' => ['description' => 'Triangle shape', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D3\ConeTest:testVolume' => ['description' => 'The volume can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D3\ConeTest:testSurface' => ['description' => 'The surface can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D3\ConeTest:testSlantHeight' => ['description' => 'The slant height can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Geometry\Shape\D3\ConeTest:testHeightFromVolume' => ['description' => 'The height can be calculated with the volume', 'type' => 'framework'],
+
     // todo: many math things!!!
 
     'phpOMS\tests\Math\Matrix\MatrixTest' => ['description' => 'Matrix operations'],
@@ -1868,4 +1938,47 @@ return [
 
     'phpOMS\tests\AutoloaderTest' => ['description' => 'Class autoloader', 'type' => 'framework'],
     'phpOMS\tests\AutoloaderTest:testAutoloader' => ['description' => 'Classes can be checked for existence', 'type' => 'framework'],
+
+    // Modules are below
+    'Modules\tests\Admin\ControllerTest' => ['description' => 'Admin api controller', 'type' => 'module'],
+    // settings
+    'Modules\tests\Admin\ControllerTest:testApiSettingsGet' => ['description' => 'Application settings can be read from the database', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiSettingsSet' => ['description' => 'Application settings can be set in the database', 'type' => 'module'],
+    // groups
+    'Modules\tests\Admin\ControllerTest:testApiGroupGet' => ['description' => 'A user group can be returned', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupSet' => ['description' => 'A user group can be updated', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupFind' => ['description' => 'A user group can be found by name', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupCreateDelete' => ['description' => 'A user group can be created and deleted', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupCreateInvalid' => ['description' => 'A invalid user group cannot be created', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddAccountToGroup' => ['description' => 'A user can be added to a user group', 'type' => 'module'],
+    // group_permission
+    'Modules\tests\Admin\ControllerTest:testApiAddGroupPermission' => ['description' => 'A permission can be added to a user group', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupPermissionGet' => ['description' => 'A group permission can be returned', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupPermissionCreateDelete' => ['description' => 'A user group permission can be created and deleted', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddGroupPermissionInvalidData' => ['description' => 'A permission with missing data cannot be added to a user group', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddGroupPermissionInvalidType' => ['description' => 'A invalid permission type cannot be added to a user group', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiGroupPermissionUpdate' => ['description' => 'A user group permission can be updated', 'type' => 'module'],
+    // users
+    'Modules\tests\Admin\ControllerTest:testApiGroupGet' => ['description' => 'A user can be returned', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountUpdate' => ['description' => 'A user can be updated', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountFind' => ['description' => 'A user can be found by name', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountAndProfileCreate' => ['description' => 'A user and profile for the user can be created', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountDelete' => ['description' => 'A user can be deleted', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountCreateInvalid' => ['description' => 'A invalid user cannot be created', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddGroupToAccount' => ['description' => 'A user group can be added to a user', 'type' => 'module'],
+    // user_permission
+    'Modules\tests\Admin\ControllerTest:testApiAddAccountPermission' => ['description' => 'A permission can be added to a user', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountPermissionGet' => ['description' => 'A user permission can be returned', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountPermissionCreateDelete' => ['description' => 'A user permission can be created and deleted', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddAccountPermissionInvalidData' => ['description' => 'A permission with missing data cannot be added to a user', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAddAccountPermissionInvalidType' => ['description' => 'A invalid permission type cannot be added to a user', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiAccountPermissionUpdate' => ['description' => 'A user permission can be updated', 'type' => 'module'],
+    // groups & users
+    'Modules\tests\Admin\ControllerTest:testApiAccountGroupFind' => ['description' => 'A user and user group can be found by name', 'type' => 'module'],
+    // module
+    'Modules\tests\Admin\ControllerTest:testApiModuleStatusUpdate' => ['description' => 'The status of a module can be updated', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiModuleStatusUpdateEmptyModule' => ['description' => 'A missing module cannot be updated', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiModuleStatusUpdateInvalidStatus' => ['description' => 'A invalid module status cannot update a module', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiModuleStatusUpdateInvalidModule' => ['description' => 'A invalid module cannot be updated', 'type' => 'module'],
+    'Modules\tests\Admin\ControllerTest:testApiReInit' => ['description' => 'A module can be re-initialized', 'type' => 'module'],
 ];
