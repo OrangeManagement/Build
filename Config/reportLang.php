@@ -1936,6 +1936,19 @@ return [
     'phpOMS\tests\AutoloaderTest:testAutoloader' => ['description' => 'Classes can be checked for existence', 'type' => 'framework'],
 
     // Modules are below
+    'Modules\tests\Admin\Admin\AdminTest' => ['description' => 'Admin module - general module information', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testModuleIntegration' => ['description' => 'The module can be installed, deactivated and activated', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testValidMapper' => ['description' => 'The mappers are valid', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testMapperAgainstModel' => ['description' => 'The mappers match the models', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testValidDbSchema' => ['description' => 'The database schema definition is valid', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testDbSchemaAgainstDb' => ['description' => 'The database schema is correctly setup in the database', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testMapperAgainstDbSchema' => ['description' => 'The mapper matches the database setup', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testJson' => ['description' => 'The module info file has the correct structure', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testDependency' => ['description' => 'The dependencies got installed', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testRoutes' => ['description' => 'The routes got installed and the endpoints are defined', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testHooks' => ['description' => 'The hooks got installed and the endpoints are defined', 'type' => 'module'],
+    'Modules\tests\Admin\Admin\AdminTest:testNavigation' => ['description' => 'The navigation got installed', 'type' => 'module'],
+    // CONTROLLER:
     'Modules\tests\Admin\Controller\ApiControllerTest' => ['description' => 'Admin api controller', 'type' => 'module'],
     // settings
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiSettingsGet' => ['description' => 'Application settings can be read from the database', 'type' => 'module'],
