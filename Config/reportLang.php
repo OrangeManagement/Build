@@ -1200,7 +1200,9 @@ return [
 
     'phpOMS\tests\Module\ModuleAbstractTest' => ['description' => 'Abstract module'],
     'phpOMS\tests\Module\ModuleAbstractTest:testConstants' => ['description' => 'The constant values of the abstract module are overwritten by the extension', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleAbstractTest:testName' => ['description' => 'The name of the module can be returned', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testDependencies' => ['description' => 'The dependencies of the module can be returned', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleAbstractTest:testProviding' => ['description' => 'The providing of the module can be returned', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testInvalidLocalization' => ['description' => 'A invalid language or theme returns in an empty localization/language dataset', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testFillJson' => ['description' => 'The module can automatically generate a json response based on provided data for the frontend', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testFillJsonRaw' => ['description' => 'The module can automatically generate a json response based on provided data', 'type' => 'framework'],

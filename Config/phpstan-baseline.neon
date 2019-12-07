@@ -2721,11 +2721,6 @@ parameters:
 			path: phpOMS/Stdlib/Base/Iban.php
 
 		-
-			message: "#^Parameter \\#2 \\$timestamp of function date expects int, int\\|false given\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Base/SmartDateTime.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Stdlib\\\\Graph\\\\Node\\:\\:getNeighbors\\(\\)\\.$#"
 			count: 1
 			path: phpOMS/Stdlib/Graph/BinaryTree.php
