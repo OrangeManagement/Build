@@ -16,7 +16,6 @@ for FILE in $(git diff --cached --name-only); do
         $(phpcsfix "$FILE")
     fi
 
-
     # Filename
     if [[ $(isValidFileName "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tInvalid file name '$FILE'.\e[0m" >&2

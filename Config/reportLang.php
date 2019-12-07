@@ -171,6 +171,9 @@ return [
     'phpOMS\tests\Algorithm\PathFinding\GridTest:testDiagonalNoObstacleBlockNeighbors' => ['description' => 'No diagonal neighbors are found if one obstacle exists', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\PathFinding\GridTest:testDiagonalNoObstacleAllNeighbors' => ['description' => 'All neighbors can be found correctly if no obstacles exist', 'type' => 'framework'],
 
+    'phpOMS\tests\Algorithm\PathFinding\HeuristicTest' => ['description' => 'Heuristic for path finding', 'type' => 'framework'],
+    'phpOMS\tests\Algorithm\PathFinding\HeuristicTest:testHeuristics' => ['description' => 'The heuristics return the corret metric results', 'type' => 'framework'],
+
     'phpOMS\tests\Algorithm\PathFinding\NodeTest' => ['description' => 'Node on grid for path finding', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\PathFinding\NodeTest:testDefault' => ['description' => 'The node has the expected values after initialization', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\PathFinding\NodeTest:testNodesWithEqualCoordinatesAreEqual' => ['description' => 'Nodes with equal coordinates are equal', 'type' => 'framework'],
@@ -519,6 +522,10 @@ return [
     'phpOMS\tests\DataStorage\Database\DataMapperAbstractTest:testUpdateArray' => ['description' => 'The datamapper sucessfully updates a database entry from an array', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\DataMapperAbstractTest:testDelete' => ['description' => 'The datamapper sucessfully deletes a database entry from a model', 'type' => 'framework'],
 
+    'phpOMS\tests\DataStorage\Database\SchemaMapperTest' => ['description' => 'Mapper for the database schema', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Database\SchemaMapperTest:testTables' => ['description' => 'The tables can be returned', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Database\SchemaMapperTest:testFields' => ['description' => 'The fields of a table can be returned', 'type' => 'framework'],
+
     'phpOMS\tests\DataStorage\Database\Connection\ConnectionFactoryTest' => ['description' => 'Database connection factory', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Connection\ConnectionFactoryTest:testCreateMysql' => ['description' => 'The mysql connection can be successfully created', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Connection\ConnectionFactoryTest:testCreatePostgres' => ['description' => 'The postgresql connection can be successfully created', 'type' => 'framework'],
@@ -862,6 +869,7 @@ return [
     'phpOMS\tests\Math\Matrix\MatrixTest:testTranspose' => ['description' => 'A matrix can be transposed', 'type' => 'framework'],
     'phpOMS\tests\Math\Matrix\MatrixTest:testSolve' => ['description' => 'A matrix equation Ax = b can be solved for x', 'type' => 'framework'],
     'phpOMS\tests\Math\Matrix\MatrixTest:testRank' => ['description' => 'The rank of a matrix can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Matrix\MatrixTest:testUpperTriangular' => ['description' => 'The upper triangular matrix can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Matrix\MatrixTest:testMatrixInputOutput' => ['description' => 'The matrix elements can be set and returned', 'type' => 'framework'],
     'phpOMS\tests\Math\Matrix\MatrixTest:testArrayAccess' => ['description' => 'A matrix can be accessed like a 1-dimensional array', 'type' => 'framework'],
     'phpOMS\tests\Math\Matrix\MatrixTest:testMatrixExtract' => ['description' => 'Sub matrices can be extracted from a matrix', 'type' => 'framework'],
@@ -968,6 +976,7 @@ return [
     'phpOMS\tests\Math\Topology\Metrics2DTest:testManhattan' => ['description' => 'The manhattan distance can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testEuclidean' => ['description' => 'The euclidean distance can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testChebyshev' => ['description' => 'The chebyshev distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\Metrics2DTest:testOctile' => ['description' => 'The octile distance can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testMinkowski' => ['description' => 'The minkowski distance can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testCanberra' => ['description' => 'The canberra distance can be calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testBrayCurtis' => ['description' => 'The bray-curtis distance can be calculated', 'type' => 'framework'],
@@ -1131,7 +1140,9 @@ return [
     'phpOMS\tests\Message\Http\ResponseTest:testInvalidRemove' => ['description' => 'None-existing response data cannot be removed', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\ResponseTest:testToArray' => ['description' => 'Response data can be turned into an array', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\ResponseTest:testJsonRender' => ['description' => 'A response with json as content-type is automatically rendered as json data', 'type' => 'framework'],
-    'phpOMS\tests\Message\Http\ResponseTest:testMinimizedRender' => ['description' => 'A response can be forced to minimize the content by removing newlines and whitespaces', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\ResponseTest:testJsonDataDecode' => ['description' => 'Json data can be decoded from the response data', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\ResponseTest:testMinimizedRender' => ['description' => 'A html response can be forced to minimize the content by removing newlines and whitespaces', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\ResponseTest:testInvalidMinimizedRender' => ['description' => 'None-html responses cannot be forced to minimize the content by removing newlines and whitespaces', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\ResponseTest:testInvalidResponseDataToArray' => ['description' => 'Invalid response data results in an empty array', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\ResponseTest:testInvalidResponseDataRender' => ['description' => 'Invalid response data results in an empty render', 'type' => 'framework'],
 
@@ -1271,6 +1282,7 @@ return [
     'phpOMS\tests\Stdlib\Base\EnumTest:testInvalidConstantException' => ['description' => 'A invalid enum name throws a OutOfBoundsException', 'type' => 'framework'],
 
     'phpOMS\tests\Stdlib\Base\HeapTest' => ['description' => 'Heap'],
+    'phpOMS\tests\Stdlib\Base\HeapTest:testHeapify' => ['description' => 'A list of elements can be turned into a heap', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\HeapTest:testSize' => ['description' => 'Elements get correctly pushed to the heap', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\HeapTest:testPushAndPop' => ['description' => 'Heap elements get returned in the correct order', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\HeapTest:testPushAndPopCustomComparator' => ['description' => 'Heap elements get returned in the correct order by using a custom comparator', 'type' => 'framework'],
@@ -1313,8 +1325,11 @@ return [
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testCreateFromDateTime' => ['description' => 'A smart datetime can be created from a datetime', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testEndOfMonth' => ['description' => 'A smart datetime can be returned of the last day of the month', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testStartOfMonth' => ['description' => 'A smart datetime can be returned of the fist day of the month', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testEndOfWeek' => ['description' => 'A smart datetime can be returned of the fist day of the week', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testStartOfWeek' => ['description' => 'A smart datetime can be returned of the last day of the week', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testLeapYear' => ['description' => 'A date or year can be checked if it is a leap year', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testDayOfWeek' => ['description' => 'The day of the week index can be retruned from a date', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testInvalidDayOfWeek' => ['description' => 'A invalid day of the week returns a negative week index', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testCalendarSheet' => ['description' => 'A calendar sheet is retunred containing all days of the month and some days of the previous and next month', 'type' => 'framework'],
 
     // todo: graph
@@ -1649,6 +1664,7 @@ return [
     'phpOMS\tests\Uri\HttpTest:testFragment' => ['description' => 'The fragment data can be parsed correctly from a url', 'type' => 'framework'],
     'phpOMS\tests\Uri\HttpTest:testPathData' => ['description' => 'The path data can be parsed correctly from a url', 'type' => 'framework'],
     'phpOMS\tests\Uri\HttpTest:testRouteInputOutput' => ['description' => 'The route can be parsed correctly from a url', 'type' => 'framework'],
+    'phpOMS\tests\Uri\HttpTest:testInvalidUri' => ['description' => 'A invalid uri cannot get parsed', 'type' => 'framework'],
 
     'phpOMS\tests\Uri\ArgumentTest' => ['description' => 'Argument uri / uri', 'type' => 'framework'],
     'phpOMS\tests\Uri\ArgumentTest:testDefault' => ['description' => 'The argument uri has the expected default values after initialization', 'type' => 'framework'],
