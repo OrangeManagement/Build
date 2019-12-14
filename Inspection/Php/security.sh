@@ -2,7 +2,9 @@
 
 . config.sh
 
+echo "#################################################"
 echo "Start php security inspection"
+echo "#################################################"
 
 # PHP code inspection
 CODE[0]="file_get_content"

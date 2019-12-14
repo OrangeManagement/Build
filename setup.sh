@@ -4,6 +4,7 @@
 
 echo "#################################################"
 echo "Remove old setup"
+echo "#################################################"
 
 # Previous cleanup
 rm -r -f ${ROOT_PATH}
@@ -20,6 +21,7 @@ cd ${BASE_PATH}
 
 echo "#################################################"
 echo "Setup repositories"
+echo "#################################################"
 
 # Create git repositories
 for i in "${GITHUB_URL[@]}"
@@ -37,6 +39,7 @@ git submodule foreach git checkout develop
 
 echo "#################################################"
 echo "Setup hooks"
+echo "#################################################"
 
 # Setup hooks
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/hooks/pre-commit
@@ -55,6 +58,7 @@ chmod +x ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
 
 echo "#################################################"
 echo "Setup build output"
+echo "#################################################"
 
 # Creating directories for inspection
 mkdir -p ${INSPECTION_PATH}/logs
@@ -100,6 +104,7 @@ cd ${TOOLS_PATH}
 
 echo "#################################################"
 echo "Setup tools"
+echo "#################################################"
 
 # Downloading tools
 wget --tries=2 -nc https://getcomposer.org/composer.phar

@@ -2,7 +2,9 @@
 
 . config.sh
 
+echo "#################################################"
 echo "Start php style inspection"
+echo "#################################################"
 
 php ${TOOLS_PATH}/phpcs.phar ${ROOT_PATH}/phpOMS --standard="${BUILD_PATH}/Config/phpcs.xml" -s --report-full=${INSPECTION_PATH}/Framework/phpcs.log --report-junit=${INSPECTION_PATH}/Framework/phpcs.xml
 

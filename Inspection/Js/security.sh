@@ -2,7 +2,9 @@
 
 . config.sh
 
+echo "#################################################"
 echo "Start js security inspection"
+echo "#################################################"
 
 # JS code inspection
 CODE[0]="onload"

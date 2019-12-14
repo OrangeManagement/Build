@@ -2,7 +2,9 @@
 
 . config.sh
 
+echo "#################################################"
 echo "Start php stats inspection"
+echo "#################################################"
 
 #
 php ${TOOLS_PATH}/phploc.phar ${ROOT_PATH}/phpOMS/ > ${INSPECTION_PATH}/Framework/phploc.log
