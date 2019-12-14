@@ -8,6 +8,9 @@ usermod -aG sudo test
 #wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
 #echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
 
+apt -y install software-properties-common
+add-apt-repository ppa:ondrej/php
+
 apt-get update
 
 apt-get install npm git php7.4 php7.4-dev php7.4-cli php7.4-common php7.4-mysql php7.4-pgsql php7.4-xdebug php7.4-json php7.4-opcache php7.4-pdo php7.4-sqlite php7.4-mbstring php7.4-curl php7.4-imap php7.4-bcmath php7.4-zip php7.4-dom php7.4-xml php7.4-phar php7.4-gd php-pear apache2 mysql-server postgresql postgresql-contrib
