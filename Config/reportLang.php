@@ -139,6 +139,10 @@ return [
     'phpOMS\tests\Algorithm\Knapsack\ItemTest' => ['description' => 'The default item to be added to the backpack or basket', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\Knapsack\ItemTest:testDefault' => ['description' => 'The item has the expected values after initialization', 'type' => 'framework'],
 
+    'phpOMS\tests\Algorithm\Maze\MazeGeneratorTest' => ['description' => 'Maze generation', 'type' => 'framework'],
+    'phpOMS\tests\Algorithm\Maze\MazeGeneratorTest:testMazeGeneration' => ['description' => 'A random maze can be generated', 'type' => 'framework'],
+    'phpOMS\tests\Algorithm\Maze\MazeGeneratorTest:testMazeRender' => ['description' => 'A random maze can be rendered', 'type' => 'framework'],
+
     'phpOMS\tests\Algorithm\PathFinding\AStarTest' => ['description' => 'AStar path finding', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\PathFinding\AStarTest:testPathFindingDiagonal' => ['description' => 'The correct path is found for diagonal movement', 'type' => 'framework'],
     'phpOMS\tests\Algorithm\PathFinding\AStarTest:testPathFindingStraight' => ['description' => 'The correct path is found for straight movement', 'type' => 'framework'],
