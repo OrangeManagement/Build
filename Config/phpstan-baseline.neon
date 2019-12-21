@@ -1,3 +1,4 @@
+
 parameters:
 	ignoreErrors:
 		-
@@ -1406,36 +1407,6 @@ parameters:
 			path: Web/Api/Application.php
 
 		-
-			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
-			count: 1
-			path: Web/E404/Application.php
-
-		-
-			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
-			count: 2
-			path: Web/E404/Application.php
-
-		-
-			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
-			count: 1
-			path: Web/E500/Application.php
-
-		-
-			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
-			count: 2
-			path: Web/E500/Application.php
-
-		-
-			message: "#^Cannot access property \\$appName on Web\\\\WebApplication\\|null\\.$#"
-			count: 1
-			path: Web/E503/Application.php
-
-		-
-			message: "#^Cannot access property \\$l11nManager on Web\\\\WebApplication\\|null\\.$#"
-			count: 2
-			path: Web/E503/Application.php
-
-		-
 			message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
 			count: 2
 			path: phpOMS/Algorithm/JobScheduling/Weighted.php
@@ -1444,21 +1415,6 @@ parameters:
 			message: "#^Array \\(array\\<phpOMS\\\\Algorithm\\\\Knapsack\\\\ItemInterface\\>\\) does not accept array\\<string, mixed\\>\\.$#"
 			count: 1
 			path: phpOMS/Algorithm/Knapsack/Backpack.php
-
-		-
-			message: "#^PHPDoc tag @param for parameter \\$endNode with type phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null is not subtype of native type phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\.$#"
-			count: 5
-			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
-
-		-
-			message: "#^Cannot call method getX\\(\\) on phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null\\.$#"
-			count: 4
-			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
-
-		-
-			message: "#^Cannot call method getY\\(\\) on phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null\\.$#"
-			count: 4
-			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
 
 		-
 			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpStraight\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
@@ -1479,51 +1435,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpDiagonalNoObstacle\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
 			count: 3
 			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
-
-		-
-			message: "#^Property phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:\\$nodes has unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes as its type\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Property phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:\\$expandedNodes has unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes as its type\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Array \\(array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\) does not accept phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Call to method getX\\(\\) on an unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\.$#"
-			count: 2
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Call to method getY\\(\\) on an unknown class phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\.$#"
-			count: 2
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:getPath\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:expandPath\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes\\>\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Parameter \\#1 \\$node1 of method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:interpolate\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\Node, phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes given\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
-
-		-
-			message: "#^Parameter \\#2 \\$node2 of method phpOMS\\\\Algorithm\\\\PathFinding\\\\Path\\:\\:interpolate\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\Node, phpOMS\\\\Algorithm\\\\PathFinding\\\\Nodes given\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/Path.php
 
 		-
 			message: "#^Binary operation \"\\+\\=\" between array\\<int\\|string, mixed\\> and array\\|false results in an error\\.$#"
