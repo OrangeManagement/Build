@@ -1336,6 +1336,8 @@ return [
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testStartOfMonth' => ['description' => 'A smart datetime can be returned of the fist day of the month', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testEndOfWeek' => ['description' => 'A smart datetime can be returned of the fist day of the week', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testStartOfWeek' => ['description' => 'A smart datetime can be returned of the last day of the week', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testEndOfDay' => ['description' => 'A smart datetime can be returned of the end of the day', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testStartOfDay' => ['description' => 'A smart datetime can be returned of the start of the day', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testLeapYear' => ['description' => 'A date or year can be checked if it is a leap year', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testDayOfWeek' => ['description' => 'The day of the week index can be retruned from a date', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testInvalidDayOfWeek' => ['description' => 'A invalid day of the week returns a negative week index', 'type' => 'framework'],
