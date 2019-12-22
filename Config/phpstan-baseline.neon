@@ -71,11 +71,6 @@ parameters:
 			path: Modules/Auditor/Controller/BackendController.php
 
 		-
-			message: "#^Method Modules\\\\Auditor\\\\Models\\\\Audit\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Auditor/Models/Audit.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
 			count: 1
 			path: Modules/Balance/Controller/BackendController.php
@@ -1902,11 +1897,6 @@ parameters:
 
 		-
 			message: "#^Call to an undefined static method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:ftpCreate\\(\\)\\.$#"
-			count: 1
-			path: phpOMS/System/File/Ftp/File.php
-
-		-
-			message: "#^Cannot call method getPath\\(\\) on phpOMS\\\\Uri\\\\Http\\|null\\.$#"
 			count: 1
 			path: phpOMS/System/File/Ftp/File.php
 
