@@ -26,16 +26,16 @@ echo "#################################################"
 # Create git repositories
 for i in "${GITHUB_URL[@]}"
 do
-    git clone -b ${GIT_BRANCH} $i
+    git clone -b ${GIT_BRANCH} $i >/dev/null
 done
 
 cd ${BASE_PATH}/Website
-git submodule update --init --recursive
-git submodule foreach git checkout develop
+git submodule update --init --recursive >/dev/null
+git submodule foreach git checkout develop >/dev/null
 
 cd ${ROOT_PATH}
-git submodule update --init --recursive
-git submodule foreach git checkout develop
+git submodule update --init --recursive >/dev/null
+git submodule foreach git checkout develop >/dev/null
 
 echo "#################################################"
 echo "Setup hooks"
@@ -107,27 +107,27 @@ echo "Setup tools"
 echo "#################################################"
 
 # Downloading tools
-wget --tries=2 -nc https://getcomposer.org/composer.phar
-wget --tries=2 -nc https://phar.phpunit.de/phploc.phar
-wget --tries=2 -nc https://phar.phpunit.de/phpunit.phar
-wget --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.0/phpcs.phar
-#wget --tries=2 -nc http://static.phpmd.org/php/latest/phpmd.phar no longer available
-wget --tries=2 -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
-#wget --tries=2 -nc http://static.pdepend.org/php/latest/pdepend.phar
-wget --tries=2 -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-wget --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.11.16/phpstan.phar
-wget --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
-wget --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar
-wget --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
-wget --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
-wget --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc3/testreportgenerator.phar
+wget --tries=2 -nc https://getcomposer.org/composer.phar >/dev/null
+wget --tries=2 -nc https://phar.phpunit.de/phploc.phar >/dev/null
+wget --tries=2 -nc https://phar.phpunit.de/phpunit.phar >/dev/null
+wget --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.0/phpcs.phar >/dev/null
+#wget --tries=2 -nc http://static.phpmd.org/php/latest/phpmd.phar no longer available >/dev/null
+wget --tries=2 -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar >/dev/null
+#wget --tries=2 -nc http://static.pdepend.org/php/latest/pdepend.phar >/dev/null
+wget --tries=2 -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz >/dev/null
+wget --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.11.16/phpstan.phar >/dev/null
+wget --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar >/dev/null
+wget --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar >/dev/null
+wget --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip >/dev/null
+wget --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar >/dev/null
+wget --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc3/ testreportgenerator.phar >/dev/null
 
 mkdir ${ROOT_PATH}/jsOMS/tests
 
-unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests
-tar -zxvf compiler-latest.tar.gz
+unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests >/dev/null
+tar -zxvf compiler-latest.tar.gz >/dev/null
 
 chmod -R 777 ${TOOLS_PATH}
 
 cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
-php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/
+php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/ >/dev/null
