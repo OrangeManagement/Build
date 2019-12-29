@@ -2153,4 +2153,10 @@ return [
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiModuleStatusUpdateInvalidStatus' => ['description' => 'A invalid module status cannot update a module', 'type' => 'module'],
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiModuleStatusUpdateInvalidModule' => ['description' => 'A invalid module cannot be updated', 'type' => 'module'],
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiReInit' => ['description' => 'A module can be re-initialized', 'type' => 'module'],
+    
+    'Modules\tests\News\Controller\ApiControllerTest' => ['description' => 'News api controller', 'type' => 'module'],
+    'Modules\tests\News\Controller\ApiControllerTest:testApiNewsCreate' => ['description' => 'A news article can be created', 'type' => 'module'],
+    'Modules\tests\News\Controller\ApiControllerTest:testApiNewsGet' => ['description' => 'A news article can be returned', 'type' => 'module'],
+    'Modules\tests\News\Controller\ApiControllerTest:testApiNewsUpdate' => ['description' => 'A news article can be updated', 'type' => 'module'],
+    'Modules\tests\News\Controller\ApiControllerTest:testApiNewsDelete' => ['description' => 'A news article can be deleted', 'type' => 'module'],
 ];
