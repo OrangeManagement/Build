@@ -4,6 +4,7 @@ includes:
 parameters:
     fileExtensions:
         - php
+    reportUnmatchedIgnoredErrors: true
     excludes_analyse:
         - *.tpl.php
         - */tests/*
