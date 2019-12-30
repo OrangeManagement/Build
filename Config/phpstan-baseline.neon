@@ -296,11 +296,6 @@ parameters:
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
-			message: "#^Call to an undefined method Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:importArticle\\(\\)\\.$#"
-			count: 2
-			path: Modules/Exchange/Interfaces/GSD/Importer.php
-
-		-
 			message: "#^Parameter \\#1 \\$dbdata of static method phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionFactory\\:\\:create\\(\\) expects array\\<string\\>, array\\<string, mixed\\> given\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
@@ -359,16 +354,6 @@ parameters:
 			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Accounting\\\\Models\\\\CostObjectMapper\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
-
-		-
-			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostCenter.php
-
-		-
-			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostObject.php
 
 		-
 			message: "#^Access to constant CUSTOMER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
@@ -1262,11 +1247,6 @@ parameters:
 
 		-
 			message: "#^Method Modules\\\\Tasks\\\\Models\\\\Task\\:\\:getDue\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/Task.php
-
-		-
-			message: "#^Cannot call method format\\(\\) on DateTime\\|null\\.$#"
 			count: 1
 			path: Modules/Tasks/Models/Task.php
 
