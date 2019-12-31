@@ -236,11 +236,6 @@ parameters:
 			path: Modules/Database/Controller/BackendController.php
 
 		-
-			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\DatabaseEditor\\\\Controller\\\\ConnectionFactory\\.$#"
-			count: 2
-			path: Modules/DatabaseEditor/Controller/ApiController.php
-
-		-
 			message: "#^Undefined variable\\: \\$builder$#"
 			count: 2
 			path: Modules/DatabaseEditor/Controller/ApiController.php
@@ -1016,62 +1011,7 @@ parameters:
 			path: Modules/Purchase/Controller/BackendController.php
 
 		-
-			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\FormValidation not found\\.$#"
-			count: 3
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQAQuestionFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 2
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\Markdown not found\\.$#"
-			count: 3
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QAQuestion not found\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setQuestion\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setLanguage\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setCategory\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setStatus\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setBadges\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestion\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to static method isValidValue\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAQuestionStatus\\.$#"
+			message: "#^Call to an undefined method Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:setBadges\\(\\)\\.$#"
 			count: 1
 			path: Modules/QA/Controller/ApiController.php
 
@@ -1081,67 +1021,7 @@ parameters:
 			path: Modules/QA/Controller/ApiController.php
 
 		-
-			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQAAnswerFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
-			count: 2
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QAAnswer not found\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setQuestion\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
-			count: 2
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setStatus\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswer\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to static method isValidValue\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswerStatus\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategoryMapper\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\QA\\\\Controller\\\\ApiController\\:\\:createQACategoryFromRquest\\(\\) has invalid type Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
-			count: 2
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Instantiated class Modules\\\\QA\\\\Controller\\\\QACategory not found\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setName\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to method setParent\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QACategory\\.$#"
+			message: "#^Call to an undefined method Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:setName\\(\\)\\.$#"
 			count: 1
 			path: Modules/QA/Controller/ApiController.php
 
@@ -1222,11 +1102,6 @@ parameters:
 
 		-
 			message: "#^Array has 2 duplicate keys with value 'tag_color' \\('tag_color', 'tag_color'\\)\\.$#"
-			count: 1
-			path: Modules/Tag/Models/TagMapper.php
-
-		-
-			message: "#^Class Modules\\\\Tag\\\\Models\\\\AccountMapper not found\\.$#"
 			count: 1
 			path: Modules/Tag/Models/TagMapper.php
 
@@ -1471,7 +1346,7 @@ parameters:
 			path: phpOMS/DataStorage/Database/DatabasePool.php
 
 		-
-			message: "#^Instanceof between array\\|Closure and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
+			message: "#^Instanceof between array and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Query/Builder.php
 
