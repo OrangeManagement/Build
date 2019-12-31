@@ -993,7 +993,18 @@ return [
     'phpOMS\tests\Math\Topology\Metrics2DTest:testInvalidHammingDimension' => ['description' => 'Different dimension sizes for the coordinates in the hamming metric throw a InvalidDimensionException', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\Metrics2DTest:testInvalidUlamDimension' => ['description' => 'Different dimension sizes for the coordinates in the ulam metric throw a InvalidDimensionException', 'type' => 'framework'],
 
-    // todo: stochastics
+    'phpOMS\tests\Math\Topology\MetricsNDTest' => ['description' => 'Metric/distance calculations'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testManhattan' => ['description' => 'The manhattan distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testEuclidean' => ['description' => 'The euclidean distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testChebyshev' => ['description' => 'The chebyshev distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testMinkowski' => ['description' => 'The minkowski distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testCanberra' => ['description' => 'The canberra distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testBrayCurtis' => ['description' => 'The bray-curtis distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testAngularSeparation' => ['description' => 'The angular distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testHammingDistance' => ['description' => 'The hamming distance can be calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Topology\MetricsNDTest:testInvalidHammingDimension' => ['description' => 'Different dimension sizes for the coordinates in the hamming metric throw a InvalidDimensionException', 'type' => 'framework'],
+
+    /** @todo Implement the stochhastics documentation **/
 
     'phpOMS\tests\Math\Numerics\Interpolation\CubicSplineInterpolationTest' => ['description' => 'Cubic spline interpolation'],
     'phpOMS\tests\Math\Numerics\Interpolation\CubicSplineInterpolationTest:testInterpolationFirstDerivative' => ['description' => 'The spline interpolation using the first derivative is correct', 'type' => 'framework'],
@@ -1343,7 +1354,7 @@ return [
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testInvalidDayOfWeek' => ['description' => 'A invalid day of the week returns a negative week index', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Base\SmartDateTimeTest:testCalendarSheet' => ['description' => 'A calendar sheet is returned containing all days of the month and some days of the previous and next month', 'type' => 'framework'],
 
-    // todo: graph
+    /** @todo Implement the graph documentation */
 
     'phpOMS\tests\Stdlib\Map\MultiMapTest' => ['description' => 'Map which associates multiple keys with the same value'],
     'phpOMS\tests\Stdlib\Map\MultiMapTest:testDefault' => ['description' => 'The map has the expected default values and functionality after initialization', 'type' => 'framework'],
@@ -2153,7 +2164,7 @@ return [
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiModuleStatusUpdateInvalidStatus' => ['description' => 'A invalid module status cannot update a module', 'type' => 'module'],
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiModuleStatusUpdateInvalidModule' => ['description' => 'A invalid module cannot be updated', 'type' => 'module'],
     'Modules\tests\Admin\Controller\ApiControllerTest:testApiReInit' => ['description' => 'A module can be re-initialized', 'type' => 'module'],
-    
+
     'Modules\tests\News\Controller\ApiControllerTest' => ['description' => 'News api controller', 'type' => 'module'],
     'Modules\tests\News\Controller\ApiControllerTest:testApiNewsCreate' => ['description' => 'A news article can be created', 'type' => 'module'],
     'Modules\tests\News\Controller\ApiControllerTest:testApiNewsGet' => ['description' => 'A news article can be returned', 'type' => 'module'],
