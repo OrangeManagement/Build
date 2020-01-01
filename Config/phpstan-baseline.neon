@@ -32,7 +32,12 @@ parameters:
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:insert\\(\\)\\.$#"
-			count: 2
+			count: 1
+			path: Modules/Address/Admin/Installer.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:insert\\(\\)\\.$#"
+			count: 1
 			path: Modules/Admin/Admin/Installer.php
 
 		-
