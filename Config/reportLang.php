@@ -1356,6 +1356,17 @@ return [
 
     /** @todo Implement the graph documentation */
 
+    'phpOMS\tests\Stdlib\Graph\NodeTest' => ['description' => 'Node in a graph'],
+    'phpOMS\tests\Stdlib\Graph\NodeTest:testDefault' => ['description' => 'The node has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Graph\NodeTest:testDataInputOutput' => ['description' => 'The node data can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Graph\NodeTest:testNodesEqual' => ['description' => 'Two equal nodes are equal', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Graph\NodeTest:testNodesNotEqual' => ['description' => 'Two different nodes are not equal', 'type' => 'framework'],
+
+    'phpOMS\tests\Stdlib\Graph\EdgeTest' => ['description' => 'Edge between nodes'],
+    'phpOMS\tests\Stdlib\Graph\EdgeTest:testDefault' => ['description' => 'The edge has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Graph\EdgeTest:testDirected' => ['description' => 'An edge can be directed', 'type' => 'framework'],
+    'phpOMS\tests\Stdlib\Graph\EdgeTest:testWeight' => ['description' => 'An edge can have a weight', 'type' => 'framework'],
+
     'phpOMS\tests\Stdlib\Map\MultiMapTest' => ['description' => 'Map which associates multiple keys with the same value'],
     'phpOMS\tests\Stdlib\Map\MultiMapTest:testDefault' => ['description' => 'The map has the expected default values and functionality after initialization', 'type' => 'framework'],
     'phpOMS\tests\Stdlib\Map\MultiMapTest:testBasicAddAny' => ['description' => 'Elements with multiple optional keys can be added', 'type' => 'framework'],
