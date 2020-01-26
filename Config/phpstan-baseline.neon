@@ -1,3 +1,5 @@
+
+
 parameters:
 	ignoreErrors:
 		-
@@ -31,16 +33,6 @@ parameters:
 			path: Modules/AccountsReceivable/Controller/BackendController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:insert\\(\\)\\.$#"
-			count: 1
-			path: Modules/Address/Admin/Installer.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:insert\\(\\)\\.$#"
-			count: 1
-			path: Modules/Admin/Admin/Installer.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:apiProfileCreateDbEntry\\(\\)\\.$#"
 			count: 1
 			path: Modules/Admin/Controller/ApiController.php
@@ -54,11 +46,6 @@ parameters:
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
 			count: 8
 			path: Modules/Admin/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
-			count: 1
-			path: Modules/Admin/Models/AccountMapper.php
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
@@ -651,11 +638,6 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
-
-		-
 			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool has unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool as its type\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
@@ -769,11 +751,6 @@ parameters:
 			message: "#^Parameter \\$dt of method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\:\\:__construct\\(\\) has invalid typehint type DateTiem\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
-			count: 2
-			path: Modules/HumanResourceTimeRecording/Models/SessionMapper.php
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
@@ -1136,11 +1113,6 @@ parameters:
 			path: Modules/Tasks/Models/TaskElement.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:count\\(\\)\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/TaskMapper.php
-
-		-
 			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Arrival.php
@@ -1251,6 +1223,36 @@ parameters:
 			path: phpOMS/Algorithm/Knapsack/Backpack.php
 
 		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Grid\\:\\:getNeighbors\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
+			count: 2
+			path: phpOMS/Algorithm/PathFinding/Grid.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode and null will always evaluate to false\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:findNeighborsStraight\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:findNeighborsDiagonal\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:findNeighborsDiagonalOneObstacle\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
+			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:findNeighborsDiagonalNoObstacle\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
+			count: 1
+			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
+
+		-
 			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpStraight\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
 			count: 3
 			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
@@ -1276,21 +1278,6 @@ parameters:
 			path: phpOMS/Config/SettingsAbstract.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:into\\(\\)\\.$#"
-			count: 3
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:delete\\(\\)\\.$#"
-			count: 3
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:update\\(\\)\\.$#"
-			count: 4
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
 			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
 			count: 4
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
@@ -1301,17 +1288,12 @@ parameters:
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:select\\(\\)\\.$#"
-			count: 4
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) with return type void returns mixed but should not return anything\\.$#"
+			message: "#^Parameter \\#1 \\.\\.\\.\\$columns of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:select\\(\\) expects array\\<int, mixed\\>, string given\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:random\\(\\)\\.$#"
+			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) with return type void returns mixed but should not return anything\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
@@ -1421,7 +1403,7 @@ parameters:
 			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
 
 		-
-			message: "#^Method phpOMS\\\\Math\\\\Parser\\\\Evaluator\\:\\:shuntingYard\\(\\) should return array\\<int, string\\> but returns array\\<int, string\\|null\\>\\.$#"
+			message: "#^Method phpOMS\\\\Math\\\\Parser\\\\Evaluator\\:\\:shuntingYard\\(\\) should return array\\<string\\> but returns array\\<int, string\\|null\\>\\.$#"
 			count: 1
 			path: phpOMS/Math/Parser/Evaluator.php
 
@@ -1611,64 +1593,19 @@ parameters:
 			path: phpOMS/Stdlib/Base/Iban.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Stdlib\\\\Graph\\\\Node\\:\\:getNeighbors\\(\\)\\.$#"
+			message: "#^PHPDoc tag @return with type float\\|int is not subtype of native type int\\.$#"
 			count: 1
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
+			path: phpOMS/Stdlib/Graph/Edge.php
 
 		-
-			message: "#^Method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) should return phpOMS\\\\Stdlib\\\\Graph\\\\Node but returns phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null\\.$#"
+			message: "#^Argument of an invalid type bool supplied for foreach, only iterables are supported\\.$#"
 			count: 1
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
+			path: phpOMS/Stdlib/Graph/Graph.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Stdlib\\\\Graph\\\\Node and null will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Cannot assign new offset to array\\|phpOMS\\\\Stdlib\\\\Graph\\\\Node\\.$#"
+			message: "#^Cannot call method getId\\(\\) on string\\.$#"
 			count: 1
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getLeft\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null given\\.$#"
-			count: 2
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, phpOMS\\\\Stdlib\\\\Graph\\\\Node\\|null given\\.$#"
-			count: 2
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getLeft\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, null given\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Parameter \\#1 \\$base of method phpOMS\\\\Stdlib\\\\Graph\\\\BinaryTree\\:\\:getRight\\(\\) expects phpOMS\\\\Stdlib\\\\Graph\\\\Node, null given\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/BinaryTree.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Stdlib\\\\Graph\\\\Node and null will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Stdlib/Graph/Tree.php
-
-		-
-			message: "#^Parameter \\#1 \\.\\.\\.\\$arg1 of function min expects array, \\(array\\<int, int\\>\\)\\|int given\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Tree.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Stdlib\\\\Graph\\\\Tree\\:\\:getLevel\\(\\)\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Tree.php
-
-		-
-			message: "#^Function callback not found\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Tree.php
+			path: phpOMS/Stdlib/Graph/Graph.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between array and false will always evaluate to false\\.$#"
