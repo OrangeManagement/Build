@@ -85,3 +85,6 @@ php php-cs-fixer.phar fix phpOMS/ --rules='{"array_syntax": {"syntax": "short"},
 # consider:
 # "mb_str_functions": true,
 # "phpdoc_add_missing_param_annotation": true,
+
+npm install -g sitespeed.io
+sitespeed.io Build/Helper/sitespeedUrls.txt -n 1 --preScript Build/Helper/sitespeedAuth.js --outputFolder Build/sitespeed

@@ -803,11 +803,6 @@ parameters:
 			path: Modules/Marketing/Controller/BackendController.php
 
 		-
-			message: "#^Method Modules\\\\Marketing\\\\Models\\\\Promotion\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Marketing/Models/Promotion.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createAccountModelPermission\\(\\)\\.$#"
 			count: 1
 			path: Modules/Media/Controller/ApiController.php
@@ -1278,6 +1273,11 @@ parameters:
 			path: phpOMS/Config/SettingsAbstract.php
 
 		-
+			message: "#^Function setcookie invoked with 8 parameters, 1\\-7 required\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Cookie/CookieJar.php
+
+		-
 			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
 			count: 4
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
@@ -1356,6 +1356,11 @@ parameters:
 			message: "#^phpOMS\\\\DataStorage\\\\Database\\\\Schema\\\\Builder\\:\\:__construct\\(\\) does not call parent constructor from phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Schema/Builder.php
+
+		-
+			message: "#^Function session_set_cookie_params invoked with 6 parameters, 1\\-5 required\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Session/HttpSession.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
@@ -1591,21 +1596,6 @@ parameters:
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
 			count: 2
 			path: phpOMS/Stdlib/Base/Iban.php
-
-		-
-			message: "#^PHPDoc tag @return with type float\\|int is not subtype of native type int\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Edge.php
-
-		-
-			message: "#^Argument of an invalid type bool supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Graph.php
-
-		-
-			message: "#^Cannot call method getId\\(\\) on string\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Graph/Graph.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between array and false will always evaluate to false\\.$#"
