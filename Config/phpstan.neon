@@ -8,6 +8,8 @@ parameters:
     excludes_analyse:
         - *.tpl.php
         - */tests/*
+        - */Modules/Media/Files/*
+        - */d0cbb361b14ac3ef32486f0a09ab937d/*
         - */test/*
         - *Test.php
         - *Routes.php

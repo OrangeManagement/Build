@@ -228,11 +228,6 @@ parameters:
 			path: Modules/Database/Controller/BackendController.php
 
 		-
-			message: "#^Undefined variable\\: \\$builder$#"
-			count: 2
-			path: Modules/DatabaseEditor/Controller/ApiController.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
 			count: 1
 			path: Modules/DatabaseEditor/Controller/BackendController.php
@@ -279,11 +274,6 @@ parameters:
 
 		-
 			message: "#^Property Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:\\$remote has unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface as its type\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/GSD/Importer.php
-
-		-
-			message: "#^Parameter \\#1 \\$dbdata of static method phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionFactory\\:\\:create\\(\\) expects array\\<string\\>, array\\<string, mixed\\> given\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
@@ -545,6 +535,16 @@ parameters:
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:setDownloadable\\(\\)\\.$#"
 			count: 1
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:uploadFiles\\(\\)\\.$#"
+			count: 2
+			path: Modules/Helper/Controller/ApiController.php
+
+		-
+			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createMediaCollectionFromMedia\\(\\)\\.$#"
+			count: 2
 			path: Modules/Helper/Controller/ApiController.php
 
 		-
@@ -1278,6 +1278,21 @@ parameters:
 			path: phpOMS/DataStorage/Cookie/CookieJar.php
 
 		-
+			message: "#^Parameter \\#1 \\$dbdata of class phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\MysqlConnection constructor expects array\\('db' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'login' \\=\\> string, 'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\), array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\) given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
+
+		-
+			message: "#^Parameter \\#1 \\$dbdata of class phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\PostgresConnection constructor expects array\\('db' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'login' \\=\\> string, 'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\), array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\) given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
+
+		-
+			message: "#^Parameter \\#1 \\$dbdata of class phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\SqlServerConnection constructor expects array\\('db' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'login' \\=\\> string, 'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\), array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\) given\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
+
+		-
 			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
 			count: 4
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
@@ -1356,11 +1371,6 @@ parameters:
 			message: "#^phpOMS\\\\DataStorage\\\\Database\\\\Schema\\\\Builder\\:\\:__construct\\(\\) does not call parent constructor from phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Schema/Builder.php
-
-		-
-			message: "#^Function session_set_cookie_params invoked with 6 parameters, 1\\-5 required\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Session/HttpSession.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
@@ -1481,11 +1491,6 @@ parameters:
 			message: "#^Property phpOMS\\\\Message\\\\Mail\\\\Mail\\:\\:\\$overview \\(string\\) does not accept array\\.$#"
 			count: 1
 			path: phpOMS/Message/Mail/Mail.php
-
-		-
-			message: "#^Access to an undefined property phpOMS\\\\Message\\\\RequestAbstract\\:\\:\\$files\\.$#"
-			count: 1
-			path: phpOMS/Message/RequestAbstract.php
 
 		-
 			message: "#^Class phpOMS\\\\Message\\\\Socket\\\\Request constructor invoked with 1 parameter, 0 required\\.$#"
@@ -1781,6 +1786,11 @@ parameters:
 			message: "#^Cannot call method setTimestamp\\(\\) on DateTime\\|null\\.$#"
 			count: 2
 			path: phpOMS/System/File/Local/FileAbstract.php
+
+		-
+			message: "#^Result of \\|\\| is always true\\.$#"
+			count: 1
+			path: phpOMS/System/File/Storage.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
