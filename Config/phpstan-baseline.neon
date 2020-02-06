@@ -1,3 +1,5 @@
+
+
 parameters:
 	ignoreErrors:
 		-
@@ -14,11 +16,6 @@ parameters:
 			message: "#^Call to an undefined method phpOMS\\\\Router\\\\RouterInterface\\:\\:add\\(\\)\\.$#"
 			count: 2
 			path: Install/WebApplication.php
-
-		-
-			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: Modules/Admin/Controller/ApiController.php
 
 		-
 			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
@@ -91,22 +88,7 @@ parameters:
 			path: Modules/ClientManagement/Models/Client.php
 
 		-
-			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\FormValidation not found\\.$#"
-			count: 1
-			path: Modules/Comments/Controller/BackendController.php
-
-		-
-			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\Comment not found\\.$#"
-			count: 1
-			path: Modules/Comments/Controller/BackendController.php
-
-		-
-			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\Comments\\\\Controller\\\\CommentMapper\\.$#"
-			count: 1
-			path: Modules/Comments/Controller/BackendController.php
-
-		-
-			message: "#^Call to method jsonSerialize\\(\\) on an unknown class Modules\\\\Comments\\\\Controller\\\\Comment\\.$#"
+			message: "#^Call to an undefined method Modules\\\\Comments\\\\Models\\\\Comment\\:\\:jsonSerialize\\(\\)\\.$#"
 			count: 1
 			path: Modules/Comments/Controller/BackendController.php
 
@@ -131,16 +113,6 @@ parameters:
 			path: Modules/EventManagement/Models/Event.php
 
 		-
-			message: "#^PHPDoc tag @return with type void is incompatible with native type phpOMS\\\\Contract\\\\RenderableInterface\\.$#"
-			count: 1
-			path: Modules/Exchange/Controller/BackendController.php
-
-		-
-			message: "#^Method Modules\\\\Exchange\\\\Controller\\\\BackendController\\:\\:viewExchangeDashboard\\(\\) with return type void returns phpOMS\\\\Views\\\\View but should not return anything\\.$#"
-			count: 1
-			path: Modules/Exchange/Controller/BackendController.php
-
-		-
 			message: "#^Property Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:\\$remote has unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface as its type\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
@@ -161,7 +133,7 @@ parameters:
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
-			message: "#^Access to private property \\$local of parent class Modules\\\\Exchange\\\\Models\\\\ImporterAbstract\\.$#"
+			message: "#^Parameter \\#1 \\$con of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:setConnection\\(\\) expects phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionAbstract, phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionInterface given\\.$#"
 			count: 2
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
@@ -206,11 +178,6 @@ parameters:
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
 
 		-
-			message: "#^Access to undefined constant Modules\\\\Exchange\\\\Models\\\\ExchangeType\\:\\:INVOICE\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
 			message: "#^Call to static method getAll\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\OMSCostCenterMapper\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
@@ -218,11 +185,6 @@ parameters:
 		-
 			message: "#^Instantiated class Modules\\\\Accounting\\\\Models\\\\CostCenter not found\\.$#"
 			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to private property \\$local of parent class Modules\\\\Exchange\\\\Models\\\\ImporterAbstract\\.$#"
-			count: 2
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
 
 		-
@@ -846,11 +808,6 @@ parameters:
 			path: phpOMS/Algorithm/JobScheduling/Weighted.php
 
 		-
-			message: "#^Array \\(array\\<phpOMS\\\\Algorithm\\\\Knapsack\\\\ItemInterface\\>\\) does not accept array\\<string, mixed\\>\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/Knapsack/Backpack.php
-
-		-
 			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Grid\\:\\:getNeighbors\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
 			count: 2
 			path: phpOMS/Algorithm/PathFinding/Grid.php
@@ -1031,11 +988,6 @@ parameters:
 			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
 
 		-
-			message: "#^Parameter \\#3 \\$value of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:set\\(\\) expects int, float given\\.$#"
-			count: 11
-			path: phpOMS/Math/Numerics/Interpolation/CubicSplineInterpolation.php
-
-		-
 			message: "#^Method phpOMS\\\\Math\\\\Parser\\\\Evaluator\\:\\:shuntingYard\\(\\) should return array\\<string\\> but returns array\\<int, string\\|null\\>\\.$#"
 			count: 1
 			path: phpOMS/Math/Parser/Evaluator.php
@@ -1101,17 +1053,7 @@ parameters:
 			path: phpOMS/Message/Socket/PacketManager.php
 
 		-
-			message: "#^Access to constant M_JSON on an unknown class phpOMS\\\\Message\\\\Socket\\\\MimeType\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
 			message: "#^Call to static method stringify\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\StringUtils\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
-			message: "#^Access to constant M_HTML on an unknown class phpOMS\\\\Message\\\\Socket\\\\MimeType\\.$#"
 			count: 1
 			path: phpOMS/Message/Socket/Response.php
 
@@ -1376,11 +1318,6 @@ parameters:
 			path: phpOMS/System/File/Storage.php
 
 		-
-			message: "#^Method phpOMS\\\\Utils\\\\Compression\\\\LZW\\:\\:decompress\\(\\) should return string but returns int\\|string\\.$#"
-			count: 1
-			path: phpOMS/Utils/Compression/LZW.php
-
-		-
 			message: "#^Result of \\|\\| is always false\\.$#"
 			count: 2
 			path: phpOMS/Utils/Converter/Numeric.php
@@ -1419,10 +1356,5 @@ parameters:
 			message: "#^Method phpOMS\\\\Utils\\\\TaskSchedule\\\\Interval\\:\\:serialize\\(\\) should return string but returns string\\|false\\.$#"
 			count: 1
 			path: phpOMS/Utils/TaskSchedule/Interval.php
-
-		-
-			message: "#^Cannot access property \\$l11nManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
-			count: 1
-			path: phpOMS/Views/View.php
 
 
