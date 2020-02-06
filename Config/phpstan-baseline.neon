@@ -1,5 +1,3 @@
-
-
 parameters:
 	ignoreErrors:
 		-
@@ -18,59 +16,9 @@ parameters:
 			path: Install/WebApplication.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 10
-			path: Modules/Accounting/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
-			path: Modules/AccountsPayable/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
-			path: Modules/AccountsReceivable/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:apiProfileCreateDbEntry\\(\\)\\.$#"
-			count: 1
-			path: Modules/Admin/Controller/ApiController.php
-
-		-
 			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
 			count: 1
 			path: Modules/Admin/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 8
-			path: Modules/Admin/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 2
-			path: Modules/Arrival/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/AssetManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 6
-			path: Modules/Auditor/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/Balance/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Billing/Controller/BackendController.php
 
 		-
 			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
@@ -81,16 +29,6 @@ parameters:
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/BudgetManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/Calendar/Controller/BackendController.php
 
 		-
 			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:addEvent\\(\\) should return int but returns int\\|null\\.$#"
@@ -143,21 +81,6 @@ parameters:
 			path: Modules/Calendar/Models/Schedule.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/Chart/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Checklist/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/ClientManagement/Controller/BackendController.php
-
-		-
 			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$taxId\\.$#"
 			count: 2
 			path: Modules/ClientManagement/Models/Client.php
@@ -166,11 +89,6 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$defaultTnvoiceAddress\\.$#"
 			count: 1
 			path: Modules/ClientManagement/Models/Client.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 2
-			path: Modules/Comments/Controller/BackendController.php
 
 		-
 			message: "#^Instantiated class Modules\\\\Comments\\\\Controller\\\\FormValidation not found\\.$#"
@@ -193,24 +111,9 @@ parameters:
 			path: Modules/Comments/Controller/BackendController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/ContractLifecycleManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/CostCenterAccounting/Controller/BackendController.php
-
-		-
 			message: "#^Property Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\:\\:\\$parent \\(int\\|Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\|null\\) does not accept string\\.$#"
 			count: 1
 			path: Modules/CostCenterAccounting/Models/CostCenter.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/CostObjectAccounting/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\:\\:\\$parent \\(int\\|Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\|null\\) does not accept string\\.$#"
@@ -218,39 +121,9 @@ parameters:
 			path: Modules/CostObjectAccounting/Models/CostObject.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/Dashboard/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Database/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/DatabaseEditor/Controller/BackendController.php
-
-		-
 			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
 			count: 1
 			path: Modules/Draw/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Draw/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Editor/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/EventManagement/Controller/BackendController.php
 
 		-
 			message: "#^Method Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
@@ -260,11 +133,6 @@ parameters:
 		-
 			message: "#^PHPDoc tag @return with type void is incompatible with native type phpOMS\\\\Contract\\\\RenderableInterface\\.$#"
 			count: 1
-			path: Modules/Exchange/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
 			path: Modules/Exchange/Controller/BackendController.php
 
 		-
@@ -283,8 +151,8 @@ parameters:
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
-			message: "#^Call to static method setConnection\\(\\) on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\DataMapperAbstract\\.$#"
-			count: 4
+			message: "#^Parameter \\#1 \\$con of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:setConnection\\(\\) expects phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionAbstract, Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface given\\.$#"
+			count: 2
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
@@ -333,42 +201,12 @@ parameters:
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
-			message: "#^Access to constant CUSTOMER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to constant SUPPLIER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to constant ACCOUNT on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to constant COSTCENTER on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to constant COSTOBJECT on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
-			message: "#^Access to constant ARTICLE on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/OMS/Importer.php
-
-		-
 			message: "#^Call to an undefined method Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Importer\\:\\:importArticle\\(\\)\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
 
 		-
-			message: "#^Access to constant INVOICE on an unknown class Modules\\\\Exchange\\\\Interfaces\\\\OMS\\\\Model\\\\ExchangeType\\.$#"
+			message: "#^Access to undefined constant Modules\\\\Exchange\\\\Models\\\\ExchangeType\\:\\:INVOICE\\.$#"
 			count: 1
 			path: Modules/Exchange/Interfaces/OMS/Importer.php
 
@@ -538,26 +376,6 @@ parameters:
 			path: Modules/Helper/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:uploadFiles\\(\\)\\.$#"
-			count: 2
-			path: Modules/Helper/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createMediaCollectionFromMedia\\(\\)\\.$#"
-			count: 2
-			path: Modules/Helper/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createAccountModelPermission\\(\\)\\.$#"
-			count: 2
-			path: Modules/Helper/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/Helper/Controller/BackendController.php
-
-		-
 			message: "#^Property Modules\\\\Helper\\\\Models\\\\Report\\:\\:\\$template has unknown class Modules\\\\Helper\\\\Models\\\\Media as its type\\.$#"
 			count: 1
 			path: Modules/Helper/Models/Report.php
@@ -571,11 +389,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$profile of class Modules\\\\HumanResourceManagement\\\\Models\\\\Employee constructor expects int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\|null, Modules\\\\Profile\\\\Models\\\\Profile given\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/HumanResourceManagement/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:\\$profile has unknown class Modules\\\\HumanResourceManagement\\\\Models\\\\Profile as its type\\.$#"
@@ -683,29 +496,14 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session and null will always evaluate to false\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
-
-		-
 			message: "#^Call to method getProfile\\(\\) on an unknown class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee\\.$#"
 			count: 2
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
-
-		-
 			message: "#^Instantiated class Modules\\\\HumanResourceTimeRecording\\\\Controller\\\\NullSession not found\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Controller/TimerecordingController.php
 
 		-
 			message: "#^Property Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:\\$employee has unknown class Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Employee as its type\\.$#"
@@ -753,31 +551,6 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/InvestmentManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 7
-			path: Modules/ItemManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Job/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/KPI/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/Kanban/Controller/BackendController.php
-
-		-
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCardComment.php
@@ -788,29 +561,9 @@ parameters:
 			path: Modules/Knowledgebase/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 7
-			path: Modules/Knowledgebase/Controller/BackendController.php
-
-		-
 			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Knowledgebase/Models/WikiDoc.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
-			path: Modules/Marketing/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createAccountModelPermission\\(\\)\\.$#"
-			count: 1
-			path: Modules/Media/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Media/Controller/BackendController.php
 
 		-
 			message: "#^PHPDoc tag @param for parameter \\$outputPath with type string\\|null is not subtype of native type string\\.$#"
@@ -838,31 +591,6 @@ parameters:
 			path: Modules/Media/Views/MediaView.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and null will always evaluate to false\\.$#"
-			count: 1
-			path: Modules/Media/Views/MediaView.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 7
-			path: Modules/Messages/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/Monitoring/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:openNav\\(\\)\\.$#"
-			count: 1
-			path: Modules/Navigation/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:openNav\\(\\)\\.$#"
-			count: 1
-			path: Modules/Navigation/Controller/TimerecordingController.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
 			count: 1
 			path: Modules/Navigation/Models/Navigation.php
@@ -878,39 +606,9 @@ parameters:
 			path: Modules/News/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/News/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 9
-			path: Modules/Organization/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/PL/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 4
-			path: Modules/Production/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Profile/Controller/BackendController.php
-
-		-
 			message: "#^Method Modules\\\\Profile\\\\Models\\\\Profile\\:\\:getImage\\(\\) should return Modules\\\\Media\\\\Models\\\\Media but returns int\\|Modules\\\\Media\\\\Models\\\\Media\\|null\\.$#"
 			count: 1
 			path: Modules/Profile/Models/Profile.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/ProjectManagement/Controller/BackendController.php
 
 		-
 			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$media has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Media as its type\\.$#"
@@ -983,11 +681,6 @@ parameters:
 			path: Modules/ProjectManagement/Models/Project.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 6
-			path: Modules/Purchase/Controller/BackendController.php
-
-		-
 			message: "#^Call to an undefined method Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:setBadges\\(\\)\\.$#"
 			count: 1
 			path: Modules/QA/Controller/ApiController.php
@@ -1003,34 +696,9 @@ parameters:
 			path: Modules/QA/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/QA/Controller/BackendController.php
-
-		-
 			message: "#^Parameter \\$badge of method Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:addBadge\\(\\) has invalid typehint type Modules\\\\QA\\\\Models\\\\QABadge\\.$#"
 			count: 1
 			path: Modules/QA/Models/QAQuestion.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 2
-			path: Modules/ResearchDevelopment/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 19
-			path: Modules/RiskManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationSplash\\(\\)\\.$#"
-			count: 1
-			path: Modules/SalesAnalysis/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/SalesAnalysis/Controller/BackendController.php
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getRouteVerb\\(\\)\\.$#"
@@ -1038,34 +706,9 @@ parameters:
 			path: Modules/Search/Controller/ApiController.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 2
-			path: Modules/Shipping/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 1
-			path: Modules/StockTaking/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/SupplierManagement/Controller/BackendController.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 6
-			path: Modules/Support/Controller/BackendController.php
-
-		-
 			message: "#^Access to an undefined property Modules\\\\Support\\\\Models\\\\Message\\:\\:\\$id\\.$#"
 			count: 1
 			path: Modules/Support/Models/Message.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 3
-			path: Modules/Surveys/Controller/BackendController.php
 
 		-
 			message: "#^Call to static method get\\(\\) on an unknown class Modules\\\\Tag\\\\Controller\\\\TagMapper\\.$#"
@@ -1081,11 +724,6 @@ parameters:
 			message: "#^Array has 2 duplicate keys with value 'tag_color' \\('tag_color', 'tag_color'\\)\\.$#"
 			count: 1
 			path: Modules/Tag/Models/TagMapper.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
-			path: Modules/Tasks/Controller/BackendController.php
 
 		-
 			message: "#^PHPDoc tag @return with type void is incompatible with native type int\\.$#"
@@ -1173,11 +811,6 @@ parameters:
 			path: Modules/WarehouseManagement/Models/Warehouse.php
 
 		-
-			message: "#^Call to an undefined method phpOMS\\\\Module\\\\ModuleAbstract\\:\\:createNavigationMid\\(\\)\\.$#"
-			count: 5
-			path: Modules/Workflow/Controller/BackendController.php
-
-		-
 			message: "#^PHPDoc tag @var for property Socket\\\\Socketserver\\\\Application\\:\\:\\$type with type phpOMS\\\\Socket\\\\SocketType is incompatible with native type string\\.$#"
 			count: 1
 			path: Socket/Socketserver/Application.php
@@ -1221,11 +854,6 @@ parameters:
 			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\Grid\\:\\:getNeighbors\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
 			count: 2
 			path: phpOMS/Algorithm/PathFinding/Grid.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode and null will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
 
 		-
 			message: "#^Method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:findNeighborsStraight\\(\\) should return array\\<phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\> but returns array\\<int, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null\\>\\.$#"
@@ -1373,11 +1001,6 @@ parameters:
 			path: phpOMS/DataStorage/Database/Schema/Builder.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 3
-			path: phpOMS/Localization/Money.php
-
-		-
 			message: "#^Result of \\|\\| is always false\\.$#"
 			count: 1
 			path: phpOMS/Localization/Money.php
@@ -1396,11 +1019,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$n of static method phpOMS\\\\Math\\\\Number\\\\Numbers\\:\\:isSquare\\(\\) expects int, float\\|int given\\.$#"
 			count: 2
 			path: phpOMS/Math/Functions/Fibonacci.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Math/Number/Numbers.php
 
 		-
 			message: "#^PHPDoc tag @param for parameter \\$leftDerivativeType with type float is incompatible with native type int\\.$#"
@@ -1428,24 +1046,9 @@ parameters:
 			path: phpOMS/Math/Statistic/MeasureOfDispersion.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Message/Console/Request.php
-
-		-
 			message: "#^Method phpOMS\\\\Message\\\\Console\\\\Request\\:\\:getMethod\\(\\) should return string but returns array\\|string\\.$#"
 			count: 1
 			path: phpOMS/Message/Console/Request.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between resource and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Message/Http/Rest.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Message/Http/Rest.php
 
 		-
 			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:decode\\(\\) should return string but returns string\\|false\\.$#"
@@ -1598,27 +1201,12 @@ parameters:
 			path: phpOMS/Socket/SocketAbstract.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Stdlib/Base/Iban.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between array and false will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/System/File/Ftp/Directory.php
-
-		-
 			message: "#^Parameter \\#2 \\$dir of static method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:size\\(\\) expects string, int\\|string given\\.$#"
 			count: 1
 			path: phpOMS/System/File/Ftp/Directory.php
 
 		-
 			message: "#^Parameter \\#2 \\$filename of function ftp_size expects string, int\\|string given\\.$#"
-			count: 1
-			path: phpOMS/System/File/Ftp/Directory.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
 			count: 1
 			path: phpOMS/System/File/Ftp/Directory.php
 
@@ -1679,11 +1267,6 @@ parameters:
 
 		-
 			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\File\\:\\:get\\(\\) should return string but returns string\\|false\\.$#"
-			count: 1
-			path: phpOMS/System/File/Ftp/File.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
 			count: 1
 			path: phpOMS/System/File/Ftp/File.php
 
@@ -1793,21 +1376,6 @@ parameters:
 			path: phpOMS/System/File/Storage.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Uri/Argument.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Uri/Http.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Utils/Compression/LZW.php
-
-		-
 			message: "#^Method phpOMS\\\\Utils\\\\Compression\\\\LZW\\:\\:decompress\\(\\) should return string but returns int\\|string\\.$#"
 			count: 1
 			path: phpOMS/Utils/Compression/LZW.php
@@ -1818,74 +1386,9 @@ parameters:
 			path: phpOMS/Utils/Converter/Numeric.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
-			count: 3
-			path: phpOMS/Utils/Converter/Numeric.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between array\\<int, string\\> and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Utils/Encoding/Huffman/Huffman.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Utils/Encoding/Huffman/Huffman.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 2
-			path: phpOMS/Utils/Git/Repository.php
-
-		-
 			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\IODatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
 			count: 1
 			path: phpOMS/Utils/IO/IODatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx not found\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods not found\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls not found\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method setReadDataOnly\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Ods\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xls\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method load\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Reader\\\\Xlsx\\.$#"
-			count: 2
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
 			message: "#^Parameter \\$queries of method phpOMS\\\\Utils\\\\IO\\\\Spreadsheet\\\\SpreadsheetDatabaseMapper\\:\\:select\\(\\) has invalid typehint type phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
@@ -1893,62 +1396,7 @@ parameters:
 			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
 		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet not found\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method getProperties\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method getSheetCount\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
 			message: "#^Call to method execute\\(\\) on an unknown class phpOMS\\\\Utils\\\\IO\\\\Builder\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method createSheet\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method setActiveSheetIndex\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Spreadsheet\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xlsx not found\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Ods not found\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Call to method save\\(\\) on an unknown class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
-
-		-
-			message: "#^Instantiated class PhpOffice\\\\PhpSpreadsheet\\\\Writer\\\\Xls not found\\.$#"
 			count: 1
 			path: phpOMS/Utils/IO/Spreadsheet/SpreadsheetDatabaseMapper.php
 
@@ -1973,18 +1421,8 @@ parameters:
 			path: phpOMS/Utils/TaskSchedule/Interval.php
 
 		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/Validation/Finance/Iban.php
-
-		-
 			message: "#^Cannot access property \\$l11nManager on phpOMS\\\\ApplicationAbstract\\|null\\.$#"
 			count: 1
-			path: phpOMS/Views/View.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 2
 			path: phpOMS/Views/View.php
 
 

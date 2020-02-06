@@ -25,6 +25,7 @@
 <exclude-pattern>*/Routes/*</exclude-pattern>
 <exclude-pattern>*/Hooks/*</exclude-pattern>
 <exclude-pattern>*/node_modules/*</exclude-pattern>
+<exclude-pattern>*/Modules/Media/Files/*</exclude-pattern>
 <arg value="q"/>
 <arg name="colors"/>
 <rule ref="Generic.Classes.DuplicateClassName"/>
@@ -93,6 +94,7 @@
         <property name="absoluteNestingLevel" value="11"/>
     </properties>
      <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
+     <exclude-pattern>*phpOMS/Message/Http/Request.php</exclude-pattern><!-- Multipart uses deep nesting -->
 </rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>
