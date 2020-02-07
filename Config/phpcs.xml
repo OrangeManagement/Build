@@ -95,6 +95,7 @@
     </properties>
      <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
      <exclude-pattern>*phpOMS/Message/Http/Request.php</exclude-pattern><!-- Multipart uses deep nesting -->
+     <exclude-pattern>*phpOMS/Message/Http/WebRouter.php</exclude-pattern><!-- WebRouter uses deep nesting -->
 </rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>
