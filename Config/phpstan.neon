@@ -5,6 +5,7 @@ parameters:
     fileExtensions:
         - php
     reportUnmatchedIgnoredErrors: false
+    inferPrivatePropertyTypeFromConstructor: true
     excludes_analyse:
         - *.tpl.php
         - */tests/*
