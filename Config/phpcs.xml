@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="default">
 <description></description>
-<exclude-pattern>*.tpl.php</exclude-pattern>
-<exclude-pattern>*.pdf.php</exclude-pattern>
-<exclude-pattern>*.xls.php</exclude-pattern>
-<exclude-pattern>*.csv.php</exclude-pattern>
 <exclude-pattern>*.css</exclude-pattern>
-<exclude-pattern>*Markdown.php</exclude-pattern>
-<exclude-pattern>*Markdown.js</exclude-pattern>
-<exclude-pattern>*Sha1.js</exclude-pattern>
-<exclude-pattern>*Sha1b.js</exclude-pattern>
-<exclude-pattern>*Routes.php</exclude-pattern>
-<exclude-pattern>*SearchCommands.php</exclude-pattern>
-<exclude-pattern>*Hooks.php</exclude-pattern>
-<exclude-pattern>*ObjLoader.js</exclude-pattern>
-<exclude-pattern>*/vendor/*</exclude-pattern>
-<exclude-pattern>*/Demo/*</exclude-pattern>
+<exclude-pattern>*.csv.php</exclude-pattern>
+<exclude-pattern>*.pdf.php</exclude-pattern>
+<exclude-pattern>*.tpl.php</exclude-pattern>
+<exclude-pattern>*.xls.php</exclude-pattern>
 <exclude-pattern>*/Build/*</exclude-pattern>
 <exclude-pattern>*/Cache/*</exclude-pattern>
+<exclude-pattern>*/Demo/*</exclude-pattern>
 <exclude-pattern>*/Docs/*</exclude-pattern>
 <exclude-pattern>*/Documentation/*</exclude-pattern>
-<exclude-pattern>*/Resources/*</exclude-pattern>
-<exclude-pattern>*/tests/*</exclude-pattern>
-<exclude-pattern>*/Routes/*</exclude-pattern>
 <exclude-pattern>*/Hooks/*</exclude-pattern>
-<exclude-pattern>*/node_modules/*</exclude-pattern>
 <exclude-pattern>*/Modules/Media/Files/*</exclude-pattern>
+<exclude-pattern>*/node_modules/*</exclude-pattern>
+<exclude-pattern>*/Resources/*</exclude-pattern>
+<exclude-pattern>*/Routes/*</exclude-pattern>
+<exclude-pattern>*/tests/*</exclude-pattern>
+<exclude-pattern>*/vendor/*</exclude-pattern>
+<exclude-pattern>*Hooks.php</exclude-pattern>
+<exclude-pattern>*Markdown.js</exclude-pattern>
+<exclude-pattern>*Markdown.php</exclude-pattern>
+<exclude-pattern>*ObjLoader.js</exclude-pattern>
+<exclude-pattern>*Routes.php</exclude-pattern>
+<exclude-pattern>*SearchCommands.php</exclude-pattern>
+<exclude-pattern>*Sha1.js</exclude-pattern>
+<exclude-pattern>*Sha1b.js</exclude-pattern>
+<exclude-pattern>[abcdef0-9]{32}/*</exclude-pattern>
 <arg value="q"/>
 <arg name="colors"/>
 <rule ref="Generic.Classes.DuplicateClassName"/>
