@@ -95,7 +95,7 @@
         <property name="absoluteNestingLevel" value="11"/>
     </properties>
      <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
-     <exclude-pattern>*phpOMS/Message/Http/Request.php</exclude-pattern><!-- Multipart uses deep nesting -->
+     <exclude-pattern>*phpOMS/Message/Http/HttpRequest.php</exclude-pattern><!-- Multipart uses deep nesting -->
      <exclude-pattern>*WebRouter.php</exclude-pattern><!-- WebRouter uses deep nesting -->
 </rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>

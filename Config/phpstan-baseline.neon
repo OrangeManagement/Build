@@ -13,6 +13,11 @@ parameters:
 			path: Install/ConsoleApplication.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:push\\(\\)\\.$#"
+			count: 1
+			path: Install/WebApplication.php
+
+		-
 			message: "#^Call to an undefined method phpOMS\\\\Router\\\\RouterInterface\\:\\:add\\(\\)\\.$#"
 			count: 2
 			path: Install/WebApplication.php
@@ -408,11 +413,6 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/Employee.php
 
 		-
-			message: "#^Static property Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeMapper\\:\\:\\$columns \\(array\\<string, array\\<string, bool\\|string\\>\\>\\) does not accept default value of type array\\<string, array\\<string, array\\<string, true\\>\\|string\\>\\>\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/EmployeeMapper.php
-
-		-
 			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool has unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool as its type\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
@@ -683,11 +683,6 @@ parameters:
 			path: Modules/Tag/Controller/ApiController.php
 
 		-
-			message: "#^Array has 2 duplicate keys with value 'tag_color' \\('tag_color', 'tag_color'\\)\\.$#"
-			count: 1
-			path: Modules/Tag/Models/TagMapper.php
-
-		-
 			message: "#^PHPDoc tag @return with type void is incompatible with native type int\\.$#"
 			count: 1
 			path: Modules/Tasks/Models/RelationAbstract.php
@@ -803,6 +798,11 @@ parameters:
 			path: Web/Api/Application.php
 
 		-
+			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:push\\(\\)\\.$#"
+			count: 1
+			path: Web/WebApplication.php
+
+		-
 			message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
 			count: 2
 			path: phpOMS/Algorithm/JobScheduling/Weighted.php
@@ -851,11 +851,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$node of static method phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointSearch\\:\\:jumpDiagonalNoObstacle\\(\\) expects phpOMS\\\\Algorithm\\\\PathFinding\\\\JumpPointNode\\|null, phpOMS\\\\Algorithm\\\\PathFinding\\\\Node\\|null given\\.$#"
 			count: 3
 			path: phpOMS/Algorithm/PathFinding/JumpPointSearch.php
-
-		-
-			message: "#^Binary operation \"\\+\\=\" between array\\<int\\|string, mixed\\> and array\\|false results in an error\\.$#"
-			count: 1
-			path: phpOMS/Config/SettingsAbstract.php
 
 		-
 			message: "#^Function setcookie invoked with 8 parameters, 1\\-7 required\\.$#"
@@ -998,9 +993,9 @@ parameters:
 			path: phpOMS/Math/Statistic/MeasureOfDispersion.php
 
 		-
-			message: "#^Method phpOMS\\\\Message\\\\Console\\\\Request\\:\\:getMethod\\(\\) should return string but returns array\\|string\\.$#"
+			message: "#^Method phpOMS\\\\Message\\\\Console\\\\ConsoleRequest\\:\\:getMethod\\(\\) should return string but returns array\\|string\\.$#"
 			count: 1
-			path: phpOMS/Message/Console/Request.php
+			path: phpOMS/Message/Console/ConsoleRequest.php
 
 		-
 			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:decode\\(\\) should return string but returns string\\|false\\.$#"
@@ -1046,36 +1041,6 @@ parameters:
 			message: "#^Property phpOMS\\\\Message\\\\Mail\\\\Mail\\:\\:\\$overview \\(string\\) does not accept array\\.$#"
 			count: 1
 			path: phpOMS/Message/Mail/Mail.php
-
-		-
-			message: "#^Class phpOMS\\\\Message\\\\Socket\\\\Request constructor invoked with 1 parameter, 0 required\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/PacketManager.php
-
-		-
-			message: "#^Call to static method stringify\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\StringUtils\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
-			message: "#^Class phpOMS\\\\Message\\\\Socket\\\\View not found\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
-			message: "#^Call to method toArray\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\View\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
-			message: "#^Call to static method getInstance\\(\\) on an unknown class phpOMS\\\\Message\\\\Socket\\\\FileLogger\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
-
-		-
-			message: "#^Access to constant MSG_FULL on an unknown class phpOMS\\\\Message\\\\Socket\\\\FileLogger\\.$#"
-			count: 1
-			path: phpOMS/Message/Socket/Response.php
 
 		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"

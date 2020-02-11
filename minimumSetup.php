@@ -12,9 +12,9 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../phpOMS/Autoloader.php';
 
 use Install\WebApplication;
-use phpOMS\Message\Http\Request;
+use phpOMS\Message\Http\HttpRequest;
 use phpOMS\Message\Http\RequestMethod;
-use phpOMS\Message\Http\Response;
+use phpOMS\Message\Http\HttpResponse;
 use phpOMS\Uri\Http;
 
 $config   = [
@@ -131,8 +131,8 @@ $db->exec('DROP DATABASE IF EXISTS ' . $config['db']['core']['masters']['admin']
 $db->exec('CREATE DATABASE IF NOT EXISTS ' . $config['db']['core']['masters']['admin']['database']);
 $db = null;
 
-$response = new Response();
-$request  = new Request(new Http(''));
+$response = new HttpResponse();
+$request  = new HttpRequest(new Http(''));
 $request->setMethod(RequestMethod::POST);
 
 $request->setData('dbhost', $config['db']['core']['masters']['admin']['host']);
