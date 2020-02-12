@@ -1,20 +1,20 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Remove old install and setup database.
  *
  * This script is usefull when you want to manually install the app without resetting an old database/app or new empty database.
  */
-ini_set('memory_limit', '2048M');
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+\ini_set('memory_limit', '2048M');
+\ini_set('display_errors', 1);
+\ini_set('display_startup_errors', 1);
+\error_reporting(\E_ALL);
 
 require_once __DIR__ . '/../phpOMS/Autoloader.php';
 
 use Install\WebApplication;
 use phpOMS\Message\Http\HttpRequest;
-use phpOMS\Message\Http\RequestMethod;
 use phpOMS\Message\Http\HttpResponse;
+use phpOMS\Message\Http\RequestMethod;
 use phpOMS\Uri\HttpUri;
 
 $config   = [
@@ -118,7 +118,7 @@ $config   = [
         'en',
     ],
     'apis'     => [
-    ]
+    ],
 ];
 
 // Reset database
