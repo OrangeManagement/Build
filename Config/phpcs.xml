@@ -199,7 +199,7 @@
     <properties>
         <property name="ignoreNewlines" value="true"/>
     </properties>
-    <exclude-pattern>*Http.js</exclude-pattern><!-- Regex false positive -->
+    <exclude-pattern>*HttpUri.js</exclude-pattern><!-- Regex false positive -->
 </rule>
 <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
 <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
