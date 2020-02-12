@@ -23,66 +23,6 @@ parameters:
 			path: Install/WebApplication.php
 
 		-
-			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:addEvent\\(\\) should return int but returns int\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Calendar.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Calendar.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Calendar\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Calendar.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Event.php
-
-		-
-			message: "#^Cannot call method setCreatedBy\\(\\) on int\\|Modules\\\\Calendar\\\\Models\\\\Schedule\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Event.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getLocation\\(\\) should return phpOMS\\\\Stdlib\\\\Base\\\\Location but returns phpOMS\\\\Stdlib\\\\Base\\\\Location\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Event.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Event\\:\\:getSchedule\\(\\) should return Modules\\\\Calendar\\\\Models\\\\Schedule but returns int\\|Modules\\\\Calendar\\\\Models\\\\Schedule\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Event.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Schedule\\:\\:getStart\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Schedule.php
-
-		-
-			message: "#^Parameter \\#1 \\$message of class InvalidArgumentException constructor expects string, int given\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Schedule.php
-
-		-
-			message: "#^Method Modules\\\\Calendar\\\\Models\\\\Schedule\\:\\:getEnd\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/Calendar/Models/Schedule.php
-
-		-
 			message: "#^Access to an undefined property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$taxId\\.$#"
 			count: 2
 			path: Modules/ClientManagement/Models/Client.php
@@ -111,11 +51,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
 			count: 1
 			path: Modules/Draw/Controller/ApiController.php
-
-		-
-			message: "#^Method Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/EventManagement/Models/Event.php
 
 		-
 			message: "#^Property Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Importer\\:\\:\\$remote has unknown class Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\ConnectionInterface as its type\\.$#"
@@ -343,16 +278,6 @@ parameters:
 			path: Modules/Helper/Controller/ApiController.php
 
 		-
-			message: "#^Property Modules\\\\Helper\\\\Models\\\\Report\\:\\:\\$template has unknown class Modules\\\\Helper\\\\Models\\\\Media as its type\\.$#"
-			count: 1
-			path: Modules/Helper/Models/Report.php
-
-		-
-			message: "#^Property Modules\\\\Helper\\\\Models\\\\Template\\:\\:\\$source has unknown class Modules\\\\Helper\\\\Models\\\\Media as its type\\.$#"
-			count: 1
-			path: Modules/Helper/Models/Template.php
-
-		-
 			message: "#^Parameter \\#1 \\$profile of class Modules\\\\HumanResourceManagement\\\\Models\\\\Employee constructor expects int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Profile\\|null, Modules\\\\Profile\\\\Models\\\\Profile given\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Controller/ApiController.php
@@ -573,33 +498,8 @@ parameters:
 			path: Modules/Profile/Models/Profile.php
 
 		-
-			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$media has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Media as its type\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
 			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$tasks has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Tasks as its type\\.$#"
 			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedias\\(\\) has invalid type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Parameter \\$media of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:addMedia\\(\\) has invalid typehint type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Call to method getId\\(\\) on an unknown class Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
-			count: 2
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\ProjectManagement\\\\Models\\\\Media\\>\\) does not accept int\\|Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
-			count: 2
 			path: Modules/ProjectManagement/Models/Project.php
 
 		-
@@ -614,16 +514,6 @@ parameters:
 
 		-
 			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getTask\\(\\) should return Modules\\\\Tasks\\\\Models\\\\Task but returns Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\|Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedia\\(\\) has invalid type Modules\\\\ProjectManagement\\\\Models\\\\Media\\.$#"
-			count: 2
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getMedia\\(\\) should return Modules\\\\ProjectManagement\\\\Models\\\\Media but returns Modules\\\\ProjectManagement\\\\Models\\\\Media\\|Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
 			count: 1
 			path: Modules/ProjectManagement/Models/Project.php
 
