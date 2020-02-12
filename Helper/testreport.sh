@@ -1,10 +1,10 @@
 #!/bin/bash
 
-php phpcs.phar ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
 php phpcs.phar ./ --standard="Build/Config/phpcs.xml"
+php phpcs.phar ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
 
-php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 7 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 7 -c Build/Config/phpstan.neon ./
+php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 7 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 
 # Remove empty lines and lines with warnings which corrupt the json format
 sed -i '/^$/d' Build/test/phpstan.json
