@@ -2006,7 +2006,6 @@ return [
     'phpOMS\tests\Utils\PermutationTest:testIsPermutation' => ['description' => 'Two string can be checked if they are a permutation of each other', 'type' => 'framework'],
     'phpOMS\tests\Utils\PermutationTest:testIsPalindrome' => ['description' => 'A string can be checked if it is a palindrome', 'type' => 'framework'],
     'phpOMS\tests\Utils\PermutationTest:testPermutate' => ['description' => 'An array can be permuted with a permutation key', 'type' => 'framework'],
-    'phpOMS\tests\Utils\PermutationTest:testWrongPermuteParameterType' => ['description' => 'A invalid permutation type throws a InvalidArgumentException', 'type' => 'framework'],
     'phpOMS\tests\Utils\PermutationTest:testWrongPermuteKeyLength' => ['description' => 'A none-existing permutation key throws a OutOfBoundsException', 'type' => 'framework'],
 
     'phpOMS\tests\Utils\StringCompareTest' => ['description' => 'String comparison / dictionary', 'type' => 'framework'],
