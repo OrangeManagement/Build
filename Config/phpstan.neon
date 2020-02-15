@@ -33,3 +33,8 @@ parameters:
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
         - '#^Strict comparison using === between[.]*#'
+        - '#expects phpOMS\\Algorithm\\PathFinding\\JumpPointNode\\|null, phpOMS\\Algorithm\\PathFinding\\Node\\|null given#'
+        - '#should return array<phpOMS\\Algorithm\\PathFinding\\Node> but returns array<int, phpOMS\\Algorithm\\PathFinding\\Node\\|null#'
+        -
+          message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
+          path: *Algorithm/JobScheduling/Weighted.php
