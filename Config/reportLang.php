@@ -1153,6 +1153,13 @@ return [
     'phpOMS\tests\Message\Http\HttpRequestTest:testToStringData' => ['description' => 'A request with a path and manually added data can be correctly casted to a string', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\HttpRequestTest:testToStringGetData' => ['description' => 'A request with a path, query parameters and manually added data can be correctly casted to a string', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\HttpRequestTest:testRestRequest' => ['description' => 'A rest request can be made from a request and the result can be read', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testPostData' => ['description' => 'A request can be made with post data', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testJsonData' => ['description' => 'A request can be made with json data', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testMultipartData' => ['description' => 'A request can be made with multipart data', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testLocale' => ['description' => 'If no locale can be identified en_US is returned', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testMobile' => ['description' => 'A none-mobile request is recognized as none-mobile', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testOS' => ['description' => 'If the OS type is unknown a unknwon OS type is returned', 'type' => 'framework'],
+    'phpOMS\tests\Message\Http\HttpRequestTest:testBrowser' => ['description' => 'If the browser type is unknown a unknwon browser type is returned', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\HttpRequestTest:testInvalidHttpsPort' => ['description' => 'A invalid https port throws a OutOfRangeException', 'type' => 'framework'],
     'phpOMS\tests\Message\Http\HttpRequestTest:testInvalidRouteVerb' => ['description' => 'A Invalid route verb throws a Exception', 'type' => 'framework'],
 
