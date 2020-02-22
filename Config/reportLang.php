@@ -2321,4 +2321,38 @@ return [
     'Modules\tests\Helper\Models\TemplateMapperTest' => ['description' => 'Template database mapper', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateMapperTest:testCR' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateMapperTest:testNewest' => ['description' => 'The newest model can be read from the database', 'type' => 'module'],
+
+    // models
+    'Modules\tests\Knowledgebase\Models\WikiAppTest' => ['description' => 'Wiki application', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiAppTest:testDefault' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiAppTest:testNameInputOutput' => ['description' => 'The name can be correctly set and returned', 'type' => 'module'],
+
+    'Modules\tests\Knowledgebase\Models\WikiAppMapperTest' => ['description' => 'Wiki application mapper', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiAppMapperTest:testCR' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest' => ['description' => 'Wiki category', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest:testDefault' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest:testAppInputOutput' => ['description' => 'The application can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest:testNameInputOutput' => ['description' => 'The name can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest:testPathInputOutput' => ['description' => 'The path can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryTest:testParentInputOutput' => ['description' => 'The parent can be correctly set and returned', 'type' => 'module'],
+
+    'Modules\tests\Knowledgebase\Models\WikiCategoryMapperTest' => ['description' => 'Wiki category mapper', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryMapperTest:testCR' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiCategoryMapperTest:testChildCR' => ['description' => 'The model can be created and read from the database with a parent category', 'type' => 'module'],
+
+    'Modules\tests\Knowledgebase\Models\WikiDocTest' => ['description' => 'Wiki document', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testDefault' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testAppInputOutput' => ['description' => 'The application can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testNameInputOutput' => ['description' => 'The name can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testDocInputOutput' => ['description' => 'The content can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testDocRawInputOutput' => ['description' => 'The raw content can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testStatusInputOutput' => ['description' => 'The status can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testCategoryInputOutput' => ['description' => 'The category can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testLanguageInputOutput' => ['description' => 'The language can be correctly set and returned', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocTest:testTagInputOutput' => ['description' => 'A tag can be correctly added and returned', 'type' => 'module'],
+
+    'Modules\tests\Knowledgebase\Models\WikiDocMapperTest' => ['description' => 'Wiki document mapper', 'type' => 'module'],
+    'Modules\tests\Knowledgebase\Models\WikiDocMapperTest:testCR' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
+
 ];
