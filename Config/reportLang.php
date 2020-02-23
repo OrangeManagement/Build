@@ -2306,6 +2306,7 @@ return [
 
     'Modules\tests\Helper\Models\TemplateTest' => ['description' => 'Template model', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateTest:testDefault' => ['description' => 'The model has the expected default values after initialization', 'type' => 'module'],
+    'Modules\tests\Helper\Models\TemplateTest:testUnitInputOutput' => ['description' => 'The unit can be set and returned correctly', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateTest:testCreatedByInputOutput' => ['description' => 'The creator can be set and returned correctly', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateTest:testNameInputOutput' => ['description' => 'The title can be set and returned correctly', 'type' => 'module'],
     'Modules\tests\Helper\Models\TemplateTest:testStatusInputOutput' => ['description' => 'The status can be set and returned correctly', 'type' => 'module'],
