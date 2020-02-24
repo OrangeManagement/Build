@@ -13,7 +13,7 @@ for FILE in $(git diff --cached --name-only); do
 
     # Fixes
     if [[ "$FILE" =~ ^.+(php)$ ]]; then
-        $(phpcsfix "$FILE")
+        phpcsfix "$FILE"
     fi
 
     # Filename
