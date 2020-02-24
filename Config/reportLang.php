@@ -1226,12 +1226,12 @@ return [
     'phpOMS\tests\Model\Html\MetaTest:testNameInputOutput' => ['description' => 'A name can be set and returned', 'type' => 'framework'],
     'phpOMS\tests\Model\Html\MetaTest:testRender' => ['description' => 'The meta data can be rendered', 'type' => 'framework'],
 
-    'phpOMS\tests\Module\InfoManagerTest' => ['description' => 'Module info file manager'],
-    'phpOMS\tests\Module\InfoManagerTest:testLoad' => ['description' => 'A info file can be correctly loaded', 'type' => 'framework'],
-    'phpOMS\tests\Module\InfoManagerTest:testChange' => ['description' => 'A info file can be modified', 'type' => 'framework'],
-    'phpOMS\tests\Module\InfoManagerTest:testInvalidPathLoad' => ['description' => 'A invalid info file path load throws a PathException', 'type' => 'framework'],
-    'phpOMS\tests\Module\InfoManagerTest:testInvalidPathUpdate' => ['description' => 'A invalid info file path update throws a PathException', 'type' => 'framework'],
-    'phpOMS\tests\Module\InfoManagerTest:testInvalidDataSet' => ['description' => 'A invalid change data throws a InvalidArgumentException', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleInfoTest' => ['description' => 'Module info file manager'],
+    'phpOMS\tests\Module\ModuleInfoTest:testLoad' => ['description' => 'A info file can be correctly loaded', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleInfoTest:testChange' => ['description' => 'A info file can be modified', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleInfoTest:testInvalidPathLoad' => ['description' => 'A invalid info file path load throws a PathException', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleInfoTest:testInvalidPathUpdate' => ['description' => 'A invalid info file path update throws a PathException', 'type' => 'framework'],
+    'phpOMS\tests\Module\ModuleInfoTest:testInvalidDataSet' => ['description' => 'A invalid change data throws a InvalidArgumentException', 'type' => 'framework'],
 
     'phpOMS\tests\Module\ModuleManagerTest' => ['description' => 'Manager for the module system'],
     'phpOMS\tests\Module\ModuleManagerTest:testAttributes' => ['description' => 'The module manager has the expected attributes', 'type' => 'framework'],
@@ -2162,9 +2162,9 @@ return [
     'phpOMS\tests\Views\PaginationViewTest:testPageInputOutput' => ['description' => 'The page can be set and returned', 'type' => 'framework'],
     'phpOMS\tests\Views\PaginationViewTest:testResultsInputOutput' => ['description' => 'The results can be set and returned', 'type' => 'framework'],
 
-    'phpOMS\tests\ApplicationAbstractTest' => ['description' => 'Application abstraction', 'type' => 'framework'],
-    'phpOMS\tests\ApplicationAbstractTest:testInputOutput' => ['description' => 'Application values can be set and returned', 'type' => 'framework'],
-    'phpOMS\tests\ApplicationAbstractTest:testInvalidInputOutput' => ['description' => 'Application values cannot be overwritten', 'type' => 'framework'],
+    'phpOMS\tests\Application\ApplicationAbstractTest' => ['description' => 'Application abstraction', 'type' => 'framework'],
+    'phpOMS\tests\Application\ApplicationAbstractTest:testInputOutput' => ['description' => 'Application values can be set and returned', 'type' => 'framework'],
+    'phpOMS\tests\Application\ApplicationAbstractTest:testInvalidInputOutput' => ['description' => 'Application values cannot be overwritten', 'type' => 'framework'],
 
     'phpOMS\tests\AutoloaderTest' => ['description' => 'Class autoloader', 'type' => 'framework'],
     'phpOMS\tests\AutoloaderTest:testAutoloader' => ['description' => 'Classes can be checked for existence', 'type' => 'framework'],
