@@ -29,6 +29,7 @@ parameters:
         - */Hooks/*
         - */node_modules/*
         - */Modules/Shop/Admin/Install/Application/*
+        - */Install/Application*
     ignoreErrors:
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
