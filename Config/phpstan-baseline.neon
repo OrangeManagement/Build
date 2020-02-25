@@ -426,6 +426,11 @@ parameters:
 			path: Modules/DatabaseEditor/Models/Table.php
 
 		-
+			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
+			count: 1
+			path: Modules/Draw/Controller/ApiController.php
+
+		-
 			message: "#^Method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: Modules/Draw/Models/DrawImage.php
@@ -606,6 +611,11 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/StaffList.php
 
 		-
+			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getList\\(\\) should return array but returns array\\<string, mixed\\>\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
 			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getStats\\(\\) should return array but return statement is missing\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
@@ -621,7 +631,17 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
+			message: "#^Cannot call method getStatus\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
 			message: "#^Cannot call method getId\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot call method getSession\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
@@ -877,6 +897,11 @@ parameters:
 
 		-
 			message: "#^PHPDoc tag @param for parameter \\$outputPath with type string\\|null is not subtype of native type string\\.$#"
+			count: 1
+			path: Modules/Media/Models/Media.php
+
+		-
+			message: "#^Parameter \\#1 \\$known_string of function hash_equals expects string, string\\|null given\\.$#"
 			count: 1
 			path: Modules/Media/Models/Media.php
 
@@ -1461,12 +1486,32 @@ parameters:
 			path: Modules/TestModule/Controller/Controller.php
 
 		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$creator has unknown class phpOMS\\\\Models\\\\User as its type\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
 		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreated\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
 			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) has invalid type phpOMS\\\\Models\\\\User\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) should return phpOMS\\\\Models\\\\User but returns phpOMS\\\\Models\\\\User\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
@@ -1479,6 +1524,16 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$prices\\.$#"
 			count: 3
 			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getDelivered\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getSender\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
 			message: "#^Property Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:\\$id has no typehint specified\\.$#"
@@ -1544,6 +1599,16 @@ parameters:
 			message: "#^Method phpOMS\\\\Account\\\\PermissionAbstract\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: phpOMS/Account/PermissionAbstract.php
+
+		-
+			message: "#^Offset 0 does not exist on array\\(int, int\\)\\|null\\.$#"
+			count: 6
+			path: phpOMS/Algorithm/Maze/MazeGenerator.php
+
+		-
+			message: "#^Offset 1 does not exist on array\\(int, int\\)\\|null\\.$#"
+			count: 5
+			path: phpOMS/Algorithm/Maze/MazeGenerator.php
 
 		-
 			message: "#^Method Model\\\\CoreSettings\\:\\:getOptions\\(\\) has no return typehint specified\\.$#"
@@ -1771,6 +1836,11 @@ parameters:
 			path: phpOMS/DataStorage/Database/Query/Builder.php
 
 		-
+			message: "#^Offset int does not exist on array\\|string\\|null\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/Query/Builder.php
+
+		-
 			message: "#^Instanceof between array and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Query/Builder.php
@@ -1929,6 +1999,11 @@ parameters:
 			message: "#^Variable \\$value in PHPDoc tag @var does not match any variable in the foreach loop\\: \\$word$#"
 			count: 1
 			path: phpOMS/Math/Stochastic/NaiveBayesClassifier.php
+
+		-
+			message: "#^Offset 'Content\\-Disposition' does not exist on array\\<string, array\\<int\\|string, mixed\\>\\>\\|null\\.$#"
+			count: 1
+			path: phpOMS/Message/Http/HttpRequest.php
 
 		-
 			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:decode\\(\\) should return string but returns string\\|false\\.$#"
@@ -2521,6 +2596,11 @@ parameters:
 			path: phpOMS/Utils/Converter/File.php
 
 		-
+			message: "#^Offset 0 does not exist on array\\<int, mixed\\>\\|null\\.$#"
+			count: 2
+			path: phpOMS/Utils/Encoding/Huffman/Dictionary.php
+
+		-
 			message: "#^Method phpOMS\\\\Utils\\\\IO\\\\Csv\\\\CsvInterface\\:\\:exportCsv\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: phpOMS/Utils/IO/Csv/CsvInterface.php
@@ -2549,4 +2629,19 @@ parameters:
 			message: "#^Method phpOMS\\\\Utils\\\\Parser\\\\Markdown\\\\Markdown\\:\\:inlineSpecialCharacter\\(\\) should return array\\|null but return statement is missing\\.$#"
 			count: 1
 			path: phpOMS/Utils/Parser/Markdown/Markdown.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
+			count: 1
+			path: phpOMS/Utils/Parser/Markdown/Markdown.php
+
+		-
+			message: "#^Offset 0 does not exist on array\\|null\\.$#"
+			count: 1
+			path: phpOMS/Utils/RnG/Phone.php
+
+		-
+			message: "#^Offset 1 does not exist on array\\|null\\.$#"
+			count: 1
+			path: phpOMS/Utils/RnG/Phone.php
 
