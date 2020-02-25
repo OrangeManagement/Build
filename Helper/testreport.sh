@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir Build/test
+
 php phpcs.phar ./ --standard="Build/Config/phpcs.xml"
 php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 7 -c Build/Config/phpstan.neon ./
 
