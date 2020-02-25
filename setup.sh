@@ -110,14 +110,14 @@ echo "#################################################"
 wget -q --tries=2 -nc https://getcomposer.org/composer.phar
 wget -q --tries=2 -nc https://phar.phpunit.de/phploc.phar
 wget -q --tries=2 -nc https://phar.phpunit.de/phpunit.phar
-wget -q --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.0/phpcs.phar
+wget -q --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.4/phpcs.phar
 #wget -q --tries=2 -nc http://static.phpmd.org/php/latest/phpmd.phar no longer available
 wget -q --tries=2 -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
 #wget -q --tries=2 -nc http://static.pdepend.org/php/latest/pdepend.phar
 wget -q --tries=2 -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-wget -q --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.11.16/phpstan.phar
+wget -q --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.12.11/phpstan.phar
 wget -q --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
-wget -q --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.13.1/php-cs-fixer.phar
+wget -q --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar
 wget -q --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
 wget -q --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
 wget -q --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc3/ testreportgenerator.phar
