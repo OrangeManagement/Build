@@ -2634,14 +2634,3 @@ parameters:
 			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
 			count: 1
 			path: phpOMS/Utils/Parser/Markdown/Markdown.php
-
-		-
-			message: "#^Offset 0 does not exist on array\\|null\\.$#"
-			count: 1
-			path: phpOMS/Utils/RnG/Phone.php
-
-		-
-			message: "#^Offset 1 does not exist on array\\|null\\.$#"
-			count: 1
-			path: phpOMS/Utils/RnG/Phone.php
-
