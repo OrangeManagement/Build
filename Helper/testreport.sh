@@ -3,10 +3,10 @@
 mkdir -p Build/test
 
 php phpcs.phar ./ --standard="Build/Config/phpcs.xml"
-php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon ./
+./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon ./
 
 php phpcs.phar ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
-php phpstan.phar analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
+./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 
 # Remove empty lines and lines with warnings which corrupt the json format
 sed -i '/^$/d' Build/test/phpstan.json

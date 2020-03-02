@@ -21,6 +21,11 @@ parameters:
 			path: Install/ConsoleApplication.php
 
 		-
+			message: "#^Constant fase not found\\.$#"
+			count: 1
+			path: Install/InstallAbstract.php
+
+		-
 			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
 			count: 1
 			path: Install/InstallAbstract.php
@@ -49,31 +54,6 @@ parameters:
 			message: "#^Property Modules\\\\Accounting\\\\Models\\\\IncomeStatement\\:\\:\\$incomeStatement has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Accounting/Models/IncomeStatement.php
-
-		-
-			message: "#^Method Modules\\\\Admin\\\\Models\\\\Module\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Admin/Models/Module.php
-
-		-
-			message: "#^Property Modules\\\\Admin\\\\Theme\\\\Backend\\\\Components\\\\GroupTagSelector\\\\GroupTagSelectorPopupView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Admin/Theme/Backend/Components/GroupTagSelector/GroupTagSelectorPopupView.php
-
-		-
-			message: "#^Property Modules\\\\Admin\\\\Theme\\\\Backend\\\\Components\\\\GroupTagSelector\\\\GroupTagSelectorView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Admin/Theme/Backend/Components/GroupTagSelector/GroupTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Admin\\\\Theme\\\\Backend\\\\Components\\\\GroupTagSelector\\\\GroupTagSelectorView\\:\\:\\$isRequired has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Admin/Theme/Backend/Components/GroupTagSelector/GroupTagSelectorView.php
-
-		-
-			message: "#^Method Modules\\\\Auditor\\\\Models\\\\Audit\\:\\:__construct\\(\\) has parameter \\$account with no typehint specified\\.$#"
-			count: 1
-			path: Modules/Auditor/Models/Audit.php
 
 		-
 			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$createdBy has no typehint specified\\.$#"
@@ -211,11 +191,6 @@ parameters:
 			path: Modules/Billing/Models/Invoice.php
 
 		-
-			message: "#^Method Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
 			message: "#^Property Modules\\\\Billing\\\\Models\\\\InvoiceElement\\:\\:\\$order has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Billing/Models/InvoiceElement.php
@@ -316,19 +291,9 @@ parameters:
 			path: Modules/Billing/Models/InvoiceElement.php
 
 		-
-			message: "#^Method Modules\\\\Billing\\\\Models\\\\InvoiceElement\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/InvoiceElement.php
-
-		-
 			message: "#^Property Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView\\:\\:\\$calendar has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Calendar/Theme/Backend/Components/Calendar/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Event\\\\BaseView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Calendar/Theme/Backend/Components/Event/BaseView.php
 
 		-
 			message: "#^Property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$salesRep has no typehint specified\\.$#"
@@ -366,21 +331,6 @@ parameters:
 			path: Modules/Comments/Models/Comment.php
 
 		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$title has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$content has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$contentRaw has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
 			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$ref has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Comments/Models/Comment.php
@@ -394,16 +344,6 @@ parameters:
 			message: "#^Property Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\:\\:\\$parent \\(int\\|Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\|null\\) does not accept string\\.$#"
 			count: 1
 			path: Modules/CostObjectAccounting/Models/CostObject.php
-
-		-
-			message: "#^Method Modules\\\\Dashboard\\\\Models\\\\DashboardBoard\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Dashboard/Models/DashboardBoard.php
-
-		-
-			message: "#^Method Modules\\\\Dashboard\\\\Models\\\\DashboardComponent\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Dashboard/Models/DashboardComponent.php
 
 		-
 			message: "#^Property Modules\\\\DatabaseEditor\\\\Models\\\\Database\\:\\:\\$name has no typehint specified\\.$#"
@@ -424,21 +364,6 @@ parameters:
 			message: "#^Property Modules\\\\DatabaseEditor\\\\Models\\\\Table\\:\\:\\$fields has no typehint specified\\.$#"
 			count: 1
 			path: Modules/DatabaseEditor/Models/Table.php
-
-		-
-			message: "#^Parameter \\#1 \\$media of static method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:fromMedia\\(\\) expects Modules\\\\Media\\\\Models\\\\Media, Modules\\\\Media\\\\Models\\\\Media\\|null given\\.$#"
-			count: 1
-			path: Modules/Draw/Controller/ApiController.php
-
-		-
-			message: "#^Method Modules\\\\Draw\\\\Models\\\\DrawImage\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Draw/Models/DrawImage.php
-
-		-
-			message: "#^Method Modules\\\\Editor\\\\Models\\\\EditorDoc\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Editor/Models/EditorDoc.php
 
 		-
 			message: "#^Property Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:\\$tasks has no typehint specified\\.$#"
@@ -506,94 +431,9 @@ parameters:
 			path: Modules/Exchange/Interfaces/GSD/Importer.php
 
 		-
-			message: "#^Method Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Model\\\\GSDCostCenter\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostCenter.php
-
-		-
-			message: "#^Method Modules\\\\Exchange\\\\Interfaces\\\\GSD\\\\Model\\\\GSDCostObject\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Exchange/Interfaces/GSD/Model/GSDCostObject.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:setDownloadable\\(\\)\\.$#"
 			count: 1
 			path: Modules/Helper/Controller/ApiController.php
-
-		-
-			message: "#^Method Modules\\\\Helper\\\\Models\\\\Report\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Helper/Models/Report.php
-
-		-
-			message: "#^Method Modules\\\\Helper\\\\Models\\\\Template\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Helper/Models/Template.php
-
-		-
-			message: "#^Property Modules\\\\Helper\\\\Views\\\\HelperView\\:\\:\\$dataSets has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Helper/Views/HelperView.php
-
-		-
-			message: "#^Property Modules\\\\Helper\\\\Views\\\\HelperView\\:\\:\\$dataSet has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Helper/Views/HelperView.php
-
-		-
-			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:\\$image has unknown class Modules\\\\HumanResourceManagement\\\\Models\\\\Media as its type\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getImage\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getImage\\(\\) should return int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Media but returns int\\|Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\|Modules\\\\Media\\\\Models\\\\NullMedia\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Parameter \\$image of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:setImage\\(\\) has invalid typehint type Modules\\\\HumanResourceManagement\\\\Models\\\\Media\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getNewestEducationHistory\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeEducationHistory\\.$#"
-			count: 2
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Instantiated class Modules\\\\HumanResourceManagement\\\\Models\\\\NullEmployeeEducationHistory not found\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Return typehint of method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:getNewestWorkHistory\\(\\) has invalid type Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeWorkHistory\\.$#"
-			count: 2
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Instantiated class Modules\\\\HumanResourceManagement\\\\Models\\\\NullEmployeeWorkHistory not found\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\Employee\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/Employee.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeHistory\\:\\:__construct\\(\\) has parameter \\$employee with no typehint specified\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/EmployeeHistory.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\EmployeeHistory\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/HumanResourceManagement/Models/EmployeeHistory.php
 
 		-
 			message: "#^Property Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:\\$dbPool has unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool as its type\\.$#"
@@ -608,11 +448,6 @@ parameters:
 		-
 			message: "#^Call to method get\\(\\) on an unknown class phpOMS\\\\DataStorage\\\\Database\\\\Pool\\.$#"
 			count: 6
-			path: Modules/HumanResourceManagement/Models/StaffList.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getList\\(\\) should return array but returns array\\<string, mixed\\>\\|null\\.$#"
-			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
 
 		-
@@ -631,17 +466,7 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
-			message: "#^Cannot call method getStatus\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
-
-		-
 			message: "#^Cannot call method getId\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
-
-		-
-			message: "#^Cannot call method getSession\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
@@ -674,21 +499,6 @@ parameters:
 			message: "#^Cannot call method getDatetime\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\.$#"
 			count: 2
 			path: Modules/HumanResourceTimeRecording/Models/Session.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Models/Session.php
-
-		-
-			message: "#^Method Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Models/SessionElement.php
-
-		-
-			message: "#^Variable \\$session in PHPDoc tag @var does not match assigned variable \\$sessions\\.$#"
-			count: 1
-			path: Modules/HumanResourceTimeRecording/Models/SessionMapper.php
 
 		-
 			message: "#^Property Modules\\\\ItemManagement\\\\Models\\\\Item\\:\\:\\$number has no typehint specified\\.$#"
@@ -846,16 +656,6 @@ parameters:
 			path: Modules/Kanban/Models/KanbanColumn.php
 
 		-
-			message: "#^Method Modules\\\\Knowledgebase\\\\Models\\\\WikiApp\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Knowledgebase/Models/WikiApp.php
-
-		-
-			message: "#^Method Modules\\\\Knowledgebase\\\\Models\\\\WikiCategory\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Knowledgebase/Models/WikiCategory.php
-
-		-
 			message: "#^Property Modules\\\\Marketing\\\\Models\\\\Promotion\\:\\:\\$media has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Marketing/Models/Promotion.php
@@ -896,131 +696,6 @@ parameters:
 			path: Modules/Media/Models/Collection.php
 
 		-
-			message: "#^PHPDoc tag @param for parameter \\$outputPath with type string\\|null is not subtype of native type string\\.$#"
-			count: 1
-			path: Modules/Media/Models/Media.php
-
-		-
-			message: "#^Parameter \\#1 \\$known_string of function hash_equals expects string, string\\|null given\\.$#"
-			count: 1
-			path: Modules/Media/Models/Media.php
-
-		-
-			message: "#^Method Modules\\\\Media\\\\Models\\\\Media\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Models/Media.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\InlinePreview\\\\BaseView\\:\\:\\$form has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/InlinePreview/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\InlinePreview\\\\BaseView\\:\\:\\$virtualPath has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/InlinePreview/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\InlinePreview\\\\BaseView\\:\\:\\$name has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/InlinePreview/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Media\\\\BaseView\\:\\:\\$media has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/Media/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Upload\\\\BaseView\\:\\:\\$form has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/Upload/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Upload\\\\BaseView\\:\\:\\$virtualPath has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/Upload/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Media\\\\Theme\\\\Backend\\\\Components\\\\Upload\\\\BaseView\\:\\:\\$name has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Media/Theme/Backend/Components/Upload/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$pid has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$name has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$type has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$subtype has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$icon has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$uri has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$target has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$action has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$from has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$order has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$parent has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$permissionPerm has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$permissionType has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
-			message: "#^Property Modules\\\\Navigation\\\\Models\\\\NavElement\\:\\:\\$permissionElement has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Navigation/Models/NavElement.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
 			count: 1
 			path: Modules/Navigation/Models/Navigation.php
@@ -1034,91 +709,6 @@ parameters:
 			message: "#^Static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) invoked with 4 parameters, 1 required\\.$#"
 			count: 2
 			path: Modules/News/Controller/ApiController.php
-
-		-
-			message: "#^Method Modules\\\\News\\\\Models\\\\NewsArticle\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/News/Models/NewsArticle.php
-
-		-
-			message: "#^Method Modules\\\\Organization\\\\Models\\\\Department\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Models/Department.php
-
-		-
-			message: "#^Method Modules\\\\Organization\\\\Models\\\\Position\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Models/Position.php
-
-		-
-			message: "#^Method Modules\\\\Organization\\\\Models\\\\Unit\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Models/Unit.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\DepartmentTagSelector\\\\DepartmentTagSelectorPopupView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/DepartmentTagSelector/DepartmentTagSelectorPopupView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\DepartmentTagSelector\\\\DepartmentTagSelectorView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/DepartmentTagSelector/DepartmentTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\DepartmentTagSelector\\\\DepartmentTagSelectorView\\:\\:\\$isRequired has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/DepartmentTagSelector/DepartmentTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\PositionTagSelector\\\\PositionTagSelectorView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/PositionTagSelector/PositionTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\PositionTagSelector\\\\PositionTagSelectorView\\:\\:\\$isRequired has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/PositionTagSelector/PositionTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\UnitTagSelector\\\\UnitTagSelectorPopupView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/UnitTagSelector/UnitTagSelectorPopupView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\UnitTagSelector\\\\UnitTagSelectorView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/UnitTagSelector/UnitTagSelectorView.php
-
-		-
-			message: "#^Property Modules\\\\Organization\\\\Theme\\\\Backend\\\\Components\\\\UnitTagSelector\\\\UnitTagSelectorView\\:\\:\\$isRequired has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Organization/Theme/Backend/Components/UnitTagSelector/UnitTagSelectorView.php
-
-		-
-			message: "#^Method Modules\\\\Profile\\\\Models\\\\Profile\\:\\:getImage\\(\\) should return Modules\\\\Media\\\\Models\\\\Media but returns int\\|Modules\\\\Media\\\\Models\\\\Media\\|null\\.$#"
-			count: 1
-			path: Modules/Profile/Models/Profile.php
-
-		-
-			message: "#^Method Modules\\\\Profile\\\\Models\\\\Profile\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Profile/Models/Profile.php
-
-		-
-			message: "#^Property Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Profile/Theme/Backend/Components/AccountGroupSelector/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView\\:\\:\\$name has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Profile/Theme/Backend/Components/AccountGroupSelector/BaseView.php
-
-		-
-			message: "#^Property Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\BaseView\\:\\:\\$isRequired has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Profile/Theme/Backend/Components/AccountGroupSelector/BaseView.php
 
 		-
 			message: "#^Property Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\PopupView\\:\\:\\$id has no typehint specified\\.$#"
@@ -1436,82 +1026,12 @@ parameters:
 			path: Modules/Surveys/Models/Survey.php
 
 		-
-			message: "#^Method Modules\\\\Tag\\\\Models\\\\Tag\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tag/Models/Tag.php
-
-		-
-			message: "#^Method Modules\\\\Tasks\\\\Models\\\\AccountRelation\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/AccountRelation.php
-
-		-
-			message: "#^Method Modules\\\\Tasks\\\\Models\\\\GroupRelation\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/GroupRelation.php
-
-		-
-			message: "#^Method Modules\\\\Tasks\\\\Models\\\\RelationAbstract\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/RelationAbstract.php
-
-		-
-			message: "#^Method Modules\\\\Tasks\\\\Models\\\\Task\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/Task.php
-
-		-
-			message: "#^Method Modules\\\\Tasks\\\\Models\\\\TaskElement\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/TaskElement.php
-
-		-
-			message: "#^Cannot access offset 0 on array\\|false\\.$#"
-			count: 1
-			path: Modules/Tasks/Models/TaskMapper.php
-
-		-
-			message: "#^Property Modules\\\\Tasks\\\\Theme\\\\Backend\\\\Components\\\\Tasks\\\\ListView\\:\\:\\$tasks has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Theme/Backend/Components/Tasks/ListView.php
-
-		-
-			message: "#^Property Modules\\\\Tasks\\\\Views\\\\TaskView\\:\\:\\$media has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Tasks/Views/TaskView.php
-
-		-
-			message: "#^Method Modules\\\\TestModule\\\\Controller\\\\Controller\\:\\:testEndpoint\\(\\) has parameter \\$data with no typehint specified\\.$#"
-			count: 1
-			path: Modules/TestModule/Controller/Controller.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Arrival.php
-
-		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$creator has unknown class phpOMS\\\\Models\\\\User as its type\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
 		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreated\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
 			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) has invalid type phpOMS\\\\Models\\\\User\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) should return phpOMS\\\\Models\\\\User but returns phpOMS\\\\Models\\\\User\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
@@ -1524,16 +1044,6 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$prices\\.$#"
 			count: 3
 			path: Modules/WarehouseManagement/Models/Article.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getDelivered\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
-
-		-
-			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getSender\\(\\) should return int but returns int\\|null\\.$#"
-			count: 1
-			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
 			message: "#^Property Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:\\$id has no typehint specified\\.$#"
@@ -1586,36 +1096,6 @@ parameters:
 			path: Socket/Socketserver/Application.php
 
 		-
-			message: "#^Method phpOMS\\\\Account\\\\Account\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Account/Account.php
-
-		-
-			message: "#^Method phpOMS\\\\Account\\\\Group\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Account/Group.php
-
-		-
-			message: "#^Method phpOMS\\\\Account\\\\PermissionAbstract\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Account/PermissionAbstract.php
-
-		-
-			message: "#^Offset 0 does not exist on array\\(int, int\\)\\|null\\.$#"
-			count: 6
-			path: phpOMS/Algorithm/Maze/MazeGenerator.php
-
-		-
-			message: "#^Offset 1 does not exist on array\\(int, int\\)\\|null\\.$#"
-			count: 5
-			path: phpOMS/Algorithm/Maze/MazeGenerator.php
-
-		-
-			message: "#^Method Model\\\\CoreSettings\\:\\:getOptions\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: Model/CoreSettings.php
-
-		-
 			message: "#^Function setcookie invoked with 8 parameters, 1\\-7 required\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Cookie/CookieJar.php
@@ -1634,66 +1114,6 @@ parameters:
 			message: "#^Parameter \\#1 \\$dbdata of class phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\SqlServerConnection constructor expects array\\('db' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'login' \\=\\> string, 'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\), array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\) given\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
-
-		-
-			message: "#^Offset 'host' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/MysqlConnection.php
-
-		-
-			message: "#^Offset 'login' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/MysqlConnection.php
-
-		-
-			message: "#^Offset 'password' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/MysqlConnection.php
-
-		-
-			message: "#^Offset 'port' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/MysqlConnection.php
-
-		-
-			message: "#^Offset 'host' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/PostgresConnection.php
-
-		-
-			message: "#^Offset 'login' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/PostgresConnection.php
-
-		-
-			message: "#^Offset 'password' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/PostgresConnection.php
-
-		-
-			message: "#^Offset 'port' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/PostgresConnection.php
-
-		-
-			message: "#^Offset 'host' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/SqlServerConnection.php
-
-		-
-			message: "#^Offset 'login' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/SqlServerConnection.php
-
-		-
-			message: "#^Offset 'password' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/SqlServerConnection.php
-
-		-
-			message: "#^Offset 'port' does not exist on array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string, 'prefix' \\=\\> string\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Connection/SqlServerConnection.php
 
 		-
 			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:createConditionals\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
@@ -1723,11 +1143,6 @@ parameters:
 		-
 			message: "#^Variable \\$columns in PHPDoc tag @var does not exist\\.$#"
 			count: 4
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Unreachable statement \\- code above always terminates\\.$#"
-			count: 2
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
@@ -1831,67 +1246,7 @@ parameters:
 			path: phpOMS/DataStorage/Database/DatabasePool.php
 
 		-
-			message: "#^Unsafe usage of new static\\(\\)\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Offset int does not exist on array\\|string\\|null\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
 			message: "#^Instanceof between array and phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder will always evaluate to false\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:on\\(\\) has parameter \\$boolean with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:on\\(\\) has parameter \\$columns with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:on\\(\\) has parameter \\$operator with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:on\\(\\) has parameter \\$values with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:orOn\\(\\) has parameter \\$columns with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:orOn\\(\\) has parameter \\$operator with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:orOn\\(\\) has parameter \\$values with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:andOn\\(\\) has parameter \\$columns with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:andOn\\(\\) has parameter \\$operator with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:andOn\\(\\) has parameter \\$values with no typehint specified\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/Query/Builder.php
 
@@ -1916,11 +1271,6 @@ parameters:
 			path: phpOMS/DataStorage/Database/Query/Grammar/Grammar.php
 
 		-
-			message: "#^Method phpOMS\\\\Localization\\\\Localization\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Localization/Localization.php
-
-		-
 			message: "#^Method phpOMS\\\\Math\\\\Geometry\\\\ConvexHull\\\\MonotoneChain\\:\\:createConvexHull\\(\\) should return array\\<int, array\\<string, float\\|int\\>\\> but returns array\\<int\\|string, array\\<string, float\\|int\\>\\>\\.$#"
 			count: 1
 			path: phpOMS/Math/Geometry/ConvexHull/MonotoneChain.php
@@ -1931,37 +1281,17 @@ parameters:
 			path: phpOMS/Math/Geometry/ConvexHull/MonotoneChain.php
 
 		-
-			message: "#^Parameter \\#1 \\$matrix of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:setMatrix\\(\\) expects array\\<int, array\\<float\\|int\\>\\>, array\\<int\\|string, array\\<int, mixed\\>\\> given\\.$#"
+			message: "#^Parameter \\#1 \\$matrix of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:setMatrix\\(\\) expects array\\<int, array\\<float\\|int\\>\\>, array\\<int\\|string, array\\<int, \\(float\\|int\\)\\>\\> given\\.$#"
 			count: 1
 			path: phpOMS/Math/Matrix/CholeskyDecomposition.php
 
 		-
-			message: "#^Class phpOMS\\\\Math\\\\Matrix\\\\Matrix implements generic interface ArrayAccess but does not specify its types\\: TKey, TValue$#"
+			message: "#^Parameter \\#1 \\$offset of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetGet\\(\\) expects string, int given\\.$#"
 			count: 1
 			path: phpOMS/Math/Matrix/Matrix.php
 
 		-
-			message: "#^Class phpOMS\\\\Math\\\\Matrix\\\\Matrix implements generic interface Iterator but does not specify its types\\: TKey, TValue$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:current\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetGet\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetGet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:key\\(\\) has no return typehint specified\\.$#"
+			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:key\\(\\) should return string but returns int\\.$#"
 			count: 1
 			path: phpOMS/Math/Matrix/Matrix.php
 
@@ -1971,22 +1301,7 @@ parameters:
 			path: phpOMS/Math/Matrix/Matrix.php
 
 		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetExists\\(\\) has parameter \\$offset with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetSet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetSet\\(\\) has parameter \\$value with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetUnset\\(\\) has parameter \\$offset with no typehint specified\\.$#"
+			message: "#^Parameter \\#1 \\$offset of method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:offsetExists\\(\\) expects string, int given\\.$#"
 			count: 1
 			path: phpOMS/Math/Matrix/Matrix.php
 
@@ -1994,16 +1309,6 @@ parameters:
 			message: "#^Parameter \\#2 \\$offset of function array_slice expects int, float\\|int given\\.$#"
 			count: 1
 			path: phpOMS/Math/Statistic/MeasureOfDispersion.php
-
-		-
-			message: "#^Variable \\$value in PHPDoc tag @var does not match any variable in the foreach loop\\: \\$word$#"
-			count: 1
-			path: phpOMS/Math/Stochastic/NaiveBayesClassifier.php
-
-		-
-			message: "#^Offset 'Content\\-Disposition' does not exist on array\\<string, array\\<int\\|string, mixed\\>\\>\\|null\\.$#"
-			count: 1
-			path: phpOMS/Message/Http/HttpRequest.php
 
 		-
 			message: "#^Method phpOMS\\\\Message\\\\Mail\\\\EmailAbstract\\:\\:decode\\(\\) should return string but returns string\\|false\\.$#"
@@ -2051,11 +1356,6 @@ parameters:
 			path: phpOMS/Message/Mail/Mail.php
 
 		-
-			message: "#^Method phpOMS\\\\Message\\\\ResponseAbstract\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Message/ResponseAbstract.php
-
-		-
 			message: "#^Method phpOMS\\\\Message\\\\Socket\\\\PacketManager\\:\\:handle\\(\\) has parameter \\$client with no typehint specified\\.$#"
 			count: 1
 			path: phpOMS/Message/Socket/PacketManager.php
@@ -2071,67 +1371,7 @@ parameters:
 			path: phpOMS/Message/Socket/SocketHeader.php
 
 		-
-			message: "#^Method phpOMS\\\\Message\\\\UploadedFileInterface\\:\\:getStream\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Message/UploadedFileInterface.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Dom\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Dom.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Dom\\:\\:unserialize\\(\\) has parameter \\$raw with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Dom.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\FormValidation\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/FormValidation.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\FormValidation\\:\\:unserialize\\(\\) has parameter \\$raw with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/FormValidation.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Notify\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Notify.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Notify\\:\\:unserialize\\(\\) has parameter \\$raw with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Notify.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Redirect\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Redirect.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Redirect\\:\\:unserialize\\(\\) has parameter \\$raw with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Redirect.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Reload\\:\\:unserialize\\(\\) has parameter \\$raw with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Reload.php
-
-		-
-			message: "#^Method phpOMS\\\\Model\\\\Message\\\\Reload\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Model/Message/Reload.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\RequestAbstract\\:\\:getHash\\(\\)\\.$#"
-			count: 1
-			path: phpOMS/Module/ModuleManager.php
-
-		-
-			message: "#^Cannot access offset int on array\\<int, string\\>\\|false\\.$#"
 			count: 1
 			path: phpOMS/Module/ModuleManager.php
 
@@ -2209,26 +1449,6 @@ parameters:
 			message: "#^Property phpOMS\\\\Socket\\\\SocketAbstract\\:\\:\\$sock \\(resource\\) does not accept resource\\|false\\.$#"
 			count: 1
 			path: phpOMS/Socket/SocketAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\Stdlib\\\\Base\\\\Address\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Base/Address.php
-
-		-
-			message: "#^Method phpOMS\\\\Stdlib\\\\Base\\\\Location\\:\\:jsonSerialize\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Stdlib/Base/Location.php
-
-		-
-			message: "#^Interface phpOMS\\\\System\\\\File\\\\DirectoryInterface extends generic interface ArrayAccess but does not specify its types\\: TKey, TValue$#"
-			count: 1
-			path: phpOMS/System/File/DirectoryInterface.php
-
-		-
-			message: "#^Interface phpOMS\\\\System\\\\File\\\\DirectoryInterface extends generic interface Iterator but does not specify its types\\: TKey, TValue$#"
-			count: 1
-			path: phpOMS/System/File/DirectoryInterface.php
 
 		-
 			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:parseRawList\\(\\) should return array\\<string, array\\<string, int\\|string\\>\\> but returns array\\<int\\|string, array\\<string, int\\|string\\>\\>\\.$#"
@@ -2596,16 +1816,6 @@ parameters:
 			path: phpOMS/Utils/Converter/File.php
 
 		-
-			message: "#^Offset 0 does not exist on array\\<int, mixed\\>\\|null\\.$#"
-			count: 2
-			path: phpOMS/Utils/Encoding/Huffman/Dictionary.php
-
-		-
-			message: "#^Method phpOMS\\\\Utils\\\\IO\\\\Csv\\\\CsvInterface\\:\\:exportCsv\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: phpOMS/Utils/IO/Csv/CsvInterface.php
-
-		-
 			message: "#^Cannot assign offset string to string\\.$#"
 			count: 2
 			path: phpOMS/Utils/Parser/Markdown/Markdown.php
@@ -2630,7 +1840,3 @@ parameters:
 			count: 1
 			path: phpOMS/Utils/Parser/Markdown/Markdown.php
 
-		-
-			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
-			count: 1
-			path: phpOMS/Utils/Parser/Markdown/Markdown.php
