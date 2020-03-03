@@ -41,6 +41,7 @@ parameters:
         - '#should return array<phpOMS\\Algorithm\\PathFinding\\Node> but returns array<int, phpOMS\\Algorithm\\PathFinding\\Node\|null#'
         - '#^Offset .* does not exist on array.*#'
         - '#.*unserialize\(\) has parameter .* with no typehint specified#'
+        - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
         -
           message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
           path: *Algorithm/JobScheduling/Weighted.php
