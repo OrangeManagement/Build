@@ -581,6 +581,9 @@ return [
     'phpOMS\tests\DataStorage\Database\Connection\SqlServerConnectionTest:testInvalidDatabaseTypeName' => ['description' => 'A invalid database type throws a InvalidConnectionConfigException', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Connection\SqlServerConnectionTest:testInvalidDatabaseName' => ['description' => 'A invalid database throws a InvalidConnectionConfigException', 'type' => 'framework'],
 
+    'phpOMS\tests\DataStorage\Database\Connection\NullConnectionTest' => ['description' => 'Null connection', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Database\Connection\NullConnectionTest:testConnect' => ['description' => 'A null connection can be created as placeholder', 'type' => 'framework'],
+
     'phpOMS\tests\DataStorage\Database\Query\BuilderTest' => ['description' => 'Query builder for sql queries', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Query\BuilderTest:testMysqlSelect' => ['description' => 'Mysql selects form a valid query', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Query\BuilderTest:testMysqlOrder' => ['description' => 'Mysql orders form a valid query', 'type' => 'framework'],
