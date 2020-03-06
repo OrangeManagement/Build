@@ -21,16 +21,6 @@ parameters:
 			path: Install/ConsoleApplication.php
 
 		-
-			message: "#^Constant fase not found\\.$#"
-			count: 1
-			path: Install/InstallAbstract.php
-
-		-
-			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: Install/InstallAbstract.php
-
-		-
 			message: "#^Call to an undefined method phpOMS\\\\Message\\\\HeaderAbstract\\:\\:push\\(\\)\\.$#"
 			count: 1
 			path: Install/WebApplication.php
@@ -62,66 +52,6 @@ parameters:
 
 		-
 			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$client has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipTo has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipFAO has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipAddress has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipCity has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipZip has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$shipCountry has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billTo has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billFAO has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billAddress has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billCity has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billZip has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Billing/Models/Invoice.php
-
-		-
-			message: "#^Property Modules\\\\Billing\\\\Models\\\\Invoice\\:\\:\\$billCountry has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Billing/Models/Invoice.php
 
@@ -291,11 +221,6 @@ parameters:
 			path: Modules/Billing/Models/InvoiceElement.php
 
 		-
-			message: "#^Property Modules\\\\Calendar\\\\Theme\\\\Backend\\\\Components\\\\Calendar\\\\BaseView\\:\\:\\$calendar has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Calendar/Theme/Backend/Components/Calendar/BaseView.php
-
-		-
 			message: "#^Property Modules\\\\ClientManagement\\\\Models\\\\Client\\:\\:\\$salesRep has no typehint specified\\.$#"
 			count: 1
 			path: Modules/ClientManagement/Models/Client.php
@@ -321,21 +246,6 @@ parameters:
 			path: Modules/ClientManagement/Models/Client.php
 
 		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$list has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
-			message: "#^Property Modules\\\\Comments\\\\Models\\\\Comment\\:\\:\\$ref has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Comments/Models/Comment.php
-
-		-
 			message: "#^Property Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\:\\:\\$parent \\(int\\|Modules\\\\CostCenterAccounting\\\\Models\\\\CostCenter\\|null\\) does not accept string\\.$#"
 			count: 1
 			path: Modules/CostCenterAccounting/Models/CostCenter.php
@@ -344,16 +254,6 @@ parameters:
 			message: "#^Property Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\:\\:\\$parent \\(int\\|Modules\\\\CostObjectAccounting\\\\Models\\\\CostObject\\|null\\) does not accept string\\.$#"
 			count: 1
 			path: Modules/CostObjectAccounting/Models/CostObject.php
-
-		-
-			message: "#^Property Modules\\\\DatabaseEditor\\\\Models\\\\Database\\:\\:\\$name has no typehint specified\\.$#"
-			count: 1
-			path: Modules/DatabaseEditor/Models/Database.php
-
-		-
-			message: "#^Property Modules\\\\DatabaseEditor\\\\Models\\\\Database\\:\\:\\$tables has no typehint specified\\.$#"
-			count: 1
-			path: Modules/DatabaseEditor/Models/Database.php
 
 		-
 			message: "#^Property Modules\\\\DatabaseEditor\\\\Models\\\\Table\\:\\:\\$name has no typehint specified\\.$#"
@@ -451,6 +351,11 @@ parameters:
 			path: Modules/HumanResourceManagement/Models/StaffList.php
 
 		-
+			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getList\\(\\) should return array but returns array\\<string, mixed\\>\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceManagement/Models/StaffList.php
+
+		-
 			message: "#^Method Modules\\\\HumanResourceManagement\\\\Models\\\\StaffList\\:\\:getStats\\(\\) should return array but return statement is missing\\.$#"
 			count: 1
 			path: Modules/HumanResourceManagement/Models/StaffList.php
@@ -466,7 +371,17 @@ parameters:
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
 		-
+			message: "#^Cannot call method getStatus\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
 			message: "#^Cannot call method getId\\(\\) on int\\|Modules\\\\HumanResourceTimeRecording\\\\Models\\\\Session\\.$#"
+			count: 1
+			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
+
+		-
+			message: "#^Cannot call method getSession\\(\\) on Modules\\\\HumanResourceTimeRecording\\\\Models\\\\SessionElement\\|null\\.$#"
 			count: 1
 			path: Modules/HumanResourceTimeRecording/Controller/ApiController.php
 
@@ -571,16 +486,6 @@ parameters:
 			path: Modules/Kanban/Models/KanbanBoard.php
 
 		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanBoard\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanBoard.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanBoard\\:\\:\\$columns has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanBoard.php
-
-		-
 			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:\\$column has no typehint specified\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCard.php
@@ -596,47 +501,12 @@ parameters:
 			path: Modules/Kanban/Models/KanbanCard.php
 
 		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:\\$comments has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:\\$labels has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:\\$media has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCard.php
-
-		-
 			message: "#^Method Modules\\\\Kanban\\\\Models\\\\KanbanCard\\:\\:addMedia\\(\\) has parameter \\$media with no typehint specified\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCard.php
 
 		-
 			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCardComment\\:\\:\\$card has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCardComment.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCardComment\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCardComment.php
-
-		-
-			message: "#^Property Modules\\\\Kanban\\\\Models\\\\KanbanCardComment\\:\\:\\$media has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Kanban/Models/KanbanCardComment.php
-
-		-
-			message: "#^PHPDoc tag @return with type int\\|phpOMS\\\\Account\\\\Account is not subtype of native type int\\.$#"
 			count: 1
 			path: Modules/Kanban/Models/KanbanCardComment.php
 
@@ -706,39 +576,19 @@ parameters:
 			path: Modules/News/Controller/ApiController.php
 
 		-
-			message: "#^Static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) invoked with 4 parameters, 1 required\\.$#"
+			message: "#^Parameter \\#2 \\$searchDepth of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) expects int, string given\\.$#"
 			count: 2
 			path: Modules/News/Controller/ApiController.php
 
 		-
-			message: "#^Property Modules\\\\Profile\\\\Theme\\\\Backend\\\\Components\\\\AccountGroupSelector\\\\PopupView\\:\\:\\$id has no typehint specified\\.$#"
-			count: 1
-			path: Modules/Profile/Theme/Backend/Components/AccountGroupSelector/PopupView.php
-
-		-
-			message: "#^Property Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:\\$tasks has unknown class Modules\\\\ProjectManagement\\\\Models\\\\Tasks as its type\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^PHPDoc tag @param for parameter \\$task with type int\\|Modules\\\\Tasks\\\\Models\\\\Task is not subtype of native type Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Array \\(array\\<Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\>\\) does not accept Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
+			message: "#^Parameter \\#3 \\$popDepth of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) expects int, string given\\.$#"
 			count: 2
-			path: Modules/ProjectManagement/Models/Project.php
+			path: Modules/News/Controller/ApiController.php
 
 		-
-			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getTask\\(\\) should return Modules\\\\Tasks\\\\Models\\\\Task but returns Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\|Modules\\\\Tasks\\\\Models\\\\Task\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
-
-		-
-			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getTasks\\(\\) should return array\\<Modules\\\\Tasks\\\\Models\\\\Task\\> but returns array\\<Modules\\\\ProjectManagement\\\\Models\\\\Tasks\\>\\.$#"
-			count: 1
-			path: Modules/ProjectManagement/Models/Project.php
+			message: "#^Static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:find\\(\\) invoked with 4 parameters, 1\\-3 required\\.$#"
+			count: 2
+			path: Modules/News/Controller/ApiController.php
 
 		-
 			message: "#^Method Modules\\\\ProjectManagement\\\\Models\\\\Project\\:\\:getCalendar\\(\\) should return Modules\\\\Calendar\\\\Models\\\\Calendar but returns int\\|Modules\\\\Calendar\\\\Models\\\\Calendar\\.$#"
@@ -751,59 +601,9 @@ parameters:
 			path: Modules/ProjectManagement/Models/Project.php
 
 		-
-			message: "#^Call to static method create\\(\\) on an unknown class Modules\\\\QA\\\\Controller\\\\QAAnswerMapper\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Call to an undefined method Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:setName\\(\\)\\.$#"
-			count: 1
-			path: Modules/QA/Controller/ApiController.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:\\$answer has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QAAnswer.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:\\$question has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QAAnswer.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:\\$isAccepted has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QAAnswer.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QAAnswer\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QAAnswer.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QACategory\\:\\:\\$parent has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QACategory.php
-
-		-
 			message: "#^Property Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:\\$language has no typehint specified\\.$#"
 			count: 1
 			path: Modules/QA/Models/QAQuestion.php
-
-		-
-			message: "#^Property Modules\\\\QA\\\\Models\\\\QAQuestion\\:\\:\\$createdBy has no typehint specified\\.$#"
-			count: 1
-			path: Modules/QA/Models/QAQuestion.php
-
-		-
-			message: "#^Property Modules\\\\RiskManagement\\\\Models\\\\Category\\:\\:\\$title has no typehint specified\\.$#"
-			count: 1
-			path: Modules/RiskManagement/Models/Category.php
-
-		-
-			message: "#^Property Modules\\\\RiskManagement\\\\Models\\\\Category\\:\\:\\$parent has no typehint specified\\.$#"
-			count: 1
-			path: Modules/RiskManagement/Models/Category.php
 
 		-
 			message: "#^Property Modules\\\\RiskManagement\\\\Models\\\\Category\\:\\:\\$responsible has no typehint specified\\.$#"
@@ -1026,12 +826,32 @@ parameters:
 			path: Modules/Surveys/Models/Survey.php
 
 		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getDate\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Arrival\\:\\:getAcceptor\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Arrival.php
+
+		-
 			message: "#^Property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$creator has unknown class phpOMS\\\\Models\\\\User as its type\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
 		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreated\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
 			message: "#^Return typehint of method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) has invalid type phpOMS\\\\Models\\\\User\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:getCreator\\(\\) should return phpOMS\\\\Models\\\\User but returns phpOMS\\\\Models\\\\User\\|null\\.$#"
 			count: 1
 			path: Modules/WarehouseManagement/Models/Article.php
 
@@ -1044,6 +864,16 @@ parameters:
 			message: "#^Access to an undefined property Modules\\\\WarehouseManagement\\\\Models\\\\Article\\:\\:\\$prices\\.$#"
 			count: 3
 			path: Modules/WarehouseManagement/Models/Article.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getDelivered\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
+
+		-
+			message: "#^Method Modules\\\\WarehouseManagement\\\\Models\\\\Shipping\\:\\:getSender\\(\\) should return int but returns int\\|null\\.$#"
+			count: 1
+			path: Modules/WarehouseManagement/Models/Shipping.php
 
 		-
 			message: "#^Property Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:\\$id has no typehint specified\\.$#"
@@ -1116,27 +946,12 @@ parameters:
 			path: phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
 
 		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:createConditionals\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			message: "#^Array \\(array\\<string, array\\<string, string\\>\\>\\) does not accept string\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:createModel\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getObjectId\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:setObjectId\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:createHasMany\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
+			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:withConditional\\(\\) should return static\\(phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\) but returns class\\-string\\<static\\(phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\)\\>\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
@@ -1151,88 +966,38 @@ parameters:
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:updateHasMany\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:updateModel\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:updateConditionals\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Argument of an invalid type string supplied for foreach, only iterables are supported\\.$#"
-			count: 4
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:deleteHasMany\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:deleteModel\\(\\) has parameter \\$refClass with generic class ReflectionClass but does not specify its types\\: T$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) has parameter \\$key with no typehint specified\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
 			message: "#^PHPDoc tag @return with type void is incompatible with native type array\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Only iterables can be unpacked, string given in argument \\#1\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Parameter \\#1 \\.\\.\\.\\$columns of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:select\\(\\) expects array\\<int, mixed\\>, string given\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) with return type void returns mixed but should not return anything\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Parameter \\#1 \\$result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstract\\(\\) expects array, void given\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Parameter \\#3 \\$columns of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstract\\(\\) expects array, string given\\.$#"
-			count: 1
-			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getConditionals\\(\\) \\(void\\) is used\\.$#"
 			count: 2
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Call to an undefined static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateConditionalsArray\\(\\)\\.$#"
+			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateOwnsOneArray\\(\\) with return type void returns mixed but should not return anything\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Parameter \\#1 \\$result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstractArray\\(\\) expects array, void given\\.$#"
+			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateBelongsToArray\\(\\) with return type void returns mixed but should not return anything\\.$#"
 			count: 1
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
-			message: "#^Parameter \\#3 \\$columns of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateAbstractArray\\(\\) expects array, string given\\.$#"
+			message: "#^Result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateOwnsOneArray\\(\\) \\(void\\) is used\\.$#"
 			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Result of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:populateBelongsToArray\\(\\) \\(void\\) is used\\.$#"
+			count: 1
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^Parameter \\#2 \\$ref of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getPrimaryKeysBy\\(\\) expects string, string\\|null given\\.$#"
+			count: 4
+			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
+
+		-
+			message: "#^If condition is always true\\.$#"
+			count: 2
 			path: phpOMS/DataStorage/Database/DataMapperAbstract.php
 
 		-
@@ -1837,6 +1602,11 @@ parameters:
 
 		-
 			message: "#^Method phpOMS\\\\Utils\\\\Parser\\\\Markdown\\\\Markdown\\:\\:inlineSpecialCharacter\\(\\) should return array\\|null but return statement is missing\\.$#"
+			count: 1
+			path: phpOMS/Utils/Parser/Markdown/Markdown.php
+
+		-
+			message: "#^Parameter \\#3 \\$subject of function str_replace expects array\\|string, string\\|null given\\.$#"
 			count: 1
 			path: phpOMS/Utils/Parser/Markdown/Markdown.php
 
