@@ -48,3 +48,20 @@ parameters:
         -
           message: '#Binary operation "\-" between string and int results in an error#'
           path: *Matrix/Matrix.php
+
+SELECT
+    `a`.`organization_unit_id` as id_3,
+    `b`.`organization_unit_id` as id_2,
+    `c`.`organization_unit_id` as id_1
+
+FROM `oms_organization_unit` as a
+
+LEFT JOIN `oms_organization_unit` as b
+    ON
+        `a`.`organization_unit_parent` = `b`.`organization_unit_id`
+
+LEFT JOIN `oms_organization_unit` as c
+    ON
+        `b`.`organization_unit_parent` = `c`.`organization_unit_id`
+
+WHERE `a`.`organization_unit_id` = 1;

@@ -610,7 +610,6 @@ return [
 
     'phpOMS\tests\DataStorage\Database\Query\Grammar\GrammarTest' => ['description' => 'Basic sql query grammar', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Query\Grammar\GrammarTest:testDefault' => ['description' => 'The grammar has the expected default values after initialization', 'type' => 'framework'],
-    'phpOMS\tests\DataStorage\Database\Query\Grammar\GrammarTest:testPrefixInputOutput' => ['description' => 'The grammar can define a default table prefix and return this value', 'type' => 'framework'],
 
     'phpOMS\tests\DataStorage\Database\Query\Grammar\MysqlGrammarTest' => ['description' => 'Mysql sql query grammar', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Query\Grammar\MysqlGrammarTest:testDefault' => ['description' => 'The grammar has the expected default values after initialization', 'type' => 'framework'],
@@ -626,7 +625,6 @@ return [
 
     'phpOMS\tests\DataStorage\Database\Schema\Grammar\GrammarTest' => ['description' => 'Basic sql query grammar', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Schema\Grammar\GrammarTest:testDefault' => ['description' => 'The grammar has the expected default values after initialization', 'type' => 'framework'],
-    'phpOMS\tests\DataStorage\Database\Schema\Grammar\GrammarTest:testPrefixInputOutput' => ['description' => 'The grammar can define a default table prefix and return this value', 'type' => 'framework'],
 
     'phpOMS\tests\DataStorage\Database\Schema\Grammar\MysqlGrammarTest' => ['description' => 'Mysql sql schema grammar', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Database\Schema\Grammar\MysqlGrammarTest:testDefault' => ['description' => 'The grammar has the expected default values after initialization', 'type' => 'framework'],
