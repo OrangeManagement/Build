@@ -1,6 +1,5 @@
 includes:
     - phpstan-baseline.neon
-
 parameters:
     fileExtensions:
         - php
@@ -32,6 +31,8 @@ parameters:
         - */Modules/Shop/Admin/Install/Application/*
         - */Install/Application*
         - */Web/*
+        - */Modules/**/Application/*
+        - */Modules/Organization/Controller/BackendController.php
     ignoreErrors:
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
