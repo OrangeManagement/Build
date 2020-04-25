@@ -2139,6 +2139,7 @@ return [
 
     'phpOMS\tests\Views\ViewTest' => ['description' => 'View for response rendering', 'type' => 'framework'],
     'phpOMS\tests\Views\ViewTest:testDefault' => ['description' => 'The view has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Views\ViewTest:testHasData' => ['description' => 'The view data can be checked for existance', 'type' => 'framework'],
     'phpOMS\tests\Views\ViewTest:testGetText' => ['description' => 'The view can output text from the localization manager', 'type' => 'framework'],
     'phpOMS\tests\Views\ViewTest:testGetHtml' => ['description' => 'The view can output html escaped text from the localization manager', 'type' => 'framework'],
     'phpOMS\tests\Views\ViewTest:testGetNumeric' => ['description' => 'The numeric value can be printed based on the localization', 'type' => 'framework'],
