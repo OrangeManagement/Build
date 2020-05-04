@@ -1110,7 +1110,7 @@ return [
 
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest' => ['description' => 'Measure of dispersion'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testRange' => ['description' => 'The correlation coefficient (Bravis Person) is calculated correctly', 'type' => 'framework'],
-    'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testStandardDeviation' => ['description' => 'The standard deviation is correctly calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testStandardDeviationSample' => ['description' => 'The standard deviation is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testEmpiricalCovariance' => ['description' => 'The empirical covariance is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testVarianceSample' => ['description' => 'The sample variance is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testVariancePopulation' => ['description' => 'The population/empirical variance is correctly calculated', 'type' => 'framework'],
