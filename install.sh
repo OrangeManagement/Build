@@ -29,8 +29,9 @@ apt-get install npm git php7.4 php7.4-dev php7.4-cli php7.4-common php7.4-mysql 
 # update mysql.user set plugin='' where user='root';
 # flush privileges;
 
-# /etc/postgresq/...
+# /etc/postgresq/hba_..
 # change from md5 to trust
+# login to psql and \password define new password
 
 update-rc.d postgresql enable
 service postgresql start
