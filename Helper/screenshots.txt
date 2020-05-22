@@ -1,0 +1,2 @@
+firefox -screenshot https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options --file true --filename "/home/spl1nes/Downloads/test.png" --selector "h1"
+firefox -screenshot https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options --file true --filename "/home/spl1nes/Downloads/test2.png" --selector "h2"
