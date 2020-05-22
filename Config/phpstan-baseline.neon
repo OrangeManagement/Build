@@ -1081,6 +1081,11 @@ parameters:
 			path: ../../phpOMS/System/File/Ftp/Directory.php
 
 		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:offsetGet\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: ../../phpOMS/System/File/Ftp/Directory.php
+
+		-
 			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:current\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: ../../phpOMS/System/File/Ftp/Directory.php
@@ -1102,6 +1107,11 @@ parameters:
 
 		-
 			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:offsetSet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
+			count: 1
+			path: ../../phpOMS/System/File/Ftp/Directory.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\Ftp\\\\Directory\\:\\:offsetGet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
 			count: 1
 			path: ../../phpOMS/System/File/Ftp/Directory.php
 
@@ -1379,6 +1389,11 @@ parameters:
 			message: "#^Method phpOMS\\\\System\\\\File\\\\Local\\\\Directory\\:\\:offsetGet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
 			count: 1
 			path: ../../phpOMS/System/File/Local/Directory.php
+
+		-
+			message: "#^Method phpOMS\\\\System\\\\File\\\\FtpStorage\\\\Directory\\:\\:offsetGet\\(\\) has parameter \\$offset with no typehint specified\\.$#"
+			count: 1
+			path: ../../phpOMS/System/File/FtpStorage/Directory.php
 
 		-
 			message: "#^Result of \\|\\| is always true\\.$#"
