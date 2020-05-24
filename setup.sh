@@ -46,14 +46,12 @@ cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Build/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
-cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/Modules/hooks/pre-commit
 cp ${ROOT_PATH}/Build/Hooks/default.sh ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
 
 chmod +x ${ROOT_PATH}/.git/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/Build/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/phpOMS/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/jsOMS/hooks/pre-commit
-chmod +x ${ROOT_PATH}/.git/modules/Modules/hooks/pre-commit
 chmod +x ${ROOT_PATH}/.git/modules/cssOMS/hooks/pre-commit
 
 echo "#################################################"
@@ -121,8 +119,6 @@ wget -q --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/down
 wget -q --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
 wget -q --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
 wget -q --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc3/ testreportgenerator.phar
-
-mkdir ${ROOT_PATH}/jsOMS/tests
 
 unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests >/dev/null
 tar -zxvf compiler-latest.tar.gz >/dev/null
