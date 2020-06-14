@@ -397,6 +397,10 @@ return [
     'phpOMS\tests\Business\Marketing\NetPromoterScoreTest:testDefault' => ['description' => 'The net promoter has the expected default values after initialization', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\NetPromoterScoreTest:testScoreDetractorPassivePromotor' => ['description' => 'The net promoter score, detractors, passives and promoters are correct', 'type' => 'framework'],
 
+    'phpOMS\tests\Business\Marketing\PageRankTest' => ['description' => 'Page rank algorithm', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\PageRankTest:testPageRank' => ['description' => 'Test the correctness of the page rank algorithm', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\PageRankTest:testPageRankCustomDampingAndStart' => ['description' => 'Test the correctness of the page rank algorithm with custom damping and starting values', 'type' => 'framework'],
+
     'phpOMS\tests\Business\Programming\MetricsTest' => ['description' => 'General programming metrics', 'type' => 'framework'],
     'phpOMS\tests\Business\Programming\MetricsTest:testABCMetric' => ['description' => 'Test correctness of the ABC calculation', 'type' => 'framework'],
     'phpOMS\tests\Business\Programming\MetricsTest:testCRAPMetric' => ['description' => 'Test correctness of CRAP score', 'type' => 'framework'],
