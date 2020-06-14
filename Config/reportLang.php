@@ -1107,7 +1107,8 @@ return [
     'phpOMS\tests\Math\Statistic\AverageTest:testMedian' => ['description' => 'The median is correctly calculated', 'type' => 'framework'],
 
     'phpOMS\tests\Math\Statistic\CorrelationTest' => ['description' => 'Correlations'],
-    'phpOMS\tests\Math\Statistic\CorrelationTest:testBravisPersonCorrelationCoefficient' => ['description' => 'The correlation coefficient (Bravis Person) is calculated correctly', 'type' => 'framework'],
+    'phpOMS\tests\Math\Statistic\CorrelationTest:testBravisPersonCorrelationCoefficientPopulation' => ['description' => 'The correlation coefficient (Bravis Person) is calculated correctly', 'type' => 'framework'],
+    'phpOMS\tests\Math\Statistic\CorrelationTest:testBravisPersonCorrelationCoefficientSample' => ['description' => 'The correlation coefficient (Bravis Person) is calculated correctly on a Sample', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\CorrelationTest:testAutocorrelationCoefficient' => ['description' => 'The autocorrelation coefficient is calculated correctly', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\CorrelationTest:testPortmanteauTestBoxPierce' => ['description' => 'The portmanteau test (Box Pierce) is correct', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\CorrelationTest:testPortmanteauTestLjungBox' => ['description' => 'The portmanteau test (Ljung Box) is correct', 'type' => 'framework'],
@@ -1116,6 +1117,7 @@ return [
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testRange' => ['description' => 'The correlation coefficient (Bravis Person) is calculated correctly', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testStandardDeviationSample' => ['description' => 'The standard deviation is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testEmpiricalCovariance' => ['description' => 'The empirical covariance is correctly calculated', 'type' => 'framework'],
+    'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testSampleCovariance' => ['description' => 'The empirical covariance on a sample is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testVarianceSample' => ['description' => 'The sample variance is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testVariancePopulation' => ['description' => 'The population/empirical variance is correctly calculated', 'type' => 'framework'],
     'phpOMS\tests\Math\Statistic\MeasureOfDispersionTest:testDeviation' => ['description' => 'The mean deviations are correctly calculated', 'type' => 'framework'],
