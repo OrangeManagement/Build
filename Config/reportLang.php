@@ -390,6 +390,9 @@ return [
     'phpOMS\tests\Business\Finance\LorenzkurveTest' => ['description' => 'Lorenz kurve', 'type' => 'framework'],
     'phpOMS\tests\Business\Finance\LorenzkurveTest:testGiniCoefficient' => ['description' => 'The gini coefficient calculation is correct', 'type' => 'framework'],
 
+    'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest' => ['description' => 'Article affinity/correlation', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest:testAffinity' => ['description' => 'The highest affinities between articles purchased are calculated correctly', 'type' => 'framework'],
+
     'phpOMS\tests\Business\Marketing\MetricsTest' => ['description' => 'General marketing metrics', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\MetricsTest:testCustomerRetention' => ['description' => 'Test the correctness of the customer retention calculation', 'type' => 'framework'],
 
