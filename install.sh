@@ -79,6 +79,10 @@ npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest 
 # FTP
 apt-get install vsftpd
 
+#OCR
+sudo apt-get install tesseract-ocr
+#tesseract ../copyright.png -c preserve_interword_spaces=1 stdout
+
 # /etc/vstftpd.conf
 # write_enable=YES
 # anon_upload_enable=YES
