@@ -2092,7 +2092,10 @@ return [
     'phpOMS\tests\Utils\StringUtilsTest:testContains' => ['description' => 'A string can be checked if it contains at least one defined string element', 'type' => 'framework'],
     'phpOMS\tests\Utils\StringUtilsTest:testContainsMb' => ['description' => 'A multi-byte string can be checked if it contains at least one defined string element', 'type' => 'framework'],
     'phpOMS\tests\Utils\StringUtilsTest:testCountMb' => ['description' => 'The characters of a multi-byte string can be counted', 'type' => 'framework'],
-    'phpOMS\tests\Utils\StringUtilsTest:testCountBeginning' => ['description' => 'The amount of a defined characters in the beginning of a string can be counted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testCountBeginning' => ['description' => 'he amount of a defined characters in the beginning of a string can be counted', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testIntHash' => ['description' => 'A string creates a integer hash', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testSameHash' => ['description' => 'The same string creates the same hash', 'type' => 'framework'],
+    'phpOMS\tests\Utils\StringUtilsTest:testDifferentHash' => ['description' => 'Different strings create different hashes', 'type' => 'framework'],
     'phpOMS\tests\Utils\StringUtilsTest:testStringify' => ['description' => 'Various data types can be stringified', 'type' => 'framework'],
     'phpOMS\tests\Utils\StringUtilsTest:testStringDiffHtml' => ['description' => 'The difference between two strings can be evaluated', 'type' => 'framework'],
 
