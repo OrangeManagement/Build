@@ -24,7 +24,7 @@ function printUsage() : void
 $destination = ($key = \array_search('-d', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
 $modulePath  = ($key = \array_search('-m', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
 
-if (!isset($destination) || !isset($modulePath) ) {
+if (!isset($destination) || !isset($modulePath)) {
     printUsage();
 
     return;
@@ -78,4 +78,4 @@ foreach($langs as $lang => $data) {
 
 echo 'Language files have different length: ' . ($unequalLength ? 'yes' : 'no') . "\n";
 echo 'Unused language components: ' . "\n";
-var_dump($unusedLanguage);
+\var_dump($unusedLanguage);

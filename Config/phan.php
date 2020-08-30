@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 return [
     'target_php_version' => null,
     'strict_param_checking' => true,
