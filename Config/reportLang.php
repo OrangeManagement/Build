@@ -393,6 +393,10 @@ return [
     'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest'              => ['description' => 'Article affinity/correlation', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest:testAffinity' => ['description' => 'The highest affinities between articles purchased are calculated correctly', 'type' => 'framework'],
 
+    'pphpOMS\tests\Business\Marketing\CustomerValueTest'              => ['description' => 'Customer value', 'type' => 'framework'],
+    'pphpOMS\tests\Business\Marketing\CustomerValueTest:testSimpleCLV' => ['description' => 'The simple customer life time value is correctly calculated', 'type' => 'framework'],
+    'pphpOMS\tests\Business\Marketing\CustomerValueTest:testMRR' => ['description' => 'The monthly recurring revenue (MRR) is correctly calculated', 'type' => 'framework'],
+
     'phpOMS\tests\Business\Marketing\MetricsTest'                       => ['description' => 'General marketing metrics', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\MetricsTest:testCustomerRetention' => ['description' => 'Test the correctness of the customer retention calculation', 'type' => 'framework'],
 
@@ -434,7 +438,7 @@ return [
     'phpOMS\tests\DataStorage\Cache\Connection\ConnectionFactoryTest:testCreateFileCache'  => ['description' => 'The file cache can be created', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Cache\Connection\ConnectionFactoryTest:testCreateMemCached'  => ['description' => 'The memcached cache can be created', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Cache\Connection\ConnectionFactoryTest:testCreateRedisCache' => ['description' => 'The redis cache can be created', 'type' => 'framework'],
-    'phpOMS\tests\DataStorage\Cache\Connection\ConnectionFactoryTest:testInvalidCacheType' => ['description' => 'An invalid cache type results in an exception', 'type' => 'framework'],
+    'phpOMS\tests\DataStorage\Cache\Connection\ConnectionFactoryTest:testInvalidCacheType' => ['description' => 'A invalid cache type results in an exception', 'type' => 'framework'],
 
     'phpOMS\tests\DataStorage\Cache\Connection\FileCacheTest'                             => ['description' => 'File cache connection', 'type' => 'framework'],
     'phpOMS\tests\DataStorage\Cache\Connection\FileCacheTest:testDefault'                 => ['description' => 'The file cache connection has the expected default values after initialization', 'type' => 'framework'],
@@ -1284,6 +1288,9 @@ return [
     'phpOMS\tests\Module\ModuleAbstractTest:testModelUpdate'         => ['description' => 'A model can be updated', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testModelDelete'         => ['description' => 'A model can be deleted', 'type' => 'framework'],
     'phpOMS\tests\Module\ModuleAbstractTest:testModelRelation'       => ['description' => 'A model relation can be created', 'type' => 'framework'],
+
+    'phpOMS\tests\Module\NullModuleTest'                           => ['description' => 'Basic module functionality'],
+    'phpOMS\tests\Module\NullModuleTest:testInvalidModuleMethodCalls'   => ['description' => 'A invalid module method call will create an error log', 'type' => 'framework'],
 
     'phpOMS\tests\Module\PackageManagerTest'                           => ['description' => 'Manager for install/update packages'],
     'phpOMS\tests\Module\PackageManagerTest:testPackageValidInstall'   => ['description' => 'A package can be installed', 'type' => 'framework'],
