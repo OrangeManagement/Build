@@ -1311,6 +1311,9 @@ return [
     'phpOMS\tests\Router\WebRouterTest:testWithoutCSRF'                      => ['description' => 'Routes which require a CSRF token don\'t match without a CSRF token', 'type' => 'framework'],
     'phpOMS\tests\Router\WebRouterTest:testWithValidPermissions'             => ['description' => 'Routes only match if the permissions match', 'type' => 'framework'],
     'phpOMS\tests\Router\WebRouterTest:testWithInvalidPermissions'           => ['description' => 'Routes don\'t match if the permissions don\'t match', 'type' => 'framework'],
+    'phpOMS\tests\Router\WebRouterTest:testDataValidation'           => ['description' => 'A data validation pattern validates matches correctly', 'type' => 'framework'],
+    'phpOMS\tests\Router\WebRouterTest:testInvalidDataValidation'           => ['description' => 'A data validation pattern invalidates missmatches', 'type' => 'framework'],
+    'phpOMS\tests\Router\WebRouterTest:testDataFromPattern'           => ['description' => 'A uri can be used for data population', 'type' => 'framework'],
 
     'phpOMS\tests\Router\SocketRouterTest'                            => ['description' => 'Router for socket requests'],
     'phpOMS\tests\Router\SocketRouterTest:testDefault'                => ['description' => 'The route result for an empty request is empty', 'type' => 'framework'],
@@ -1848,6 +1851,9 @@ return [
     'phpOMS\tests\Utils\Converter\MeasurementTest:testInvalidEnergyPowerTo'   => ['description' => 'Invalid conversion to unknown energy throws a InvalidArgumentException', 'type' => 'framework'],
     'phpOMS\tests\Utils\Converter\MeasurementTest:testInvalidFileSizeFrom'    => ['description' => 'Invalid conversion from unknown filesize throws a InvalidArgumentException', 'type' => 'framework'],
     'phpOMS\tests\Utils\Converter\MeasurementTest:testInvalidFileSizeTo'      => ['description' => 'Invalid conversion to unknown filesize throws a InvalidArgumentException', 'type' => 'framework'],
+
+    'phpOMS\tests\Utils\Converter\FileSizeTypeTest'                 => ['description' => 'File size types', 'type' => 'framework'],
+    'phpOMS\tests\Utils\Converter\FileSizeTypeTest:testAutoFormat'  => ['description' => 'File sizes can get automatically formatted according to their size', 'type' => 'framework'],
 
     'phpOMS\tests\Utils\Converter\NumericTest'                    => ['description' => 'Numeric converter', 'type' => 'framework'],
     'phpOMS\tests\Utils\Converter\NumericTest:testArabicToRoman'  => ['description' => 'Arabic numbers can be converted to roman numbers', 'type' => 'framework'],
