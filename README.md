@@ -20,6 +20,7 @@ The last feature is the backend and documentation generation based on the DocBlo
 
 The build system will take care of most requirements, the following tools and commands have to be available on the system.
 
+* Composer
 * npm
 * git
 * wget
