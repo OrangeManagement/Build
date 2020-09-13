@@ -392,6 +392,7 @@ return [
 
     'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest'              => ['description' => 'Article affinity/correlation', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest:testAffinity' => ['description' => 'The highest affinities between articles purchased are calculated correctly', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\ArticleCorrelationAffinityTest:testInvalidItemAffinity' => ['description' => 'The affinity of a new article is empty', 'type' => 'framework'],
 
     'pphpOMS\tests\Business\Marketing\CustomerValueTest'              => ['description' => 'Customer value', 'type' => 'framework'],
     'pphpOMS\tests\Business\Marketing\CustomerValueTest:testSimpleCLV' => ['description' => 'The simple customer life time value is correctly calculated', 'type' => 'framework'],
