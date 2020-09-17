@@ -400,6 +400,10 @@ return [
 
     'phpOMS\tests\Business\Marketing\MetricsTest'                       => ['description' => 'General marketing metrics', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\MetricsTest:testCustomerRetention' => ['description' => 'Test the correctness of the customer retention calculation', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\MetricsTest:testBerrysCustomerProfits' => ['description' => 'The profit according to Berry can be correctly calculated', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\MetricsTest:testMigrationModelPurchaseMatrix' => ['description' => 'The purchase probability of customers can be calculated based on historic information using the migration model', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\MetricsTest:testMigrationModel' => ['description' => 'The CLV can be calculated using the migration model', 'type' => 'framework'],
+    'phpOMS\tests\Business\Marketing\MetricsTest:testMailingSuccessEstimation' => ['description' => 'The migration model can be used in order to determin which buying/none-buying customer group should receive a mailing', 'type' => 'framework'],
 
     'phpOMS\tests\Business\Marketing\NetPromoterScoreTest'                                   => ['description' => 'Net promoter', 'type' => 'framework'],
     'phpOMS\tests\Business\Marketing\NetPromoterScoreTest:testDefault'                       => ['description' => 'The net promoter has the expected default values after initialization', 'type' => 'framework'],
@@ -680,6 +684,10 @@ return [
     'phpOMS\tests\Event\EventManagerTest:testDispatchAfterAllConditions'         => ['description' => 'An event only gets executed if all conditions and sub conditions are met', 'type' => 'framework'],
     'phpOMS\tests\Event\EventManagerTest:testDispatchAfterSomeConditionsInvalid' => ['description' => 'An event doesn\'t get executed if not all conditions and sub conditions are met', 'type' => 'framework'],
     'phpOMS\tests\Event\EventManagerTest:testInvalidEventTrigger'                => ['description' => 'None-existing events cannot be executed/triggered', 'type' => 'framework'],
+    'phpOMS\tests\Event\EventManagerTest:testDispatchSimilarGroupAndId'                => ['description' => 'An event can be triggered with group and id regex matches', 'type' => 'framework'],
+    'phpOMS\tests\Event\EventManagerTest:testDispatchSimilarId'                => ['description' => 'An event can be triggered with a fixed group definition and id regex matches', 'type' => 'framework'],
+    'phpOMS\tests\Event\EventManagerTest:testDispatchSimilarGroup'                => ['description' => ' An event can be triggered with regex group matches and fixed id definition', 'type' => 'framework'],
+    'phpOMS\tests\Event\EventManagerTest:testDispatchSimilarInvalid'                => ['description' => ' A invalid regex match will not triggered an event', 'type' => 'framework'],
     'phpOMS\tests\Event\EventManagerTest:testReset'                              => ['description' => 'An event can be defined to reset after all conditions and subconditions are met. Then all conditions and sub conditions must be met again before it gets triggered again', 'type' => 'framework'],
     'phpOMS\tests\Event\EventManagerTest:testNoeReset'                           => ['description' => 'An event can be defined to not reset after all conditions and subconditions are met. Then an event can be triggered any time.', 'type' => 'framework'],
     'phpOMS\tests\Event\EventManagerTest:testDetach'                             => ['description' => 'An event can be manually removed/detached', 'type' => 'framework'],
@@ -773,6 +781,7 @@ return [
 
     'phpOMS\tests\Log\FileLoggerTest'                     => ['description' => 'File logger for saving log information in a local file', 'type' => 'framework'],
     'phpOMS\tests\Log\FileLoggerTest:testDefault'         => ['description' => 'The logger has the expected default values after initialization', 'type' => 'framework'],
+    'phpOMS\tests\Log\FileLoggerTest:testFileLoggerInstance'    => ['description' => 'The file logger can automatically create a new instance if none exists', 'type' => 'framework'],
     'phpOMS\tests\Log\FileLoggerTest:testNamedLogFile'    => ['description' => 'A log file for the output can be specified for the file logger', 'type' => 'framework'],
     'phpOMS\tests\Log\FileLoggerTest:testUnnamedLogFile'  => ['description' => 'If no log file name is specified a log file per date is created', 'type' => 'framework'],
     'phpOMS\tests\Log\FileLoggerTest:testNoFileIfNoLog'   => ['description' => 'If no logs are performed no log file will be created', 'type' => 'framework'],
