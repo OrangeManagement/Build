@@ -49,7 +49,7 @@ phpenmod ast
 
 # Install redis
 sudo apt install redis-server
-# /etc/redis/...conifg
+# /etc/redis/...config
 # supervised systemd
 # dir /var/lib/redis
 systemctl restart redis
@@ -59,7 +59,7 @@ echo "extension=redis.so" | tee /etc/php/7.4/mods-available/redis.ini
 phpenmod redis
 
 # Install memcached
-apt-get install memcached libmemcached-dev libmemcached-tools
+apt-get install memcached libmemcached-dev libmemcached-tools php7.4-memcached
 systemctl restart memcached
 pecl install memcached
 echo "extension=memcached.so" | tee /etc/php/7.4/mods-available/memcached.ini
