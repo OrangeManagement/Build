@@ -117,7 +117,7 @@ wget -q --tries=2 -nc https://github.com/phpstan/phpstan/releases/download/0.12.
 wget -q --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
 wget -q --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar
 wget -q --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
-wget -q --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
+#wget -q --tries=2 -nc https://github.com/Orange-Management/Documentor/releases/download/v1.1.1/documentor.phar
 wget -q --tries=2 -nc https://github.com/Orange-Management/TestReportGenerator/releases/download/1.1.0-rc3/ testreportgenerator.phar
 
 unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests >/dev/null
