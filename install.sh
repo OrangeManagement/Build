@@ -94,5 +94,27 @@ systemctl restart apache2
 # "mb_str_functions": true,
 # "phpdoc_add_missing_param_annotation": true,
 
+#Mssql
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+apt-get update
+apt-get install -y mssql-server
+/opt/mssql/bin/mssql-conf setup
+systemctl status mssql-server --no-pager
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+apt-get install libodbc1 unixodbc unixodbc-dev msodbcsql
+https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+sudo apt-get update
+sudo apt-get install mssql-tools unixodbc-dev
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
+phpenmod -v 7.4 sqlsrv pdo_sqlsrv
+service apache2 restart
+
 npm install -g sitespeed.io
 sitespeed.io Build/Helper/sitespeedUrls.txt -n 1 --preScript Build/Helper/sitespeedAuth.js --outputFolder Build/sitespeed
