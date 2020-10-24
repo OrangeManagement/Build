@@ -10,6 +10,7 @@ parameters:
         - *.tpl.php
         - */tests/*
         - */Modules/Media/Files/*
+        - */omsSetup/*
         - */d0cbb361b14ac3ef32486f0a09ab937d/*
         - */test/*
         - *Test.php
@@ -43,6 +44,9 @@ parameters:
         - '#^Offset .* does not exist on array.*#'
         - '#.*unserialize\(\) has parameter .* with no typehint specified#'
         - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
+        -
+          message: '#.*has parameter \$con with no typehint specified#'
+          path: *Ftp/File.php
         -
           message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
           path: *Algorithm/JobScheduling/Weighted.php
