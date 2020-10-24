@@ -11,6 +11,7 @@ parameters:
         - */tests/*
         - */Modules/Media/Files/*
         - */omsSetup/*
+        - */demoSetup/*
         - */d0cbb361b14ac3ef32486f0a09ab937d/*
         - */test/*
         - *Test.php
