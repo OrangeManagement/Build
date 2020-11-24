@@ -168,7 +168,7 @@
 			"        }",
 			"",
 			"        $$1 = \\$this->create$2FromRequest(\\$request);",
-			"        \\$this->createModel(\\$request->getHeader()->getAccount(), $$1, $2Mapper::class, '$1');",
+			"        \\$this->createModel(\\$request->header->account, $$1, $2Mapper::class, '$1');",
 			"        \\$this->fillJsonResponse(\\$request, \\$response, NotificationLevel::OK, '$2', '$2 successfully created', $$1);",
 			"    }",
 			"",
