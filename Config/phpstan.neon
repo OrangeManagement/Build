@@ -6,6 +6,8 @@ parameters:
     reportUnmatchedIgnoredErrors: false
     inferPrivatePropertyTypeFromConstructor: true
     checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    treatPhpDocTypesAsCertain: false
     excludes_analyse:
         - *.tpl.php
         - */tests/*
