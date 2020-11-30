@@ -13,7 +13,7 @@ add-apt-repository ppa:ondrej/php
 
 apt-get update
 
-apt-get install npm git php7.4 php7.4-dev php7.4-cli php7.4-common php7.4-mysql php7.4-pgsql php7.4-xdebug php7.4-json php7.4-opcache php7.4-pdo php7.4-sqlite php7.4-mbstring php7.4-curl php7.4-imap php7.4-bcmath php7.4-zip php7.4-dom php7.4-xml php7.4-phar php7.4-gd php-pear apache2 mysql-server postgresql postgresql-contrib php7.4-pcov
+apt-get install npm git php8.0 php8.0-dev php8.0-cli php8.0-common php8.0-mysql php8.0-pgsql php8.0-xdebug php8.0-json php8.0-opcache php8.0-pdo php8.0-sqlite php8.0-mbstring php8.0-curl php8.0-imap php8.0-bcmath php8.0-zip php8.0-dom php8.0-xml php8.0-phar php8.0-gd php-pear apache2 mysql-server postgresql postgresql-contrib php8.0-pcov
 
 # USE mysql;
 # mysql < 5.7
@@ -44,7 +44,7 @@ a2enmod headers
 
 pecl install ast
 
-echo "extension=ast.so" | tee /etc/php/7.4/mods-available/ast.ini
+echo "extension=ast.so" | tee /etc/php/8.0/mods-available/ast.ini
 phpenmod ast
 
 # Install redis
@@ -55,14 +55,14 @@ sudo apt install redis-server
 systemctl restart redis
 
 pecl install redis
-echo "extension=redis.so" | tee /etc/php/7.4/mods-available/redis.ini
+echo "extension=redis.so" | tee /etc/php/8.0/mods-available/redis.ini
 phpenmod redis
 
 # Install memcached
-apt-get install memcached libmemcached-dev libmemcached-tools php7.4-memcached
+apt-get install memcached libmemcached-dev libmemcached-tools php8.0-memcached
 systemctl restart memcached
 pecl install memcached
-echo "extension=memcached.so" | tee /etc/php/7.4/mods-available/memcached.ini
+echo "extension=memcached.so" | tee /etc/php/8.0/mods-available/memcached.ini
 phpenmod memcached
 
 # Install email server for testing
@@ -111,9 +111,9 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.4/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.4/mods-available/pdo_sqlsrv.ini
-phpenmod -v 7.4 sqlsrv pdo_sqlsrv
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.0/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.0/mods-available/pdo_sqlsrv.ini
+phpenmod -v 8.0 sqlsrv pdo_sqlsrv
 service apache2 restart
 
 npm install -g sitespeed.io
