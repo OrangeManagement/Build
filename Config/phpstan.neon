@@ -41,6 +41,7 @@ parameters:
         - */Web/*
         - */Modules/**/Application/*
         - */Modules/Organization/Controller/BackendController.php
+        - *Model/CoreSettings.php
     ignoreErrors:
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
