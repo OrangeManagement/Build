@@ -31,6 +31,10 @@ parameters:
         - *Resources*
         - */Routes/*
         - */Hooks/*
+        - */Message/Mail/*
+        - */Auth/OAuth2/*
+        - */Markdown/Markdown.php
+        - */Socket/*
         - */node_modules/*
         - */Modules/Shop/Admin/Install/Application/*
         - */Install/Application*
