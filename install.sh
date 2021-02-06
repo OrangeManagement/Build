@@ -13,7 +13,7 @@ add-apt-repository ppa:ondrej/php
 
 apt-get update
 
-apt-get install npm git php8.0 php8.0-dev php8.0-cli php8.0-common php8.0-mysql php8.0-pgsql php8.0-xdebug php8.0-json php8.0-opcache php8.0-pdo php8.0-sqlite php8.0-mbstring php8.0-curl php8.0-imap php8.0-bcmath php8.0-zip php8.0-dom php8.0-xml php8.0-phar php8.0-gd php-pear apache2 mysql-server postgresql postgresql-contrib php8.0-pcov
+apt-get install npm git php8.0 php8.0-dev php8.0-cli php8.0-common php8.0-mysql php8.0-pgsql php8.0-xdebug php8.0-opcache php8.0-pdo php8.0-sqlite php8.0-mbstring php8.0-curl php8.0-imap php8.0-bcmath php8.0-zip php8.0-dom php8.0-xml php8.0-phar php8.0-gd php-pear apache2 mysql-server postgresql postgresql-contrib pcov
 
 # USE mysql;
 # mysql < 5.7
