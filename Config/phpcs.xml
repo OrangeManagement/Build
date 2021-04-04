@@ -35,7 +35,7 @@
 <arg value="q"/>
 <arg name="colors"/>
 <arg name="tab-width" value="4"/>
-<rule ref="Generic.Classes.DuplicateClassName"/>
+<!-- <rule ref="Generic.Classes.DuplicateClassName"/> @todo: disabled until bug is fixed. currently namespace is ignored which creates a lot of false positives e.g. Installer, Updater, Controller, etc. -->
 <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
 <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall">
     <exclude-pattern>*Sort.php</exclude-pattern>
