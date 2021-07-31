@@ -2,10 +2,10 @@
 
 mkdir -p Build/test
 
-php phpcs.phar ./ --standard="Build/Config/phpcs.xml"
+./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml"
 ./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon ./
 
-php phpcs.phar ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
+./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
 ./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 
 # Remove empty lines and lines with warnings which corrupt the json format
