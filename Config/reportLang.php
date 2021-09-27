@@ -1088,8 +1088,6 @@ return [
     'phpOMS\tests\Math\Topology\MetricsNDTest:testInvalidAngularSeparationDimension' => ['description' => 'Different dimension sizes for the coordinates in the angular separation metric throw a InvalidDimensionException', 'type' => 'framework'],
     'phpOMS\tests\Math\Topology\MetricsNDTest:testInvalidHammingDimension'           => ['description' => 'Different dimension sizes for the coordinates in the hamming metric throw a InvalidDimensionException', 'type' => 'framework'],
 
-    /** @todo Implement the stochhastics documentation **/
-
     'phpOMS\tests\Math\Numerics\Interpolation\CubicSplineInterpolationTest'                                   => ['description' => 'Cubic spline interpolation'],
     'phpOMS\tests\Math\Numerics\Interpolation\CubicSplineInterpolationTest:testInterpolationFirstDerivative'  => ['description' => 'The spline interpolation using the first derivative is correct', 'type' => 'framework'],
     'phpOMS\tests\Math\Numerics\Interpolation\CubicSplineInterpolationTest:testInterpolationSecondDerivative' => ['description' => 'The spline interpolation using the second derivative is correct', 'type' => 'framework'],
