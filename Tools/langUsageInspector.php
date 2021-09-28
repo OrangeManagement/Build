@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 function printUsage() : void
 {
-    echo 'Usage: -d <DESTINATION_PATH> -m <MODULE_PATH>' . "\n\n";
+    echo 'Usage: -d <DESTINATION_PATH> -m <PATH>' . "\n\n";
     echo "\t" . '-d Destination/output directory.' . "\n";
     echo "\t" . '-m Module directory.' . "\n";
 }
