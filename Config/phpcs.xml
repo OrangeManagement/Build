@@ -13,6 +13,7 @@
 <exclude-pattern>*/Documentation/*</exclude-pattern>
 <exclude-pattern>*/Hooks/*</exclude-pattern>
 <exclude-pattern>*/Modules/Media/Files/*</exclude-pattern>
+<exclude-pattern>*/Admin/Install/Application/*</exclude-pattern>
 <exclude-pattern>*/node_modules/*</exclude-pattern>
 <exclude-pattern>*/Resources/*</exclude-pattern>
 <exclude-pattern>*/Web/*</exclude-pattern>
@@ -105,6 +106,7 @@
      <exclude-pattern>*phpOMS/Message/Http/HttpRequest.php</exclude-pattern><!-- Multipart uses deep nesting -->
      <exclude-pattern>*WebRouter.php</exclude-pattern><!-- WebRouter uses deep nesting -->
      <exclude-pattern>*Mail.php</exclude-pattern><!-- Mail uses deep nesting -->
+     <exclude-pattern>*Exchange/Interfaces*</exclude-pattern><!-- Exchange interfaces can be deeply nested -->
 </rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>

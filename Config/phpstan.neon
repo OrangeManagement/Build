@@ -43,6 +43,7 @@ parameters:
         - */Modules/Organization/Controller/BackendController.php
         - *Model/CoreSettings.php
     ignoreErrors:
+        - '#[.]*separator of function explode expects non-empty-string[.]*#'
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
         - '#^Strict comparison using === between[.]*#'
