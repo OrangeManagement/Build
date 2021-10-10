@@ -38,6 +38,7 @@ service postgresql start
 
 # Install sqlsrv
 # https://docs.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-2017
+# systemctl restart mssql-server
 
 a2enmod rewrite
 a2enmod headers
