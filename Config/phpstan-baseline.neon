@@ -1,12 +1,12 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property Modules\\\\EventManagement\\\\Models\\\\Event\\:\\:\\$end \\(DateTime\\) does not accept DateTime\\|false\\.$#"
+			message: "#^Parameter \\#1 \\$columns of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:where\\(\\) expects array\\|phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Where\\|string, string\\|null given\\.$#"
 			count: 1
-			path: *Modules/EventManagement/Models/Event.php
+			path: *Modules/Admin/Models/GroupMapper.php
 
 		-
-			message: "#^Cannot access offset string on array\\<string, Modules\\\\Media\\\\Models\\\\Media\\>\\|Modules\\\\Media\\\\Models\\\\Media\\.$#"
+			message: "#^Cannot access offset string on array\\<Modules\\\\Media\\\\Models\\\\Media\\>\\|Modules\\\\Media\\\\Models\\\\Media\\.$#"
 			count: 4
 			path: *Modules/Helper/Controller/ApiController.php
 
@@ -16,34 +16,19 @@ parameters:
 			path: *Modules/Helper/Controller/BackendController.php
 
 		-
-			message: "#^Cannot call method execute\\(\\) on PDOStatement\\|false\\.$#"
+			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:run\\(\\) has parameter \\$data with no typehint specified\\.$#"
 			count: 1
-			path: *Modules/HumanResourceTimeRecording/Models/SessionMapper.php
+			path: *Modules/Workflow/Templates/Permission/Workflow.php
 
 		-
-			message: "#^Cannot call method fetchAll\\(\\) on PDOStatement\\|false\\.$#"
+			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:runPending\\(\\) has parameter \\$data with no typehint specified\\.$#"
 			count: 1
-			path: *Modules/HumanResourceTimeRecording/Models/SessionMapper.php
+			path: *Modules/Workflow/Templates/Permission/Workflow.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagejpeg expects resource, GdImage given\\.$#"
+			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:runRequest\\(\\) has parameter \\$data with no typehint specified\\.$#"
 			count: 1
-			path: *Modules/Media/Models/UploadFile.php
-
-		-
-			message: "#^Method Modules\\\\Support\\\\Models\\\\Message\\:\\:setCreated\\(\\) has parameter \\$created with no typehint specified\\.$#"
-			count: 1
-			path: *Modules/Support/Models/Message.php
-
-		-
-			message: "#^Cannot call method execute\\(\\) on PDOStatement\\|false\\.$#"
-			count: 1
-			path: *Modules/Tasks/Models/TaskMapper.php
-
-		-
-			message: "#^Cannot call method fetchAll\\(\\) on PDOStatement\\|false\\.$#"
-			count: 1
-			path: *Modules/Tasks/Models/TaskMapper.php
+			path: *Modules/Workflow/Templates/Permission/Workflow.php
 
 		-
 			message: "#^Property Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:\\$id has no typehint specified\\.$#"
@@ -56,21 +41,6 @@ parameters:
 			path: *Modules/Workflow/Templates/Permission/Workflow.php
 
 		-
-			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:run\\(\\) has parameter \\$data with no typehint specified\\.$#"
-			count: 1
-			path: *Modules/Workflow/Templates/Permission/Workflow.php
-
-		-
-			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:runRequest\\(\\) has parameter \\$data with no typehint specified\\.$#"
-			count: 1
-			path: *Modules/Workflow/Templates/Permission/Workflow.php
-
-		-
-			message: "#^Method Modules\\\\Workflow\\\\Templates\\\\Permission\\\\Workflow\\:\\:runPending\\(\\) has parameter \\$data with no typehint specified\\.$#"
-			count: 1
-			path: *Modules/Workflow/Templates/Permission/Workflow.php
-
-		-
 			message: "#^Parameter \\#2 \\$callback of function usort expects callable\\(mixed, mixed\\)\\: int, array\\('self', 'continuousComparator'\\) given\\.$#"
 			count: 1
 			path: *phpOMS/Algorithm/Knapsack/Continuous.php
@@ -79,11 +49,6 @@ parameters:
 			message: "#^Constructor of class phpOMS\\\\Business\\\\Marketing\\\\ArticleCorrelationAffinity has an unused parameter \\$considerQuantity\\.$#"
 			count: 1
 			path: *phpOMS/Business/Marketing/ArticleCorrelationAffinity.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Database\\\\BuilderAbstract\\:\\:quote\\(\\) should return string but returns string\\|false\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Database/BuilderAbstract.php
 
 		-
 			message: "#^Parameter \\#1 \\$dbdata of class phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\MysqlConnection constructor expects array\\('db' \\=\\> string, 'host' \\=\\> string, 'port' \\=\\> int, 'login' \\=\\> string, 'password' \\=\\> string, 'database' \\=\\> string\\), array\\('db' \\=\\> string, \\?'host' \\=\\> string, \\?'port' \\=\\> int, \\?'login' \\=\\> string, \\?'password' \\=\\> string, 'database' \\=\\> string\\) given\\.$#"
@@ -101,32 +66,12 @@ parameters:
 			path: *phpOMS/DataStorage/Database/Connection/ConnectionFactory.php
 
 		-
-			message: "#^Cannot call method getProperty\\(\\) on ReflectionClass\\<mixed\\>\\|null\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Parameter \\#1 \\$mapper of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getInitialized\\(\\) expects string, phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract given\\.$#"
-			count: 2
-			path: *phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
-			message: "#^Parameter \\#1 \\$mapper of static method phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract\\:\\:getInitializedArray\\(\\) expects string, phpOMS\\\\DataStorage\\\\Database\\\\DataMapperAbstract given\\.$#"
-			count: 2
-			path: *phpOMS/DataStorage/Database/DataMapperAbstract.php
-
-		-
 			message: "#^Array \\(array\\<phpOMS\\\\DataStorage\\\\Database\\\\Connection\\\\ConnectionAbstract\\>\\) does not accept phpOMS\\\\DataStorage\\\\DataStorageConnectionInterface\\.$#"
 			count: 1
 			path: *phpOMS/DataStorage/Database/DatabasePool.php
 
 		-
-			message: "#^Parameter \\#2 \\$operator of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:where\\(\\) expects array\\|string, array\\|string\\|null given\\.$#"
-			count: 2
-			path: *phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Possibly invalid array key type phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\|string\\.$#"
+			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Column\\:\\:getColumn\\(\\)\\.$#"
 			count: 1
 			path: *phpOMS/DataStorage/Database/Query/Builder.php
 
@@ -136,39 +81,19 @@ parameters:
 			path: *phpOMS/DataStorage/Database/Query/Builder.php
 
 		-
+			message: "#^Parameter \\#2 \\$operator of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:where\\(\\) expects array\\|string, array\\|string\\|null given\\.$#"
+			count: 2
+			path: *phpOMS/DataStorage/Database/Query/Builder.php
+
+		-
 			message: "#^Parameter \\#3 \\$values of method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\:\\:on\\(\\) expects array\\|string, array\\|string\\|null given\\.$#"
 			count: 2
 			path: *phpOMS/DataStorage/Database/Query/Builder.php
 
 		-
-			message: "#^Cannot call method bindParam\\(\\) on PDOStatement\\|false\\.$#"
+			message: "#^Possibly invalid array key type phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Builder\\|string\\.$#"
 			count: 1
 			path: *phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Cannot call method execute\\(\\) on PDOStatement\\|false\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Call to an undefined method phpOMS\\\\DataStorage\\\\Database\\\\Query\\\\Column\\:\\:getColumn\\(\\)\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Database/Query/Builder.php
-
-		-
-			message: "#^Property phpOMS\\\\DataStorage\\\\Session\\\\FileSession\\:\\:\\$sid \\(string\\) does not accept string\\|false\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Session/FileSession.php
-
-		-
-			message: "#^Method phpOMS\\\\DataStorage\\\\Session\\\\FileSessionHandler\\:\\:create_sid\\(\\) should return string but returns string\\|false\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Session/FileSessionHandler.php
-
-		-
-			message: "#^Property phpOMS\\\\DataStorage\\\\Session\\\\HttpSession\\:\\:\\$sid \\(string\\) does not accept string\\|false\\.$#"
-			count: 1
-			path: *phpOMS/DataStorage/Session/HttpSession.php
 
 		-
 			message: "#^Method phpOMS\\\\Math\\\\Geometry\\\\ConvexHull\\\\MonotoneChain\\:\\:createConvexHull\\(\\) should return array\\<int, array\\('x' \\=\\> float\\|int, 'y' \\=\\> float\\|int\\)\\> but returns array\\<int\\|string, array\\('x' \\=\\> float\\|int, 'y' \\=\\> float\\|int\\)\\>\\.$#"
@@ -186,6 +111,11 @@ parameters:
 			path: *phpOMS/Math/Matrix/CholeskyDecomposition.php
 
 		-
+			message: "#^Binary operation \"\\-\" between string\\|null and int results in an error\\.$#"
+			count: 1
+			path: *phpOMS/Math/Matrix/Matrix.php
+
+		-
 			message: "#^Method phpOMS\\\\Math\\\\Matrix\\\\Matrix\\:\\:current\\(\\) should return int but returns float\\|int\\.$#"
 			count: 1
 			path: *phpOMS/Math/Matrix/Matrix.php
@@ -201,31 +131,7 @@ parameters:
 			path: *phpOMS/Math/Matrix/Matrix.php
 
 		-
-			message: "#^Binary operation \"\\-\" between string\\|null and int results in an error\\.$#"
-			count: 1
-			path: *phpOMS/Math/Matrix/Matrix.php
-
-		-
-			message: "#^Parameter \\#2 \\$offset of function array_slice expects int, float\\|int given\\.$#"
-			count: 1
-			path: *phpOMS/Math/Statistic/MeasureOfDispersion.php
-
-		-
-			message: "#^Parameter \\#2 \\$timezone of class phpOMS\\\\Stdlib\\\\Base\\\\SmartDateTime constructor expects DateTimeZone\\|null, DateTimeZone\\|false given\\.$#"
-			count: 1
-			path: *phpOMS/Stdlib/Base/SmartDateTime.php
-
-		-
-			message: "#^Parameter \\#1 \\$timestamp of function getdate expects int\\|null, int\\|false given\\.$#"
-			count: 1
-			path: *phpOMS/Stdlib/Base/SmartDateTime.php
-
-		-
-			message: "#^Cannot call method getWeight\\(\\) on phpOMS\\\\Stdlib\\\\Graph\\\\Edge\\|null\\.$#"
-			count: 1
-			path: *phpOMS/Stdlib/Graph/Graph.php
-
-		-
 			message: "#^Call to an undefined method DirectoryIterator\\|RecursiveIteratorIterator\\<RecursiveDirectoryIterator\\>\\|RegexIterator\\:\\:getPathname\\(\\)\\.$#"
 			count: 1
 			path: *phpOMS/System/File/Local/Directory.php
+
