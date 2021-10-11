@@ -135,3 +135,17 @@ parameters:
 			count: 1
 			path: *phpOMS/System/File/Local/Directory.php
 
+		-
+			message: "#^Parameter \\#2 \\$count of function array_fill expects int\\<0, max\\>, int given\\.$#"
+			count: 1
+			path: *phpOMS/Algorithm/Knapsack/Bounded.php
+
+		-
+			message: "#^Offset 'currency' does not exist on SimpleXMLElement\\|null\\.$#"
+			count: 1
+			path: *phpOMS/Utils/Converter/Currency.php
+
+		-
+			message: "#^Offset 'rate' does not exist on SimpleXMLElement\\|null\\.$#"
+			count: 1
+			path: *phpOMS/Utils/Converter/Currency.php

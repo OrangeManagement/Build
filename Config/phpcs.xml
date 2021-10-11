@@ -87,7 +87,10 @@
 <rule ref="Generic.Formatting.DisallowMultipleStatements">
     <exclude-pattern>*/tests/*</exclude-pattern><!-- inline function definition -->
 </rule>
-<rule ref="Generic.Formatting.MultipleStatementAlignment"/>
+<rule ref="Generic.Formatting.MultipleStatementAlignment">
+    <exclude-pattern>*oLib.js</exclude-pattern><!-- I don't know why it doesn't understand this -->
+    <exclude-pattern>*StringUtils.js</exclude-pattern><!-- I don't know why it doesn't understand this -->
+</rule>
 <rule ref="Generic.Formatting.SpaceAfterCast"/>
 <rule ref="Generic.Functions.CallTimePassByReference"/>
 <!--<rule ref="Generic.Metrics.CyclomaticComplexity">
