@@ -38,6 +38,7 @@ service postgresql start
 
 # Install sqlsrv
 # https://docs.microsoft.com/en-us/sql/connect/php/installation-tutorial-linux-mac?view=sql-server-2017
+# https://www.sqlservercentral.com/blogs/reset-sa-password-on-sql-server-on-linux
 # systemctl restart mssql-server
 
 a2enmod rewrite
