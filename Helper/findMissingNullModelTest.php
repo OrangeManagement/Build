@@ -34,8 +34,18 @@ foreach ($modules as $module) {
 			continue;
 		}
 
-		if (!\is_file(__DIR__ . '/../../Modules/' . $module . '/tests/Models/' . $model)) {
-			echo $module . ': ' . $model . "\n";
+		if (\stripos($model, '.php') === false) {
+			throw \Exception('invalid substr');
+		}
+
+		$model = \substr($model, 4, -4); // remove Null and .php from string
+
+		if (empty($model)) {
+			throw \Exception('invalid substr');
+		}
+
+		if (!\is_file(__DIR__ . '/../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php')) {
+			echo $module . ': Null' . $model . "\n";
 
 			if (!\is_dir(__DIR__ . '/../../Modules/' . $module . '/tests')) {
 				\mkdir(__DIR__ . '/../../Modules/' . $module . '/tests');
@@ -44,8 +54,6 @@ foreach ($modules as $module) {
 			if (!\is_dir(__DIR__ . '/../../Modules/' . $module . '/tests/Models')) {
 				\mkdir(__DIR__ . '/../../Modules/' . $module . '/tests/Models');
 			}
-
-			$model = \substr($model, 4, -4); // remove Null and .php from string
 
 			$test = '<?php' . "\n"
 				. '/**' . "\n"
