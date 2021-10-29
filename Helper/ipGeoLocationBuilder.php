@@ -13,7 +13,7 @@ function ip2int(string $ip) : float
 }
 
 while (($data = \fgetcsv($fh, 150, ",")) !== false) {
-    \fputcsv($fo, [ip2int($data[0]), ip2int($data[1]), $data[4]]);
+    \fputcsv($fo, [\ip2int($data[0]), \ip2int($data[1]), $data[4]]);
 }
 
 \fclose($fo);

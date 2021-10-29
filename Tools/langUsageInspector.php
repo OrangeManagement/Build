@@ -25,7 +25,7 @@ $destination = ($key = \array_search('-d', $argv)) === false || $key === \count(
 $modulePath  = ($key = \array_search('-m', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
 
 if (!isset($destination) || !isset($modulePath)) {
-    printUsage();
+    \printUsage();
 
     return;
 }
