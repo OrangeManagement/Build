@@ -217,7 +217,6 @@
     <exclude-pattern>*HttpUri.js</exclude-pattern>--><!-- Regex false positive -->
 <!--</rule>-->
 <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing">
-    <exclude-pattern>*DataMapperAbstract.php</exclude-pattern>
 </rule>
 <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
 <rule ref="Zend.Files.ClosingTag"/>
