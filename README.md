@@ -1,6 +1,6 @@
 # General
 
-The Orange Management build system is a collection of scripts to create builds. Builds that can get created are:
+The Karaka build system is a collection of scripts to create builds. Builds that can get created are:
 
 * Public release builds
 * Public developer release builds

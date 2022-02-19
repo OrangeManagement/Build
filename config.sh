@@ -10,7 +10,7 @@ RELEASE_PATH="/var/www/html/Release"
 INSPECTION_PATH="/var/www/html/Inspection"
 
 # Web
-WEB_URL="http://orange-management.de"
+WEB_URL="http://karaka.de"
 MAIL_ADDR=""
 
 # Authentications
@@ -18,8 +18,8 @@ DB_USER="root"
 DB_PASSWORD="root"
 
 # Git variables
-GITHUB_URL[0]="https://github.com/Orange-Management/Orange-Management.git"
-GITHUB_URL[1]="https://github.com/Orange-Management/Website.git"
+GITHUB_URL[0]="https://github.comkaraka-management/Orange-Management.git"
+GITHUB_URL[1]="https://github.comkaraka-management/Website.git"
 
 GIT_BRANCH="develop"
 
