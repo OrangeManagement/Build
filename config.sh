@@ -2,7 +2,7 @@
 
 # Paths
 BASE_PATH="/var/www/html"
-ROOT_PATH="/var/www/html/Orange-Management"
+ROOT_PATH="/var/www/html/Karaka"
 BUILD_PATH="/var/www/html/Build"
 
 TOOLS_PATH="/var/www/html/Tools"
@@ -18,8 +18,8 @@ DB_USER="root"
 DB_PASSWORD="root"
 
 # Git variables
-GITHUB_URL[0]="https://github.comkaraka-management/Orange-Management.git"
-GITHUB_URL[1]="https://github.comkaraka-management/Website.git"
+GITHUB_URL[0]="https://github.com/karaka-management/Karaka.git"
+GITHUB_URL[1]="https://github.com/karaka-management/Website.git"
 
 GIT_BRANCH="develop"
 

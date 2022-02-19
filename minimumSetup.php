@@ -144,7 +144,7 @@ $request->setData('updatepassword', $config['db']['core']['masters']['admin']['p
 $request->setData('deleteuser', $config['db']['core']['masters']['admin']['login']);
 $request->setData('deletepassword', $config['db']['core']['masters']['admin']['password']);
 
-$request->setData('orgname', 'Orange-Management');
+$request->setData('orgname', 'Karaka');
 $request->setData('adminname', 'admin');
 $request->setData('adminpassword', 'orange');
 $request->setData('adminemail', 'admin@oms.com');

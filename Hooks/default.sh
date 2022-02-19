@@ -6,7 +6,7 @@ strindex() {
 }
 
 orgpath="$(pwd)"
-repository="Orange-Management"
+repository="Karaka"
 pos=$(strindex "$orgpath" "$repository")
 length=$pos+${#repository}
 rootpath=${orgpath:0:length}
