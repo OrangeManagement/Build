@@ -103,7 +103,7 @@
 			" * @link       https://karaka.app",
 			" * @since      1.0.0",
 			" */",
-			"class $2 implements ArrayableInterface, \\JsonSerializable",
+			"class $2 implements \\JsonSerializable",
 			"{",
 			"    private \\$id = 0;",
 			"",
