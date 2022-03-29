@@ -28,7 +28,7 @@ parameters:
         - */Docs/*
         - */Documentation/*
         - */Resources/*
-        - *Resources*
+        - */Libraries/*
         - */Routes/*
         - */Hooks/*
         - */Message/Mail/*

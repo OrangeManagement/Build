@@ -16,6 +16,7 @@
 <exclude-pattern>*/Admin/Install/Application/*</exclude-pattern>
 <exclude-pattern>*/node_modules/*</exclude-pattern>
 <exclude-pattern>*/Resources/*</exclude-pattern>
+<exclude-pattern>*/Libraries/*</exclude-pattern>
 <exclude-pattern>*/Web/*</exclude-pattern>
 <exclude-pattern>*/omsSetup/*</exclude-pattern>
 <exclude-pattern>*/demoSetup/*</exclude-pattern>
