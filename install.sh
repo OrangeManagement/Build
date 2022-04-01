@@ -76,7 +76,7 @@ sudo useradd -d /home/test -g mail -u 1001 -s /bin/bash test
 # Make sure no ssh is possible for this user
 
 # npm
-npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest selenium-webdriver chromedriver geckodriver
+npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest selenium-webdriver chromedriver geckodriver eslint
 
 # FTP
 apt-get install vsftpd
