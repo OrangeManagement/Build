@@ -46,6 +46,11 @@ return [
     ':testing_process_list_4'   => 'Framework vs. Library vs. Module',
     ':testing_process_list_5'   => 'Environment dependent vs. Environment independent',
     ':testing_process_desc_2'   => 'In addition to these functional tests we also do performance analysis of critical components. In addition to these automated tests we also do manual tests which are not included in this report during the development process and testing environments. New tests are constantly added and old tests are improved if applicable. In case tests become redundant or no longer provide any benefit due to software changes we may remove them.',
+    ':testing_process_desc_3'   => 'The testing rulesets can be found at:',
+    ':testing_process_rules_1'   => '<a href="https://github.com/Karaka-Management/Karaka/blob/8f0a3a1cd8e753481f2ab6c7f2dcd78b85e41922/tests/phpunit_default.xml">PhpUnit</a>',
+    ':testing_process_rules_2'   => '<a href="https://github.com/Karaka-Management/Build/blob/f1c3abe2db03ec112075574c1419ee547e5f7c13/Config/phpcs.xml">PhpCS</a>',
+    ':testing_process_rules_3'   => '<a href="https://github.com/Karaka-Management/Build/blob/f1c3abe2db03ec112075574c1419ee547e5f7c13/Config/phpstan.neon">PhpStan</a> and <a href="https://github.com/Karaka-Management/Build/blob/f1c3abe2db03ec112075574c1419ee547e5f7c13/Config/phpstan-baseline.neon">Baseline</a>',
+    ':testing_process_rules_4'   => '<a href="https://github.com/Karaka-Management/Build/blob/f1c3abe2db03ec112075574c1419ee547e5f7c13/Config/.eslintrc.jsonl">Eslint</a>',
     ':testing_summary'          => 'Testing Summary',
     ':testing_summary_coverage' => 'Coverage',
     ':testing_summary_tests'    => 'Tests',
@@ -2488,4 +2493,5 @@ return [
     'Modules\tests\Knowledgebase\Models\WikiDocMapperTest'        => ['description' => 'Wiki document mapper', 'type' => 'module'],
     'Modules\tests\Knowledgebase\Models\WikiDocMapperTest:testCR' => ['description' => 'The model can be created and read from the database', 'type' => 'module'],
 
+    'jsOMS\tests\UI\Component\FormTest' => ['description' => 'Form manager', 'type' => 'framework'],
 ];
