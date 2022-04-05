@@ -22,6 +22,7 @@
         "history": "readonly",
         "screen": "readonly",
         "Image": "readonly",
+        "Blob": "readonly",
         "Notification": "readonly",
         "XMLHttpRequest": "readonly",
         "HTMLElement": "readonly",
@@ -146,52 +147,6 @@
         "function-paren-newline": [
             "error",
             "consistent"
-        ],
-        "indent": [
-            "warn",
-            4,
-            {
-                "SwitchCase": 1,
-                "VariableDeclarator": 1,
-                "outerIIFEBody": 1,
-                "MemberExpression": 1,
-                "FunctionDeclaration": {
-                    "parameters": 1,
-                    "body": 1
-                },
-                "FunctionExpression": {
-                    "parameters": 1,
-                    "body": 1
-                },
-                "CallExpression": {
-                    "arguments": "off"
-                },
-                "ArrayExpression": 1,
-                "ObjectExpression": 1,
-                "ImportDeclaration": 1,
-                "flatTernaryExpressions": false,
-                "ignoreComments": false,
-                "ignoredNodes": [
-                    "TemplateLiteral *",
-                    "JSXElement",
-                    "JSXElement > *",
-                    "JSXAttribute",
-                    "JSXIdentifier",
-                    "JSXNamespacedName",
-                    "JSXMemberExpression",
-                    "JSXSpreadAttribute",
-                    "JSXExpressionContainer",
-                    "JSXOpeningElement",
-                    "JSXClosingElement",
-                    "JSXFragment",
-                    "JSXOpeningFragment",
-                    "JSXClosingFragment",
-                    "JSXText",
-                    "JSXEmptyExpression",
-                    "JSXSpreadChild"
-                ],
-                "offsetTernaryExpressions": true
-            }
         ],
         "key-spacing": [
             "error",

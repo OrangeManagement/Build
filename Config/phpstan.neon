@@ -8,7 +8,7 @@ parameters:
     checkMissingIterableValueType: false
     checkGenericClassInNonGenericObjectType: false
     treatPhpDocTypesAsCertain: false
-    excludes_analyse:
+    excludePaths:
         - *.tpl.php
         - */tests/*
         - */Modules/Media/Files/*
@@ -43,6 +43,8 @@ parameters:
         - */Modules/Organization/Controller/BackendController.php
         - *Model/CoreSettings.php
     ignoreErrors:
+        - '#[.]*tag @var for constant .* is not subtype of value array[.]*#'
+        - '#[.]*Offset .* on array.* always exists[.]*#'
         - '#[.]*separator of function explode expects non-empty-string[.]*#'
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
