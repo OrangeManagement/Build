@@ -13,7 +13,7 @@ isPhanTestSuccessful() {
 }
 
 isPhpStanTestSuccessful() {
-    php -d memory_limit=4G ${rootpath}/vendor/bin/phpstan analyse --autoload-file=${rootpath}/phpOMS/Autoloader.php -l 8 -c ${rootpath}/Build/Config/phpstan.neon "$1" >&2
+    php -d memory_limit=4G ${rootpath}/vendor/bin/phpstan analyse --autoload-file=${rootpath}/phpOMS/Autoloader.php -l 9 -c ${rootpath}/Build/Config/phpstan.neon "$1" >&2
     if [ $? -ne 0 ]; then
         echo 0
         return 0
