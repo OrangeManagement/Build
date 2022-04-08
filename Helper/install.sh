@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # create new user
-adduser test
-usermod -aG sudo test
+#adduser test
+#usermod -aG sudo test
 
 # Debian
 #wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
@@ -13,7 +13,7 @@ add-apt-repository ppa:ondrej/php
 
 apt-get update
 
-apt-get install npm git php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server postgresql postgresql-contrib pcov
+apt-get install npm git composer cmake php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server postgresql postgresql-contrib pcov
 
 # USE mysql;
 # mysql < 5.7
@@ -117,6 +117,3 @@ printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.1/mods-available/sqls
 printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.1/mods-available/pdo_sqlsrv.ini
 phpenmod -v 8.1 sqlsrv pdo_sqlsrv
 service apache2 restart
-
-npm install -g sitespeed.io
-sitespeed.io Build/Helper/sitespeedUrls.txt -n 1 --preScript Build/Helper/sitespeedAuth.js --outputFolder Build/sitespeed

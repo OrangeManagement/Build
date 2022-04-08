@@ -91,6 +91,7 @@ mkdir -p ${INSPECTION_PATH}/Modules
 
 mkdir -p ${INSPECTION_PATH}/Test/Php
 mkdir -p ${INSPECTION_PATH}/Test/Js
+mkdir -p ${INSPECTION_PATH}/Test/sitespeed
 
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
@@ -98,30 +99,10 @@ chmod -R 777 ${ROOT_PATH}
 # Setup tools for inspection
 mkdir -p ${TOOLS_PATH}
 
-cd ${TOOLS_PATH}
-
 echo "#################################################"
 echo "Setup tools"
 echo "#################################################"
 
-# Downloading tools
-wget -q --tries=2 -nc https://getcomposer.org/composer.phar
-wget -q --tries=2 -nc https://phar.phpunit.de/phploc.phar
-wget -q --tries=2 -nc https://github.com/squizlabs/PHP_CodeSniffer/releases/download/3.5.4/phpcs.phar
-#wget -q --tries=2 -nc http://static.phpmd.org/php/latest/phpmd.phar no longer available
-wget -q --tries=2 -nc https://github.com/Halleck45/PhpMetrics/raw/master/build/phpmetrics.phar
-#wget -q --tries=2 -nc http://static.pdepend.org/php/latest/pdepend.phar
-wget -q --tries=2 -nc http://dl.google.com/closure-compiler/compiler-latest.tar.gz
-wget -q --tries=2 -nc https://github.com/phan/phan/releases/download/0.12.5/phan.phar
-wget -q --tries=2 -nc https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v2.16.1/php-cs-fixer.phar
-wget -q --tries=2 -nc https://github.com/jasmine/jasmine/releases/download/v3.1.0/jasmine-standalone-3.1.0.zip
-#wget -q --tries=2 -nc https://github.com/karaka-management/Documentor/releases/download/v1.1.1/documentor.phar
-wget -q --tries=2 -nc https://github.com/karaka-management/TestReportGenerator/releases/download/1.1.0-rc3/testreportgenerator.phar
-
-unzip -n -j jasmine-standalone-3.1.0.zip -d ${ROOT_PATH}/jsOMS/tests >/dev/null
-tar -zxvf compiler-latest.tar.gz >/dev/null
-
-chmod -R 777 ${TOOLS_PATH}
-
-cp ${ROOT_PATH}/composer.json ${TOOLS_PATH}/composer.json
-php ${TOOLS_PATH}/composer.phar install --working-dir=${ROOT_PATH}/ >/dev/null
+cd ${ROOT_PATH}
+composer install
+npm install

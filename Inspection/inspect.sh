@@ -32,9 +32,10 @@ echo "#################################################"
 
 # Code style
 echo "#################################################"
-echo "PHP coding style"
+echo "PHP and JS coding style"
 echo "#################################################"
 . ${BUILD_PATH}/Inspection/Php/style.sh
+. ${BUILD_PATH}/Inspection/Js/style.sh
 
 # Custom html inspections
 echo "#################################################"
@@ -51,6 +52,21 @@ echo "#################################################"
 
 # Build external test report
 echo "#################################################"
-echo "PHP test report"
+echo "Test report"
 echo "#################################################"
-php ${TOOLS_PATH}/testreportgenerator.phar -b ${ROOT_PATH} -l ${BUILD_PATH}/Config/reportLang.php -c ${INSPECTION_PATH}/Test/Php/coverage.xml -u ${INSPECTION_PATH}/Test/Php/junit_php.xml -s ${INSPECTION_PATH}/Test/Php/junit_phpcs.xml -a ${INSPECTION_PATH}/Test/Php/phpstan.json -d ${INSPECTION_PATH}/Test/ReportExternal --version 1.0.0
+php {TOOLS_PATH}/TestReportGenerator/src/index.php \
+-b ${ROOT_PATH} \
+-l ${BUILD_PATH}/Config/reportLang.php \
+-s ${INSPECTION_PATH}/Test/Php/junit_phpcs.xml \
+-sj ${INSPECTION_PATH}/Test/Js/junit_eslint.xml \
+-a ${INSPECTION_PATH}/Test/Php/phpstan.json \
+-c ${INSPECTION_PATH}/Test/Php/coverage.xml \
+-u ${INSPECTION_PATH}/Test/Php/junit_php.xml \
+-d ${INSPECTION_PATH}/Test/ReportExternal \
+--version 1.0.0
+
+# Analyse page speed
+echo "#################################################"
+echo "Page performance"
+echo "#################################################"
+npx sitespeed.io ${BUILD_PATH}/Helper/sitespeedUrls.txt -n 1 --preScript ${BUILD_PATH}/Helper/sitespeedAuth.js --outputFolder ${INSPECTION_PATH}/Test/sitespeed
