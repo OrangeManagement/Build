@@ -2,10 +2,7 @@
 
 mkdir -p Build/test
 
-./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml"
-./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 9 -c Build/Config/phpstan.neon ./
-npx eslint jsOMS/ -c Build/Config/.eslintrc.json
-
+# php cs + phpstan + eslint file generation
 ./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
 ./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 9 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 npx eslint jsOMS/ -c Build/Config/.eslintrc.json -o Build/test/junit_eslint.xml -f junit
@@ -14,6 +11,7 @@ npx eslint jsOMS/ -c Build/Config/.eslintrc.json -o Build/test/junit_eslint.xml 
 sed -i '/^$/d' Build/test/phpstan.json
 sed -i '/^Warning: /d' Build/test/phpstan.json
 
+# Create report
 php ../TestReportGenerator/src/index.php \
 -b /home/spl1nes/Orange-Management \
 -l /home/spl1nes/Orange-Management/Build/Config/reportLang.php \

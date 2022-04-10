@@ -15,11 +15,16 @@ hasInvalidPhpSyntax() {
         return 2
     fi
 
-    # phpmd
-    $(php -d memory_limit=4G ${rootpath}/vendor/bin/phpmd "$1" text ${rootpath}/Build/Config/phpmd.xml --exclude *tests* --minimumpriority 1 > /dev/null)
+    echo 0
+    return 0
+}
+
+hasInvalidJsSyntax() {
+    # eslint
+    $(npx eslint "$1" -c Build/Config/.eslintrc.json > /dev/null)
     if [[ $? != 0 ]]; then
-        echo 3
-        return 3
+        echo 1
+        return 1
     fi
 
     echo 0

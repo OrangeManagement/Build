@@ -32,11 +32,6 @@ for FILE in $(git diff --cached --name-only); do
     fi
 
     # Tests
-    if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhanTestSuccessful "$FILE") = 0 ]]; then
-        echo -e "\e[1;31m\tPhan error in $FILE.\e[0m" >&2
-        exit 1
-    fi
-
     if [[ "$FILE" =~ ^.+(php)$ ]] && [[ $(isPhpStanTestSuccessful "$FILE") = 0 ]]; then
         echo -e "\e[1;31m\tPhp stan error in $FILE.\e[0m" >&2
         exit 1
@@ -59,6 +54,16 @@ for FILE in $(git diff --cached --name-only); do
 
         if [[ $PHP_SYNTAX = 3 ]]; then
             echo -e "\e[1;31m\tMess Detector error.\e[0m" >&2
+            exit 1
+        fi
+    fi
+
+    if [[ "$FILE" =~ ^.+(js)$ ]]; then
+        PHP_SYNTAX=$(hasInvalidJsSyntax "$FILE")
+
+        if [[ $PHP_SYNTAX = 1 ]]; then
+            echo -e "\e[1;31m\tEslint error.\e[0m" >&2
+            npx eslint "$FILE" -c Build/Config/.eslintrc.json
             exit 1
         fi
     fi

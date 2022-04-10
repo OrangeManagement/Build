@@ -50,6 +50,12 @@ echo "Custom php inspection"
 echo "#################################################"
 . ${BUILD_PATH}/Inspection/Php/security.sh
 
+# Custom js inspections
+echo "#################################################"
+echo "Custom js inspection"
+echo "#################################################"
+. ${BUILD_PATH}/Inspection/Js/security.sh
+
 # Build external test report
 echo "#################################################"
 echo "Test report"
