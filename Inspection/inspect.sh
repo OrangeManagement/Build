@@ -70,9 +70,3 @@ php {TOOLS_PATH}/TestReportGenerator/src/index.php \
 -u ${INSPECTION_PATH}/Test/Php/junit_php.xml \
 -d ${INSPECTION_PATH}/Test/ReportExternal \
 --version 1.0.0
-
-# Analyse page speed
-echo "#################################################"
-echo "Page performance"
-echo "#################################################"
-npx sitespeed.io ${BUILD_PATH}/Helper/sitespeedUrls.txt -n 1 --preScript ${BUILD_PATH}/Helper/sitespeedAuth.js --outputFolder ${INSPECTION_PATH}/Test/sitespeed
