@@ -2,7 +2,7 @@
 /**
  * Karaka
  *
- * PHP Version 8.0
+ * PHP Version 8.1
  *
  * @package   Helper
  * @copyright Dennis Eichhorn
@@ -59,7 +59,7 @@ foreach ($modules as $module) {
 				. '/**' . "\n"
 				. ' * Karaka' . "\n"
 				. ' *' . "\n"
-				. ' * PHP Version 8.0' . "\n"
+				. ' * PHP Version 8.1' . "\n"
 				. ' *' . "\n"
 				. ' * @package   tests' . "\n"
 				. ' * @copyright Dennis Eichhorn' . "\n"

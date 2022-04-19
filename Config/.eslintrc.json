@@ -335,7 +335,7 @@
             }
         ],
         "no-unused-vars": [
-            "error",
+            "warn",
             {
                 "args": "none",
                 "caughtErrors": "none",
@@ -353,7 +353,7 @@
         ],
         "no-useless-call": "error",
         "no-useless-computed-key": "error",
-        "no-useless-constructor": "error",
+        "no-useless-constructor": "warn",
         "no-useless-rename": "error",
         "no-useless-return": "error",
         "no-void": "error",
