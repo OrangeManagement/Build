@@ -32,5 +32,5 @@ find ${BPATH}/../../Web ${BPATH}/../../phpOMS ${BPATH}/../../jsOMS ${BPATH}/../.
 
 # php cs + phpstan + eslint
 ./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml"
-./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 9 -c Build/Config/phpstan.neon ./
+./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 8 -c Build/Config/phpstan.neon ./
 npx eslint jsOMS/ -c Build/Config/.eslintrc.json
