@@ -50,7 +50,7 @@
 <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
 <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
 <rule ref="Generic.Commenting.Todo">
-    <severity>3</severity>
+    <severity>0</severity>
 </rule>
 <rule ref="Generic.Commenting.Fixme">
     <severity>3</severity>
@@ -66,7 +66,15 @@
     </properties>
 </rule>-->
 <rule ref="Generic.Files.ByteOrderMark"/>
-<rule ref="Generic.Files.LineLength">
+<!--<rule ref="Generic.Files.LineLength">
+    <properties>
+        <property name="lineLimit" value="180"/>
+        <property name="absoluteLineLimit" value="0"/>
+    </properties>
+    <exclude-pattern>*Mapper.php</exclude-pattern>
+    <exclude-pattern>*TDistribution.php</exclude-pattern>
+    <exclude-pattern>*ChiSquaredDistribution.php</exclude-pattern>
+</rule>-->
 <rule ref="Generic.Files.OneTraitPerFile"/>
 <rule ref="Generic.Files.OneInterfacePerFile"/>
 <rule ref="Generic.Files.OneClassPerFile"/>
@@ -78,13 +86,6 @@
 </rule>
 <rule ref="Generic.Debug.ESLint"/>
 <rule ref="Generic.Debug.CSSLint"/>
-<rule ref="Generic.Debug.JSHint"/>
-    <severity>3</severity>
-    <properties>
-        <property name="lineLimit" value="150"/>
-        <property name="absoluteLineLimit" value="250"/>
-    </properties>
-</rule>
 <rule ref="Generic.Formatting.DisallowMultipleStatements">
     <exclude-pattern>*/tests/*</exclude-pattern><!-- inline function definition -->
 </rule>
@@ -115,13 +116,6 @@
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>
 <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
-<rule ref="Generic.NamingConventions.CamelCapsFunctionName">
-    <severity>3</severity>
-    <exclude-pattern>*StringUtils.php</exclude-pattern><!-- Implements missing default functions -->
-    <exclude-pattern>*FinanceFormulas.php</exclude-pattern><!-- Correct name is more important than rule -->
-    <exclude-pattern>*StockBonds.php</exclude-pattern><!-- Correct name is more important than rule -->
-    <exclude-pattern>*ExponentialSmoothing.php</exclude-pattern><!-- Correct name is more important than rule -->
-</rule>
 <rule ref="Generic.PHP.LowerCaseConstant"/>
 <rule ref="Generic.PHP.NoSilencedErrors">
     <exclude-pattern>*Server.php</exclude-pattern><!-- Socket shouldn't output errors -->
@@ -134,7 +128,7 @@
     </properties>
 </rule>
 <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClass">
     <severity>3</severity>
 </rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
@@ -160,12 +154,9 @@
 </rule>
 <rule ref="PEAR.Commenting.InlineComment"/>
 <rule ref="PEAR.ControlStructures.ControlSignature"/>
-<rule ref="PEAR.ControlStructures.MultiLineCondition">
-    <severity>3</severity>
-</rule>
 <rule ref="PEAR.Functions.ValidDefaultValue"/>
-<rule ref="PSR1.Files.SideEffects">
-<rule ref="PSR1.Classes.ClassDeclaration"/>
+<rule ref="PSR1.Files.SideEffects"/>
+<rule ref="PSR1.Classes.ClassDeclaration">
     <severity>3</severity>
     <exclude-pattern>*Pdf.php</exclude-pattern><!-- Just a wrapper -->
     <exclude-pattern>*Excel.php</exclude-pattern><!-- Just a wrapper -->
@@ -223,7 +214,7 @@
 <rule ref="Zend.Files.ClosingTag"/>
 <rule ref="Generic.WhiteSpace.ScopeIndent">
     <properties>
-        <property name="tabIndent" value="true" />
+        <property name="tabIndent" value="true"/>
     </properties>
     <exclude-pattern>*ResponseType.js</exclude-pattern>
     <exclude-pattern>*HttpUri.js</exclude-pattern>

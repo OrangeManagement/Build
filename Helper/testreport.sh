@@ -3,7 +3,7 @@
 mkdir -p Build/test
 
 # php cs + phpstan + eslint file generation
-./vendor/bin/phpcs ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
+./vendor/bin/phpcs --severity=1 ./ --standard="Build/Config/phpcs.xml" -s --report-junit=Build/test/junit_phpcs.xml
 ./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 9 -c Build/Config/phpstan.neon --error-format=prettyJson ./ > Build/test/phpstan.json
 npx eslint jsOMS/ -c Build/Config/.eslintrc.json -o Build/test/junit_eslint.xml -f junit
 

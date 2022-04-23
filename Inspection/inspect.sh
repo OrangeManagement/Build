@@ -42,7 +42,6 @@ echo "#################################################"
 echo "Custom html inspection"
 echo "#################################################"
 . ${BUILD_PATH}/Inspection/Html/tags.sh
-. ${BUILD_PATH}/Inspection/Html/attributes.sh
 
 # Custom php inspections
 echo "#################################################"
