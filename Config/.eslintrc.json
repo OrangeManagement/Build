@@ -13,7 +13,7 @@
     "plugins": [
         "import"
     ],
-    "ignorePatterns": ["**/*Test.js", "**/tests/**", "**/3D/**", "**/Hash/**", "Markdown.js"],
+    "ignorePatterns": ["**/*Test.js", "**/tests/**", "**/3D/**", "**/Hash/**", "Markdown.js", "**/Build/**"],
     "globals": {
         "document": "readonly",
         "navigator": "readonly",
@@ -21,8 +21,10 @@
         "window": "readonly",
         "history": "readonly",
         "screen": "readonly",
+        "fetch": true,
         "Image": "readonly",
         "Blob": "readonly",
+        "WebSocket": "readonly",
         "Notification": "readonly",
         "XMLHttpRequest": "readonly",
         "HTMLElement": "readonly",
@@ -38,7 +40,12 @@
         "SpeechRecognitionEvent": true,
         "SpeechRecognition": true,
         "SpeechGrammarList": true,
-        "jsOMS": "readonly"
+        "DocumentFragment": true,
+        "opr": "readonly",
+        "isChrome": "readonly",
+        "isOpera": "readonly",
+        "jsOMS": "readonly",
+        "Logger": "readonly"
     },
     "rules": {
         "no-var": "warn",
@@ -143,10 +150,6 @@
                 "before": true,
                 "after": true
             }
-        ],
-        "function-paren-newline": [
-            "error",
-            "consistent"
         ],
         "key-spacing": [
             "error",
