@@ -31,6 +31,7 @@ parameters:
         - */Libraries/*
         - */Routes/*
         - */Hooks/*
+        - */DataStorage/Database/*
         - */Message/Mail/*
         - */Auth/OAuth2/*
         - */Markdown/Markdown.php
@@ -57,6 +58,7 @@ parameters:
         - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
         - '#.*class Mpdf\\.*#'
         - '#.*PHPDoc tag @var for constant.*#'
+        - '#.*Cannot cast mixed to.*#'
         -
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
