@@ -22,14 +22,3 @@ jobs:
         VALIDATE_ALL_CODEBASE: false
         DEFAULT_BRANCH: develop
         GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-  custom:
-    runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'NO_CI')"
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@main
-    - name: Bash linting
-      run: find ./ -type f -name '*.sh' -print0 | xargs -0 -n1 -P4 bash -n | ( grep -v "syntax error" )
