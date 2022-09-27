@@ -109,7 +109,7 @@
     </properties>
      <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
      <exclude-pattern>*phpOMS/Message/Http/HttpRequest.php</exclude-pattern><!-- Multipart uses deep nesting -->
-     <exclude-pattern>*WebRouter.php</exclude-pattern><!-- WebRouter uses deep nesting -->
+     <exclude-pattern>*Router.php</exclude-pattern><!-- WebRouter uses deep nesting -->
      <exclude-pattern>*Mail.php</exclude-pattern><!-- Mail uses deep nesting -->
      <exclude-pattern>*Exchange/Interfaces*</exclude-pattern><!-- Exchange interfaces can be deeply nested -->
 </rule>
@@ -155,7 +155,9 @@
 <rule ref="PEAR.Commenting.InlineComment"/>
 <rule ref="PEAR.ControlStructures.ControlSignature"/>
 <rule ref="PEAR.Functions.ValidDefaultValue"/>
-<rule ref="PSR1.Files.SideEffects"/>
+<rule ref="PSR1.Files.SideEffects">
+    <exclude-pattern>*Autoloader.php</exclude-pattern><!-- Just a wrapper -->
+</rule>
 <rule ref="PSR1.Classes.ClassDeclaration">
     <severity>3</severity>
     <exclude-pattern>*Pdf.php</exclude-pattern><!-- Just a wrapper -->
