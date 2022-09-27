@@ -56,6 +56,7 @@ parameters:
         - '#.*unserialize\(\) has parameter .* with no typehint specified#'
         - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
         - '#.*class Mpdf\\.*#'
+        - '#.*PHPDoc tag @var for constant.*#'
         -
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
