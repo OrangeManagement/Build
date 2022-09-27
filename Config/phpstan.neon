@@ -68,3 +68,9 @@ parameters:
         -
           message: '#Binary operation "\-" between string and int results in an error#'
           path: *Matrix/Matrix.php
+        -
+          message: '#PHPDoc tag @return with type object is not subtype of native type phpOMS.*#'
+          path: *Module/ModuleManager.php
+        -
+          message: '#.*continuousComparator\(\) is unused.*#'
+          path: *Algorithm/Knapsack/Continuous.php
