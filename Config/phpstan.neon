@@ -16,6 +16,7 @@ parameters:
         - */demoSetup/*
         - */d0cbb361b14ac3ef32486f0a09ab937d/*
         - */test/*
+        - */Tools/*
         - *Test.php
         - *Routes.php
         - *Hooks.php

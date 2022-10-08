@@ -1,4 +1,5 @@
-<?php declare(strict_types=1);
+<?php
+declare(strict_types=1);
 
 return [
     // keys which start with `:` are considered localized strings used in the template not for the report.
