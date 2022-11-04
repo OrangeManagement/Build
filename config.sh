@@ -18,8 +18,8 @@ DB_USER="root"
 DB_PASSWORD="root"
 
 # Git variables
-GITHUB_URL[0]="https://github.com/karaka-management/Karaka.git"
-GITHUB_URL[1]="https://github.com/karaka-management/Website.git"
+GITHUB_URL[0]="https://github.com/Karaka-Management/Karaka.git"
+GITHUB_URL[1]="https://github.com/Karaka-Management/Website.git"
 
 GIT_BRANCH="develop"
 
