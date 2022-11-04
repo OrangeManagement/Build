@@ -3,7 +3,10 @@
 # Include config
 . config.sh
 
-# Setting up database for demo and testing
+# Setup database
+echo "#################################################"
+echo "Setup database"
+echo "#################################################"
 mysql -e 'drop database if exists oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
 mysql -e 'create database oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
 
