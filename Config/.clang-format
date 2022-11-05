@@ -4,6 +4,7 @@ AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: 'true'
 AlignEscapedNewlines: Left
 AlignOperands: 'true'
+AlignConsecutiveDeclarations: 'false'
 BreakBeforeBraces: Linux
 ColumnLimit: '120'
 IndentWidth: '4'

@@ -1,0 +1,7 @@
+{
+  "extends": "base.json",
+  "line-length": false,
+  "no-duplicate-header": false,
+  "ul-indent": 4,
+  "ol-indent": 4
+}
