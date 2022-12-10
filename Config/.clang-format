@@ -1,8 +1,7 @@
 # Common settings
 
 AlignAfterOpenBracket: Align
-AlignConsecutiveMacros:
-  Enabled: true
+AlignConsecutiveAssignments:
   AlignCompound: true
   PadOperators: true
   AcrossEmptyLines: false
