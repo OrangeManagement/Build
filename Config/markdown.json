@@ -1,6 +1,7 @@
 {
   "line-length": false,
   "no-duplicate-header": false,
+  "no-inline-html": false,
   "ul-indent": 4,
   "ol-indent": 4
 }
