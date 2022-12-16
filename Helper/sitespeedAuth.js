@@ -1,6 +1,6 @@
 module.exports = async function(context, commands)
 {
-    await commands.navigate('https://karaka.app');
+    await commands.navigate('https://jingga.app');
 
     await commands.addText.byId('admin', 'iName');
     await commands.addText.byId('orange', 'iPassword');
