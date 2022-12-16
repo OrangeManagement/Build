@@ -2,6 +2,7 @@
 
 AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments:
+  Enabled: true
   AlignCompound: true
   PadOperators: true
   AcrossEmptyLines: false
@@ -29,7 +30,7 @@ SpacesInCStyleCastParentheses: false
 SpacesInContainerLiterals: false
 SpacesInParentheses: false
 SpacesInSquareBrackets: false
-TabWidth: '4'
+TabWidth: 4
 UseTab: Never
 IndentPPDirectives: BeforeHash
 IndentCaseLabels: true
