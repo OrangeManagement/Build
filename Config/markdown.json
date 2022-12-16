@@ -4,5 +4,6 @@
   "no-inline-html": false,
   "ul-indent": 4,
   "ol-indent": 4,
-  "ul-style": "consistent"
+  "ul-style": "consistent",
+  "no-emphasis-as-header": false
 }
