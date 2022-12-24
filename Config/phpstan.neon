@@ -10,26 +10,26 @@ parameters:
     treatPhpDocTypesAsCertain: false
     excludePaths:
         - *.tpl.php
-        - */tests/*
         - */Modules/Media/Files/*
         - */omsSetup/*
         - */demoSetup/*
-        - */d0cbb361b14ac3ef32486f0a09ab937d/*
+        - */privateSetup/*
         - */test/*
+        - */tests/*
+        - */Sandbox/*
         - */Tools/*
+        - */Logs/*
         - *Test.php
         - *Routes.php
         - *Hooks.php
         - *ObjLoader.js
         - */vendor/*
-        - *vendor*
         - */Demo/*
         - */Build/*
         - */Cache/*
-        - */Docs/*
-        - */Documentation/*
         - */Resources/*
         - */Libraries/*
+        - */Web/*
         - */Routes/*
         - */Hooks/*
         - */DataStorage/Database/*
@@ -39,27 +39,31 @@ parameters:
         - */Socket/*
         - */node_modules/*
         - */Modules/Shop/Admin/Install/Application/*
-        - */Install/Application*
-        - */Web/*
         - */Modules/**/Application/*
-        - */Modules/Organization/Controller/BackendController.php
-        - *Model/CoreSettings.php
+        - */Accounting/*
     ignoreErrors:
-        - '#[.]*tag @var for constant .* is not subtype of value array[.]*#'
+        - '#.*tag @var for constant.*#'
         - '#[.]*Offset .* on array.* always exists[.]*#'
         - '#[.]*separator of function explode expects non-empty-string[.]*#'
-        - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
         - '#^Strict comparison using === between[.]*#'
+        - '#.*key\(\) should return.*#'
+        - '#.*current\(\) should return.*#'
+        - '#.*offsetExists\(\) expects.*#'
         - '#[.]*jsonSerialize\(\) has no return typehint specified#'
+        - '#.*unserialize\(\) has parameter .* with no typehint specified#'
         - '#expects phpOMS\\Algorithm\\PathFinding\\JumpPointNode\|null, phpOMS\\Algorithm\\PathFinding\\Node\|null given#'
         - '#should return array<phpOMS\\Algorithm\\PathFinding\\Node> but returns array<int, phpOMS\\Algorithm\\PathFinding\\Node\|null#'
         - '#^Offset .* does not exist on array.*#'
-        - '#.*unserialize\(\) has parameter .* with no typehint specified#'
         - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
-        - '#.*class Mpdf\\.*#'
-        - '#.*PHPDoc tag @var for constant.*#'
         - '#.*Cannot cast mixed to.*#'
+        - '#.*Instantiated class .*\\WorkflowInstance.*#'
+        - '#.*class Mpdf\\.*#'
+        - '#.*unknown class .*Stripe\\.*#'
+        - '#.*Instantiated class .*Stripe\\.*#'
+        - '#.*unknown class .*PhpOffice\\.*#'
+        - '#.*Instantiated class .*PhpOffice\\.*#'
+        - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         -
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
@@ -75,3 +79,15 @@ parameters:
         -
           message: '#.*continuousComparator\(\) is unused.*#'
           path: *Algorithm/Knapsack/Continuous.php
+        -
+          message: '#.*Empty array passed to foreach.*#'
+          path: *Admin/Install/Workflows*
+        -
+          message: '#.*app is never read.*#'
+          path: *Admin/Install/Workflows*
+        -
+          message: '#.*unknown class Modules\\Workflow\\Controller\\WorkflowInstance.*#'
+          path: *Admin/Install/Workflows*
+        -
+          message: '#.*undefined method object::getId.*#'
+          path: *TableView.php*

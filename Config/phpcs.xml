@@ -20,16 +20,21 @@
 <exclude-pattern>*/Web/*</exclude-pattern>
 <exclude-pattern>*/omsSetup/*</exclude-pattern>
 <exclude-pattern>*/demoSetup/*</exclude-pattern>
+<exclude-pattern>*/privateSetup/*</exclude-pattern>
 <exclude-pattern>*/Routes/*</exclude-pattern>
 <exclude-pattern>*/Tools/*</exclude-pattern>
 <exclude-pattern>*/tests/*</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
 <exclude-pattern>*/OAuth2/*</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*/Mail/*</exclude-pattern><!-- @todo: temporarily disabled-->
+<exclude-pattern>*/Interfaces/*</exclude-pattern><!-- @todo: temporarily disabled-->
+<exclude-pattern>*/Workflows/*</exclude-pattern><!-- @todo: temporarily disabled-->
+<exclude-pattern>*/Accounting/*</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*Hooks.php</exclude-pattern>
 <exclude-pattern>*Markdown.js</exclude-pattern>
 <exclude-pattern>*Markdown.php</exclude-pattern>
 <exclude-pattern>*ObjLoader.js</exclude-pattern>
+<exclude-pattern>config.php</exclude-pattern>
 <exclude-pattern>*Routes.php</exclude-pattern>
 <exclude-pattern>*SearchCommands.php</exclude-pattern>
 <exclude-pattern>*Sha1.js</exclude-pattern>
@@ -164,6 +169,7 @@
     <exclude-pattern>*Pdf.php</exclude-pattern><!-- Just a wrapper -->
     <exclude-pattern>*Excel.php</exclude-pattern><!-- Just a wrapper -->
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't always have side effects -->
+    <exclude-pattern>*/Interfaces/*</exclude-pattern><!-- Interfaces use require_once due to unknown upload locations and therefore no autoloading -->
 </rule>
 <rule ref="PSR2.Classes.ClassDeclaration"/>
 <rule ref="PSR2.Classes.PropertyDeclaration"/>
