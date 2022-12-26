@@ -66,9 +66,14 @@ parameters:
         - '#.*unknown class .*PhpOffice\\.*#'
         - '#.*Instantiated class .*PhpOffice\\.*#'
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
+        - '#.*Mapper.* should return.*#'
+        - '#.*l11nServer.* does not accept.*#'
         -
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
+        -
+          message: '#.*Cannot call method setId\(\) on mixed.*#'
+          path: *View.php
         -
           message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
           path: *Algorithm/JobScheduling/Weighted.php
