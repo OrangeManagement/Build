@@ -20,6 +20,14 @@ echo "#################################################"
 
 . ${BUILD_PATH}/Inspection/Php/tests.sh
 
+# Executing query inspections AFTER the unit test which also runs queries
+# This requires MYSQL with query logging enabled
+echo "#################################################"
+echo "MYSQL queries"
+echo "#################################################"
+
+. ${BUILD_PATH}/Inspection/Sql/performance.sh
+
 # Stats & metrics
 echo "#################################################"
 echo "PHP stats"

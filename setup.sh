@@ -93,6 +93,8 @@ mkdir -p ${INSPECTION_PATH}/Test/Php
 mkdir -p ${INSPECTION_PATH}/Test/Js
 mkdir -p ${INSPECTION_PATH}/Test/sitespeed
 
+mkdir -p ${INSPECTION_PATH}/Sql
+
 # Permission handling
 chmod -R 777 ${ROOT_PATH}
 
