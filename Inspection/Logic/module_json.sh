@@ -24,4 +24,3 @@ git submodule add https://github.com/karaka-management/oms-RiskManagement.git Mo
 git submodule add https://github.com/karaka-management/oms-HumanResourceTimeRecording.git Modules/HumanResourceTimeRecording
 git submodule add https://github.com/karaka-management/oms-HumanResourceManagement.git Modules/HumanResourceManagement
 git submodule add https://github.com/karaka-management/oms-Workflow.git Modules/Workflow
-git submodule add https://github.com/karaka-management/oms-Job.git Modules/Job

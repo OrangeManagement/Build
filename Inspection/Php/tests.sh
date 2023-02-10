@@ -18,3 +18,6 @@ php -d memory_limit=4G ${ROOT_PATH}/vendor/bin/phpstan analyse --autoload-file=$
 php -d memory_limit=4G ${ROOT_PATH}/vendor/bin/phpstan analyse --autoload-file=${ROOT_PATH}/phpOMS/Autoloader.php -l 9 -c ${BUILD_PATH}/Config/phpstan.neon ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/phpstan.log
 
 php -d memory_limit=4G ${ROOT_PATH}/vendor/bin/phpstan analyse --autoload-file=${ROOT_PATH}/phpOMS/Autoloader.php -l 9 -c ${BUILD_PATH}/Config/phpstan.neon --error-format=json ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Test/Php/phpstan.json
+
+# Cli debugging
+# php -dzend_extension=xdebug.so -dxdebug.mode=debug -dxdebug.profiler_enable=1
