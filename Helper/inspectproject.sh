@@ -5,7 +5,7 @@ BPATH=$(dirname "$SCRIPT")
 
 # php/js strict checks
 printf "\nStrict checks\n\n"
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude-dir={*vendor*,*Files*,*privateSetup*,*demoSetup*} --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${BPATH}/../../phpOMS ${BPATH}/../../Web ${BPATH}/../../Modules ${BPATH}/../../Model
+grep -r -L "declare(strict_types=1);" --include=*.php --exclude-dir={*vendor*,*Files*,*privateSetup*,*demoSetup*,*LanguageDetection*} --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${BPATH}/../../phpOMS ${BPATH}/../../Web ${BPATH}/../../Modules ${BPATH}/../../Model
 
 # js uses on actions
 printf "\nJs Action checks\n\n"
