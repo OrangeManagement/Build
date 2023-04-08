@@ -35,13 +35,13 @@ foreach ($modules as $module) {
 		}
 
 		if (\stripos($model, '.php') === false) {
-			throw \Exception('invalid substr');
+			throw new Exception('invalid substr');
 		}
 
 		$model = \substr($model, 4, -4); // remove Null and .php from string
 
 		if (empty($model)) {
-			throw \Exception('invalid substr');
+			throw new Exception('invalid substr');
 		}
 
 		if (!\is_file(__DIR__ . '/../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php')) {

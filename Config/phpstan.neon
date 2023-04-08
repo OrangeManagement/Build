@@ -3,6 +3,9 @@ includes:
 parameters:
     fileExtensions:
         - php
+    scanDirectories:
+        - ../../Resources/tcpdf
+        - ../../Resources/PhpOffice
     reportUnmatchedIgnoredErrors: false
     inferPrivatePropertyTypeFromConstructor: true
     checkMissingIterableValueType: false
@@ -38,7 +41,6 @@ parameters:
         - */Markdown/Markdown.php
         - */Socket/*
         - */node_modules/*
-        - */Modules/Shop/Admin/Install/Application/*
         - */Modules/**/Application/*
         - */Accounting/*
     ignoreErrors:
