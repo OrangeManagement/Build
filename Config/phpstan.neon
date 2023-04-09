@@ -1,11 +1,12 @@
 includes:
     - phpstan-baseline.neon
 parameters:
+    bootstrapFiles:
+        - phpstan_autoloader.php
     fileExtensions:
         - php
-    scanDirectories:
-        - ../../Resources/tcpdf
-        - ../../Resources/PhpOffice
+    universalObjectCratesClasses:
+        - Stripe\StripeObject
     reportUnmatchedIgnoredErrors: false
     inferPrivatePropertyTypeFromConstructor: true
     checkMissingIterableValueType: false

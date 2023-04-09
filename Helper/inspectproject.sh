@@ -16,7 +16,7 @@ printf "\nPHPCS checks\n\n"
 ./vendor/bin/phpcs --severity=1 ./ --standard="Build/Config/phpcs.xml"
 
 printf "\nPHPStan checks\n\n"
-./vendor/bin/phpstan analyse --autoload-file=phpOMS/Autoloader.php -l 9 -c Build/Config/phpstan.neon ./
+./vendor/bin/phpstan analyse -l 9 -c Build/Config/phpstan.neon ./
 
 printf "\nESlint checks\n\n"
 npx eslint jsOMS/ -c Build/Config/.eslintrc.json
