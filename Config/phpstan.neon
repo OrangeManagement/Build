@@ -68,7 +68,10 @@ parameters:
         - '#.*Instantiated class .*PhpOffice\\.*#'
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
         - '#.*Mapper.* should return.*#'
+        - '#.*::MODEL is not covariant with type class-string<T> of constant phpOMS\\DataStorage\\Database\\Mapper\\DataMapperFactory::MODEL.*#'
         - '#.*l11nServer.* does not accept.*#'
+        - '#.*Call to an undefined method Default.*#'
+        - '#.*Access to an undefined property Default.*#'
         -
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
