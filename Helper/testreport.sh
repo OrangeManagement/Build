@@ -12,7 +12,7 @@ sed -i '/^$/d' Build/test/phpstan.json
 sed -i '/^Warning: /d' Build/test/phpstan.json
 
 # Create report
-php ../TestReportGenerator/src/index.php \
+php ../../Tools/TestReportGenerator/src/index.php \
 -b /home/spl1nes/Orange-Management \
 -l /home/spl1nes/Orange-Management/Build/Config/reportLang.php \
 -c /home/spl1nes/Orange-Management/tests/coverage.xml \
