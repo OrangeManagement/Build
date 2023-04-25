@@ -12,13 +12,13 @@ sed -i '/^$/d' Build/test/phpstan.json
 sed -i '/^Warning: /d' Build/test/phpstan.json
 
 # Create report
-php ../../Tools/TestReportGenerator/src/index.php \
--b /home/spl1nes/Orange-Management \
--l /home/spl1nes/Orange-Management/Build/Config/reportLang.php \
--c /home/spl1nes/Orange-Management/tests/coverage.xml \
--s /home/spl1nes/Orange-Management/Build/test/junit_phpcs.xml \
--sj /home/spl1nes/Orange-Management/Build/test/junit_eslint.xml \
--a /home/spl1nes/Orange-Management/Build/test/phpstan.json \
--u /home/spl1nes/Orange-Management/Build/test/junit_php.xml \
--d /home/spl1nes/Orange-Management/Build/test/ReportExternal \
+php ./Tools/TestReportGenerator/src/index.php \
+-b /var/www/html/Karaka \
+-l /var/www/html/Karaka/Build/Config/reportLang.php \
+-c /var/www/html/Karaka/tests/coverage.xml \
+-s /var/www/html/Karaka/Build/test/junit_phpcs.xml \
+-sj /var/www/html/Karaka/Build/test/junit_eslint.xml \
+-a /var/www/html/Karaka/Build/test/phpstan.json \
+-u /var/www/html/Karaka/Build/test/junit_php.xml \
+-d /var/www/html/Karaka/Build/test/ReportExternal \
 --version 1.0.0
