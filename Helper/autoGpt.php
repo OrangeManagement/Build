@@ -6,7 +6,7 @@ include __DIR__ . '/../../phpOMS/Autoloader.php';
 
 // fix docblocks
 $globs = [
-    __DIR__ . '/../../phpOMS/*.php',
+    __DIR__ . '/../../phpOMS/**/*.php',
     __DIR__ . '/../../Modules/*/Models/*.php',
     __DIR__ . '/../../Modules/*/Controller/*.php',
 ];
@@ -30,6 +30,7 @@ and for functions:
 *
 * @since 1.0.0
 */
+Only output the php code, nothing else. Also don't add or change any new php code except the docblocks.
 BEHAVIOUR;
 
 $fileReader = function ($in, $filename)
@@ -38,7 +39,11 @@ $fileReader = function ($in, $filename)
     $scopeStart   = false;
     $scopeCounter = 0;
 
-    while (($line = \fgets($in)) !== false && ($line !== '' || $scopeCounter > 0)) {
+    $isFirstLine = true;
+
+    while (($line = \fgets($in)) !== false && (\trim($line) !== '' || $scopeCounter > 0)) {
+        $isFirstLine = false;
+
         if (\stripos($line, ' function ') !== false) {
             $scopeStart = true;
         }
@@ -53,6 +58,10 @@ $fileReader = function ($in, $filename)
         }
 
         $lines .= $line;
+    }
+
+    if ($isFirstLine && empty($lines)) {
+        return false;
     }
 
     return $lines;
@@ -72,7 +81,7 @@ foreach ($globs as $glob) {
 
 // implement test
 $globs = [
-    __DIR__ . '/../../phpOMS/*.php',
+    __DIR__ . '/../../phpOMS/**.php',
     __DIR__ . '/../../Modules/*/Models/*.php',
 ];
 
@@ -86,7 +95,11 @@ $fileReader = function ($in, $filename)
     $scopeStart   = false;
     $scopeCounter = 0;
 
+    $isFirstLine = true;
+
     while (($line = \fgets($in)) !== false && ($line !== '' || $scopeCounter > 0)) {
+        $isFirstLine = false;
+
         if (\stripos($line, 'public function ') !== false || \stripos($line, 'public static function ') !== false) {
             // Check if a test exists for this function
             $testFile = \str_replace('.php', 'Test.php', $filename);
@@ -139,6 +152,10 @@ $fileReader = function ($in, $filename)
         $lines .= $line;
     }
 
+    if ($isFirstLine && empty($lines)) {
+        return false;
+    }
+
     return $lines;
 };
 
@@ -157,7 +174,7 @@ foreach ($globs as $glob) {
 
 // complete and improve test
 $globs = [
-    __DIR__ . '/../../phpOMS/*.php',
+    __DIR__ . '/../../phpOMS/**.php',
     __DIR__ . '/../../Modules/*/Models/*.php',
 ];
 
@@ -171,7 +188,11 @@ $fileReader = function ($in, $filename)
     $scopeStart   = false;
     $scopeCounter = 0;
 
+    $isFirstLine = true;
+
     while (($line = \fgets($in)) !== false && ($line !== '' || $scopeCounter > 0)) {
+        $isFirstLine = false;
+
         if (\stripos($line, 'public function ') !== false || \stripos($line, 'public static function ') !== false) {
             // Check if a test exists for this function
             $testFile = \str_replace('.php', 'Test.php', $filename);
@@ -224,6 +245,10 @@ $fileReader = function ($in, $filename)
         }
 
         $lines .= $line;
+    }
+
+    if ($isFirstLine && empty($lines)) {
+        return false;
     }
 
     return $lines;
