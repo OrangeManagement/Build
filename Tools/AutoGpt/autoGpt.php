@@ -2,13 +2,13 @@
 
 use Build\Helper\GptHelper;
 
-include __DIR__ . '/../../phpOMS/Autoloader.php';
+include __DIR__ . '/../../../phpOMS/Autoloader.php';
 
 // fix docblocks
 $globs = [
-    __DIR__ . '/../../phpOMS/**/*.php',
-    __DIR__ . '/../../Modules/*/Models/*.php',
-    __DIR__ . '/../../Modules/*/Controller/*.php',
+    __DIR__ . '/../../../phpOMS/**/*.php',
+    __DIR__ . '/../../../Modules/*/Models/*.php',
+    __DIR__ . '/../../../Modules/*/Controller/*.php',
 ];
 
 $behaviour = <<<BEHAVIOUR
@@ -167,7 +167,7 @@ foreach ($globs as $glob) {
             continue;
         }
 
-        $response = GptHelper::handleFile($file, 'php://memory', $behaviour, $fileReader);
+        $response = GptHelper::handleFile($file, 'php://memory', $behaviour, $fileReader, false);
         echo $response , \PHP_EOL , \PHP_EOL;
     }
 }

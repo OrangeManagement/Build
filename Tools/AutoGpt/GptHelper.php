@@ -1,6 +1,6 @@
 <?php
 
-namespace Build\Helper;
+namespace Build\Tools\AutoGpt;
 
 use phpOMS\Message\Http\HttpRequest;
 use phpOMS\Message\Http\Rest;
@@ -9,7 +9,7 @@ use phpOMS\Uri\HttpUri;
 class GptHelper
 {
     private const ENDPOINT   = 'https://api.openai.com/v1/chat/completions';
-    private const APIKEY     = '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';
+    private const APIKEY     = '';
     private const MODEL      = 'gpt-3.5-turbo';
     private const TEMPERATUR = 0.9;
     private const MAX_TOKENS = 1700;
@@ -69,7 +69,7 @@ class GptHelper
         return \str_replace('```', '', $response->getBody());
     }
 
-    public static function handleFile(string $inPath, string $outPath, string $behavior, \Closure $fileReader) : string
+    public static function handleFile(string $inPath, string $outPath, string $behavior, \Closure $fileReader, bool $bulk = true) : string
     {
         $response = '';
 
@@ -78,7 +78,16 @@ class GptHelper
         $lines = '';
 
         while (($line = $fileReader($in, $inPath)) !== false) {
-            if (\strlen($lines) > self::MAX_STRLEN) {
+            $line = \str_replace('    ', "\t", $line);
+            if (\strlen($line) > self::MAX_STRLEN) {
+                continue;
+            }
+
+            if (!$bulk) {
+                $lines = $line;
+            }
+
+            if (!$bulk || \strlen($lines) + \strlen($line) > self::MAX_STRLEN) {
                 $response = self::aiRequest($behavior, $lines);
 
                 if ($response === '' || $response === false) {
@@ -92,10 +101,12 @@ class GptHelper
                 $lines = '';
             }
 
-            $lines .= $line . "\n";
+            if ($bulk) {
+                $lines .= $line . "\n";
+            }
         }
 
-        if (\trim($lines) !== '') {
+        if (\trim($lines) !== '' && \strlen($lines) <= self::MAX_STRLEN) {
             $response = self::aiRequest($behavior, $lines);
 
             if ($response !== '' && $response !== false) {
@@ -111,7 +122,7 @@ class GptHelper
         }
 
         if ($inPath === $outPath) {
-            if (\ftell($out) / \ftell($in) < 0.9) {
+            if (\ftell($in) === 0 || \ftell($out) / \ftell($in) < 0.9) {
                 \unlink($outPath . '.out');
             } else {
                 \unlink($outPath);
