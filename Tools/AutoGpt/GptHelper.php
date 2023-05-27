@@ -9,7 +9,7 @@ use phpOMS\Uri\HttpUri;
 class GptHelper
 {
     private const ENDPOINT   = 'https://api.openai.com/v1/chat/completions';
-    private const APIKEY     = '';
+    private const APIKEY     = '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';
     private const MODEL      = 'gpt-3.5-turbo';
     private const TEMPERATUR = 0.9;
     private const MAX_TOKENS = 1700;
@@ -66,7 +66,7 @@ class GptHelper
             || \stripos($response->getBody(), '503 Service') !== false
         );
 
-        return \str_replace('```', '', $response->getBody());
+        return $response->getBody();
     }
 
     public static function handleFile(string $inPath, string $outPath, string $behavior, \Closure $fileReader, bool $bulk = true) : string
@@ -94,6 +94,10 @@ class GptHelper
                     continue;
                 }
 
+                if(\stripos($outPath, '.php') !== false) {
+                    $response = \str_replace('```', '', $response);
+                }
+
                 $json = \json_decode($response, true);
                 \fwrite($out, $json[5][0]['message']['content']);
                 \fwrite($out, "\n");
@@ -110,6 +114,10 @@ class GptHelper
             $response = self::aiRequest($behavior, $lines);
 
             if ($response !== '' && $response !== false) {
+                if(\stripos($outPath, '.php') !== false) {
+                    $response = \str_replace('```', '', $response);
+                }
+
                 $json = \json_decode($response, true);
                 \fwrite($out, $json[5][0]['message']['content']);
                 \fwrite($out, "\n");
