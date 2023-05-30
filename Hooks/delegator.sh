@@ -14,6 +14,8 @@ for FILE in $(git diff --cached --name-only); do
     # Fixes
     if [[ "$FILE" =~ ^.+(php)$ ]]; then
         phpcsfix "$FILE"
+        phpcbf "$FILE"
+        phprector "$FILE"
     fi
 
     # Filename

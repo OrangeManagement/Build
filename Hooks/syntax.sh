@@ -21,7 +21,7 @@ hasInvalidPhpSyntax() {
 
 hasInvalidJsSyntax() {
     # eslint
-    $(npx eslint "$1" -c Build/Config/.eslintrc.json > /dev/null)
+    $(npx eslint "$1" -c ${rootpath}/Build/Config/.eslintrc.json > /dev/null)
     if [[ $? != 0 ]]; then
         echo 1
         return 1

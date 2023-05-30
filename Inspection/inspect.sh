@@ -17,7 +17,6 @@ mysql -e 'create database oms;' -u ${DB_USER} --password="${DB_PASSWORD}"
 echo "#################################################"
 echo "PHP tests"
 echo "#################################################"
-
 . ${BUILD_PATH}/Inspection/Php/tests.sh
 
 # Executing query inspections AFTER the unit test which also runs queries
@@ -25,7 +24,6 @@ echo "#################################################"
 echo "#################################################"
 echo "MYSQL queries"
 echo "#################################################"
-
 . ${BUILD_PATH}/Inspection/Sql/performance.sh
 
 # Stats & metrics
