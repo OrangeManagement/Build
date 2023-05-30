@@ -51,7 +51,7 @@ class GptHelper
         $request->header->set('Authorization', 'Bearer ' . self::APIKEY);
         $request->header->set('Content-Type', 'application/json');
         $request->setMethod('POST');
-        $request->fromData($requestBody);
+        $request->data = $requestBody;
 
         do {
             $time = \time();
