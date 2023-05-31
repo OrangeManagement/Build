@@ -15,7 +15,7 @@ $behaviour = <<<BEHAVIOUR
 You are a developer.
 BEHAVIOUR;
 
-$fileReader = function ($in, $filename)
+$fileReader = function ($in, $filename): bool|string
 {
     $lines        = '';
     $scopeStart   = false;

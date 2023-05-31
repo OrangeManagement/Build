@@ -18,8 +18,8 @@ printf "\nPHPCS checks\n\n"
 printf "\nPHPStan checks\n\n"
 ./vendor/bin/phpstan analyse -l 9 -c Build/Config/phpstan.neon ./
 
-printf "\nRector\n\n"
-vendor/bin/rector process --config Build/Config/rector.php ./
+# printf "\nRector\n\n"
+# vendor/bin/rector process --config Build/Config/rector.php ./
 
 printf "\nESlint checks\n\n"
 npx eslint jsOMS/ -c Build/Config/.eslintrc.json
