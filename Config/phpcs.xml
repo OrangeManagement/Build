@@ -109,17 +109,6 @@
     </properties>
     <exclude-pattern>*Measurement.php</exclude-pattern>
 </rule> -->
-<rule ref="Generic.Metrics.NestingLevel">
-    <properties>
-        <property name="nestingLevel" value="5"/>
-        <property name="absoluteNestingLevel" value="11"/>
-    </properties>
-     <exclude-pattern>*EigenvalueDecomposition.php</exclude-pattern><!-- Algorithm uses deep nesting -->
-     <exclude-pattern>*phpOMS/Message/Http/HttpRequest.php</exclude-pattern><!-- Multipart uses deep nesting -->
-     <exclude-pattern>*Router.php</exclude-pattern><!-- WebRouter uses deep nesting -->
-     <exclude-pattern>*Mail.php</exclude-pattern><!-- Mail uses deep nesting -->
-     <exclude-pattern>*Exchange/Interfaces*</exclude-pattern><!-- Exchange interfaces can be deeply nested -->
-</rule>
 <rule ref="Generic.PHP.RequireStrictTypes"/>
 <rule ref="Generic.NamingConventions.ConstructorName"/>
 <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
