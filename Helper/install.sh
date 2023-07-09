@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# create new user
-#adduser test
-#usermod -aG sudo test
+###############################################################
+## General
+###############################################################
+
+# For every user .bash_profile
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> /var/www/html/backup/bash/$(date "+%Y-%m-%d").log; fi'
 
 # Debian
 #wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
@@ -13,7 +16,10 @@ add-apt-repository ppa:ondrej/php
 
 apt-get update
 
-apt-get install npm git composer cmake php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server postgresql postgresql-contrib pcov wkhtmltopdf
+apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server wkhtmltopdf tesseract-ocr
+
+a2enmod rewrite
+a2enmod headers
 
 # USE mysql;
 # mysql < 5.7
@@ -29,6 +35,27 @@ apt-get install npm git composer cmake php8.1 php8.1-dev php8.1-cli php8.1-commo
 # update mysql.user set plugin='' where user='root';
 # flush privileges;
 
+###############################################################
+## Jingga Server
+###############################################################
+
+apt-get install git borgbackup
+
+### Install borg
+borg init -v --encryption=repokey /var/www/html
+borg key export /var/www/html repokey
+
+###############################################################
+## Developer
+###############################################################
+
+apt-get install npm git composer cmake postgresql postgresql-contrib pcov
+composer install
+composer update
+npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest selenium-webdriver chromedriver geckodriver eslint
+
+### Setup postgresql
+
 # /etc/postgresq/hba_..
 # change from md5 to trust
 # login to psql and \password define new password
@@ -41,8 +68,27 @@ service postgresql start
 # https://www.sqlservercentral.com/blogs/reset-sa-password-on-sql-server-on-linux
 # systemctl restart mssql-server
 
-a2enmod rewrite
-a2enmod headers
+#Mssql
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
+apt-get update
+apt-get install -y mssql-server
+/opt/mssql/bin/mssql-conf setup
+systemctl status mssql-server --no-pager
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+apt-get install libodbc1 unixodbc unixodbc-dev msodbcsql
+https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+sudo apt-get update
+sudo apt-get install mssql-tools unixodbc-dev
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.1/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.1/mods-available/pdo_sqlsrv.ini
+phpenmod -v 8.1 sqlsrv pdo_sqlsrv
+service apache2 restart
 
 pecl install ast
 
@@ -67,6 +113,10 @@ pecl install memcached
 echo "extension=memcached.so" | tee /etc/php/8.1/mods-available/memcached.ini
 phpenmod memcached
 
+# create new user
+#adduser test
+#usermod -aG sudo test
+
 # Install email server for testing
 apt-get install dovecot-imapd dovecot-pop3d
 # protocls = pop3 pop3s imap imaps
@@ -75,45 +125,10 @@ apt-get install dovecot-imapd dovecot-pop3d
 sudo useradd -d /home/test -g mail -u 1001 -s /bin/bash test
 # Make sure no ssh is possible for this user
 
-# npm
-npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest selenium-webdriver chromedriver geckodriver eslint
-
 # FTP
 apt-get install vsftpd
-
-#OCR
-sudo apt-get install tesseract-ocr
-#tesseract ../copyright.png -c preserve_interword_spaces=1 stdout
 
 # /etc/vstftpd.conf
 # write_enable=YES
 # anon_upload_enable=YES
 # connect_from_port_20=NO
-
-systemctl restart apache2
-
-# consider:
-# "mb_str_functions": true,
-# "phpdoc_add_missing_param_annotation": true,
-
-#Mssql
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
-apt-get update
-apt-get install -y mssql-server
-/opt/mssql/bin/mssql-conf setup
-systemctl status mssql-server --no-pager
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-apt-get install libodbc1 unixodbc unixodbc-dev msodbcsql
-https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
-sudo apt-get update
-sudo apt-get install mssql-tools unixodbc-dev
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-source ~/.bashrc
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
-printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/8.1/mods-available/sqlsrv.ini
-printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/8.1/mods-available/pdo_sqlsrv.ini
-phpenmod -v 8.1 sqlsrv pdo_sqlsrv
-service apache2 restart
