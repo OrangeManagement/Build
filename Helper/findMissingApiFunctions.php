@@ -285,7 +285,8 @@ foreach ($modules as $module) {
         foreach ($create as $c) {
             $nUpdate1 = \str_replace(['Create', 'Add'], 'Update', $c);
             $nUpdate2 = \str_replace(['Create', 'Add'], 'Change', $c);
-            if (!\in_array($nUpdate1, $update) && !\in_array($nUpdate2, $update)) {
+            $nUpdate3 = \str_replace(['Create', 'Add'], 'Set', $c);
+            if (!\in_array($nUpdate1, $update) && !\in_array($nUpdate2, $update) && !\in_array($nUpdate3, $update)) {
                 $missing[] = $nUpdate1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $c);
@@ -350,7 +351,8 @@ foreach ($modules as $module) {
 
             $nUpdate1 = \str_replace(['Delete', 'Remove'], 'Update', $d);
             $nUpdate2 = \str_replace(['Delete', 'Remove'], 'Change', $d);
-            if (!\in_array($nUpdate1, $update) && !\in_array($nUpdate2, $update)) {
+            $nUpdate3 = \str_replace(['Delete', 'Remove'], 'Set', $d);
+            if (!\in_array($nUpdate1, $update) && !\in_array($nUpdate2, $update) && !\in_array($nUpdate3, $update)) {
                 $missing[] = $nUpdate1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $d);
