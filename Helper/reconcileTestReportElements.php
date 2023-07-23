@@ -12,7 +12,7 @@
  */
 declare(strict_types=1);
 
-// Find missing tests
+// Find missing tests + test report bugs
 
 $report = include __DIR__ . '/../../Build/Config/reportLang.php';
 
