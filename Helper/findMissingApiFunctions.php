@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 $modules = \scandir(__DIR__ . '/../../Modules');
 
-$allowed = [];
+$allowed = ['Billing'];
 
 function createFunction($module, $modelName)
 {
@@ -127,8 +127,8 @@ function updateFunction($module, $modelName, $helperName = '')
                 return;
             }
 
-            /** @var {$helperName} \$old */
-            \$old = {$modelName}Mapper::get()->where('id', (int) \$request->getData('id'));
+            /** @var \Modules\\{$module}\Models\\{$modelName} \$old */
+            \$old = {$modelName}Mapper::get()->where('id', (int) \$request->getData('id'))->execute();
             \$new = \$this->update{$modelName}FromRequest(\$request, clone \$old);
 
             \$this->updateModel(\$request->header->account, \$old, \$new, {$modelName}Mapper::class, '{$snakeCase}', \$request->getOrigin());
@@ -267,6 +267,11 @@ foreach ($modules as $module) {
 
         foreach ($matches[2] as $match) {
             if (\strpos($match, 'event') !== false || \strpos($match, 'api') !== 0) {
+                continue;
+            }
+
+            // Get might be standalone
+            if (\strpos($match, 'Get') !== false) {
                 continue;
             }
 
