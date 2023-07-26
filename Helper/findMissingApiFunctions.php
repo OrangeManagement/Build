@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 $modules = \scandir(__DIR__ . '/../../Modules');
 
-$allowed = ['Billing'];
+$allowed = ['ClientManagement'];
 
 function createFunction($module, $modelName)
 {
