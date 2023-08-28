@@ -40,7 +40,7 @@ foreach ($report as $key => $line) {
 		$file     = \reset($parts);
 		$function = \end($parts);
 
-		$file = __DIR__ . '/../../' . \str_replace('\\', '/', $file) . '.php';
+		$file = __DIR__ . '/../../' . \strtr($file, '\\', '/') . '.php';
 
 		if (!\is_file($file)) {
 			$noTestFile[] = $key;
@@ -104,7 +104,7 @@ foreach ($directories as $directory) {
 			$function = \substr($line, 20, $end - 20);
 
 			$name = \substr(\realpath($file), \strlen(\realpath(__DIR__ . '/../../')) + 1, -4);
-			$name = \str_replace('/', '\\', $name);
+			$name = \strtr($name, '/', '\\');
 
 			$reportKey = $name . ':' . $function;
 

@@ -39,7 +39,7 @@ a2enmod headers
 ## Jingga Server
 ###############################################################
 
-apt-get install git borgbackup
+apt-get install borgbackup
 
 ### Install borg
 borg init -v --encryption=repokey /var/www/html

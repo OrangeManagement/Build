@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 $modules = \scandir(__DIR__ . '/../../Modules');
 
-$allowed = ['ClientManagement'];
+$allowed = ['Organization'];
 
 function createFunction($module, $modelName)
 {
@@ -41,8 +41,8 @@ function createFunction($module, $modelName)
         public function api{$modelName}Create(RequestAbstract \$request, ResponseAbstract \$response, mixed \$data = null) : void
         {
             if (!empty(\$val = \$this->validate{$modelName}Create(\$request))) {
-                \$response->data['{$snakeCase}_create'] = new FormValidation(\$val);
-                \$response->header->status           = RequestStatusCode::R_400;
+                \$response->header->status = RequestStatusCode::R_400;
+                \$this->createInvalidCreateResponse(\$request, \$response, \$val);
 
                 return;
             }
@@ -121,8 +121,8 @@ function updateFunction($module, $modelName, $helperName = '')
         public function api{$modelName}Update(RequestAbstract \$request, ResponseAbstract \$response, mixed \$data = null) : void
         {
             if (!empty(\$val = \$this->validate{$modelName}Update(\$request))) {
-                \$response->data[\$request->uri->__toString()] = new FormValidation(\$val);
-                \$response->header->status                     = RequestStatusCode::R_400;
+                \$response->header->status = RequestStatusCode::R_400;
+                \$this->createInvalidUpdateResponse(\$request, \$response, \$val);
 
                 return;
             }
@@ -201,8 +201,8 @@ function deleteFunction($module, $modelName)
         public function api{$modelName}Delete(RequestAbstract \$request, ResponseAbstract \$response, mixed \$data = null) : void
         {
             if (!empty(\$val = \$this->validate{$modelName}Delete(\$request))) {
-                \$response->data[\$request->uri->__toString()] = new FormValidation(\$val);
-                \$response->header->status                     = RequestStatusCode::R_400;
+                \$response->header->status = RequestStatusCode::R_400;
+                \$this->createInvalidDeleteResponse(\$request, \$response, \$val);
 
                 return;
             }
@@ -266,7 +266,12 @@ foreach ($modules as $module) {
         $delete = [];
 
         foreach ($matches[2] as $match) {
-            if (\strpos($match, 'event') !== false || \strpos($match, 'api') !== 0) {
+            if (\strpos($match, 'event') !== false
+                || \strpos($match, 'api') !== 0
+                || \strpos($match, 'To') !== false
+                || \strpos($match, 'From') !== false
+                || \strpos($match, 'Setting') !== false
+            ) {
                 continue;
             }
 

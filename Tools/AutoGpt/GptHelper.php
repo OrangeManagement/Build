@@ -69,7 +69,7 @@ class GptHelper
         return $response->getBody();
     }
 
-    public static function handleFile(string $inPath, string $outPath, string $behavior, \Closure $fileReader, bool $bulk = true) : string
+    public static function handleFile(string $inPath, string $outPath, string $behavior, Callable $fileReader, bool $bulk = true) : string
     {
         $response = '';
 
