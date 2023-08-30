@@ -22,10 +22,17 @@ sql_exit=$?
 
 # Create file backup
 
-BACKUP_PATH="/home/spl1nes/backup"
+BACKUP_PATH="/mnt/d/backup"
 TO_BACKUP="/var/www/html"
 REMOTE_USER="user"
 REMOTE_SERVER="192.168.178.38"
+REMOTE_PORT="2022"
+
+# Setting this, so the repo does not need to be given on the commandline:
+export BORG_REPO=ssh://${REMOTE_USER}@${REMOTE_SERVER}:${REMOTE_PORT}${BACKUP_PATH}
+
+# See the section "Passphrase notes" for more infos.
+export BORG_PASSPHRASE='sorden'
 
 ## Create repository
 # borg init -v --encryption=repokey ${BACKUP_PATH}

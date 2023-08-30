@@ -1,9 +1,9 @@
 #!/bin/bash
 
 MAIL_PASSWORD=""
-MAIN_PATH="/var/www/html/Karaka/"
+MAIN_PATH="/var/www/html/jingga/"
 
-# 0 4 * * * /var/www/html/Karaka/Build/Backup/cron.sh
+# 0 4 * * * /var/www/html/jingga/Build/Backup/cron.sh
 
 # Create backup
 ${MAIN_PATH}Build/Backup/backup.sh > /tmp/backup.log
