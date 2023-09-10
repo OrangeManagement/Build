@@ -4,13 +4,13 @@
 ## General
 ###############################################################
 
-# For every user .bash_profile
+# For every user .bash_profile/.bashrc
 
 export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> /var/www/html/backup/bash/$(date "+%Y-%m-%d").log; fi'
 
 apt-get update
 
-apt-get install git snapd ufw
+apt-get install git snapd ufw software-properties-common
 
 # Security
 
@@ -28,14 +28,39 @@ service fail2ban restart
 # TODO: upload ssh key and disable password login if successful
 # https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
 
+# copy the public key (e.g. *.pub to the file ~/.ssh/authorized_keys of the respective user)
+# change /etc/ssh/sshd_config PasswordAuthentication no
+# systemctl restart ssh
+
 ###############################################################
 ## Web
 ###############################################################
 
-apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server wkhtmltopdf tesseract-ocr
+apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mariadb-server mariadb-client wkhtmltopdf tesseract-ocr
 
+systemctl enable apache2
 a2enmod rewrite
 a2enmod headers
+systemctl restart apache2
+
+# Database
+
+mysql_secure_installation
+systemctl start mariadb
+systemctl enable mariadb
+
+mysql -u root -p
+
+CREATE USER 'jingga'@'%' IDENTIFIED BY 'dYg8#@wLiWJ3vE';
+CREATE USER 'demo'@'%' IDENTIFIED BY 'orange';
+
+CREATE DATABASE jingga COMMENT 'Main application database';
+CREATE DATABASE demo COMMENT 'Demo application database';
+
+GRANT ALL PRIVILEGES ON jingga TO 'jingga'@'%';
+GRANT ALL PRIVILEGES ON demo TO 'demo'@'%';
+
+FLUSH PRIVILEGES;
 
 # Apache2
 
@@ -43,6 +68,156 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
+    ServerName jingga.app
+    ServerAlias www.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.shop
+    ServerAlias www.jingga.shop
+    ServerAlias shop.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga_demo
+    ServerName demo.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga_demo>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.services
+    ServerAlias www.jingga.services
+    ServerAlias services.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.software
+    ServerAlias www.jingga.software
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.shop
+    ServerAlias www.jingga.shop
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.systems
+    ServerAlias www.jingga.systems
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.solutions
+    ServerAlias www.jingga.solutions
 
     SetEnv OMS_STRIPE_SECRET 1
     SetEnv OMS_STRIPE_PUBLIC 2
@@ -60,12 +235,11 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
 </VirtualHost>
 EOF
 
-cat << EOF > /etc/apache2/sites-available/001-saas.conf
+cat << EOF > /etc/apache2/sites-available/001-orw.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
     ServerName orw.jingga.app
-    ServerAlias www.orw.jingga.app
 
     SetEnv OMS_STRIPE_SECRET 1
     SetEnv OMS_STRIPE_PUBLIC 2
@@ -85,29 +259,8 @@ cat << EOF > /etc/apache2/sites-available/001-saas.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
-    ServerName invoicing.jingga.app
-    ServerAlias www.invoicing.jingga.app
-
-    SetEnv OMS_STRIPE_SECRET 1
-    SetEnv OMS_STRIPE_PUBLIC 2
-    SetEnv OMS_STRIPE_WEBHOOK 3
-    SetEnv OMS_PRIVATE_KEY_I 4
-
-    <Directory /var/www/html/jingga>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    ErrorLog \${APACHE_LOG_DIR}/error.log
-    CustomLog \${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-
-<VirtualHost *:80>
-    ServerAdmin info@jingga.app
-    DocumentRoot /var/www/html/jingga
-    ServerName fleetmanagement.jingga.app
-    ServerAlias www.fleetmanagement.jingga.app
+    ServerName jingga.watch
+    ServerAlias www.jingga.watch
 
     SetEnv OMS_STRIPE_SECRET 1
     SetEnv OMS_STRIPE_PUBLIC 2
@@ -125,10 +278,233 @@ cat << EOF > /etc/apache2/sites-available/001-saas.conf
 </VirtualHost>
 EOF
 
-a2ensite 001-saas.conf
-a2ensite 000-saas.conf
-service apache2 reload
-service apache2 restart
+cat << EOF > /etc/apache2/sites-available/001-invoicing.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName invoicing.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.sale
+    ServerAlias www.jingga.sale
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/001-fleet.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName fleetmanagement.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.autos
+    ServerAlias www.jingga.autos
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/001-contract.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName contractmanagement.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.media
+    ServerAlias www.jingga.media
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/001-support.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName support.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.support
+    ServerAlias www.jingga.support
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/001-wiki.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName wiki.jingga.app
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/jingga
+    ServerName jingga.wiki
+    ServerAlias www.jingga.wiki
+
+    SetEnv OMS_STRIPE_SECRET 1
+    SetEnv OMS_STRIPE_PUBLIC 2
+    SetEnv OMS_STRIPE_WEBHOOK 3
+    SetEnv OMS_PRIVATE_KEY_I 4
+
+    <Directory /var/www/html/jingga>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+sudo -u www-data mkdir /var/www/html/jingga
+sudo -u www-data mkdir /var/www/html/jingga_demo
+
+a2ensite 001-orw.conf
+a2ensite 001-invoicing.conf
+a2ensite 001-fleet.conf
+a2ensite 001-contract.conf
+a2ensite 001-support.conf
+a2ensite 001-wiki.conf
+
+systemctl reload apache2
+systemctl restart apache2
 
 snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
@@ -143,9 +519,33 @@ certbot renew --dry-run
 
 apt-get install borgbackup
 
-borg init -v --encryption=repokey /var/www/html
-borg key export /var/www/html repokey
+mkdir /backup
+borg init -v --encryption=repokey /backup
+borg key export /backup repokey
+
+###############################################################
+## vscode
+###############################################################
+
+apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+apt install apt-transport-https
+apt update
+apt install code
 
 ###############################################################
 ## Content
 ###############################################################
+
+cd /var/www/html/jingga
+git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
+git clone --recurse-submodules https://github.com/Karaka-Management/privateSetup.git
+
+cd /var/www/html/jingga_demo
+git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
+git clone --recurse-submodules https://github.com/Karaka-Management/demoSetup.git
+
