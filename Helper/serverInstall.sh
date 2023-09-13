@@ -6,10 +6,10 @@
 
 # For every user .bash_profile/.bashrc
 
-export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> /var/www/html/backup/bash/$(date "+%Y-%m-%d").log; fi'
+export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> /var/www/html/backup/bash/$(date "+%d").log'
 
 apt-get update
-
+apt-get upgrade
 apt-get install git snapd ufw software-properties-common
 
 # Security
@@ -57,8 +57,8 @@ CREATE USER 'demo'@'%' IDENTIFIED BY 'orange';
 CREATE DATABASE jingga COMMENT 'Main application database';
 CREATE DATABASE demo COMMENT 'Demo application database';
 
-GRANT ALL PRIVILEGES ON jingga TO 'jingga'@'%';
-GRANT ALL PRIVILEGES ON demo TO 'demo'@'%';
+GRANT ALL PRIVILEGES ON jingga.* TO 'jingga'@'%';
+GRANT ALL PRIVILEGES ON demo.* TO 'demo'@'%';
 
 FLUSH PRIVILEGES;
 
@@ -70,6 +70,7 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     DocumentRoot /var/www/html/jingga
     ServerName jingga.app
     ServerAlias www.jingga.app
+    ServerAlias api.jingga.app
 
     SetEnv OMS_STRIPE_SECRET 1
     SetEnv OMS_STRIPE_PUBLIC 2
@@ -85,7 +86,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
+cat << EOF > /etc/apache2/sites-available/000-shop.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
@@ -107,7 +110,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
+cat << EOF > /etc/apache2/sites-available/000-demo.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga_demo
@@ -127,7 +132,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
+cat << EOF > /etc/apache2/sites-available/000-services.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
@@ -149,7 +156,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
+cat << EOF > /etc/apache2/sites-available/000-software.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
@@ -170,28 +179,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
-<VirtualHost *:80>
-    ServerAdmin info@jingga.app
-    DocumentRoot /var/www/html/jingga
-    ServerName jingga.shop
-    ServerAlias www.jingga.shop
-
-    SetEnv OMS_STRIPE_SECRET 1
-    SetEnv OMS_STRIPE_PUBLIC 2
-    SetEnv OMS_STRIPE_WEBHOOK 3
-    SetEnv OMS_PRIVATE_KEY_I 4
-
-    <Directory /var/www/html/jingga>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    ErrorLog \${APACHE_LOG_DIR}/error.log
-    CustomLog \${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-
+cat << EOF > /etc/apache2/sites-available/000-systems.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
@@ -212,7 +202,9 @@ cat << EOF > /etc/apache2/sites-available/000-default.conf
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
+EOF
 
+cat << EOF > /etc/apache2/sites-available/000-solutions.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
     DocumentRoot /var/www/html/jingga
@@ -493,8 +485,38 @@ cat << EOF > /etc/apache2/sites-available/001-wiki.conf
 </VirtualHost>
 EOF
 
+cat << EOF > /etc/apache2/sites-available/002-gaming.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/tmrank
+    ServerName tmrank.jingga.app
+
+    <Directory /var/www/html/tmrank>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
 sudo -u www-data mkdir /var/www/html/jingga
 sudo -u www-data mkdir /var/www/html/jingga_demo
+sudo -u www-data mkdir /var/www/html/tmrank
+chown -R www-data /var/www
+
+mkdir -p /var/www/html/backup/bash
+
+chmod -R 777
+
+a2ensite 000-demo.conf
+a2ensite 000-shop.conf
+a2ensite 000-services.conf
+a2ensite 000-software.conf
+a2ensite 000-systems.conf
+a2ensite 000-solutions.conf
 
 a2ensite 001-orw.conf
 a2ensite 001-invoicing.conf
@@ -502,6 +524,8 @@ a2ensite 001-fleet.conf
 a2ensite 001-contract.conf
 a2ensite 001-support.conf
 a2ensite 001-wiki.conf
+
+a2ensite 002-gaming.conf
 
 systemctl reload apache2
 systemctl restart apache2
@@ -542,10 +566,14 @@ apt install code
 ###############################################################
 
 cd /var/www/html/jingga
-git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
-git clone --recurse-submodules https://github.com/Karaka-Management/privateSetup.git
+sudo -u www-data git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
+sudo -u www-data git clone --recurse-submodules https://github.com/Karaka-Management/privateSetup.git
+
+sudo -u www-data git submodule foreach "git checkout develop || true"
 
 cd /var/www/html/jingga_demo
-git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
-git clone --recurse-submodules https://github.com/Karaka-Management/demoSetup.git
+sudo -u www-data git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git .
+sudo -u www-data git clone --recurse-submodules https://github.com/Karaka-Management/demoSetup.git
 
+sudo -u www-data git submodule foreach "git checkout develop || true"
+chown -R www-data /var/www
