@@ -18,6 +18,7 @@ apt-get install ufw
 ufw allow ssh
 ufw allow http
 ufw allow https
+ufw enable
 
 apt-get install fail2ban -y
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
@@ -36,12 +37,20 @@ service fail2ban restart
 ## Web
 ###############################################################
 
-apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mariadb-server mariadb-client wkhtmltopdf tesseract-ocr
+apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils
+
+mkdir -p /var/cache/apache2
+mkdir -p /var/cache/apache2/tmrank
+chown -R www-data:www-data /var/cache/apache2
 
 systemctl enable apache2
 a2enmod rewrite
 a2enmod headers
+a2enmod cache
+a2enmod cache_disk
+a2enmod mpm_itk
 systemctl restart apache2
+systemctl start apache-htcacheclean
 
 # Database
 
@@ -128,6 +137,10 @@ cat << EOF > /etc/apache2/sites-available/000-demo.conf
         AllowOverride All
         Require all granted
     </Directory>
+
+    <IfModule mpm_itk_module>
+        AssignUserId www-demo www-data
+    </IfModule>
 
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
@@ -502,14 +515,21 @@ cat << EOF > /etc/apache2/sites-available/002-gaming.conf
 </VirtualHost>
 EOF
 
+# Important to have separate crontabs between production and demo apps
+useradd www-demo
+usermod -a -G www-data www-demo
+usermod -d /var/demo www-demo
+mkdir -p /var/demo
+chown www-demo:www-data /var/demo
+
 sudo -u www-data mkdir /var/www/html/jingga
-sudo -u www-data mkdir /var/www/html/jingga_demo
+sudo -u www-demo mkdir /var/www/html/jingga_demo
 sudo -u www-data mkdir /var/www/html/tmrank
-chown -R www-data /var/www
+chown -R www-data:www-data /var/www
 
 mkdir -p /var/www/html/backup/bash
 
-chmod -R 777
+chmod -R 766 /var/www/html/backup
 
 a2ensite 000-demo.conf
 a2ensite 000-shop.conf
@@ -577,3 +597,11 @@ sudo -u www-data git clone --recurse-submodules https://github.com/Karaka-Manage
 
 sudo -u www-data git submodule foreach "git checkout develop || true"
 chown -R www-data /var/www
+
+# crontab www-data
+# * 4 * * * git -C /var/www/html/jingga_demo submodule foreach git pull; git -C /var/www/html/jingga_demo/setupDemo git pull; /var/www/html/jingga_demo/setupDemo/setup.php; pkill -9 -f wkhtmltoimage;
+# * 2 * * * /var/www/html/tmrank/scripts/run.sh
+# 0 2 * * * /var/www/html/tmrank/scripts/run.sh > /var/www/html/tmrank/test.log
+
+# crontab root
+# 0 0 1 * * certbot renew --quiet
