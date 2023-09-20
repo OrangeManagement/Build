@@ -73,6 +73,8 @@ FLUSH PRIVILEGES;
 
 # Apache2
 
+# Remove %h in apache2.conf (this logs the ip addresses)
+
 cat << EOF > /etc/apache2/sites-available/000-default.conf
 <VirtualHost *:80>
     ServerAdmin info@jingga.app
