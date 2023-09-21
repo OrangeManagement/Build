@@ -51,6 +51,10 @@ parameters:
         - */Parser/Spreadsheet/*
         - *BayesianPersonalizedRanking.php
         - *Simplex.php
+        - *DBSCAN.php
+        - *MeanShift.php
+        - *Datamatrix.php
+        - *QR.php
     ignoreErrors:
         - '#.*tag @var for constant.*#'
         - '#[.]*Offset .* on array.* always exists[.]*#'
