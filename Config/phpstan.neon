@@ -46,6 +46,9 @@ parameters:
         - */Accounting/*
         - */JobScheduling/*
         - */Rating/*
+        - */Parser/Presentation/*
+        - */Parser/Document/*
+        - */Parser/Spreadsheet/*
         - *BayesianPersonalizedRanking.php
     ignoreErrors:
         - '#.*tag @var for constant.*#'
