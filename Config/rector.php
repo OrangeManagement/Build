@@ -43,7 +43,9 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->skip([
         __DIR__ . '/vendor',
+        __DIR__ . '/../../vendor',
         __DIR__ . '/Build',
+        __DIR__ . '/../../Build',
         SimplifyEmptyCheckOnEmptyArrayRector::class,
         FlipTypeControlToUseExclusiveTypeRector::class,
         UnusedForeachValueToArrayKeysRector::class,
