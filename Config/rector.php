@@ -21,6 +21,14 @@ return static function (RectorConfig $rectorConfig): void {
             __DIR__ . '/Modules',
             __DIR__ . '/phpOMS',
         ]);
+    } elseif (\is_dir(__DIR__ . '/../../phpOMS')) {
+        $rectorConfig->paths([
+            __DIR__ . '/Model',
+            __DIR__ . '/Modules',
+            __DIR__ . '/phpOMS',
+        ]);
+    } elseif (\is_dir(__DIR__ . '/../../tests')) {
+        $rectorConfig->paths([__DIR__ . '/../..']);
     } else {
         $rectorConfig->paths([__DIR__]);
     }
