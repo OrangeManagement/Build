@@ -10,7 +10,7 @@ export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >
 
 apt-get update
 apt-get upgrade
-apt-get install git snapd ufw software-properties-common
+apt-get install git git-lfs snapd ufw software-properties-common
 
 # Security
 
@@ -601,9 +601,8 @@ sudo -u www-data git submodule foreach "git checkout develop || true"
 chown -R www-data /var/www
 
 # crontab www-data
-# * 4 * * * git -C /var/www/html/jingga_demo submodule foreach git pull; git -C /var/www/html/jingga_demo/setupDemo git pull; /var/www/html/jingga_demo/setupDemo/setup.php; pkill -9 -f wkhtmltoimage;
-# * 2 * * * /var/www/html/tmrank/scripts/run.sh
-# 0 2 * * * /var/www/html/tmrank/scripts/run.sh > /var/www/html/tmrank/test.log
+# * 2 * * * git -C /var/www/html/jingga_demo submodule foreach git pull; git -C /var/www/html/jingga_demo/setupDemo git pull; /var/www/html/jingga_demo/setupDemo/setup.php; pkill -9 -f wkhtmltoimage;
+# 0 1 * * * /var/www/html/tmrank/scripts/run.sh > /var/www/html/tmrank/test.log
 
 # crontab root
 # 0 0 1 * * certbot renew --quiet

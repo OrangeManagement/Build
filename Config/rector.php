@@ -15,11 +15,15 @@ use Rector\EarlyReturn\Rector\Return_\ReturnBinaryAndToEarlyReturnRector;
 use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->paths([
-        __DIR__ . '/Model',
-        __DIR__ . '/Modules',
-        __DIR__ . '/phpOMS',
-    ]);
+    if (\is_dir(__DIR__ . '/phpOMS')) {
+        $rectorConfig->paths([
+            __DIR__ . '/Model',
+            __DIR__ . '/Modules',
+            __DIR__ . '/phpOMS',
+        ]);
+    } else {
+        $rectorConfig->paths([__DIR__]);
+    }
 
     // register a single rule
     $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
