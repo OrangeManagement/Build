@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Rector\CodeQuality\Rector\Class_\CompleteDynamicPropertiesRector;
 use Rector\CodeQuality\Rector\Class_\InlineConstructorDefaultToPropertyRector;
 use Rector\CodeQuality\Rector\ClassMethod\OptionalParametersAfterRequiredRector;
+use Rector\CodeQuality\Rector\Concat\JoinStringConcatRector;
 use Rector\CodeQuality\Rector\Empty_\SimplifyEmptyCheckOnEmptyArrayRector;
 use Rector\CodeQuality\Rector\Foreach_\UnusedForeachValueToArrayKeysRector;
 use Rector\CodeQuality\Rector\FuncCall\SimplifyRegexPatternRector;
@@ -14,6 +15,7 @@ use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 // use Rector\EarlyReturn\Rector\Return_\ReturnBinaryAndToEarlyReturnRector;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Set\ValueObject\SetList;
+use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
 
 return static function (RectorConfig $rectorConfig): void {
     if (\is_dir(__DIR__ . '/phpOMS')) {
@@ -50,7 +52,9 @@ return static function (RectorConfig $rectorConfig): void {
         FlipTypeControlToUseExclusiveTypeRector::class,
         UnusedForeachValueToArrayKeysRector::class,
         // ReturnBinaryAndToEarlyReturnRector::class,
+        JoinStringConcatRector::class,
         SimplifyRegexPatternRector::class,
+        DisallowedEmptyRuleFixerRector::class,
         RemoveAlwaysElseRector::class,
         OptionalParametersAfterRequiredRector::class,
         RemoveExtraParametersRector::class,
