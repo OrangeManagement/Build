@@ -132,6 +132,7 @@
 </rule>
 <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
 <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClass">
+    <exclude-pattern>*Grammar.php</exclude-pattern><!-- Not all grammar classes/functions use the parameters -->
     <severity>3</severity>
 </rule>
 <rule ref="PEAR.Classes.ClassDeclaration"/>
