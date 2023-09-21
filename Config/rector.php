@@ -11,7 +11,8 @@ use Rector\CodeQuality\Rector\FuncCall\SimplifyRegexPatternRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
 use Rector\Config\RectorConfig;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
-use Rector\EarlyReturn\Rector\Return_\ReturnBinaryAndToEarlyReturnRector;
+// use Rector\EarlyReturn\Rector\Return_\ReturnBinaryAndToEarlyReturnRector;
+use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
@@ -44,7 +45,7 @@ return static function (RectorConfig $rectorConfig): void {
         SimplifyEmptyCheckOnEmptyArrayRector::class,
         FlipTypeControlToUseExclusiveTypeRector::class,
         UnusedForeachValueToArrayKeysRector::class,
-        ReturnBinaryAndToEarlyReturnRector::class,
+        // ReturnBinaryAndToEarlyReturnRector::class,
         SimplifyRegexPatternRector::class,
         RemoveAlwaysElseRector::class,
         OptionalParametersAfterRequiredRector::class,
