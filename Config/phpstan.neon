@@ -50,6 +50,7 @@ parameters:
         - */Parser/Document/*
         - */Parser/Spreadsheet/*
         - *BayesianPersonalizedRanking.php
+        - *Simplex.php
     ignoreErrors:
         - '#.*tag @var for constant.*#'
         - '#[.]*Offset .* on array.* always exists[.]*#'
