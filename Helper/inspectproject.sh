@@ -31,7 +31,7 @@ echo "#################################################"
 echo "# Rector inspection"
 echo "#################################################"
 
-# vendor/bin/rector process --config Build/Config/rector.php --dry-run ./
+vendor/bin/rector process --config Build/Config/rector.php --dry-run ./
 
 echo "#################################################"
 echo "# ESlint"
