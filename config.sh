@@ -10,7 +10,7 @@ RELEASE_PATH="/var/www/html/Release"
 INSPECTION_PATH="/var/www/html/Inspection"
 
 # Web
-WEB_URL="http://karaka.de"
+WEB_URL="http://jingga.app"
 MAIL_ADDR=""
 
 # Authentications
@@ -19,7 +19,6 @@ DB_PASSWORD="root"
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Karaka-Management/Karaka.git"
-GITHUB_URL[1]="https://github.com/Karaka-Management/Website.git"
 
 GIT_BRANCH="develop"
 

@@ -14,18 +14,18 @@ declare(strict_types=1);
 
 // Find null models with no null model test and creates the tests
 
-$modules = \scandir(__DIR__ . '/../../Modules');
+$modules = \scandir(__DIR__ . '/../../../Modules');
 
 foreach ($modules as $module) {
 	if ($module === '..' || $module === '.'
-		|| !\is_dir(__DIR__ . '/../../Modules/' . $module)
-		|| !\is_dir(__DIR__ . '/../../Modules/' . $module . '/Models')
-		|| !\is_file(__DIR__ . '/../../Modules/' . $module . '/info.json'))
+		|| !\is_dir(__DIR__ . '/../../../Modules/' . $module)
+		|| !\is_dir(__DIR__ . '/../../../Modules/' . $module . '/Models')
+		|| !\is_file(__DIR__ . '/../../../Modules/' . $module . '/info.json'))
 	{
 		continue;
 	}
 
-	$models = \scandir(__DIR__ . '/../../Modules/' . $module . '/Models');
+	$models = \scandir(__DIR__ . '/../../../Modules/' . $module . '/Models');
 
 	foreach ($models as $model) {
 		if ($model === '..' || $model === '.'
@@ -44,15 +44,15 @@ foreach ($modules as $module) {
 			throw new Exception('invalid substr');
 		}
 
-		if (!\is_file(__DIR__ . '/../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php')) {
+		if (!\is_file(__DIR__ . '/../../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php')) {
 			echo $module . ': Null' . $model . "\n";
 
-			if (!\is_dir(__DIR__ . '/../../Modules/' . $module . '/tests')) {
-				\mkdir(__DIR__ . '/../../Modules/' . $module . '/tests');
+			if (!\is_dir(__DIR__ . '/../../../Modules/' . $module . '/tests')) {
+				\mkdir(__DIR__ . '/../../../Modules/' . $module . '/tests');
 			}
 
-			if (!\is_dir(__DIR__ . '/../../Modules/' . $module . '/tests/Models')) {
-				\mkdir(__DIR__ . '/../../Modules/' . $module . '/tests/Models');
+			if (!\is_dir(__DIR__ . '/../../../Modules/' . $module . '/tests/Models')) {
+				\mkdir(__DIR__ . '/../../../Modules/' . $module . '/tests/Models');
 			}
 
 			$test = '<?php' . "\n"
@@ -98,7 +98,7 @@ foreach ($modules as $module) {
 				. '    }' . "\n"
 				. '}' . "\n";
 
-			\file_put_contents(__DIR__ . '/../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php', $test);
+			\file_put_contents(__DIR__ . '/../../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php', $test);
 		}
 	}
 }

@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 // Find missing tests + test report bugs
 
-$report = include __DIR__ . '/../../Build/Config/reportLang.php';
+$report = include __DIR__ . '/../../../Build/Config/reportLang.php';
 
 $noTestFile = [];
 $noTestFunction = [];
@@ -40,7 +40,7 @@ foreach ($report as $key => $line) {
 		$file     = \reset($parts);
 		$function = \end($parts);
 
-		$file = __DIR__ . '/../../' . \strtr($file, '\\', '/') . '.php';
+		$file = __DIR__ . '/../../../' . \strtr($file, '\\', '/') . '.php';
 
 		if (!\is_file($file)) {
 			$noTestFile[] = $key;
@@ -80,8 +80,8 @@ foreach ($invalidDescription as $function) {
 }
 
 $directories = [
-	__DIR__ . '/../../phpOMS/tests/**/*Test.php',
-	__DIR__ . '/../../Modules/**/tests/**/*Test.php'
+	__DIR__ . '/../../../phpOMS/tests/**/*Test.php',
+	__DIR__ . '/../../../Modules/**/tests/**/*Test.php'
 ];
 
 foreach ($directories as $directory) {
@@ -103,7 +103,7 @@ foreach ($directories as $directory) {
 			$end = \strpos($line, '(');
 			$function = \substr($line, 20, $end - 20);
 
-			$name = \substr(\realpath($file), \strlen(\realpath(__DIR__ . '/../../')) + 1, -4);
+			$name = \substr(\realpath($file), \strlen(\realpath(__DIR__ . '/../../../')) + 1, -4);
 			$name = \strtr($name, '/', '\\');
 
 			$reportKey = $name . ':' . $function;

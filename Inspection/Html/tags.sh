@@ -29,6 +29,6 @@ TAG[18]="<embed.*\/>"
 
 for i in "${TAG[@]}"
 do
-    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/phpOMS >> ${INSPECTION_PATH}/Framework/html/tags.log
-    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/html/tags.log
+    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/phpOMS >> ${INSPECTION_PATH}/Framework/html_tags.log
+    grep -rln "$i" --include \*.tpl.php ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/html_tags.log
 done

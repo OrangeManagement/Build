@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 // Create missing api functions
 
-$modules = \scandir(__DIR__ . '/../../Modules');
+$modules = \scandir(__DIR__ . '/../../../Modules');
 
 $allowed = ['Organization'];
 
@@ -241,22 +241,22 @@ function deleteFunction($module, $modelName)
 
 foreach ($modules as $module) {
 	if ($module === '..' || $module === '.'
-		|| !\is_dir(__DIR__ . '/../../Modules/' . $module)
-		|| !\is_dir(__DIR__ . '/../../Modules/' . $module . '/Controller')
-		|| !\is_file(__DIR__ . '/../../Modules/' . $module . '/info.json')
+		|| !\is_dir(__DIR__ . '/../../../Modules/' . $module)
+		|| !\is_dir(__DIR__ . '/../../../Modules/' . $module . '/Controller')
+		|| !\is_file(__DIR__ . '/../../../Modules/' . $module . '/info.json')
         || (!empty($allowed) && !\in_array($module, $allowed))
     ) {
 		continue;
 	}
 
-    $controllers = \scandir(__DIR__ . '/../../Modules/' . $module . '/Controller');
+    $controllers = \scandir(__DIR__ . '/../../../Modules/' . $module . '/Controller');
 
 	foreach ($controllers as $controller) {
         if (\stripos($controller, 'Api') === false) {
             continue;
         }
 
-        $content = \file_get_contents(__DIR__ . '/../../Modules/' . $module . '/Controller/' . $controller);
+        $content = \file_get_contents(__DIR__ . '/../../../Modules/' . $module . '/Controller/' . $controller);
 
         $matches = [];
         \preg_match_all('/(public function )(.*?)(\()/', $content, $matches);
@@ -375,7 +375,7 @@ foreach ($modules as $module) {
             echo "\nMissing functions \"" . $module . "\": \n";
 
             $newContent = \rtrim($content, " }\n") . "\n    }\n" . $newContent . "}\n";
-            \file_put_contents(__DIR__ . '/../../Modules/' . $module . '/Controller/' . $controller, $newContent);
+            \file_put_contents(__DIR__ . '/../../../Modules/' . $module . '/Controller/' . $controller, $newContent);
         }
 
         foreach ($missing as $m) {

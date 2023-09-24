@@ -14,17 +14,17 @@ declare(strict_types=1);
 
 // Find modules where the Module/tests/Admin/AdminTest.php is missing
 
-$modules = \scandir(__DIR__ . '/../../Modules');
+$modules = \scandir(__DIR__ . '/../../../Modules');
 
 foreach ($modules as $module) {
 	if ($module === '..' || $module === '.'
-		|| !\is_dir(__DIR__ . '/../../Modules/' . $module)
-		|| !\is_file(__DIR__ . '/../../Modules/' . $module . '/info.json'))
+		|| !\is_dir(__DIR__ . '/../../../Modules/' . $module)
+		|| !\is_file(__DIR__ . '/../../../Modules/' . $module . '/info.json'))
 	{
 		continue;
 	}
 
-	if (!\is_file(__DIR__ . '/../../Modules/' . $module . '/tests/Admin/AdminTest.php')) {
+	if (!\is_file(__DIR__ . '/../../../Modules/' . $module . '/tests/Admin/AdminTest.php')) {
 		echo $module . "\n";
 	}
 }
