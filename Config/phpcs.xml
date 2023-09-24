@@ -135,7 +135,9 @@
     <exclude-pattern>*Grammar.php</exclude-pattern><!-- Not all grammar classes/functions use the parameters -->
     <severity>3</severity>
 </rule>
-<rule ref="PEAR.Classes.ClassDeclaration"/>
+<rule ref="PEAR.Classes.ClassDeclaration">
+    <exclude-pattern>*/Install/Media/*</exclude-pattern><!-- Media uploads don't have a namespace -->
+</rule>
 <rule ref="PEAR.Commenting.FileComment">
     <exclude name="PEAR.Commenting.FileComment.InvalidPackage"/>
     <exclude name="PEAR.Commenting.FileComment.IncompleteCopyright"/>
