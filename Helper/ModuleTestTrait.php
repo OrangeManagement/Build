@@ -18,6 +18,7 @@ use Model\CoreSettings;
 use Modules\Admin\Models\ModuleStatusUpdateType;
 use phpOMS\Account\AccountManager;
 use phpOMS\Application\ApplicationAbstract;
+use phpOMS\Autoloader;
 use phpOMS\DataStorage\Database\Query\Builder;
 use phpOMS\DataStorage\Database\Schema\Builder as SchemaBuilder;
 use phpOMS\DataStorage\Session\HttpSession;
