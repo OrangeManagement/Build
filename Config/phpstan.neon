@@ -87,7 +87,13 @@ parameters:
           message: '#.*has parameter \$con with no typehint specified#'
           path: *Ftp/File.php
         -
+          message: '#.*Instantiated class .* WorkflowController not found.*#'
+          path: *pdf.php
+        -
           message: '#.*Constant PDF_.*#'
+          path: *pdf.php
+        -
+          message: '#.*DefaultPdf.*#'
           path: *pdf.php
         -
           message: '#.*Cannot call method setId\(\) on mixed.*#'
