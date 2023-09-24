@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 if (\is_file(__DIR__ . '/../../tests/Autoloader.php')) {
     require_once __DIR__ . '/../../tests/Autoloader.php';
@@ -11,11 +13,12 @@ if (\is_file(__DIR__ . '/../../tests/Autoloader.php')) {
 use tests\Autoloader;
 
 if (\is_dir(__DIR__ . '/../../Karaka')) {
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources');
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/tcpdf');
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/Stripe');
+    Autoloader::addPath(__DIR__ . '/../../Karaka/');
+    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/');
+    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/tcpdf/');
+    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/Stripe/');
 } else {
-    Autoloader::addPath(__DIR__ . '/../../Resources');
-    Autoloader::addPath(__DIR__ . '/../../Resources/tcpdf');
-    Autoloader::addPath(__DIR__ . '/../../Resources/Stripe');
+    Autoloader::addPath(__DIR__ . '/../../Resources/');
+    Autoloader::addPath(__DIR__ . '/../../Resources/tcpdf/');
+    Autoloader::addPath(__DIR__ . '/../../Resources/Stripe/');
 }
