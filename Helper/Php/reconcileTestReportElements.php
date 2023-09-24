@@ -16,15 +16,15 @@ declare(strict_types=1);
 
 $report = include __DIR__ . '/../../../Build/Config/reportLang.php';
 
-$noTestFile = [];
+$noTestFile     = [];
 $noTestFunction = [];
 
-$noReportFile = [];
+$noReportFile     = [];
 $noReportFunction = [];
 
 $invalidDescription = [];
 
-$lastFileName = '';
+$lastFileName    = '';
 $lastFileContent = '';
 
 foreach ($report as $key => $line) {
@@ -61,7 +61,7 @@ foreach ($report as $key => $line) {
 	}
 }
 
-$noTestFile = \array_unique($noTestFile);
+$noTestFile     = \array_unique($noTestFile);
 $noTestFunction = \array_unique($noTestFunction);
 
 echo "\nNo test file:\n";
@@ -81,7 +81,7 @@ foreach ($invalidDescription as $function) {
 
 $directories = [
 	__DIR__ . '/../../../phpOMS/tests/**/*Test.php',
-	__DIR__ . '/../../../Modules/**/tests/**/*Test.php'
+	__DIR__ . '/../../../Modules/**/tests/**/*Test.php',
 ];
 
 foreach ($directories as $directory) {
@@ -100,7 +100,7 @@ foreach ($directories as $directory) {
 				continue;
 			}
 
-			$end = \strpos($line, '(');
+			$end      = \strpos($line, '(');
 			$function = \substr($line, 20, $end - 20);
 
 			$name = \substr(\realpath($file), \strlen(\realpath(__DIR__ . '/../../../')) + 1, -4);

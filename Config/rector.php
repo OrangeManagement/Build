@@ -23,7 +23,7 @@ use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Set\ValueObject\SetList;
 use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
 
-return static function (RectorConfig $rectorConfig): void {
+return static function (RectorConfig $rectorConfig) : void {
     $base = '';
 
     if (\is_dir(__DIR__ . '/phpOMS')) {
@@ -81,6 +81,6 @@ return static function (RectorConfig $rectorConfig): void {
         SimplifyUselessVariableRector::class => [
             $base . '/phpOMS/Utils/ColorUtils.php',
             $base . '/Utils/ColorUtils.php',
-        ]
+        ],
     ]);
 };

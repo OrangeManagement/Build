@@ -20,7 +20,7 @@ $allowed = ['Organization'];
 
 function createFunction($module, $modelName)
 {
-    $varName = \lcfirst($modelName);
+    $varName   = \lcfirst($modelName);
     $snakeCase = \strtolower(\preg_replace('/(?<!^)[A-Z]/', '_$0', $modelName));
 
     $create = <<<HEREDOC
@@ -98,7 +98,7 @@ function createFunction($module, $modelName)
 
 function updateFunction($module, $modelName, $helperName = '')
 {
-    $varName = \lcfirst($modelName);
+    $varName   = \lcfirst($modelName);
     $snakeCase = \strtolower(\preg_replace('/(?<!^)[A-Z]/', '_$0', $modelName));
 
     $helperName = $helperName === '' ? $modelName : $helperName;
@@ -180,7 +180,7 @@ function updateFunction($module, $modelName, $helperName = '')
 
 function deleteFunction($module, $modelName)
 {
-    $varName = \lcfirst($modelName);
+    $varName   = \lcfirst($modelName);
     $snakeCase = \strtolower(\preg_replace('/(?<!^)[A-Z]/', '_$0', $modelName));
 
     $create = <<<HEREDOC
@@ -311,7 +311,7 @@ foreach ($modules as $module) {
                     $modelRet = \substr($content, $retTypePos1 + 1, $retTypePos2 - ($retTypePos1 + 1));
                 }
 
-                $newContent .= updateFunction($module, $modelName, \trim($modelRet, " :\n"));
+                $newContent .= \updateFunction($module, $modelName, \trim($modelRet, " :\n"));
                 $update[] = $nUpdate1;
             }
 
@@ -321,7 +321,7 @@ foreach ($modules as $module) {
                 $missing[] = $nDelete1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $c);
-                $newContent .= deleteFunction($module, $modelName);
+                $newContent .= \deleteFunction($module, $modelName);
                 $delete[] = $nDelete1;
             }
         }
@@ -333,7 +333,7 @@ foreach ($modules as $module) {
                 $missing[] = $nCreate1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $u);
-                $newContent .= createFunction($module, $modelName);
+                $newContent .= \createFunction($module, $modelName);
                 $create[] = $nCreate1;
             }
 
@@ -343,7 +343,7 @@ foreach ($modules as $module) {
                 $missing[] = $nDelete1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $u);
-                $newContent .= deleteFunction($module, $modelName);
+                $newContent .= \deleteFunction($module, $modelName);
                 $delete[] = $nDelete1;
             }
         }
@@ -355,7 +355,7 @@ foreach ($modules as $module) {
                 $missing[] = $nCreate1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $d);
-                $newContent .= createFunction($module, $modelName);
+                $newContent .= \createFunction($module, $modelName);
                 $create[] = $nCreate1;
             }
 
@@ -366,7 +366,7 @@ foreach ($modules as $module) {
                 $missing[] = $nUpdate1;
 
                 $modelName = \str_replace(['api', 'Update', 'Change', 'Set', 'Remove', 'Delete', 'Create', 'Add'], '', $d);
-                $newContent .= updateFunction($module, $modelName);
+                $newContent .= \updateFunction($module, $modelName);
                 $create[] = $nUpdate1;
             }
         }
