@@ -11,4 +11,4 @@ find ./Model -type f -name "*.js" -exec md5sum {} \; >> hashs.txt
 find ./Web -type f -name "*.php" -exec md5sum {} \; >> hashs.txt
 find ./Web -type f -name "*.js" -exec md5sum {} \; >> hashs.txt
 find ./Developer-Guide -type f -name "*.md" -exec md5sum {} \; >> hashs.txt
-find ./Documentation -type f -name "*.md" -exec md5sum {} \; >> hashs.txt
+find ./User-Guide -type f -name "*.md" -exec md5sum {} \; >> hashs.txt
