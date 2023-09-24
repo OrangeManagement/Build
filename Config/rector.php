@@ -13,7 +13,9 @@ use Rector\CodeQuality\Rector\Foreach_\UnusedForeachValueToArrayKeysRector;
 use Rector\CodeQuality\Rector\FuncCall\SimplifyRegexPatternRector;
 use Rector\CodeQuality\Rector\FunctionLike\SimplifyUselessVariableRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
+use Rector\CodeQuality\Rector\If_\SimplifyIfNotNullReturnRector;
 use Rector\CodeQuality\Rector\Isset_\IssetOnPropertyObjectToPropertyExistsRector;
+use Rector\CodeQuality\Rector\Switch_\SingularSwitchToIfRector;
 use Rector\Config\RectorConfig;
 use Rector\EarlyReturn\Rector\If_\RemoveAlwaysElseRector;
 // use Rector\EarlyReturn\Rector\Return_\ReturnBinaryAndToEarlyReturnRector;
@@ -74,6 +76,8 @@ return static function (RectorConfig $rectorConfig): void {
         OptionalParametersAfterRequiredRector::class,
         RemoveExtraParametersRector::class,
         CompleteDynamicPropertiesRector::class,
+        SingularSwitchToIfRector::class,
+        SimplifyIfNotNullReturnRector::class,
         SimplifyUselessVariableRector::class => [
             $base . '/phpOMS/Utils/ColorUtils.php',
             $base . '/Utils/ColorUtils.php',
