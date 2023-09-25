@@ -43,7 +43,7 @@ parameters:
         - */Markdown/Markdown.php
         - */Socket/*
         - */node_modules/*
-        - */Modules/**/Application/*
+        - */Install/Application/*
         - */Accounting/*
         - */JobScheduling/*
         - */Rating/*
