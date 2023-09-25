@@ -23,7 +23,7 @@ parameters:
         - */Sandbox/*
         - */Tools/*
         - */Logs/*
-        - *Karaka-Management/*/Karaka/*
+        - */MainRepository/*
         - *Test.php
         - *Routes.php
         - *Hooks.php

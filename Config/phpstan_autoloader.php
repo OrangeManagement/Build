@@ -12,11 +12,11 @@ if (\is_file(__DIR__ . '/../../tests/Autoloader.php')) {
 
 use tests\Autoloader;
 
-if (\is_dir(__DIR__ . '/../../Karaka')) {
-    Autoloader::addPath(__DIR__ . '/../../Karaka/');
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/');
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/tcpdf/');
-    Autoloader::addPath(__DIR__ . '/../../Karaka/Resources/Stripe/');
+if (\is_dir(__DIR__ . '/../../MainRepository')) {
+    Autoloader::addPath(__DIR__ . '/../../MainRepository/');
+    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/');
+    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/tcpdf/');
+    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/Stripe/');
 } else {
     Autoloader::addPath(__DIR__ . '/../../Resources/');
     Autoloader::addPath(__DIR__ . '/../../Resources/tcpdf/');

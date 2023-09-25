@@ -62,6 +62,7 @@ return static function (RectorConfig $rectorConfig) : void {
     $rectorConfig->skip([
         $base . '/vendor',
         $base . '/Build',
+        $base . '/MainRepository',
         $base . '/Resources',
         SimplifyEmptyCheckOnEmptyArrayRector::class,
         FlipTypeControlToUseExclusiveTypeRector::class,
