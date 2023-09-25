@@ -3,6 +3,7 @@
 $finder = PhpCsFixer\Finder::create()
     ->exclude('MainRepository')
     ->exclude('vendor')
+    ->exclude('Build')
     ->in(__DIR__ . '/../../');
 
 $rules = '{
