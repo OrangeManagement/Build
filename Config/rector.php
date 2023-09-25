@@ -64,6 +64,7 @@ return static function (RectorConfig $rectorConfig) : void {
         $base . '/Build',
         $base . '/MainRepository',
         $base . '/Resources',
+        $base . '/Admin/Install/Application',
         SimplifyEmptyCheckOnEmptyArrayRector::class,
         FlipTypeControlToUseExclusiveTypeRector::class,
         UnusedForeachValueToArrayKeysRector::class,
