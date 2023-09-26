@@ -45,6 +45,7 @@ chown -R www-data:www-data /var/cache/apache2
 
 systemctl enable apache2
 a2enmod rewrite
+a2enmod expires
 a2enmod headers
 a2enmod cache
 a2enmod cache_disk
