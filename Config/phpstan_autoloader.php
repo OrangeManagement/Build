@@ -38,11 +38,11 @@ function module_autoloader($class) {
     }
 
     foreach ($paths as $path) {
-        if (\is_file($file = $path . $class2 . '.php') && \stripos($file, $class2) !== false) {
+        if (\is_file($file = $path . $class2 . '.php')) {
             include_once $file;
 
             return;
-        } elseif (\is_file($file = $path . $class3 . '.php') && \stripos($file, $class3) !== false) {
+        } elseif (\is_file($file = $path . $class3 . '.php') && \stripos($file, $class2) !== false) {
             include_once $file;
 
             return;
