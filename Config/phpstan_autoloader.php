@@ -2,23 +2,56 @@
 
 declare(strict_types=1);
 
-if (\is_file(__DIR__ . '/../../tests/Autoloader.php')) {
-    require_once __DIR__ . '/../../tests/Autoloader.php';
-} elseif (\is_file(__DIR__ . '/../../phpOMS/Autoloader.php')) {
-    require_once __DIR__ . '/../../phpOMS/Autoloader.php';
-} else {
-    require_once __DIR__ . '/../../Autoloader.php';
+function module_autoloader($class) {
+    $paths = [
+        __DIR__ . '/../../',
+        __DIR__ . '/../../MainRepository/',
+        __DIR__ . '/../../MainRepository/Resources',
+        __DIR__ . '/../../MainRepository/Resources/tcpdf',
+        __DIR__ . '/../../MainRepository/Resources/Stripe',
+        __DIR__ . '/../../Resources',
+        __DIR__ . '/../../Resources/tcpdf',
+        __DIR__ . '/../../Resources/Stripe',
+    ];
+
+    $class  = \ltrim($class, '\\');
+    $class  = \strtr($class, '_\\', '//');
+
+    if (\stripos($class, 'Web/Backend') !== false || \stripos($class, 'Web/Api') !== false) {
+        $class = \str_replace('Web/', 'Install/Application/', $class);
+    }
+
+    $class2 = $class;
+    $class3 = $class;
+
+    $pos = \stripos($class, '/');
+    if ($pos !== false) {
+        $class2 = \substr($class, $pos + 1);
+    }
+
+    if ($pos !== false) {
+        $pos = \stripos($class, '/', $pos + 1);
+
+        if ($pos !== false) {
+            $class3 = \substr($class, $pos + 1);
+        }
+    }
+
+    foreach ($paths as $path) {
+        if (\is_file($file = $path . $class2 . '.php')) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . $class3 . '.php')) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . $class . '.php')) {
+            include_once $file;
+
+            return;
+        }
+    }
 }
 
-use tests\Autoloader;
-
-if (\is_dir(__DIR__ . '/../../MainRepository')) {
-    Autoloader::addPath(__DIR__ . '/../../MainRepository/');
-    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/');
-    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/tcpdf/');
-    Autoloader::addPath(__DIR__ . '/../../MainRepository/Resources/Stripe/');
-} else {
-    Autoloader::addPath(__DIR__ . '/../../Resources/');
-    Autoloader::addPath(__DIR__ . '/../../Resources/tcpdf/');
-    Autoloader::addPath(__DIR__ . '/../../Resources/Stripe/');
-}
+spl_autoload_register('module_autoloader');
