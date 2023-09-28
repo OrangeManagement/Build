@@ -5,13 +5,13 @@ declare(strict_types=1);
 function module_autoloader($class) {
     $paths = [
         __DIR__ . '/../../',
+        __DIR__ . '/../../Resources',
+        __DIR__ . '/../../Resources/tcpdf',
+        __DIR__ . '/../../Resources/Stripe',
         __DIR__ . '/../../MainRepository/',
         __DIR__ . '/../../MainRepository/Resources',
         __DIR__ . '/../../MainRepository/Resources/tcpdf',
         __DIR__ . '/../../MainRepository/Resources/Stripe',
-        __DIR__ . '/../../Resources',
-        __DIR__ . '/../../Resources/tcpdf',
-        __DIR__ . '/../../Resources/Stripe',
     ];
 
     $class  = \ltrim($class, '\\');
@@ -38,11 +38,11 @@ function module_autoloader($class) {
     }
 
     foreach ($paths as $path) {
-        if (\is_file($file = $path . $class2 . '.php')) {
+        if (($file = \realpath($path . $class2 . '.php'))) {
             include_once $file;
 
             return;
-        } elseif (\is_file($file = $path . $class3 . '.php') && \stripos($file, $class2) !== false) {
+        } elseif (($file = \realpath($file = $path . $class3 . '.php')) && \stripos($file, $class2) !== false) {
             include_once $file;
 
             return;
