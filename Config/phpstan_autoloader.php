@@ -5,13 +5,13 @@ declare(strict_types=1);
 function module_autoloader($class) {
     $paths = [
         __DIR__ . '/../../',
-        __DIR__ . '/../../Resources',
-        __DIR__ . '/../../Resources/tcpdf',
-        __DIR__ . '/../../Resources/Stripe',
+        __DIR__ . '/../../Resources/',
+        __DIR__ . '/../../Resources/tcpdf/',
+        __DIR__ . '/../../Resources/Stripe/',
         __DIR__ . '/../../MainRepository/',
-        __DIR__ . '/../../MainRepository/Resources',
-        __DIR__ . '/../../MainRepository/Resources/tcpdf',
-        __DIR__ . '/../../MainRepository/Resources/Stripe',
+        __DIR__ . '/../../MainRepository/Resources/',
+        __DIR__ . '/../../MainRepository/Resources/tcpdf/',
+        __DIR__ . '/../../MainRepository/Resources/Stripe/',
     ];
 
     $class  = \ltrim($class, '\\');
