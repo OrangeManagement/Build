@@ -13,7 +13,6 @@ use Rector\CodeQuality\Rector\Foreach_\UnusedForeachValueToArrayKeysRector;
 use Rector\CodeQuality\Rector\FuncCall\SimplifyRegexPatternRector;
 use Rector\CodeQuality\Rector\FunctionLike\SimplifyUselessVariableRector;
 use Rector\CodeQuality\Rector\Identical\FlipTypeControlToUseExclusiveTypeRector;
-use Rector\CodeQuality\Rector\If_\SimplifyIfExactValueReturnValueRector;
 use Rector\CodeQuality\Rector\If_\SimplifyIfNotNullReturnRector;
 use Rector\CodeQuality\Rector\Isset_\IssetOnPropertyObjectToPropertyExistsRector;
 use Rector\CodeQuality\Rector\Switch_\SingularSwitchToIfRector;
@@ -83,7 +82,6 @@ return static function (RectorConfig $rectorConfig) : void {
         RemoveExtraParametersRector::class,
         CompleteDynamicPropertiesRector::class,
         SingularSwitchToIfRector::class,
-        SimplifyIfExactValueReturnValueRector::class,
         SimplifyIfNotNullReturnRector::class,
         SimplifyUselessVariableRector::class => [
             $base . '/phpOMS/Utils/ColorUtils.php',
