@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "$BUILD_PATH/config.sh"
+. "${BUILD_PATH}/config.sh"
 
 # Mysql required with query logging
 # sudo apt-get install percona-toolkit

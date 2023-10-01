@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Include config
-. "$BUILD_PATH/config.sh"
+. "${BUILD_PATH}/config.sh"
 
 # Setup database
 echo "#################################################"

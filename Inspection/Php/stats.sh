@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. "$BUILD_PATH/config.sh"
+. "${BUILD_PATH}/config.sh"
 
 echo "#################################################"
 echo "Start php stats inspection"
