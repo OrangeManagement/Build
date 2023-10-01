@@ -4,6 +4,8 @@
         ".git",
         "tests",
         "vendor",
+        "Admin/Install/Application",
+        "Install/Application",
         "Resources"
     ]
 }
