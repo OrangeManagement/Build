@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. config.sh
+. "$BUILD_PATH/config.sh"
 
 echo "#################################################"
 echo "Start html syntax inspection"
