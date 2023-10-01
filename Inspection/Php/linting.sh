@@ -6,16 +6,7 @@ echo "#################################################"
 echo "Start php linting inspection"
 echo "#################################################"
 
-find ${ROOT_PATH}/phpOMS -name "*.php" | xargs -L1 php -l > ${INSPECTION_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${INSPECTION_PATH}/logs/temp.log > ${INSPECTION_PATH}/Framework/linting_php.log
+find ${INSPECTION_PATH} -name "*.php" | xargs -L1 php -l > ${OUTPUT_PATH}/temp.log
+sed '/^No syntax.*/ d' < ${OUTPUT_PATH}/temp.log > ${OUTPUT_PATH}/linting_php.log
 
-find ${ROOT_PATH}/Web -name "*.php" | xargs -L1 php -l > ${INSPECTION_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${INSPECTION_PATH}/logs/temp.log > ${INSPECTION_PATH}/Framework/linting_php.log
-
-find ${ROOT_PATH}/Modules -name "*.php" | xargs -L1 php -l > ${INSPECTION_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${INSPECTION_PATH}/logs/temp.log > ${INSPECTION_PATH}/Modules/linting_php.log
-
-find ${ROOT_PATH}/Model -name "*.php" | xargs -L1 php -l > ${INSPECTION_PATH}/logs/temp.log
-sed '/^No syntax.*/ d' < ${INSPECTION_PATH}/logs/temp.log > ${INSPECTION_PATH}/Model/linting_php.log
-
-rm ${INSPECTION_PATH}/logs/temp.log
+rm ${OUTPUT_PATH}/temp.log

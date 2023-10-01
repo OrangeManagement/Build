@@ -7,7 +7,6 @@ BUILD_PATH="/var/www/html/Build"
 
 TOOLS_PATH="/var/www/html/Tools"
 RELEASE_PATH="/var/www/html/Release"
-INSPECTION_PATH="/var/www/html/Inspection"
 
 # Web
 WEB_URL="http://jingga.app"

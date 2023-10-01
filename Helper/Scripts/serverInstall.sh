@@ -10,7 +10,7 @@ export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >
 
 apt-get update
 apt-get upgrade
-apt-get install git git-lfs snapd ufw software-properties-common
+apt-get install git git-lfs snapd ufw software-properties-common composer
 
 # Security
 
@@ -144,6 +144,23 @@ cat << EOF > /etc/apache2/sites-available/000-demo.conf
     <IfModule mpm_itk_module>
         AssignUserId www-demo www-data
     </IfModule>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/000-dev.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/dev
+    ServerName dev.jingga.app
+
+    <Directory /var/www/html/dev>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
 
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
@@ -535,6 +552,7 @@ mkdir -p /var/www/html/backup/bash
 chmod -R 766 /var/www/html/backup
 
 a2ensite 000-demo.conf
+a2ensite 000-dev.conf
 a2ensite 000-shop.conf
 a2ensite 000-services.conf
 a2ensite 000-software.conf

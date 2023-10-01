@@ -1,0 +1,9 @@
+{
+    "composer": false,
+    "excludes": [
+        ".git",
+        "tests",
+        "vendor",
+        "Resources"
+    ]
+}
