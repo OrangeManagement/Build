@@ -53,6 +53,15 @@ function module_autoloader($class) {
             return;
         }
     }
+
+    $class = \str_replace('Modules/', '/', $class);
+    foreach ($paths as $path) {
+        if (\is_file($file = $path . $class . '.php')) {
+            include_once $file;
+
+            return;
+        }
+    }
 }
 
 spl_autoload_register('module_autoloader');
