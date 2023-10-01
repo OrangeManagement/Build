@@ -63,12 +63,15 @@ mysql -u root -p
 
 CREATE USER 'jingga'@'%' IDENTIFIED BY 'dYg8#@wLiWJ3vE';
 CREATE USER 'demo'@'%' IDENTIFIED BY 'orange';
+CREATE USER 'test'@'%' IDENTIFIED BY 'orange';
 
 CREATE DATABASE jingga COMMENT 'Main application database';
 CREATE DATABASE demo COMMENT 'Demo application database';
+CREATE DATABASE omt COMMENT 'Tests';
 
 GRANT ALL PRIVILEGES ON jingga.* TO 'jingga'@'%';
 GRANT ALL PRIVILEGES ON demo.* TO 'demo'@'%';
+GRANT ALL PRIVILEGES ON omt.* TO 'test'@'%';
 
 FLUSH PRIVILEGES;
 

@@ -7,8 +7,8 @@
 echo "#################################################"
 echo "Setup database"
 echo "#################################################"
-mysql -e 'drop database if exists omb;' -u ${DB_USER} --password="${DB_PASSWORD}"
-mysql -e 'create database omb;' -u ${DB_USER} --password="${DB_PASSWORD}"
+mysql -e 'drop database if exists omt;' -u ${DB_USER} --password="${DB_PASSWORD}"
+mysql -e 'create database omt;' -u ${DB_USER} --password="${DB_PASSWORD}"
 
 # Build js
 #. Js/build.sh

@@ -12,6 +12,12 @@ fi
 INSPECTION_PATH="$1"
 OUTPUT_PATH="$2"
 
+if [ "$OUTPUT_PATH" == "/" ] || [ "$OUTPUT_PATH" == "/etc" ]; then
+    echo "Bad path"
+    exit 1
+fi
+
+rm -rf ${OUTPUT_PATH}
 mkdir -p ${OUTPUT_PATH}
 mkdir -p ${OUTPUT_PATH}/coverage
 mkdir -p ${OUTPUT_PATH}/phpunit
