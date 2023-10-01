@@ -12,7 +12,7 @@ function module_autoloader($class) {
         __DIR__ . '/../../MainRepository/Resources/',
         __DIR__ . '/../../MainRepository/Resources/tcpdf/',
         __DIR__ . '/../../MainRepository/Resources/Stripe/',
-        __DIR__ . '/../../src',
+        __DIR__ . '/../../src/',
         __DIR__ . '/../../../',
     ];
 
@@ -55,9 +55,30 @@ function module_autoloader($class) {
         }
     }
 
+
+    foreach ($paths as $path) {
+        if (($file = \realpath($path . 'oms-' . $class2 . '.php'))) {
+            include_once $file;
+
+            return;
+        } elseif (($file = \realpath($file = $path . 'oms-' . $class3 . '.php')) && \stripos($file, $class2) !== false) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . 'oms-' . $class . '.php')) {
+            include_once $file;
+
+            return;
+        }
+    }
+
     $class = \str_replace('Modules/', '/', $class);
     foreach ($paths as $path) {
         if (\is_file($file = $path . $class . '.php')) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . 'oms-' . $class . '.php')) {
             include_once $file;
 
             return;
