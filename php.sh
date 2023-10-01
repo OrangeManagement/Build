@@ -19,6 +19,7 @@ fi
 
 rm -rf ${OUTPUT_PATH}
 mkdir -p ${OUTPUT_PATH}
+mkdir -p ${OUTPUT_PATH}/ReportExternal
 mkdir -p ${OUTPUT_PATH}/coverage
 mkdir -p ${OUTPUT_PATH}/phpunit
 mkdir -p ${OUTPUT_PATH}/metrics

@@ -12,8 +12,8 @@ WEB_URL="http://jingga.app"
 MAIL_ADDR=""
 
 # Authentications
-DB_USER="root"
-DB_PASSWORD="root"
+DB_USER="test"
+DB_PASSWORD="orange"
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Karaka-Management/Karaka.git"
