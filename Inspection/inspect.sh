@@ -71,7 +71,7 @@ echo "#################################################"
 echo "Test report"
 echo "#################################################"
 php ${TOOLS_PATH}/TestReportGenerator/src/index.php \
--b ${ROOT_PATH} \
+-b ${INSPECTION_PATH} \
 -l ${BUILD_PATH}/Config/reportLang.php \
 -s ${OUTPUT_PATH}/junit_phpcs.xml \
 -sj ${OUTPUT_PATH}/junit_eslint.xml \

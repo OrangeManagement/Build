@@ -1,10 +1,8 @@
 #!/bin/bash
 
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-source "$SCRIPT_DIR/script2.sh"
-
 # Include config
-. "$SCRIPT_DIR/config.sh"
+BUILD_PATH="$(dirname "$(readlink -f "$0")")"
+. "$BUILD_PATH/config.sh"
 
 if [ $# -eq 0 ]; then
   echo "No parameters provided."

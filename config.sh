@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # Paths
-BASE_PATH="/var/www/html"
-ROOT_PATH="/var/www/html/Karaka"
-BUILD_PATH="/var/www/html/Build"
+BASE_PATH="${BUILD_PATH}/.."
+ROOT_PATH="${BUILD_PATH}/.."
 
-TOOLS_PATH="/var/www/html/Tools"
+TOOLS_PATH="${BUILD_PATH}/.."
 RELEASE_PATH="/var/www/html/Release"
 
 # Web
