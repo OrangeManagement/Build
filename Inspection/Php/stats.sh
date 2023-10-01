@@ -7,5 +7,5 @@ echo "Start php stats inspection"
 echo "#################################################"
 
 #
-php ${TOOLS_PATH}/vendor/bin/phploc ${INSPECTION_PATH} > ${OUTPUT_PATH}/phploc.log
-php ${TOOLS_PATH}/vendor/bin/phpmetrics --config=${BUILD_PATH}/Config/phpmetrics.json --report-html=${OUTPUT_PATH}/metrics ${INSPECTION_PATH}
+php ${TOOLS_PATH}/vendor/bin/phploc ${INSPECTION_PATH} > ${OUTPUT_PATH}/phploc.log || true
+php ${TOOLS_PATH}/vendor/bin/phpmetrics --config=${BUILD_PATH}/Config/phpmetrics.json --report-html=${OUTPUT_PATH}/metrics ${INSPECTION_PATH} || true

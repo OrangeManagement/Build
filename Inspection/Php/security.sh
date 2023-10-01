@@ -46,4 +46,4 @@ do
 done
 
 # PHP strict type
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${INSPECTION_PATH} > ${OUTPUT_PATH}/strict_missing_php.log
+grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${INSPECTION_PATH} > ${OUTPUT_PATH}/strict_missing_php.log || true

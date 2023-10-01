@@ -73,7 +73,7 @@ echo "#################################################"
 php ${TOOLS_PATH}/TestReportGenerator/src/index.php \
 -b ${INSPECTION_PATH} \
 -l ${BUILD_PATH}/Config/reportLang.php \
--s ${OUTPUT_PATH}/junit_phpcs.xml \
+-s ${OUTPUT_PATH}/phpcs.xml \
 -sj ${OUTPUT_PATH}/junit_eslint.xml \
 -a ${OUTPUT_PATH}/phpstan.json \
 -c ${OUTPUT_PATH}/coverage.xml \
