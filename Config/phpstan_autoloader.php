@@ -39,6 +39,7 @@ function module_autoloader($class) {
         }
     }
 
+    // github and normal
     foreach ($paths as $path) {
         if (($file = \realpath($path . $class2 . '.php'))) {
             include_once $file;
@@ -55,7 +56,7 @@ function module_autoloader($class) {
         }
     }
 
-
+    // own server
     foreach ($paths as $path) {
         if (($file = \realpath($path . 'oms-' . $class2 . '.php'))) {
             include_once $file;
@@ -72,7 +73,9 @@ function module_autoloader($class) {
         }
     }
 
-    $class = \str_replace('Modules/', '/', $class);
+    $paths[] = __DIR__ . '/../../src/Karaka/';
+
+    $class = \ltrim(\str_replace('Modules/', '/', $class), '/');
     foreach ($paths as $path) {
         if (\is_file($file = $path . $class . '.php')) {
             include_once $file;

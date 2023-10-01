@@ -12,7 +12,7 @@ echo "#################################################"
 echo "Start php static inspection"
 echo "#################################################"
 
-php -d memory_limit=4G ${TOOLS_PATH}/vendor/bin/phpstan analyse --no-progress -l 9 -c ${BUILD_PATH}/Config/phpstan.neon ${INSPECTION_PATH} || true
+php -dmemory_limit=4G ${TOOLS_PATH}/vendor/bin/phpstan analyse --error-format=prettyJson --no-progress -l 9 -c ${BUILD_PATH}/Config/phpstan.neon ${INSPECTION_PATH} > ${OUTPUT_PATH}/phpstan.json || true
 
 # Cli debugging
 # php -dzend_extension=xdebug.so -dxdebug.mode=debug -dxdebug.profiler_enable=1
