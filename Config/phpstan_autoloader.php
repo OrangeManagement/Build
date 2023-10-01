@@ -12,6 +12,7 @@ function module_autoloader($class) {
         __DIR__ . '/../../MainRepository/Resources/',
         __DIR__ . '/../../MainRepository/Resources/tcpdf/',
         __DIR__ . '/../../MainRepository/Resources/Stripe/',
+        __DIR__ . '/../../../',
     ];
 
     $class  = \ltrim($class, '\\');
