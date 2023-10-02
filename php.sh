@@ -14,19 +14,18 @@ BASE_NAME=$(basename "$REPO_PATH" .git)
 INSPECTION_PATH="$(realpath "$2")/${BASE_NAME}"
 OUTPUT_PATH="$(realpath "$2")/${BASE_NAME}/build"
 
-rm -rf ${INSPECTION_PATH}
-
-if [ "$OUTPUT_PATH" == "/" ] || [ "$OUTPUT_PATH" == "/etc" ]; then
+if [ "$OUTPUT_PATH" == "/" ] || [ "$INSPECTION_PATH" == "/" ]; then
     echo "Bad path"
     exit 1
 fi
 
-rm -rf ${OUTPUT_PATH}
-mkdir -p ${OUTPUT_PATH}
-mkdir -p ${OUTPUT_PATH}/ReportExternal
-mkdir -p ${OUTPUT_PATH}/coverage
-mkdir -p ${OUTPUT_PATH}/phpunit
-mkdir -p ${OUTPUT_PATH}/metrics
+rm -rf "${INSPECTION_PATH}"
+
+mkdir -p "${OUTPUT_PATH}"
+mkdir -p "${OUTPUT_PATH}/ReportExternal"
+mkdir -p "${OUTPUT_PATH}/coverage"
+mkdir -p "${OUTPUT_PATH}/phpunit"
+mkdir -p "${OUTPUT_PATH}/metrics"
 
 git clone --recurse-submodules ${REPO_PATH} ${INSPECTION_PATH}
 git -C ${INSPECTION_PATH} checkout develop
