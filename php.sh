@@ -34,7 +34,7 @@ mkdir -p "${OUTPUT_PATH}/phpunit"
 mkdir -p "${OUTPUT_PATH}/metrics"
 
 if [[ ${BASE_NAME} == *"oms-"* ]]; then
-    git clone --recurse-submodules ${REPO_PATH} ${INSPECTION_PATH}/MainRepository
+    git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git ${INSPECTION_PATH}/MainRepository
     git -C ${INSPECTION_PATH}/MainRepository checkout develop
     git -C ${INSPECTION_PATH}/MainRepository pull
     git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git checkout develop || true'
