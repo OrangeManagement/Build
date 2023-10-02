@@ -21,24 +21,24 @@ fi
 
 rm -rf "${INSPECTION_PATH}"
 
-mkdir -p "${OUTPUT_PATH}"
-mkdir -p "${OUTPUT_PATH}/ReportExternal"
-mkdir -p "${OUTPUT_PATH}/coverage"
-mkdir -p "${OUTPUT_PATH}/phpunit"
-mkdir -p "${OUTPUT_PATH}/metrics"
-
 git clone --recurse-submodules ${REPO_PATH} ${INSPECTION_PATH}
 git -C ${INSPECTION_PATH} checkout develop
 git -C ${INSPECTION_PATH} pull
 git -C ${INSPECTION_PATH} submodule foreach 'git checkout develop || true'
 git -C ${INSPECTION_PATH} submodule foreach 'git pull || true'
 
+mkdir -p "${OUTPUT_PATH}"
+mkdir -p "${OUTPUT_PATH}/ReportExternal"
+mkdir -p "${OUTPUT_PATH}/coverage"
+mkdir -p "${OUTPUT_PATH}/phpunit"
+mkdir -p "${OUTPUT_PATH}/metrics"
+
 if [[ ${BASE_NAME} == *"oms-"* ]]; then
-    git clone --recurse-submodules ${REPO_PATH} ${INSPECTION_PATH}/Karaka
-    git -C ${INSPECTION_PATH}/Karaka checkout develop
-    git -C ${INSPECTION_PATH}/Karaka pull
-    git -C ${INSPECTION_PATH}/Karaka submodule foreach 'git checkout develop || true'
-    git -C ${INSPECTION_PATH}/Karaka submodule foreach 'git pull || true'
+    git clone --recurse-submodules ${REPO_PATH} ${INSPECTION_PATH}/MainRepository
+    git -C ${INSPECTION_PATH}/MainRepository checkout develop
+    git -C ${INSPECTION_PATH}/MainRepository pull
+    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git checkout develop || true'
+    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git pull || true'
 fi
 
 # Run inspection

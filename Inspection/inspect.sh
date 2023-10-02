@@ -26,12 +26,6 @@ echo "MYSQL queries"
 echo "#################################################"
 . ${BUILD_PATH}/Inspection/Sql/performance.sh
 
-# Stats & metrics
-echo "#################################################"
-echo "PHP stats"
-echo "#################################################"
-. ${BUILD_PATH}/Inspection/Php/stats.sh
-
 # Linting
 echo "#################################################"
 echo "Json and PHP linting"
@@ -65,6 +59,12 @@ echo "#################################################"
 echo "Custom js inspection"
 echo "#################################################"
 . ${BUILD_PATH}/Inspection/Js/security.sh
+
+# Stats & metrics
+echo "#################################################"
+echo "PHP stats"
+echo "#################################################"
+. ${BUILD_PATH}/Inspection/Php/stats.sh
 
 # Build external test report
 echo "#################################################"
