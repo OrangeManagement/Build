@@ -98,7 +98,6 @@ GITHUB[94]="https://github.com/Karaka-Management/oms-TestModule.git"
 GITHUB[95]="https://github.com/Karaka-Management/oms-Tools.git"
 GITHUB[96]="https://github.com/Karaka-Management/oms-WarehouseManagement.git"
 GITHUB[97]="https://github.com/Karaka-Management/oms-Workflow.git"
-GITHUB[98]="https://github.com/Karaka-Management/Organization-Guide.git"
 GITHUB[99]="https://github.com/Karaka-Management/phpOMS.git"
 
 for i in "${GITHUB[@]}"
