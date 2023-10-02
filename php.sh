@@ -34,11 +34,13 @@ mkdir -p "${OUTPUT_PATH}/phpunit"
 mkdir -p "${OUTPUT_PATH}/metrics"
 
 if [[ ${BASE_NAME} == *"oms-"* ]]; then
-    git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git ${INSPECTION_PATH}/MainRepository
-    git -C ${INSPECTION_PATH}/MainRepository checkout develop
-    git -C ${INSPECTION_PATH}/MainRepository pull
-    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git checkout develop || true'
-    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git pull || true'
+    mkdir -p ${INSPECTION_PATH}/MainRepository
+    cp -R ${INSPECTION_PATH}/../Karaka/* ${INSPECTION_PATH}/MainRepository
+#    git clone --recurse-submodules https://github.com/Karaka-Management/Karaka.git ${INSPECTION_PATH}/MainRepository
+#    git -C ${INSPECTION_PATH}/MainRepository checkout develop
+#    git -C ${INSPECTION_PATH}/MainRepository pull
+#    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git checkout develop || true'
+#    git -C ${INSPECTION_PATH}/MainRepository submodule foreach 'git pull || true'
 fi
 
 # Run inspection
