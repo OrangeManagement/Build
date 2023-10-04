@@ -16,7 +16,13 @@ add-apt-repository ppa:ondrej/php
 
 apt-get update
 
-apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mysql-server wkhtmltopdf tesseract-ocr poppler-utils
+apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils
+
+apt-get install curl libcurl4-openssl-dev libxml2 libxml2-dev
+
+mysql_secure_installation
+systemctl start mariadb
+systemctl enable mariadb
 
 a2enmod rewrite
 a2enmod headers
@@ -49,7 +55,7 @@ borg key export /var/www/html repokey
 ## Developer
 ###############################################################
 
-apt-get install npm git composer cmake postgresql postgresql-contrib pcov
+apt-get install npm git composer nodejs cmake postgresql postgresql-contrib pcov
 composer install
 composer update
 npm install -D jasmine jasmine-node istanbul jasmine-console-reporter supertest jasmine-supertest selenium-webdriver chromedriver geckodriver eslint

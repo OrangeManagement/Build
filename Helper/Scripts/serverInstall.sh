@@ -10,7 +10,7 @@ export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >
 
 apt-get update
 apt-get upgrade
-apt-get install git git-lfs snapd ufw software-properties-common composer nodejs npm
+apt-get install git snapd ufw software-properties-common composer nodejs npm
 
 # Security
 
