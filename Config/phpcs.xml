@@ -7,6 +7,7 @@
 <exclude-pattern>*.tpl.php</exclude-pattern>
 <exclude-pattern>*.xls.php</exclude-pattern>
 <exclude-pattern>*/Build/*</exclude-pattern>
+<exclude-pattern>*/MainRepository/*</exclude-pattern>
 <exclude-pattern>*/Cache/*</exclude-pattern>
 <exclude-pattern>*/Demo/*</exclude-pattern>
 <exclude-pattern>*/Docs/*</exclude-pattern>

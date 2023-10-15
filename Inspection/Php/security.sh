@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. config.sh
+. "${BUILD_PATH}/config.sh"
 
 echo "#################################################"
 echo "Start php security inspection"
@@ -38,21 +38,12 @@ CODE[27]="action=\""
 CODE[28]="ReflectionClass"
 CODE[29]="TestUtils"
 
-touch ${INSPECTION_PATH}/Framework/critical_php.log
-touch ${INSPECTION_PATH}/Modules/critical_php.log
-touch ${INSPECTION_PATH}/Model/critical_php.log
-touch ${INSPECTION_PATH}/Web/critical_php.log
+touch ${OUTPUT_PATH}/critical_php.log
 
 for i in "${CODE[@]}"
 do
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/phpOMS >> ${INSPECTION_PATH}/Framework/critical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Modules >> ${INSPECTION_PATH}/Modules/critical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Model >> ${INSPECTION_PATH}/Model/critical_php.log
-    grep -rlni "$i" --include \*.php ${ROOT_PATH}/Web >> ${INSPECTION_PATH}/Web/critical_php.log
+    grep -rlni "$i" --include \*.php ${INSPECTION_PATH} >> ${OUTPUT_PATH}/critical_php.log
 done
 
 # PHP strict type
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${ROOT_PATH}/phpOMS > ${INSPECTION_PATH}/Framework/strict_missing_php.log
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${ROOT_PATH}/Modules > ${INSPECTION_PATH}/Modules/strict_missing_php.log
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${ROOT_PATH}/Model > ${INSPECTION_PATH}/Model/strict_missing_php.log
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${ROOT_PATH}/Web > ${INSPECTION_PATH}/Web/strict_missing_php.log
+grep -r -L "declare(strict_types=1);" --include=*.php --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${INSPECTION_PATH} > ${OUTPUT_PATH}/strict_missing_php.log || true

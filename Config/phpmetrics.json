@@ -1,0 +1,12 @@
+{
+    "composer": true,
+    "excludes": [
+        ".git",
+        "tests",
+        "MainRepository",
+        "vendor",
+        "Admin/Install/Application",
+        "Install/Application",
+        "Resources"
+    ]
+}

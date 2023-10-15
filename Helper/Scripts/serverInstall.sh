@@ -10,7 +10,7 @@ export PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >
 
 apt-get update
 apt-get upgrade
-apt-get install git git-lfs snapd ufw software-properties-common
+apt-get install git snapd ufw software-properties-common composer nodejs npm
 
 # Security
 
@@ -39,6 +39,9 @@ service fail2ban restart
 
 apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils
 
+pecl install pcov
+#echo "extension=pcov.so" > /etc/php/cli/conf.d/20-xdebug.ini
+
 mkdir -p /var/cache/apache2
 mkdir -p /var/cache/apache2/tmrank
 chown -R www-data:www-data /var/cache/apache2
@@ -63,12 +66,15 @@ mysql -u root -p
 
 CREATE USER 'jingga'@'%' IDENTIFIED BY 'dYg8#@wLiWJ3vE';
 CREATE USER 'demo'@'%' IDENTIFIED BY 'orange';
+CREATE USER 'test'@'%' IDENTIFIED BY 'orange';
 
 CREATE DATABASE jingga COMMENT 'Main application database';
 CREATE DATABASE demo COMMENT 'Demo application database';
+CREATE DATABASE omt COMMENT 'Tests';
 
 GRANT ALL PRIVILEGES ON jingga.* TO 'jingga'@'%';
 GRANT ALL PRIVILEGES ON demo.* TO 'demo'@'%';
+GRANT ALL PRIVILEGES ON omt.* TO 'test'@'%';
 
 FLUSH PRIVILEGES;
 
@@ -144,6 +150,23 @@ cat << EOF > /etc/apache2/sites-available/000-demo.conf
     <IfModule mpm_itk_module>
         AssignUserId www-demo www-data
     </IfModule>
+
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+
+cat << EOF > /etc/apache2/sites-available/000-dev.conf
+<VirtualHost *:80>
+    ServerAdmin info@jingga.app
+    DocumentRoot /var/www/html/dev
+    ServerName dev.jingga.app
+
+    <Directory /var/www/html/dev>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
 
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
@@ -535,6 +558,7 @@ mkdir -p /var/www/html/backup/bash
 chmod -R 766 /var/www/html/backup
 
 a2ensite 000-demo.conf
+a2ensite 000-dev.conf
 a2ensite 000-shop.conf
 a2ensite 000-services.conf
 a2ensite 000-software.conf

@@ -12,6 +12,8 @@ function module_autoloader($class) {
         __DIR__ . '/../../MainRepository/Resources/',
         __DIR__ . '/../../MainRepository/Resources/tcpdf/',
         __DIR__ . '/../../MainRepository/Resources/Stripe/',
+        __DIR__ . '/../../src/',
+        __DIR__ . '/../../../',
     ];
 
     $class  = \ltrim($class, '\\');
@@ -37,6 +39,7 @@ function module_autoloader($class) {
         }
     }
 
+    // github and normal
     foreach ($paths as $path) {
         if (($file = \realpath($path . $class2 . '.php'))) {
             include_once $file;
@@ -47,6 +50,38 @@ function module_autoloader($class) {
 
             return;
         } elseif (\is_file($file = $path . $class . '.php')) {
+            include_once $file;
+
+            return;
+        }
+    }
+
+    // own server
+    foreach ($paths as $path) {
+        if (($file = \realpath($path . 'oms-' . $class2 . '.php'))) {
+            include_once $file;
+
+            return;
+        } elseif (($file = \realpath($file = $path . 'oms-' . $class3 . '.php')) && \stripos($file, $class2) !== false) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . 'oms-' . $class . '.php')) {
+            include_once $file;
+
+            return;
+        }
+    }
+
+    $paths[] = __DIR__ . '/../../src/Karaka/';
+
+    $class = \ltrim(\str_replace('Modules/', '/', $class), '/');
+    foreach ($paths as $path) {
+        if (\is_file($file = $path . $class . '.php')) {
+            include_once $file;
+
+            return;
+        } elseif (\is_file($file = $path . 'oms-' . $class . '.php')) {
             include_once $file;
 
             return;

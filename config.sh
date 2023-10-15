@@ -1,21 +1,19 @@
 #!/bin/bash
 
 # Paths
-BASE_PATH="/var/www/html"
-ROOT_PATH="/var/www/html/Karaka"
-BUILD_PATH="/var/www/html/Build"
+BASE_PATH="${BUILD_PATH}/.."
+ROOT_PATH="${BUILD_PATH}/.."
 
-TOOLS_PATH="/var/www/html/Tools"
+TOOLS_PATH="${BUILD_PATH}/.."
 RELEASE_PATH="/var/www/html/Release"
-INSPECTION_PATH="/var/www/html/Inspection"
 
 # Web
 WEB_URL="http://jingga.app"
 MAIL_ADDR=""
 
 # Authentications
-DB_USER="root"
-DB_PASSWORD="root"
+DB_USER="test"
+DB_PASSWORD="orange"
 
 # Git variables
 GITHUB_URL[0]="https://github.com/Karaka-Management/Karaka.git"
