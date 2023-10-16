@@ -96,6 +96,16 @@ foreach ($modules as $module) {
 				. '        $null = new Null' . $model . '(2);' . "\n"
 				. '        self::assertEquals(2, $null->getId());' . "\n"
 				. '    }' . "\n"
+				. "\n"
+				. '    /**' . "\n"
+				. '     * @covers Modules\\' . $module . '\Models\Null' . $model . '' . "\n"
+				. '     * @group framework' . "\n"
+				. '     */' . "\n"
+				. '    public function testJsonSerialize() : void' . "\n"
+				. '    {' . "\n"
+				. '        $null = new Null' . $model . '(2);' . "\n"
+				. '        self::assertEquals([\'id\' => 2], $null);' . "\n"
+				. '    }' . "\n"
 				. '}' . "\n";
 
 			\file_put_contents(__DIR__ . '/../../../Modules/' . $module . '/tests/Models/Null' . $model . 'Test.php', $test);
