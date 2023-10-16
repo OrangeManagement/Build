@@ -94,7 +94,7 @@ foreach ($modules as $module) {
 				. '    public function testId() : void' . "\n"
 				. '    {' . "\n"
 				. '        $null = new Null' . $model . '(2);' . "\n"
-				. '        self::assertEquals(2, $null->getId());' . "\n"
+				. '        self::assertEquals(2, $null->id);' . "\n"
 				. '    }' . "\n"
 				. "\n"
 				. '    /**' . "\n"
