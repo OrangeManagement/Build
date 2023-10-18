@@ -79,13 +79,20 @@ foreach ($modules as $module) {
             $relevantFunction[] = $match;
         }
 
-        $tests1 = \scandir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller');
-        $tests2 = \scandir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api');
+        $tests1 = \is_dir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller') ? \scandir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller') : [];
+        if ($tests1 === false) {
+            $tests1 = [];
+        }
+
+        $tests2 = \is_dir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api') ? \scandir(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api') : [];
+        if ($tests2 === false) {
+            $tests2 = [];
+        }
 
         $testFilesContent = [];
 
         foreach ($tests1 as $file) {
-            if ($file === '..' || $file === '.') {
+            if ($file === '..' || $file === '.' || !\is_file(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/' . $file)) {
                 continue;
             }
 
@@ -93,35 +100,60 @@ foreach ($modules as $module) {
         }
 
         foreach ($tests2 as $file) {
-            if ($file === '..' || $file === '.') {
+            if ($file === '..' || $file === '.' || !\is_file(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api/' . $file)) {
                 continue;
             }
 
-            $testFilesContent[__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api/' . $file] = \file_get_contents(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/' . $file);
+            $testFilesContent[__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api/' . $file] = \file_get_contents(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/Api/' . $file);
         }
+
+        $open = [];
 
         foreach ($testFilesContent as $path => $testFile) {
             foreach ($relevantFunction as $function) {
                 $offset = 0;
-                $found  = false;
+                $found  = -1;
 
-                while (($invalidPos = \stripos('->' . $function . '(', $testFile, $offset)) !== false) {
+                if (!isset($open[$function])) {
+                    $open[$function] = -1;
+                }
+
+                while (($invalidPos = \stripos($testFile, '->' . $function . '(', $offset)) !== false) {
                     $offset = $invalidPos + 1;
-                    $found  = true;
+                    $found  = 0;
 
                     $statusPos = \stripos($testFile, 'self::assertEquals(RequestStatusCode::');
                     if ($statusPos !== false && $statusPos - $invalidPos < 250) {
-                        $found = false;
+                        $found = 1;
+
+                        $open[$function] = 1;
 
                         break;
                     }
                 }
 
-                if ($found) {
+                if ($found === 0) {
+                    echo $function . "\n";
                     $newContent = \createFunction($function);
                     $newContent = \rtrim($testFile, " }\n") . "\n    }\n" . $newContent . "}\n";
-                    \file_put_contents($path, $newContent);
+                    //\file_put_contents($path, $newContent);
+                    $open[$function] = 1;
                 }
+            }
+        }
+
+        if (\is_file(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/ApiControllerTest.php')) {
+            $testFile = \file_get_contents(__DIR__ . '/../../../Modules/' . $module . '/tests/Controller/ApiControllerTest.php');
+            foreach ($open as $function => $value) {
+                if ($value === 1) {
+                    continue;
+                }
+
+                echo $function . "\n";
+                $newContent = \createFunction($function);
+                $newContent = \rtrim($testFile, " }\n") . "\n    }\n" . $newContent . "}\n";
+                //\file_put_contents($path, $newContent);
+                $open[$function] = 1;
             }
         }
     }
