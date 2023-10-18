@@ -25,15 +25,15 @@ function createFunction($name)
 {
     $invalid = <<<HEREDOC
 
-    public function testInvalid{$name}() : void
-    {
-        \$response = new HttpResponse();
-        \$request  = new HttpRequest(new HttpUri(''));
+        public function testInvalid{$name}() : void
+        {
+            \$response = new HttpResponse();
+            \$request  = new HttpRequest(new HttpUri(''));
 
-        \$request->header->account = 1;
-        \$this->module->{$name}(\$request, \$response);
-        self::assertEquals(RequestStatusCode::R_400, \$response->header->status);
-    }
+            \$request->header->account = 1;
+            \$this->module->{$name}(\$request, \$response);
+            self::assertEquals(RequestStatusCode::R_400, \$response->header->status);
+        }
 
     HEREDOC;
 
@@ -136,7 +136,7 @@ foreach ($modules as $module) {
                     echo $function . "\n";
                     $newContent = \createFunction($function);
                     $newContent = \rtrim($testFile, " }\n") . "\n    }\n" . $newContent . "}\n";
-                    //\file_put_contents($path, $newContent);
+                    \file_put_contents($path, $newContent);
                     $open[$function] = 1;
                 }
             }
@@ -152,7 +152,7 @@ foreach ($modules as $module) {
                 echo $function . "\n";
                 $newContent = \createFunction($function);
                 $newContent = \rtrim($testFile, " }\n") . "\n    }\n" . $newContent . "}\n";
-                //\file_put_contents($path, $newContent);
+                \file_put_contents($path, $newContent);
                 $open[$function] = 1;
             }
         }
