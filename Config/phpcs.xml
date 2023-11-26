@@ -34,7 +34,6 @@
 <exclude-pattern>*/Accounting/*</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*/JobScheduling/*</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*/TrueSkill.php</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Simplex.php</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*/BayesianPersonalizedRanking.php</exclude-pattern><!-- @todo: temporarily disabled-->
 <exclude-pattern>*/Parser/Spreadsheet/*</exclude-pattern><!-- @note: false positive due to libs -->
 <exclude-pattern>*/Parser/Presentation/*</exclude-pattern><!-- @note: false positive due to libs -->
