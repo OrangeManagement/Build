@@ -27,17 +27,16 @@
 <exclude-pattern>*/tests/*</exclude-pattern>
 <exclude-pattern>*/Sandbox/*</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
-<exclude-pattern>*/OAuth2/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Mail/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Interfaces/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Workflows/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Accounting/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/JobScheduling/*</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/TrueSkill.php</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/BayesianPersonalizedRanking.php</exclude-pattern><!-- @todo: temporarily disabled-->
-<exclude-pattern>*/Parser/Spreadsheet/*</exclude-pattern><!-- @note: false positive due to libs -->
-<exclude-pattern>*/Parser/Presentation/*</exclude-pattern><!-- @note: false positive due to libs -->
-<exclude-pattern>*/Parser/Document/*</exclude-pattern><!-- @note: false positive due to libs -->
+<exclude-pattern>*/Mail/*</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/Interfaces/*</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/Workflows/*</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/Accounting/*</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/JobScheduling/*</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/TrueSkill.php</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/BayesianPersonalizedRanking.php</exclude-pattern><!-- @todo temporarily disabled-->
+<exclude-pattern>*/Parser/Spreadsheet/*</exclude-pattern><!-- false positive due to libs -->
+<exclude-pattern>*/Parser/Presentation/*</exclude-pattern><!-- false positive due to libs -->
+<exclude-pattern>*/Parser/Document/*</exclude-pattern><!-- false positive due to libs -->
 <exclude-pattern>*Hooks.php</exclude-pattern>
 <exclude-pattern>*Markdown.js</exclude-pattern>
 <exclude-pattern>*ObjLoader.js</exclude-pattern>
@@ -50,7 +49,7 @@
 <arg value="q"/>
 <arg name="colors"/>
 <arg name="tab-width" value="4"/>
-<!-- <rule ref="Generic.Classes.DuplicateClassName"/> @todo: disabled until bug is fixed. currently namespace is ignored which creates a lot of false positives e.g. Installer, Updater, Controller, etc. -->
+<!-- <rule ref="Generic.Classes.DuplicateClassName"/> @todo disabled until bug is fixed. currently namespace is ignored which creates a lot of false positives e.g. Installer, Updater, Controller, etc. -->
 <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
 <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall">
     <exclude-pattern>*Sort.php</exclude-pattern>

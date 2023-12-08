@@ -26,7 +26,7 @@ service fail2ban restart
 
 # SSH
 
-# TODO: upload ssh key and disable password login if successful
+# upload ssh key and disable password login if successful
 # https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
 
 # copy the public key (e.g. *.pub to the file ~/.ssh/authorized_keys of the respective user)
