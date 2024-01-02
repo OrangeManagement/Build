@@ -46,6 +46,7 @@
 <exclude-pattern>*Sha1.js</exclude-pattern>
 <exclude-pattern>*Sha1b.js</exclude-pattern>
 <exclude-pattern>[abcdef0-9]{32}/*</exclude-pattern>
+<exclude-pattern>*.min.js</exclude-pattern>
 <arg value="q"/>
 <arg name="colors"/>
 <arg name="tab-width" value="4"/>
@@ -148,6 +149,7 @@
     <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
     <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
     <exclude name="PEAR.Commenting.ClassComment.InvalidVersion"/>
+    <exclude name="PEAR.Commenting.ClassComment.DuplicateLicenseTag"/>
 </rule>
 <rule ref="PEAR.Commenting.FunctionComment">
     <severity>7</severity>

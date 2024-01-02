@@ -61,10 +61,15 @@ return static function (RectorConfig $rectorConfig) : void {
 
     $rectorConfig->skip([
         $base . '/vendor',
+        '*/vendor',
+        '*/node_modules',
+        $base . '/privateSetup',
+        $base . '/demoSetup',
         $base . '/Build',
         $base . '/MainRepository',
         $base . '/Resources',
         $base . '/Tools',
+        $base . '/Sandbox',
         $base . '/cssOMS',
         '*/Admin/Install/Application',
         SimplifyEmptyCheckOnEmptyArrayRector::class,
