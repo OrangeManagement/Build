@@ -16,21 +16,21 @@ declare(strict_types=1);
 
 function printUsage() : void
 {
-    echo 'Usage: -d <DESTINATION_PATH> -m <PATH>
+    echo 'Usage: -m <PATH>';
 
-';
-    echo "\t" . '-d Destination/output directory.' . "\n";
-    echo "\t" . '-m Module directory.' . "\n";
+    echo "\t" . '-m Module name.' . "\n";
 }
 
-$destination = ($key = \array_search('-d', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
-$modulePath  = ($key = \array_search('-m', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
+// $destination = ($key = \array_search('-d', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
+$moduleName = ($key = \array_search('-m', $argv)) === false || $key === \count($argv) - 1 ? null : \trim($argv[$key + 1], '" ');
 
-if (!isset($destination) || !isset($modulePath)) {
+if (!isset($moduleName)) {
     \printUsage();
 
     return;
 }
+
+$modulePath = __DIR__ . '/../../../Modules/' . $moduleName;
 
 $sources = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($modulePath));
 $tpls    = [];
@@ -69,7 +69,8 @@ foreach($langs as $lang => $data) {
         $fileContent = \file_get_contents($tpl);
 
         foreach ($data as $key => $word) {
-            if (\stripos($fileContent, '$this->getHtml(\'' . $key . '\')') !== false
+            if ((\stripos($fileContent, '$this->getHtml(\'' . $key . '\')') !== false
+                || \stripos($fileContent, '$this->getHtml(\'' . $key . '\', \'' . $moduleName . '\', \'Backend\')') !== false)
                 && ($key = \array_search($key, $unusedLanguage)) !== false
             ) {
                 unset($unusedLanguage[$key]);
@@ -81,3 +82,32 @@ foreach($langs as $lang => $data) {
 echo 'Language files have different length: ' . ($unequalLength ? 'yes' : 'no') . "\n";
 echo 'Unused language components: ' . "\n";
 \var_dump($unusedLanguage);
+
+$sources = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($modulePath));
+$tpls    = [];
+$langs   = [];
+
+foreach ($sources as $source) {
+    if ($source->isFile()
+        && (($temp = \strlen($source->getPathname()) - \strlen('lang.php')) >= 0 && \strpos($source->getPathname(), 'lang.php', $temp) !== false)
+        && \strlen(\explode('.', \basename($source->getPathname()))[0]) === 2
+    ) {
+        $file = \file_get_contents($source->getPathname());
+        $lines = \explode("\n", $file);
+        $exclude = [];
+
+        foreach ($lines as $line) {
+            foreach ($unusedLanguage as $unused) {
+                if (\strpos($line, ' \'' . $unused . '\' ') !== false
+                    && \stripos($unused, ':') === false
+                ) {
+                    continue 2;
+                }
+            }
+
+            $exclude[] = $line;
+        }
+
+        \file_put_contents($source->getPathname(), \implode("\n", $exclude));
+    }
+}
