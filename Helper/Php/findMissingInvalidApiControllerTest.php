@@ -28,7 +28,7 @@ function createFunction($name)
         public function testInvalid{$name}() : void
         {
             \$response = new HttpResponse();
-            \$request  = new HttpRequest(new HttpUri(''));
+            \$request  = new HttpRequest();
 
             \$request->header->account = 1;
             \$this->module->{$name}(\$request, \$response);

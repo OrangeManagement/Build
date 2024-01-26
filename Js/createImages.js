@@ -47,12 +47,12 @@ const src = [
         __dirname + '/../../Modules/Help/Docs/Help/img/help-general-module-list.png'
     ],
     [
-        'http://192.168.178.38/en/backend/help/module/single?id=Admin',
+        'http://192.168.178.38/en/backend/help/module/view?id=Admin',
         '//*[@id="content"]',
         __dirname + '/../../Modules/Help/Docs/Help/img/help-general-module-readme.png'
     ],
     [
-        'http://192.168.178.38/en/backend/help/module/single?id=Admin&page=Dev%2Fstructure',
+        'http://192.168.178.38/en/backend/help/module/view?id=Admin&page=Dev%2Fstructure',
         '//*[@id="content"]',
         __dirname + '/../../Modules/Help/Docs/Help/img/help-general-module-structure.png'
     ],
