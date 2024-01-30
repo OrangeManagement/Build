@@ -29,7 +29,7 @@ foreach ($modules as $module) {
 
 	foreach ($models as $model) {
 		if ($model === '..' || $model === '.'
-			|| \stripos($model, 'Null') !== 0
+			|| !\str_starts_with($model, 'Null')
 		) {
 			continue;
 		}
