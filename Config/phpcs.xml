@@ -27,13 +27,6 @@
 <exclude-pattern>*/tests/*</exclude-pattern>
 <exclude-pattern>*/Sandbox/*</exclude-pattern>
 <exclude-pattern>*/vendor/*</exclude-pattern>
-<exclude-pattern>*/Mail/*</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/Interfaces/*</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/Workflows/*</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/Accounting/*</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/JobScheduling/*</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/TrueSkill.php</exclude-pattern><!-- @todo temporarily disabled-->
-<exclude-pattern>*/BayesianPersonalizedRanking.php</exclude-pattern><!-- @todo temporarily disabled-->
 <exclude-pattern>*/Parser/Spreadsheet/*</exclude-pattern><!-- false positive due to libs -->
 <exclude-pattern>*/Parser/Presentation/*</exclude-pattern><!-- false positive due to libs -->
 <exclude-pattern>*/Parser/Document/*</exclude-pattern><!-- false positive due to libs -->
