@@ -3,6 +3,7 @@
 $finder = PhpCsFixer\Finder::create()
     ->exclude('MainRepository')
     ->exclude('vendor')
+    ->exclude('node_modules')
     ->exclude('Build')
     ->in(__DIR__ . '/../../');
 
@@ -18,18 +19,18 @@ $rules = '{
     },
     "binary_operator_spaces": {
         "operators": {
-            "=": "align",
-            ".=": "align",
-            "+=": "align",
-            "-=": "align",
-            "*=": "align",
-            "\/=": "align",
-            "|=": "align",
-            "&=": "align",
-            "=>": "align",
-            "??=": "align",
-            ">>=": "align",
-            "<<=": "align"
+            "=": "align_single_space_minimal",
+            ".=": "align_single_space_minimal",
+            "+=": "align_single_space_minimal",
+            "-=": "align_single_space_minimal",
+            "*=": "align_single_space_minimal",
+            "\/=": "align_single_space_minimal",
+            "|=": "align_single_space_minimal",
+            "&=": "align_single_space_minimal",
+            "=>": "align_single_space_minimal",
+            "??=": "align_single_space_minimal",
+            ">>=": "align_single_space_minimal",
+            "<<=": "align_single_space_minimal"
         }
     },
     "cast_spaces": {
@@ -48,6 +49,7 @@ $rules = '{
     "declare_equal_normalize": {
         "space": "none"
     },
+    "nullable_type_declaration_for_default_null_value": true,
     "elseif": true,
     "encoding": true,
     "explicit_indirect_variable": true,

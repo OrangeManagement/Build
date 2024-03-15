@@ -7,19 +7,19 @@ echo "#################################################"
 echo "# PHP strict"
 echo "#################################################"
 
-grep -r -L "declare(strict_types=1);" --include=*.php --exclude-dir={*vendor*,*Files*,*privateSetup*,*demoSetup*,*LanguageDetection*,*Resources*,*node_modules*,*privateSetup*,*Build*} --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${BPATH}/../../phpOMS ${BPATH}/../../Web ${BPATH}/../../Modules ${BPATH}/../../Model
+grep -r -L "declare(strict_types=1);" --include=*.php --exclude-dir={*vendor*,*Files*,*privateSetup*,*demoSetup*,*LanguageDetection*,*Resources*,*node_modules*,*privateSetup*,*Build*} --exclude={*.tpl.php,*Hooks.php,*Routes.php,*SearchCommands.php} ${BPATH}/../../../phpOMS ${BPATH}/../../../Web ${BPATH}/../../../Modules ${BPATH}/../../../Model
 
 echo "#################################################"
 echo "# JS security inspection"
 echo "#################################################"
 
-grep -rlni "onafterprint=\|onbeforeprint=\|onbeforeunload=\|onerror=\|onhaschange=\|onload=\|onmessage=\|onoffline=\|ononline=\|onpagehide=\|onpageshow=\|onpopstate=\|onredo=\|onresize=\|onstorage=\|onund=o\|onunload=\|onblur=\|onchage=\|oncontextmenu=\|onfocus=\|onformchange=\|onforminput=\|oninput=\|oninvalid=\|onreset=\|onselect=\|onsubmit=\|onkeydown=\|onkeypress=\|onkeyup=\|onclick=\|ondblclic=k\|ondrag=\|ondragend=\|ondragenter=\|ondragleave=\|ondragover=\|ondragstart=\|ondrop=\|onmousedown=\|onmousemove=\|onmouseout=\|onmouseover=\|onmouseup=\|onmousewheel=\|onscroll=\|onabor=t\|oncanplay=\|oncanplaythrough=\|ondurationchange=\|onemptied=\|onended=\|onerror=\|onloadeddata=\|onloadedmetadata=\|onloadstart=\|onpause=\|onplay=\|onplaying=\|onprogress=\|onratechange=\|onreadystatechange=\|onseeked=\|onseeking=\|onstalled=\|onsuspend=\|ontimeupdate=\|onvolumechange=" --include=*.js ${BPATH}/../../jsOMS ${BPATH}/../../Model ${BPATH}/../../Modules ${BPATH}/../../Web
+grep -rlni "onafterprint=\|onbeforeprint=\|onbeforeunload=\|onerror=\|onhaschange=\|onload=\|onmessage=\|onoffline=\|ononline=\|onpagehide=\|onpageshow=\|onpopstate=\|onredo=\|onresize=\|onstorage=\|onund=o\|onunload=\|onblur=\|onchage=\|oncontextmenu=\|onfocus=\|onformchange=\|onforminput=\|oninput=\|oninvalid=\|onreset=\|onselect=\|onsubmit=\|onkeydown=\|onkeypress=\|onkeyup=\|onclick=\|ondblclic=k\|ondrag=\|ondragend=\|ondragenter=\|ondragleave=\|ondragover=\|ondragstart=\|ondrop=\|onmousedown=\|onmousemove=\|onmouseout=\|onmouseover=\|onmouseup=\|onmousewheel=\|onscroll=\|onabor=t\|oncanplay=\|oncanplaythrough=\|ondurationchange=\|onemptied=\|onended=\|onerror=\|onloadeddata=\|onloadedmetadata=\|onloadstart=\|onpause=\|onplay=\|onplaying=\|onprogress=\|onratechange=\|onreadystatechange=\|onseeked=\|onseeking=\|onstalled=\|onsuspend=\|ontimeupdate=\|onvolumechange=" --include=*.js ${BPATH}/../../../jsOMS ${BPATH}/../../../Model ${BPATH}/../../../Modules ${BPATH}/../../../Web
 
 echo "#################################################"
 echo "# PHPCS"
 echo "#################################################"
 
-./vendor/bin/phpcs --severity=1 ./ --standard="Build/Config/phpcs.xml"
+./vendor/bin/phpcs -s --severity=1 ./ --standard="Build/Config/phpcs.xml"
 
 echo "#################################################"
 echo "# PHP static inspection"

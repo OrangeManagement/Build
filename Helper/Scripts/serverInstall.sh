@@ -26,7 +26,7 @@ service fail2ban restart
 
 # SSH
 
-# TODO: upload ssh key and disable password login if successful
+# upload ssh key and disable password login if successful
 # https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04
 
 # copy the public key (e.g. *.pub to the file ~/.ssh/authorized_keys of the respective user)
@@ -37,7 +37,7 @@ service fail2ban restart
 ## Web
 ###############################################################
 
-apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils
+apt-get install php8.1 php8.1-dev php8.1-cli php8.1-common php8.1-mysql php8.1-pgsql php8.1-xdebug php8.1-opcache php8.1-pdo php8.1-sqlite php8.1-mbstring php8.1-curl php8.1-imap php8.1-bcmath php8.1-zip php8.1-dom php8.1-xml php8.1-phar php8.1-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils imagemagick
 
 pecl install pcov
 #echo "extension=pcov.so" > /etc/php/cli/conf.d/20-xdebug.ini
@@ -67,14 +67,24 @@ mysql -u root -p
 CREATE USER 'jingga'@'%' IDENTIFIED BY 'dYg8#@wLiWJ3vE';
 CREATE USER 'demo'@'%' IDENTIFIED BY 'orange';
 CREATE USER 'test'@'%' IDENTIFIED BY 'orange';
+CREATE USER 'build'@'%' IDENTIFIED BY 'orange';
 
-CREATE DATABASE jingga COMMENT 'Main application database';
-CREATE DATABASE demo COMMENT 'Demo application database';
-CREATE DATABASE omt COMMENT 'Tests';
+# website
+CREATE DATABASE jingga';
+
+# demo
+CREATE DATABASE omd';
+
+# test
+CREATE DATABASE omt';
+
+# build
+CREATE DATABASE omb';
 
 GRANT ALL PRIVILEGES ON jingga.* TO 'jingga'@'%';
-GRANT ALL PRIVILEGES ON demo.* TO 'demo'@'%';
+GRANT ALL PRIVILEGES ON omd.* TO 'demo'@'%';
 GRANT ALL PRIVILEGES ON omt.* TO 'test'@'%';
+GRANT ALL PRIVILEGES ON omb.* TO 'build'@'%';
 
 FLUSH PRIVILEGES;
 

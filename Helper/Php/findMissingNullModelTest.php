@@ -29,7 +29,7 @@ foreach ($modules as $module) {
 
 	foreach ($models as $model) {
 		if ($model === '..' || $model === '.'
-			|| \stripos($model, 'Null') !== 0
+			|| !\str_starts_with($model, 'Null')
 		) {
 			continue;
 		}
@@ -80,7 +80,7 @@ foreach ($modules as $module) {
 				. '{' . "\n"
 				. '    /**' . "\n"
 				. '     * @covers Modules\\' . $module . '\Models\Null' . $model . '' . "\n"
-				. '     * @group framework' . "\n"
+				. '     * @group module' . "\n"
 				. '     */' . "\n"
 				. '    public function testNull() : void' . "\n"
 				. '    {' . "\n"
@@ -89,12 +89,22 @@ foreach ($modules as $module) {
 				. "\n"
 				. '    /**' . "\n"
 				. '     * @covers Modules\\' . $module . '\Models\Null' . $model . '' . "\n"
-				. '     * @group framework' . "\n"
+				. '     * @group module' . "\n"
 				. '     */' . "\n"
 				. '    public function testId() : void' . "\n"
 				. '    {' . "\n"
 				. '        $null = new Null' . $model . '(2);' . "\n"
-				. '        self::assertEquals(2, $null->getId());' . "\n"
+				. '        self::assertEquals(2, $null->id);' . "\n"
+				. '    }' . "\n"
+				. "\n"
+				. '    /**' . "\n"
+				. '     * @covers Modules\\' . $module . '\Models\Null' . $model . '' . "\n"
+				. '     * @group module' . "\n"
+				. '     */' . "\n"
+				. '    public function testJsonSerialize() : void' . "\n"
+				. '    {' . "\n"
+				. '        $null = new Null' . $model . '(2);' . "\n"
+				. '        self::assertEquals([\'id\' => 2], $null);' . "\n"
 				. '    }' . "\n"
 				. '}' . "\n";
 

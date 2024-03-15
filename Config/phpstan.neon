@@ -14,6 +14,7 @@ parameters:
     treatPhpDocTypesAsCertain: false
     excludePaths:
         - *.tpl.php
+        - *.min.js
         - */Modules/Media/Files/*
         - */omsSetup/*
         - */demoSetup/*
@@ -40,7 +41,6 @@ parameters:
         - */DataStorage/Database/*
         - */Message/Mail/*
         - */Auth/OAuth2/*
-        - */Markdown/Markdown.php
         - */Socket/*
         - */node_modules/*
         - */Install/Application/*
@@ -51,7 +51,6 @@ parameters:
         - */Parser/Document/*
         - */Parser/Spreadsheet/*
         - *BayesianPersonalizedRanking.php
-        - *Simplex.php
         - *DBSCAN.php
         - *MeanShift.php
         - *Datamatrix.php
