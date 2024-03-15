@@ -96,6 +96,7 @@
     <exclude-pattern>*/tests/*</exclude-pattern><!-- inline function definition -->
 </rule>
 <rule ref="Generic.Formatting.MultipleStatementAlignment">
+    <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
     <exclude-pattern>*oLib.js</exclude-pattern><!-- I don't know why it doesn't understand this -->
     <exclude-pattern>*StringUtils.js</exclude-pattern><!-- I don't know why it doesn't understand this -->
 </rule>
@@ -113,6 +114,7 @@
 <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
 <rule ref="Generic.PHP.LowerCaseConstant"/>
 <rule ref="Generic.PHP.NoSilencedErrors">
+    <exclude-pattern>*/Message/Mail/*</exclude-pattern>
     <exclude-pattern>*Server.php</exclude-pattern><!-- Socket shouldn't output errors -->
     <exclude-pattern>*Ftp/File.php</exclude-pattern><!-- Socket shouldn't output errors -->
     <exclude-pattern>*Ftp/Directory.php</exclude-pattern><!-- Socket shouldn't output errors -->
