@@ -4,7 +4,7 @@ echo "#################################################"
 echo "# Build develop"
 echo "#################################################"
 
-git submodule foreach git checkout develop
+git submodule foreach "git checkout develop || true"
 git submodule foreach git pull
 
 git checkout develop
@@ -58,5 +58,5 @@ echo "#################################################"
 echo "# Switch to develop"
 echo "#################################################"
 
-git submodule foreach git checkout develop
+git submodule foreach "git checkout develop || true"
 git checkout develop
