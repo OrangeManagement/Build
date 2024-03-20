@@ -51,4 +51,4 @@ echo "#################################################"
 echo "# PHP stats inspection"
 echo "#################################################"
 
-./vendor/bin/phploc --exclude vendor --exclude node_modules --exclude Resources --exclude Build --exclude .git --exclude privateSetup --exclude demoSetup ./
+#./vendor/bin/phploc --exclude vendor --exclude node_modules --exclude Resources --exclude Build --exclude .git --exclude privateSetup --exclude demoSetup ./
