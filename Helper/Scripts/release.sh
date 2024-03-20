@@ -25,9 +25,9 @@ echo "#################################################"
 echo "# Update develop main repo"
 echo "#################################################"
 
-git git add .
-git git commit -m "Preparing for master update"
-git git push
+git add .
+git commit -m "Preparing for master update"
+git push
 
 echo "#################################################"
 echo "# Switch to master"
@@ -44,15 +44,15 @@ echo "# Merge develop"
 echo "#################################################"
 
 git submodule foreach git merge develop
-git git merge develop
+git merge develop
 
 git submodule foreach git add .
 git submodule foreach "git commit -m 'Update master' || true"
 git submodule foreach git push
 
-git git add .
-git git commit -m "Update master"
-git git push
+git add .
+git commit -m "Update master"
+git push
 
 echo "#################################################"
 echo "# Switch to develop"
