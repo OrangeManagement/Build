@@ -6,7 +6,7 @@ MAIN_PATH="/var/www/html/jingga/"
 # 0 4 * * * /var/www/html/jingga/Build/Backup/cron.sh
 
 # Create backup
-${MAIN_PATH}Build/Backup/backup.sh > /tmp/backup.log
+${MAIN_PATH}Build/Backup/local.sh > /tmp/backup.log
 
 # Mail log files
 ${MAIN_PATH}Build/Backup/mail.sh ${MAIL_PASSWORD} /tmp/backup.log
