@@ -57,22 +57,22 @@ borg create                         \
     --exclude-caches                \
     --exclude 'home/*/.cache/*'     \
     --exclude 'var/tmp/*'           \
+    --exclude '*.log'               \
                                     \
     ${BACKUP_PATH}::${TIMESTAMP}-$$-www  \
     ${TO_BACKUP}
 
 backup_exit=$?
 
-## Only keep 7 daily, 4 weekly and 6 monthly backups
+## Only keep 1 daily, 0 weekly and 3 monthly backups
 info "Pruning repository"
 
 borg prune                          \
     --list                          \
     --glob-archives '{hostname}-*'  \
     --show-rc                       \
-    --keep-daily    7               \
-    --keep-weekly   4               \
-    --keep-monthly  6               \
+    --keep-daily    1               \
+    --keep-monthly  3               \
     --keep-yearly   10
 
 prune_exit=$?
