@@ -22,17 +22,21 @@ sql_exit=$?
 
 # Create file backup
 
-BACKUP_PATH="/mnt/d/backup"
+BACKUP_PATH="/mnt/d/backup/backup.borg"
 TO_BACKUP="/var/www/html"
-REMOTE_USER="user"
-REMOTE_SERVER="192.168.178.38"
-REMOTE_PORT="2022"
+#REMOTE_USER="user"
+#REMOTE_SERVER="192.168.178.38"
+#REMOTE_PORT="2022"
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=ssh://${REMOTE_USER}@${REMOTE_SERVER}:${REMOTE_PORT}${BACKUP_PATH}
+#export BORG_REPO=ssh://${REMOTE_USER}@${REMOTE_SERVER}:${REMOTE_PORT}${BACKUP_PATH}
 
 # See the section "Passphrase notes" for more infos.
-export BORG_PASSPHRASE='sorden'
+export BORG_PASSPHRASE='password'
+
+# Global settings
+export BORG_RELOCATED_REPO_ACCESS_IS_OK=no
+export BORG_UNKNOWN_UNENCRYPTED_REPO_ACCESS_IS_OK=no
 
 ## Create repository
 # borg init -v --encryption=repokey ${BACKUP_PATH}
@@ -47,26 +51,28 @@ borg create                         \
     --list                          \
     --stats                         \
     --show-rc                       \
+    --one-file-system               \
     --compression lz4               \
+    --checkpoint-interval 86400     \
     --exclude-caches                \
     --exclude 'home/*/.cache/*'     \
     --exclude 'var/tmp/*'           \
+    --exclude '*.log'               \
                                     \
-    ::'{hostname}-{utcnow}'         \
+    ${BACKUP_PATH}::${TIMESTAMP}-$$-www  \
     ${TO_BACKUP}
 
 backup_exit=$?
 
-## Only keep 7 daily, 4 weekly and 6 monthly backups
+## Only keep 1 daily, 0 weekly and 3 monthly backups
 info "Pruning repository"
 
 borg prune                          \
     --list                          \
     --glob-archives '{hostname}-*'  \
     --show-rc                       \
-    --keep-daily    7               \
-    --keep-weekly   4               \
-    --keep-monthly  6               \
+    --keep-daily    1               \
+    --keep-monthly  3               \
     --keep-yearly   10
 
 prune_exit=$?
@@ -78,17 +84,25 @@ borg compact ${BACKUP_PATH}
 
 compact_exit=$?
 
+## Check integrity
+info "Checking repository"
+
+borg check --verify-data ${BACKUP_PATH}
+
+check_exit=$?
+
 # Handle global exit code
 global_exit=$(( sql_exit > backup_exit ? sql_exit : backup_exit ))
 global_exit=$(( prune_exit > global_exit ? prune_exit : global_exit ))
 global_exit=$(( compact_exit > global_exit ? compact_exit : global_exit ))
+global_exit=$(( check_exit > global_exit ? check_exit : global_exit ))
 
 if [ ${global_exit} -eq 0 ]; then
     info "Backup finished successfully"
 elif [ ${global_exit} -eq 1 ]; then
-    info "Backup, Prune, and/or Compact finished with warnings"
+    info "Backup, Prune, Compact and/or Check finished with warnings"
 else
-    info "Backup, Prune, and/or Compact finished with errors"
+    info "Backup, Prune, Compact and/or Check finished with errors"
 fi
 
 exit ${global_exit}

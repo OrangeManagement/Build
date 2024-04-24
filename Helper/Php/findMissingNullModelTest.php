@@ -2,7 +2,7 @@
 /**
  * Jingga
  *
- * PHP Version 8.1
+ * PHP Version 8.2
  *
  * @package   Helper
  * @copyright Dennis Eichhorn
@@ -59,7 +59,7 @@ foreach ($modules as $module) {
 				. '/**' . "\n"
 				. ' * Jingga' . "\n"
 				. ' *' . "\n"
-				. ' * PHP Version 8.1' . "\n"
+				. ' * PHP Version 8.2' . "\n"
 				. ' *' . "\n"
 				. ' * @package   tests' . "\n"
 				. ' * @copyright Dennis Eichhorn' . "\n"

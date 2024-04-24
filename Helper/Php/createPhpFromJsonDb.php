@@ -11,7 +11,7 @@ $mapper = <<< MAPPER
 /**
  * Jingga
  *
- * PHP Version 8.1
+ * PHP Version 8.2
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
@@ -84,7 +84,7 @@ $model = <<< MODEL
 /**
  * Jingga
  *
- * PHP Version 8.1
+ * PHP Version 8.2
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
@@ -136,7 +136,7 @@ $nullmodel = <<< NULLMODEL
 /**
  * Jingga
  *
- * PHP Version 8.1
+ * PHP Version 8.2
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
