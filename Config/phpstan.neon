@@ -127,3 +127,6 @@ parameters:
         -
           message: '#.*of method TCPDF::setHeaderData\(\) expects string.*#'
           path: *bill.pdf.php*
+        -
+          message: '#.*SessionInterface::\$data.*#'
+          path: *CliApplication.php*
