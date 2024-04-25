@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SEARCH_DIR="./tests"
+SEARCH_DIR=$1
 
 FILES=$(find $SEARCH_DIR -type f -name "*Test.js")
 
