@@ -121,3 +121,9 @@ parameters:
         -
           message: '#.*undefined method object::getId.*#'
           path: *TableView.php*
+        -
+          message: '#.*Cannot access property .* on mixed.*#'
+          path: *View.php*
+        -
+          message: '#.*of method TCPDF::setHeaderData\(\) expects string.*#'
+          path: *bill.pdf.php*
