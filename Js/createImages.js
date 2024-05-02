@@ -65,24 +65,24 @@ const src = [
 
     // Groups
     [
-        'http://192.168.178.38/en/admin/group/settings?id=3#c-tab-3',
+        'http://192.168.178.38/en/admin/group/view?id=3#c-tab-3',
         '//*[@id="permissionForm"]',
         __dirname + '/../../Modules/Admin/Docs/Help/img/admin-group-settings-permission-form.png'
     ],
     [
-        'http://192.168.178.38/en/admin/group/settings?id=3#c-tab-3',
+        'http://192.168.178.38/en/admin/group/view?id=3#c-tab-3',
         '//*[@id="igroup-tabs"]/div[2]/div[3]/div/div[2]/div',
         __dirname + '/../../Modules/Admin/Docs/Help/img/admin-group-settings-permission-list.png'
     ],
 
     // Accounts
     [
-        'http://192.168.178.38/en/admin/account/settings?id=1#c-tab-3',
+        'http://192.168.178.38/en/admin/account/view?id=1#c-tab-3',
         '//*[@id="permissionForm"]',
         __dirname + '/../../Modules/Admin/Docs/Help/img/admin-account-settings-permission-form.png'
     ],
     [
-        'http://192.168.178.38/en/admin/account/settings?id=1#c-tab-3',
+        'http://192.168.178.38/en/admin/account/view?id=1#c-tab-3',
         '//*[@id="iaccount-tabs"]/div[2]/div[3]/div/div[2]/div',
         __dirname + '/../../Modules/Admin/Docs/Help/img/admin-account-settings-permission-list.png'
     ],
