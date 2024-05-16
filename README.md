@@ -1,6 +1,6 @@
 # General
 
-The Karaka build system is a collection of scripts to create builds. Builds that can get created are:
+The Jingga build system is a collection of scripts to create builds. Builds that can get created are:
 
 * Public release builds
 * Public developer release builds

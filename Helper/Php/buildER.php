@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../../../phpOMS/Autoloader.php';
 
-use \phpOMS\Autoloader;
-
 $module = 'Billing';
 if ($module === '..' || $module === '.'
     || !\is_dir(__DIR__ . '/../../../Modules/' . $module)

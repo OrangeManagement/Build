@@ -92,8 +92,8 @@ foreach ($sources as $source) {
         && (($temp = \strlen($source->getPathname()) - \strlen('lang.php')) >= 0 && \strpos($source->getPathname(), 'lang.php', $temp) !== false)
         && \strlen(\explode('.', \basename($source->getPathname()))[0]) === 2
     ) {
-        $file = \file_get_contents($source->getPathname());
-        $lines = \explode("\n", $file);
+        $file    = \file_get_contents($source->getPathname());
+        $lines   = \explode("\n", $file);
         $exclude = [];
 
         foreach ($lines as $line) {

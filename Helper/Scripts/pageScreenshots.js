@@ -1,6 +1,6 @@
 const {By,Key,Builder} = require("selenium-webdriver");
 const chrome = require('selenium-webdriver/chrome');
-const http = require('http');
+
 let fs = require('fs');
 let path = require('path');
 

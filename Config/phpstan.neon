@@ -28,7 +28,6 @@ parameters:
         - *Test.php
         - *Routes.php
         - *Hooks.php
-        - *ObjLoader.js
         - */vendor/*
         - */Demo/*
         - */Build/*
@@ -38,11 +37,12 @@ parameters:
         - */Web/*
         - */Routes/*
         - */Hooks/*
-        - */DataStorage/Database/*
-        - */Message/Mail/*
-        - */Auth/OAuth2/*
-        - */Socket/*
         - */node_modules/*
+        - *ObjLoader.js
+        - */Socket/*
+        - */DataStorage/Database/*
+        - */Auth/OAuth2/*
+        - */Message/Mail/*
         - */Install/Application/*
         - */Accounting/*
         - */JobScheduling/*
@@ -56,20 +56,9 @@ parameters:
         - *Datamatrix.php
         - *QR.php
     ignoreErrors:
-        - '#.*tag @var for constant.*#'
-        - '#[.]*Offset .* on array.* always exists[.]*#'
-        - '#[.]*separator of function explode expects non-empty-string[.]*#'
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
-        - '#^Strict comparison using === between[.]*#'
-        - '#.*key\(\) should return.*#'
-        - '#.*current\(\) should return.*#'
-        - '#.*offsetExists\(\) expects.*#'
-        - '#[.]*jsonSerialize\(\) has no return typehint specified#'
-        - '#.*unserialize\(\) has parameter .* with no typehint specified#'
         - '#expects phpOMS\\Algorithm\\PathFinding\\JumpPointNode\|null, phpOMS\\Algorithm\\PathFinding\\Node\|null given#'
         - '#should return array<phpOMS\\Algorithm\\PathFinding\\Node> but returns array<int, phpOMS\\Algorithm\\PathFinding\\Node\|null#'
-        - '#^Offset .* does not exist on array.*#'
-        - '#.*refClass with generic class ReflectionClass but does not specify its types.*#'
         - '#.*Cannot cast mixed to.*#'
         - '#.*Instantiated class .*\\WorkflowInstance.*#'
         - '#.*Instantiated class .*\\WorkflowController.*#'
@@ -79,15 +68,8 @@ parameters:
         - '#.*unknown class .*PhpOffice\\.*#'
         - '#.*Instantiated class .*PhpOffice\\.*#'
         - '#[.]*PhpOffice\\PhpSpreadsheet\\[.]*#'
-        - '#.*Mapper.* should return.*#'
-        - '#.*::MODEL is not covariant with type class-string<T> of constant phpOMS\\DataStorage\\Database\\Mapper\\DataMapperFactory::MODEL.*#'
-        - '#.*l11nServer.* does not accept.*#'
-        - '#.*Call to static method installExternal.*#'
         - '#.*MODEL is not covariant with type class-string.*#'
         - '#.*Access to an undefined property Default.*#'
-        -
-          message: '#.*has parameter \$con with no typehint specified#'
-          path: *Ftp/File.php
         -
           message: '#.*Constant PDF_.*#'
           path: *pdf.php
@@ -98,23 +80,11 @@ parameters:
           message: '#.*Cannot call method setId\(\) on mixed.*#'
           path: *View.php
         -
-          message: "#^Cannot call method getTimestamp\\(\\) on DateTime\\|null\\.$#"
-          path: *Algorithm/JobScheduling/Weighted.php
-        -
-          message: '#Binary operation "\-" between string and int results in an error#'
-          path: *Matrix/Matrix.php
-        -
           message: '#PHPDoc tag @return with type object is not subtype of native type phpOMS.*#'
           path: *Module/ModuleManager.php
         -
           message: '#.*continuousComparator\(\) is unused.*#'
           path: *Algorithm/Knapsack/Continuous.php
-        -
-          message: '#.*Empty array passed to foreach.*#'
-          path: *Admin/Install/Workflows*
-        -
-          message: '#.*app is never read.*#'
-          path: *Admin/Install/Workflows*
         -
           message: '#.*unknown class Modules\\Workflow\\Controller\\WorkflowInstance.*#'
           path: *Admin/Install/Workflows*
@@ -127,6 +97,3 @@ parameters:
         -
           message: '#.*of method TCPDF::setHeaderData\(\) expects string.*#'
           path: *bill.pdf.php*
-        -
-          message: '#.*SessionInterface::\$data.*#'
-          path: *CliApplication.php*

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function module_autoloader($class) {
+function module_autoloader($class) : void {
     $paths = [
         __DIR__ . '/../../',
         __DIR__ . '/../../Resources/',
@@ -16,8 +16,8 @@ function module_autoloader($class) {
         __DIR__ . '/../../../',
     ];
 
-    $class  = \ltrim($class, '\\');
-    $class  = \strtr($class, '_\\', '//');
+    $class = \ltrim($class, '\\');
+    $class = \strtr($class, '_\\', '//');
 
     if (\stripos($class, 'Web/Backend') !== false || \stripos($class, 'Web/Api') !== false) {
         $class = \str_replace('Web/', 'Install/Application/', $class);
@@ -89,4 +89,4 @@ function module_autoloader($class) {
     }
 }
 
-spl_autoload_register('module_autoloader');
+\spl_autoload_register('module_autoloader');

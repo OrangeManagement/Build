@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
-$jsonStr = '';
-$name = 'ItemPackaging';
+$jsonStr   = '';
+$name      = 'ItemPackaging';
 $namespace = 'Modules\IteManagement\Models';
-$output = __DIR__ . '/../../../' . \str_replace('\\', '/', $namespace) . '/';
+$output    = __DIR__ . '/../../../' . \str_replace('\\', '/', $namespace) . '/';
 
 //////////// Create Mapper
 $mapper = <<< MAPPER
@@ -113,7 +113,7 @@ class {$name} implements \JsonSerializable
     public function toArray() : array
     {
         return [
-            'id' => $this->id,
+            'id' => {$this->id},
         ];
     }
 
@@ -122,7 +122,7 @@ class {$name} implements \JsonSerializable
      */
     public function jsonSerialize() : mixed
     {
-        return $this->toArray();
+        return {$this->toArray}();
     }
 }
 
@@ -161,13 +161,13 @@ final class Null{$name} extends {$name}
     /**
      * Constructor
      *
-     * @param int $id Model id
+     * @param int {$id} Model id
      *
      * @since 1.0.0
      */
-    public function __construct(int $id = 0)
+    public function __construct(int {$id} = 0)
     {
-        $this->id = $id;
+        {$this->id} = {$id};
     }
 
     /**
@@ -175,7 +175,7 @@ final class Null{$name} extends {$name}
      */
     public function jsonSerialize() : mixed
     {
-        return ['id' => $this->id];
+        return ['id' => {$this->id}];
     }
 }
 
