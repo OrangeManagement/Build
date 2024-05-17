@@ -8,9 +8,6 @@ parameters:
     universalObjectCratesClasses:
         - Stripe\StripeObject
     reportUnmatchedIgnoredErrors: false
-    inferPrivatePropertyTypeFromConstructor: true
-    checkMissingIterableValueType: false
-    checkGenericClassInNonGenericObjectType: false
     treatPhpDocTypesAsCertain: false
     excludePaths:
         - *.tpl.php
@@ -56,6 +53,10 @@ parameters:
         - *Datamatrix.php
         - *QR.php
     ignoreErrors:
+        -
+          identifier: missingType.iterableValue
+        -
+          identifier: missingType.generics
         - '#^Call to an undefined method phpOMS\\Module\\ModuleAbstract::[.]*#'
         - '#expects phpOMS\\Algorithm\\PathFinding\\JumpPointNode\|null, phpOMS\\Algorithm\\PathFinding\\Node\|null given#'
         - '#should return array<phpOMS\\Algorithm\\PathFinding\\Node> but returns array<int, phpOMS\\Algorithm\\PathFinding\\Node\|null#'

@@ -66,11 +66,11 @@
 <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
 <rule ref="Generic.PHP.DisallowShortOpenTag"/>
 <rule ref="Generic.PHP.DiscourageGoto"/>
-<!--<rule ref="Generic.PHP.ForbiddenFunctions">
+<rule ref="Generic.PHP.ForbiddenFunctions">
     <properties>
         <property name="forbiddenFunctions" type="array" value="delete=>unset,print=>echo,create_function=>null" />
     </properties>
-</rule>-->
+</rule>
 <rule ref="Generic.Files.ByteOrderMark"/>
 <!--<rule ref="Generic.Files.LineLength">
     <properties>
@@ -164,7 +164,6 @@
     <exclude-pattern>*Pdf.php</exclude-pattern><!-- Just a wrapper -->
     <exclude-pattern>*Excel.php</exclude-pattern><!-- Just a wrapper -->
     <exclude-pattern>*/tests/*</exclude-pattern><!-- Tests don't always have side effects -->
-    <exclude-pattern>*/Interfaces/*</exclude-pattern><!-- Interfaces use require_once due to unknown upload locations and therefore no autoloading -->
 </rule>
 <rule ref="PSR2.Classes.ClassDeclaration"/>
 <rule ref="PSR2.Classes.PropertyDeclaration"/>
@@ -206,12 +205,11 @@
         <property name="ignoreNewlines" value="true"/>
     </properties>
 </rule>
-<!--<rule ref="Squiz.WhiteSpace.OperatorSpacing">
+<rule ref="Squiz.WhiteSpace.OperatorSpacing">
     <properties>
         <property name="ignoreNewlines" value="true"/>
     </properties>
-    <exclude-pattern>*HttpUri.js</exclude-pattern>--><!-- Regex false positive -->
-<!--</rule>-->
+</rule>
 <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing">
 </rule>
 <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
@@ -221,6 +219,5 @@
         <property name="tabIndent" value="true"/>
     </properties>
     <exclude-pattern>*ResponseType.js</exclude-pattern>
-    <exclude-pattern>*HttpUri.js</exclude-pattern>
 </rule>
 </ruleset>
