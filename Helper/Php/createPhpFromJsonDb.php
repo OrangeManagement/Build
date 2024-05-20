@@ -15,7 +15,7 @@ $mapper = <<< MAPPER
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
- * @license   OMS License 2.0
+ * @license   OMS License 2.2
  * @version   1.0.0
  * @link      https://jingga.app
  */
@@ -29,7 +29,7 @@ use phpOMS\DataStorage\Database\Mapper\DataMapperFactory;
  * {$name} mapper class.
  *
  * @package {$namespace}
- * @license OMS License 2.0
+ * @license OMS License 2.2
  * @link    https://jingga.app
  * @since   1.0.0
  *
@@ -88,7 +88,7 @@ $model = <<< MODEL
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
- * @license   OMS License 2.0
+ * @license   OMS License 2.2
  * @version   1.0.0
  * @link      https://jingga.app
  */
@@ -100,7 +100,7 @@ namespace {$namespace};
  * {$name} class.
  *
  * @package {$namespace}
- * @license OMS License 2.0
+ * @license OMS License 2.2
  * @link    https://jingga.app
  * @since   1.0.0
  */
@@ -140,7 +140,7 @@ $nullmodel = <<< NULLMODEL
  *
  * @package   {$namespace}
  * @copyright Dennis Eichhorn
- * @license   OMS License 2.0
+ * @license   OMS License 2.2
  * @version   1.0.0
  * @link      https://jingga.app
  */
@@ -152,7 +152,7 @@ namespace {$namespace};
  * Null model
  *
  * @package {$namespace}
- * @license OMS License 2.0
+ * @license OMS License 2.2
  * @link    https://jingga.app
  * @since   1.0.0
  */

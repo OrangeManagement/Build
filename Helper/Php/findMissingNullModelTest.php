@@ -6,7 +6,7 @@
  *
  * @package   Helper
  * @copyright Dennis Eichhorn
- * @license   OMS License 2.0
+ * @license   OMS License 2.2
  * @version   1.0.0
  * @link      https://jingga.app
  */
@@ -63,7 +63,7 @@ foreach ($modules as $module) {
 				. ' *' . "\n"
 				. ' * @package   tests' . "\n"
 				. ' * @copyright Dennis Eichhorn' . "\n"
-				. ' * @license   OMS License 2.0' . "\n"
+				. ' * @license   OMS License 2.2' . "\n"
 				. ' * @version   1.0.0' . "\n"
 				. ' * @link      https://jingga.app' . "\n"
 				. ' */' . "\n"
