@@ -10,6 +10,7 @@ RUN apt-get update && \
     apache2 \
     software-properties-common \
     wget \
+    git \
     gnupg2 \
     lsb-release
 
