@@ -47,7 +47,10 @@ RUN a2enmod php8.3 && \
 EXPOSE 80
 
 # Setup php-xdebug
-RUN echo -e "zend_extension=xdebug.so\nxdebug.mode=debug,profile,trace\nxdebug.start_with_request=yes\nxdebug.client_port=9003\nxdebug.client_host=localhost\nxdebug.trace_format=1" > /etc/php/8.3/apache2/conf.d/20-xdebug.ini
+COPY data/000-default.conf /etc/apache2/sites-enabled/000-default.conf
+COPY data/20-xdebug.ini /etc/php/8.3/apache2/conf.d/20-xdebug.ini
+
+RUN echo "ServerName 127.0.0.2" >> /etc/apache2/apache2.conf
 
 RUN service apache2 restart
 
