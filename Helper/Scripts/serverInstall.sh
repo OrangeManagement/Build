@@ -42,13 +42,12 @@ service fail2ban restart
 ## Web
 ###############################################################
 
-apt-get install php8.3 php8.3-dev php8.3-cli php8.3-common php8.3-intl php8.3-mysql php8.3-pgsql php8.3-xdebug php8.3-opcache php8.3-pdo php8.3-sqlite php8.3-mbstring php8.3-curl php8.3-imap php8.3-bcmath php8.3-zip php8.3-dom php8.3-xml php8.3-phar php8.3-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils imagemagick
+apt-get install php8.3 php8.3-dev php8.3-cli php8.3-common php8.3-intl php8.3-mysql php8.3-pgsql php8.3-xdebug php8.3-opcache php8.3-pdo php8.3-sqlite php8.3-mbstring php8.3-curl php8.3-imap php8.3-bcmath php8.3-zip php8.3-dom php8.3-xml php8.3-phar php8.3-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils imagemagick redis-server wget
 
 pecl install pcov
 #echo "extension=pcov.so" > /etc/php/cli/conf.d/20-xdebug.ini
 
 mkdir -p /var/cache/apache2
-mkdir -p /var/cache/apache2/tmrank
 chown -R www-data:www-data /var/cache/apache2
 
 systemctl enable apache2
@@ -539,23 +538,6 @@ cat << EOF > /etc/apache2/sites-available/001-wiki.conf
 </VirtualHost>
 EOF
 
-cat << EOF > /etc/apache2/sites-available/002-gaming.conf
-<VirtualHost *:80>
-    ServerAdmin info@jingga.app
-    DocumentRoot /var/www/html/tmrank
-    ServerName tmrank.jingga.app
-
-    <Directory /var/www/html/tmrank>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-
-    ErrorLog \${APACHE_LOG_DIR}/error.log
-    CustomLog \${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-EOF
-
 # Important to have separate crontabs between production and demo apps
 useradd www-demo
 usermod -a -G www-data www-demo
@@ -565,7 +547,6 @@ chown www-demo:www-data /var/demo
 
 sudo -u www-data mkdir /var/www/html/jingga
 sudo -u www-demo mkdir /var/www/html/jingga_demo
-sudo -u www-data mkdir /var/www/html/tmrank
 chown -R www-data:www-data /var/www
 
 mkdir -p /var/www/html/backup/bash
