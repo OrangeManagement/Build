@@ -42,7 +42,7 @@ service fail2ban restart
 ## Web
 ###############################################################
 
-apt-get install php8.3 php8.3-dev php8.3-cli php8.3-common php8.3-intl php8.3-mysql php8.3-pgsql php8.3-xdebug php8.3-opcache php8.3-pdo php8.3-sqlite php8.3-mbstring php8.3-curl php8.3-imap php8.3-bcmath php8.3-zip php8.3-dom php8.3-xml php8.3-phar php8.3-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client wkhtmltopdf tesseract-ocr poppler-utils imagemagick redis-server wget
+apt-get install php8.3 php8.3-dev php8.3-cli php8.3-common php8.3-intl php8.3-mysql php8.3-pgsql php8.3-xdebug php8.3-opcache php8.3-pdo php8.3-sqlite php8.3-mbstring php8.3-curl php8.3-imap php8.3-bcmath php8.3-zip php8.3-dom php8.3-xml php8.3-phar php8.3-gd php-pear apache2 libapache2-mpm-itk apache2-utils mariadb-server mariadb-client xvfb libfontconfig wkhtmltopdf tesseract-ocr poppler-utils imagemagick redis-server wget
 
 pecl install pcov
 #echo "extension=pcov.so" > /etc/php/cli/conf.d/20-xdebug.ini
